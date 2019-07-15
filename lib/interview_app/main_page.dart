@@ -24,6 +24,8 @@ class _SchedulesPageState extends State<SchedulesPage>
   double hour = 0;
   double min = 0;
   int second = 0;
+  AnimationController _fadeAnimationController;
+  Animation<double> _fadeAnimation;
 
   @override
   void initState() {
@@ -40,6 +42,13 @@ class _SchedulesPageState extends State<SchedulesPage>
       second %= 60;
       setState(() {});
     });
+    _fadeAnimationController = AnimationController(vsync: this, duration: Duration(
+      milliseconds: 500
+    ));
+
+    _fadeAnimation = Tween<double>(begin: 0, end: 1).animate(_fadeAnimationController);
+
+    _fadeAnimationController.forward();
   }
 
   @override
@@ -339,7 +348,16 @@ class _SchedulesPageState extends State<SchedulesPage>
           Flexible(
             flex: 5,
             fit: FlexFit.tight,
-            child: Placeholder(),
+            child: FadeTransition(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 24,
+                vertical: 8),
+                decoration: BoxDecoration(
+                  color: boxBlackColor,
+                  borderRadius: BorderRadius.circular(8)
+                ),
+              ), opacity: _fadeAnimationController,
+            ),
           ),
           Flexible(
             flex: 1,
@@ -378,3 +396,28 @@ class _SchedulesPageState extends State<SchedulesPage>
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
