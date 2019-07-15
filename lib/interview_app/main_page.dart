@@ -8,6 +8,7 @@ class InterviewApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SchedulesPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -26,11 +27,16 @@ class _SchedulesPageState extends State<SchedulesPage>
   int second = 0;
   AnimationController _fadeAnimationController;
   Animation<double> _fadeAnimation;
+  AnimationController _emailAnimationController;
+  Animation<double> emailAnimation;
+  AnimationController _buttonAnimationController;
+  Animation<double> buttonAnimation;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+//    var deviceWidth = MediaQuery.of(context).size.width;
     _timer = Timer.periodic(Duration(seconds: 1), (t) {
       if (settingTime < 1)
         _timer.cancel();
@@ -42,12 +48,42 @@ class _SchedulesPageState extends State<SchedulesPage>
       second %= 60;
       setState(() {});
     });
-    _fadeAnimationController = AnimationController(vsync: this, duration: Duration(
-      milliseconds: 500
-    ));
+    _fadeAnimationController = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 1500));
+    _emailAnimationController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
 
-    _fadeAnimation = Tween<double>(begin: 0, end: 1).animate(_fadeAnimationController);
+    _fadeAnimation =
+        Tween<double>(begin: 0, end: 1).animate(_fadeAnimationController)
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((s) {
+            if (s == AnimationStatus.completed) {
+//              _fadeAnimationController.reset();
+              _emailAnimationController.forward();
+            }
+          });
+    emailAnimation =
+        CurvedAnimation(parent: _emailAnimationController, curve: Curves.easeIn)
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((s) {
+            if (s == AnimationStatus.completed) {
+//              _fadeAnimationController.forward();
+              _buttonAnimationController.forward();
+            }
+          });
 
+    _buttonAnimationController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 700));
+    buttonAnimation =
+    Tween<double>(begin: 0, end: 392)
+        .animate(_buttonAnimationController)
+      ..addListener(() {
+        setState(() {});
+      });
     _fadeAnimationController.forward();
   }
 
@@ -58,11 +94,15 @@ class _SchedulesPageState extends State<SchedulesPage>
       _timer.cancel();
       _timer = null;
     }
+    _fadeAnimationController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    var deviceMedia = MediaQuery.of(context);
+    print("device width : ${deviceMedia.size.width}");
+
     return Scaffold(
       backgroundColor: appBackgroundColor,
       body: Column(
@@ -244,7 +284,7 @@ class _SchedulesPageState extends State<SchedulesPage>
             flex: 3,
             fit: FlexFit.tight,
             child: Container(
-              margin: EdgeInsets.only(left: 24, right: 24, top: 16, bottom:16),
+              margin: EdgeInsets.only(left: 24, right: 24, top: 16, bottom: 16),
               decoration: BoxDecoration(
                 color: boxBlackColor,
                 borderRadius: BorderRadius.circular(16),
@@ -271,17 +311,20 @@ class _SchedulesPageState extends State<SchedulesPage>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text("Dreamwalker",style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16
-                        ),),
-                        SizedBox(height: 8,),
-                        Text("Developer",style: TextStyle(
-                            color: Colors.white.withOpacity(0.5),
-                            fontSize: 14
-                        ),)
+                        Text(
+                          "Dreamwalker",
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Developer",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(0.5),
+                              fontSize: 14),
+                        )
                       ],
-
                     ),
                   ),
                   Flexible(
@@ -301,46 +344,58 @@ class _SchedulesPageState extends State<SchedulesPage>
                                 shape: BoxShape.circle,
                               ),
                             ),
-                            SizedBox(width: 12,),
-                            Text("Available", style: TextStyle(
-                              color: Colors.white.withOpacity(0.6,),
-                              fontSize: 16
-                            ),)
+                            SizedBox(
+                              width: 12,
+                            ),
+                            Text(
+                              "Available",
+                              style: TextStyle(
+                                  color: Colors.white.withOpacity(
+                                    0.6,
+                                  ),
+                                  fontSize: 16),
+                            )
                           ],
                         ),
-                        SizedBox(height: 8,),
+                        SizedBox(
+                          height: 8,
+                        ),
                         Row(
                           children: <Widget>[
                             Container(
                               height: 34,
                               width: 48,
                               decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(16)
-                              ),
+                                  color: Colors.white.withOpacity(0.2),
+                                  borderRadius: BorderRadius.circular(16)),
                               child: Center(
-                                child: Icon(Icons.phone, color: Colors.white,),
+                                child: Icon(
+                                  Icons.phone,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
-                            SizedBox(width: 8,),
+                            SizedBox(
+                              width: 8,
+                            ),
                             Container(
                               height: 34,
                               width: 48,
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.2),
-                                  borderRadius: BorderRadius.circular(16)
-                              ),
+                                  borderRadius: BorderRadius.circular(16)),
                               child: Center(
-                                child: Icon(Icons.message, color: Colors.white,),
+                                child: Icon(
+                                  Icons.message,
+                                  color: Colors.white,
+                                ),
                               ),
                             )
                           ],
                         )
                       ],
-
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -349,22 +404,181 @@ class _SchedulesPageState extends State<SchedulesPage>
             flex: 5,
             fit: FlexFit.tight,
             child: FadeTransition(
+              opacity: _fadeAnimationController,
               child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 24,
-                vertical: 8),
+                margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                 decoration: BoxDecoration(
-                  color: boxBlackColor,
-                  borderRadius: BorderRadius.circular(8)
+                    color: boxBlackColor,
+                    borderRadius: BorderRadius.circular(16)),
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding:
+                            const EdgeInsets.only(right: 16, left: 16, top: 16),
+                        child: Row(
+                          children: <Widget>[
+                            Text(
+                              "Interviews Records",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                            Spacer(),
+                            Text(
+                              "Dashboard",
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.8),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Container(
+                              height: 16,
+                              width: 16,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white.withOpacity(0.2)),
+                              child: Center(
+                                child: Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 12,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            ScaleTransition(
+                              scale: _emailAnimationController,
+                              child: Container(
+                                height: 78,
+                                width: 78,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: appYellowColor),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.mail_outline,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      "Emails",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            ScaleTransition(
+                              scale: _emailAnimationController,
+                              child: Container(
+                                height: 78,
+                                width: 78,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle, color: appRedColor),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.message,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      "Chats",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            ScaleTransition(
+                              scale: _emailAnimationController,
+                              child: Container(
+                                height: 78,
+                                width: 78,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: appBlueColor),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.photo_library,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      "Media",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Text(
+                          "110 emails archived!",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(0.6),
+                              letterSpacing: 1.2,
+                              fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ), opacity: _fadeAnimationController,
+              ),
             ),
           ),
           Flexible(
             flex: 1,
             fit: FlexFit.tight,
-            child: Placeholder(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24
+                ),
+                child: AnimatedContainer(
+                  duration: Duration(milliseconds: 500),
+                  width: buttonAnimation.value,
+                  height: double.infinity,
+                  decoration: BoxDecoration(color: appOrangeColor,
+                  borderRadius: BorderRadius.circular(16)),
+                  child: Center(
+                    child: Text("No Interview Records Found Today!",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  ),
+                  
+                ),
+                
+              ),
           ),
-
         ],
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),
@@ -396,28 +610,3 @@ class _SchedulesPageState extends State<SchedulesPage>
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
