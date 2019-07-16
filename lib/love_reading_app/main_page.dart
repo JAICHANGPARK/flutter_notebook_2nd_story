@@ -264,7 +264,11 @@ class _MainPageState extends State<MainPage> {
                   height: 8,
                 ),
                 Container(
-                  height: 130,
+                  height: 120,
+                  margin: EdgeInsets.only(left: 24,
+                  right: 24,
+                  top: 8),
+                  padding: EdgeInsets.only(left: 8),
                   decoration: BoxDecoration(
                     border: Border.all()
                   ),
@@ -272,27 +276,32 @@ class _MainPageState extends State<MainPage> {
                     children: <Widget>[
                       Container(
                         width: 64,
-                        height: 120,
+                        height: 100,
                         decoration: BoxDecoration(
                           border: Border.all(),
                         ),
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text("All Group Up"),
-                          Text("This beaufifully illistrated stroy of a young\n"
-                              "boy trying to find a quiet..."),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Row(
-                            children: <Widget>[
-                              Icon(Icons.star, color: Colors.yellow,
-                                  size: 12,)
-                            ],
-                          )
-                        ],
+                      SizedBox(width: 8,),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16, bottom: 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text("All Group Up"),
+                            Text("This beaufifully illistrated stroy of a young\n"
+                                "boy trying to find a quiet..."),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(Icons.star, color: Colors.yellow,
+                                    size: 12,)
+                              ],
+                            )
+                          ],
+                        ),
                       )
                     ],
                   ),
