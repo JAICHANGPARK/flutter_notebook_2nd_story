@@ -70,6 +70,18 @@ class _MainPageState extends State<MainPage> {
               child: Stack(
                 children: <Widget>[
                   Positioned(
+                    left: 24,
+                    top: 0,
+                    bottom: 0,
+                    right: 16,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(17),
+                          color: Colors.deepPurple
+                      ),
+                    ),
+                  ),
+                  Positioned(
                     top: 16,
                     left: 0,
                     bottom: 16,
@@ -94,18 +106,42 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                   Positioned(
-                    left: 24,
-                    top: 0,
-                    bottom: 0,
-                    right: 24,
+                    left: 64,
+                    top: 48,
+                    bottom: 48,
                     child: Container(
+                      width: 110,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(17),
-                        color: Colors.deepPurple
+                        color: Colors.red,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 4
+                        )
                       ),
                     ),
-
+                  ),
+                  Positioned(
+                    right: 48,
+                    top: 62,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text("The World", style: TextStyle(
+                          color: Colors.white
+                        ),),
+                        Text("Of Abstract Art",
+                        style: TextStyle(
+                          color: Colors.white
+                        ),),
+                        Text("56:18  *  10 Chapters",style: TextStyle(
+                          color: Colors.white
+                        ),)
+                      ],
+                    ),
                   )
+
+
+
                 ],
               ),
             ),
@@ -170,6 +206,16 @@ class _MainPageState extends State<MainPage> {
             ),
 
           ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 60,
+        decoration: BoxDecoration(
+          color: Colors.grey,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(24),
+            topRight: Radius.circular(24),
+          )
         ),
       ),
     );
