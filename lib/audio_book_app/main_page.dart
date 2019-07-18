@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/audio_book_app/detail_page.dart';
 
 class AudioBookApp extends StatelessWidget {
   @override
@@ -108,15 +109,24 @@ class _MainPageState extends State<MainPage> {
                     left: 64,
                     top: 48,
                     bottom: 48,
-                    child: Container(
-                      width: 110,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          border: Border.all(color: Colors.white, width: 4),
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  "http://demo.cmssuperheroes.com/themeforest/bookjunky/wp-content/uploads/the_world.jpg"),
-                              fit: BoxFit.cover)),
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)
+                        => AudioDetailPage()));
+                      },
+                      child: Hero(
+                        tag: "home_01",
+                        child: Container(
+                          width: 110,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              border: Border.all(color: Colors.white, width: 4),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      "http://demo.cmssuperheroes.com/themeforest/bookjunky/wp-content/uploads/the_world.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
                     ),
                   ),
                   Positioned(
@@ -538,6 +548,7 @@ class _MainPageState extends State<MainPage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(onPressed: (){},
+        heroTag: "testing",
         elevation: 8,
       backgroundColor: Colors.deepPurple,
         child: Icon(Icons.add,
