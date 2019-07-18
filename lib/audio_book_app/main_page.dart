@@ -86,7 +86,7 @@ class _MainPageState extends State<MainPage> {
                     left: 0,
                     bottom: 16,
                     child:Transform.translate(
-                      offset: Offset(-120, 0),
+                      offset: Offset(-100, 0),
                       child: Transform.rotate(
                         child: Container(
                           height: 240,
@@ -101,7 +101,7 @@ class _MainPageState extends State<MainPage> {
                               fontSize: 16
                             ),),
                           ),
-                        ), angle: 2.6,
+                        ), angle: -1.58,
                       ),
                     ),
                   ),
@@ -121,7 +121,7 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                   Positioned(
-                    right: 48,
+                    right: 42,
                     top: 62,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
