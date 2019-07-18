@@ -66,7 +66,7 @@ class _MainPageState extends State<MainPage> {
             ),
             Container(
               height: 260,
-              decoration: BoxDecoration(color: Colors.deepPurpleAccent),
+//              decoration: BoxDecoration(color: Colors.deepPurpleAccent),
               child: Stack(
                 children: <Widget>[
                   Positioned(
@@ -77,31 +77,30 @@ class _MainPageState extends State<MainPage> {
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(17),
-                          color: Colors.deepPurple
-                      ),
+                          color: Colors.deepPurple),
                     ),
                   ),
                   Positioned(
                     top: 16,
                     left: 0,
                     bottom: 16,
-                    child:Transform.translate(
+                    child: Transform.translate(
                       offset: Offset(-100, 0),
                       child: Transform.rotate(
                         child: Container(
                           height: 240,
                           width: 240,
                           decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xffe26564)
-                          ),
+                              shape: BoxShape.circle, color: Color(0xffe26564)),
                           child: Center(
-                            child: Text("DESIGN & ART", style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16
-                            ),),
+                            child: Text(
+                              "DESIGN & ART",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
                           ),
-                        ), angle: -1.58,
+                        ),
+                        angle: -1.58,
                       ),
                     ),
                   ),
@@ -112,15 +111,12 @@ class _MainPageState extends State<MainPage> {
                     child: Container(
                       width: 110,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 4
-                        ),
-                        image: DecorationImage(image:
-                        NetworkImage("http://demo.cmssuperheroes.com/themeforest/bookjunky/wp-content/uploads/the_world.jpg"),
-                        fit: BoxFit.cover)
-                      ),
+                          color: Colors.blue,
+                          border: Border.all(color: Colors.white, width: 4),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  "http://demo.cmssuperheroes.com/themeforest/bookjunky/wp-content/uploads/the_world.jpg"),
+                              fit: BoxFit.cover)),
                     ),
                   ),
                   Positioned(
@@ -129,22 +125,55 @@ class _MainPageState extends State<MainPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text("The World", style: TextStyle(
-                          color: Colors.white
-                        ),),
-                        Text("Of Abstract Art",
-                        style: TextStyle(
-                          color: Colors.white
-                        ),),
-                        Text("56:18  *  10 Chapters",style: TextStyle(
-                          color: Colors.white
-                        ),)
+                        Text(
+                          "The World",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              letterSpacing: 1.5),
+                        ),
+                        Text(
+                          "Of Abstract Art",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              letterSpacing: 1.5),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Text(
+                          "56:18  *  10 Chapters",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 24,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            FloatingActionButton(
+                              child: Icon(
+                                Icons.play_arrow,
+                                color: Colors.deepPurple,
+                              ),
+                              backgroundColor: Colors.white,
+                              elevation: 0,
+                              onPressed: () {},
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              "Play Now",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        )
                       ],
                     ),
                   )
-
-
-
                 ],
               ),
             ),
@@ -171,29 +200,286 @@ class _MainPageState extends State<MainPage> {
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Container(
-                    width: 180,
+                    width: 160,
                     margin: EdgeInsets.only(top: 8, bottom: 8, right: 8),
-                    decoration: BoxDecoration(border: Border.all()),
+//                    decoration: BoxDecoration(border: Border.all()),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(top: 24, bottom: 8),
+                          decoration: BoxDecoration(
+                              color: Color(0xffe26564),
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 4,
+                                    spreadRadius: 3,
+                                    offset: Offset(0, 3))
+                              ]),
+                        ),
+                        Positioned(
+                          left: 16,
+                          top: 0,
+                          right: 42,
+                          child: Container(
+                            height: 150,
+                            width: 100,
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black.withOpacity(0.1),
+                                      blurRadius: 4,
+                                      spreadRadius: 3)
+                                ],
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://is1-ssl.mzstatic.com/image/thumb/Video20/v4/c8/a3/ab/c8a3aba1-b364-d325-512c-338fcebfa3d2/pr_source.lsr/268x0w.png"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 24,
+                          left: 16,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "13 Hours",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                "56:18 * 10 Chapters",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    letterSpacing: 1.5),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Container(
-                    width: 180,
-                    margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(border: Border.all()),
+                    width: 160,
+                    margin:
+                        EdgeInsets.only(top: 8, bottom: 8, right: 8, left: 8),
+//                    decoration: BoxDecoration(border: Border.all()),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(top: 24, bottom: 8),
+                          decoration: BoxDecoration(
+                              color: Color(0xffe26564),
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 4,
+                                    spreadRadius: 3,
+                                    offset: Offset(0, 3))
+                              ]),
+                        ),
+                        Positioned(
+                          left: 16,
+                          top: 0,
+                          right: 42,
+                          child: Container(
+                            height: 150,
+                            width: 100,
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black.withOpacity(0.1),
+                                      blurRadius: 4,
+                                      spreadRadius: 3)
+                                ],
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://is1-ssl.mzstatic.com/image/thumb/Video20/v4/c8/a3/ab/c8a3aba1-b364-d325-512c-338fcebfa3d2/pr_source.lsr/268x0w.png"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 24,
+                          left: 16,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "13 Hours",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                "56:18 * 10 Chapters",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    letterSpacing: 1.5),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Container(
-                    width: 180,
-                    margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(border: Border.all()),
+                    width: 160,
+                    margin:
+                        EdgeInsets.only(top: 8, bottom: 8, right: 8, left: 8),
+//                    decoration: BoxDecoration(border: Border.all()),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(top: 24, bottom: 8),
+                          decoration: BoxDecoration(
+                              color: Color(0xffe26564),
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 4,
+                                    spreadRadius: 3,
+                                    offset: Offset(0, 3))
+                              ]),
+                        ),
+                        Positioned(
+                          left: 16,
+                          top: 0,
+                          right: 42,
+                          child: Container(
+                            height: 150,
+                            width: 100,
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black.withOpacity(0.1),
+                                      blurRadius: 4,
+                                      spreadRadius: 3)
+                                ],
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://is1-ssl.mzstatic.com/image/thumb/Video20/v4/c8/a3/ab/c8a3aba1-b364-d325-512c-338fcebfa3d2/pr_source.lsr/268x0w.png"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 24,
+                          left: 16,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "13 Hours",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                "56:18 * 10 Chapters",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    letterSpacing: 1.5),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Container(
-                    width: 180,
-                    margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(border: Border.all()),
+                    width: 160,
+                    margin:
+                        EdgeInsets.only(top: 8, bottom: 8, right: 8, left: 8),
+//                    decoration: BoxDecoration(border: Border.all()),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(top: 24, bottom: 8),
+                          decoration: BoxDecoration(
+                              color: Color(0xffe26564),
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 4,
+                                    spreadRadius: 3,
+                                    offset: Offset(0, 3))
+                              ]),
+                        ),
+                        Positioned(
+                          left: 16,
+                          top: 0,
+                          right: 42,
+                          child: Container(
+                            height: 150,
+                            width: 100,
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black.withOpacity(0.1),
+                                      blurRadius: 4,
+                                      spreadRadius: 3)
+                                ],
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://is1-ssl.mzstatic.com/image/thumb/Video20/v4/c8/a3/ab/c8a3aba1-b364-d325-512c-338fcebfa3d2/pr_source.lsr/268x0w.png"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 24,
+                          left: 16,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "13 Hours",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                "56:18 * 10 Chapters",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    letterSpacing: 1.5),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 16,),
+            SizedBox(
+              height: 16,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 24),
               child: Align(
@@ -207,23 +493,62 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
-
           ],
         ),
       ),
       bottomNavigationBar: Container(
         height: 60,
         decoration: BoxDecoration(
-          color: Colors.grey,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(24),
-            topRight: Radius.circular(24),
-          )
+            color: Colors.grey.withOpacity(0.2),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(24),
+              topRight: Radius.circular(24),
+            )),
+        child: Stack(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.book),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.book),
+                    onPressed: () {},
+                  ),
+                  SizedBox(
+                    width: 64,
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.book),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.book),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+        elevation: 8,
+      backgroundColor: Colors.deepPurple,
+        child: Icon(Icons.add,
+        color: Colors.orange,size: 38,),
       ),
     );
   }
 }
+
+
+
 
 
 
