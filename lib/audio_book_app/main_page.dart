@@ -112,11 +112,14 @@ class _MainPageState extends State<MainPage> {
                     child: Container(
                       width: 110,
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: Colors.blue,
                         border: Border.all(
                           color: Colors.white,
                           width: 4
-                        )
+                        ),
+                        image: DecorationImage(image:
+                        NetworkImage("http://demo.cmssuperheroes.com/themeforest/bookjunky/wp-content/uploads/the_world.jpg"),
+                        fit: BoxFit.cover)
                       ),
                     ),
                   ),
