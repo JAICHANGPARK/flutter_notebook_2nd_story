@@ -17,6 +17,60 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+
+            ),
+            height: 180,
+           child: Placeholder(),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height-180,
+            child: Placeholder(),
+
+          )
+        ],
+      ),
+    );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
