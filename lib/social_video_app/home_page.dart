@@ -37,7 +37,6 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Expanded(
                   flex: 8,
-
                     child: Container(
                       padding: EdgeInsets.only(top: 72),
                       color: Color(0xfff6f5fa),
@@ -48,7 +47,90 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 28,
                             fontWeight: FontWeight.w500,
                           ),),
-                          SizedBox(height: 24,)
+                          SizedBox(height: 24,),
+                          Container(
+                            height: 32,
+                            decoration: BoxDecoration(
+
+                            ),
+                            child: Center(
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    left: 0,
+                                    right: 0,
+                                    top: 16,
+                                    child: Container(
+                                      height: 1,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 0,
+                                    top: 9,
+                                    child: Container(
+                                      height: 16,
+                                      width: 16,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                        border: Border.all(
+                                          color: Colors.blue,
+                                          width: 4
+                                        )
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 24,
+                                    top: 9,
+                                    child: Container(
+                                      height: 16,
+                                      width: 16,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.white,
+                                          border: Border.all(
+                                              color: Colors.indigo,
+                                              width: 4
+                                          )
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 48,
+                                    top: 14,
+                                    child: Container(
+                                      height: 5,
+                                      width: 160,
+                                      decoration: BoxDecoration(
+                                        color: Colors.lightBlue,
+                                        borderRadius: BorderRadius.circular(8)
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    right: 24,
+                                    top: 9,
+                                    child: Container(
+                                      height: 16,
+                                      width: 16,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.white,
+                                          border: Border.all(
+                                              color: Colors.indigo,
+                                              width: 4
+                                          )
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ),
