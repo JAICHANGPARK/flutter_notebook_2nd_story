@@ -23,7 +23,9 @@ class _HomePageState extends State<HomePage> {
 
     _controller = VideoPlayerController.network(
       'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
-    );
+    )..addListener((){
+
+    });
     _initializeVideoPlayerFuture = _controller.initialize().then((_){
       _controller.play();
     });
@@ -167,10 +169,17 @@ class _HomePageState extends State<HomePage> {
                 if (snapshot.connectionState == ConnectionState.done) {
                   // If the VideoPlayerController has finished initialization, use
                   // the data it provides to limit the aspect ratio of the VideoPlayer.
-                  return AspectRatio(
-                    aspectRatio: _controller.value.aspectRatio,
-                    // Use the VideoPlayer widget to display the video.
-                    child: VideoPlayer(_controller),
+                  return ListView(
+                    children: <Widget>[
+                      Container(
+                        height: 180,
+                        child: AspectRatio(
+                          aspectRatio: _controller.value.aspectRatio,
+                          // Use the VideoPlayer widget to display the video.
+                          child: VideoPlayer(_controller),
+                        ),
+                      )
+                    ],
                   );
                 } else {
                   // If the VideoPlayerController is still initializing, show a
