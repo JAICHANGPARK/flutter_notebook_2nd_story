@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:video_player/video_player.dart';
 class SocialVideoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  VideoPlayerController _controller;
+  Future<void> _initializeVideoPlayerFuture;
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    _controller = VideoPlayerController.network(
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    );
+    _initializeVideoPlayerFuture = _controller.initialize().then((_){
+      _controller.play();
+    });
+    super.initState();
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _controller.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,7 +161,24 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
             height: MediaQuery.of(context).size.height - 180,
-            child: Placeholder(),
+            child: FutureBuilder(
+              future: _initializeVideoPlayerFuture,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  // If the VideoPlayerController has finished initialization, use
+                  // the data it provides to limit the aspect ratio of the VideoPlayer.
+                  return AspectRatio(
+                    aspectRatio: _controller.value.aspectRatio,
+                    // Use the VideoPlayer widget to display the video.
+                    child: VideoPlayer(_controller),
+                  );
+                } else {
+                  // If the VideoPlayerController is still initializing, show a
+                  // loading spinner.
+                  return Center(child: CircularProgressIndicator());
+                }
+              },
+            )
           )
         ],
       ),
