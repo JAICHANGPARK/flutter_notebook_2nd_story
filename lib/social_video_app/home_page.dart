@@ -168,8 +168,71 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.vertical,
               physics: BouncingScrollPhysics(),
               children: <Widget>[
-
+                Card(buttonColor: Colors.indigo,),
               ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+class Card extends StatelessWidget {
+  final Color buttonColor;
+  Card({@required this.buttonColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height:  (MediaQuery.of(context).size.height - 180) / 2,
+      decoration: BoxDecoration(
+        color: Colors.red
+      ),
+      child: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Expanded(
+                flex: 2,
+                child: Placeholder(),
+              ),
+              Expanded(
+                flex: 8,
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 8,
+                      child: Placeholder(),
+                    ),
+                    Expanded(
+                      flex: 3,
+                      child: Placeholder(),
+                    ),
+
+                  ],
+                ),
+              )
+            ],
+          ),
+          Positioned(
+            left: 46,
+            top: 110,
+            child: Container(
+              height: 68,
+              width: 68,
+              decoration: BoxDecoration(
+                color: buttonColor,
+                border: Border.all(
+                  color: Colors.white,
+                  width: 5
+                )
+              ),
+              child: Center(
+                child: Icon(Icons.play_arrow,
+                color: Colors.white,
+                size: 32,),
+              ),
             ),
           )
         ],
