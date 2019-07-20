@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
 import 'package:video_player/video_player.dart';
 class SocialVideoApp extends StatelessWidget {
   @override
@@ -169,6 +170,8 @@ class _HomePageState extends State<HomePage> {
               physics: BouncingScrollPhysics(),
               children: <Widget>[
                 Card(buttonColor: Colors.indigo,),
+                Card(buttonColor: Colors.lightBlueAccent,),
+                Card(buttonColor: Colors.indigo,),
               ],
             ),
           )
@@ -184,9 +187,9 @@ class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:  (MediaQuery.of(context).size.height - 180) / 2,
+      height:  (MediaQuery.of(context).size.height - 180) / 1.8,
       decoration: BoxDecoration(
-        color: Colors.red
+        color: Colors.white
       ),
       child: Stack(
         fit: StackFit.expand,
@@ -195,7 +198,56 @@ class Card extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 flex: 2,
-                child: Placeholder(),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: 90,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Color(0xfff6f5fa),
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text("246", style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 18
+                          ),),
+                          Text("likes",
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 12
+                            ),)
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+                      height: 84,
+                      decoration: BoxDecoration(
+                          color: Colors.white
+                      ),
+                      child: Center(
+                        child: Container(
+                          height: 38,
+                          width: 38,
+                          decoration: BoxDecoration(
+                            border: Border.all(),
+                            shape: BoxShape.circle
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: CircleAvatar(
+                              radius: 16,
+                              backgroundImage: NetworkImage(dreamwalkerImg),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
               Expanded(
                 flex: 8,
@@ -203,11 +255,49 @@ class Card extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       flex: 8,
-                      child: Placeholder(),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(image:
+                          NetworkImage("https://cdn.pixabay.com/photo/2018/06/13/18/20/wave-3473335_960_720.jpg"),
+                          fit: BoxFit.cover)
+                        ),
+                      ),
                     ),
                     Expanded(
                       flex: 3,
-                      child: Placeholder(),
+                      child: Container(
+                        color: Color(0xfff6f5fa),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.only(right: 24),
+                              child: Row(
+                                children: <Widget>[
+                                  Text("The coral beaches of Australia",
+                                  style: TextStyle(
+                                    fontSize: 14
+                                  ),),
+                                  Spacer(),
+                                  IconButton(
+                                    padding: EdgeInsets.zero,
+                                    iconSize: 18,
+                                    icon: Icon(Icons.more_vert,
+                                    color: Colors.grey,),
+                                    onPressed: (){},
+                                  )
+                                ],
+                              ),
+                            ),
+                            Text("Dreamwalker 77K views",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14
+                            ),)
+                          ],
+                        ),
+                      ),
                     ),
 
                   ],
@@ -217,7 +307,7 @@ class Card extends StatelessWidget {
           ),
           Positioned(
             left: 46,
-            top: 110,
+            top: 124,
             child: Container(
               height: 68,
               width: 68,
