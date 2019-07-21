@@ -34,13 +34,50 @@ class _HomePageState extends State<HomePage> {
             child: Placeholder(),
           ),
           Container(
-            height: MediaQuery.of(context).size.height - 148,
+            height: MediaQuery.of(context).size.height - 210,
             child: Placeholder(),
           )
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-          items: []),
+          selectedIconTheme: IconThemeData(color: Colors.black),
+          selectedLabelStyle: TextStyle(
+            color: Colors.black,
+          ),
+          unselectedLabelStyle: TextStyle(color: Colors.black),
+          currentIndex: 0,
+          unselectedIconTheme: IconThemeData(color: Colors.black),
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home,
+                ),
+                title: Text("ホーム")),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.notifications_none,
+                ),
+                title: Text("お知らせ")),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.monetization_on,
+                ),
+                title: Text("メルペイ")),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.person_outline,
+                ),
+                title: Text("マイページ"))
+          ]),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.redAccent,
+        child: Icon(
+          Icons.camera_alt,
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }
@@ -56,26 +93,3 @@ class _CupertinoHomePageState extends State<CupertinoHomePage> {
     return Container();
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
