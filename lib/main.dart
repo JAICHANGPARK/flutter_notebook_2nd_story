@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/merukari_clone/main_page.dart';
 
-import 'package:flutter_notebook_second_story/social_video_app/home_page.dart';
-
-void main() => runApp(SocialVideoApp());
+void main() => runApp(MerukariClone());
 
 
