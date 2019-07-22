@@ -83,7 +83,6 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
               ),
             ),
             TabBar(
-
               onTap: (newTabIndex){
                 setState(() {
                 });
@@ -110,59 +109,130 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
 
               height: MediaQuery.of(context).size.height - 120,
               child: TabBarView(
-
                   controller: tabController,
                   physics: BouncingScrollPhysics(),
                   children: [
-                    ListView(
-                      shrinkWrap: true,
-                      padding: EdgeInsets.zero,
-                      scrollDirection: Axis.vertical,
-                      children: <Widget>[
-                        Container(
-                          height: 460,
-                          width: MediaQuery.of(context).size.width,
-                          child: Column(
-                            children: <Widget>[
-                              Expanded(
-                                flex: 8,
-                                child: Container(
+                    Container(
+                      color: Colors.black.withOpacity(0.05),
+                      child: ListView(
+                        shrinkWrap: true,
+                        padding: EdgeInsets.zero,
+                        scrollDirection: Axis.vertical,
+                        children: <Widget>[
+                          Container(
+                            height: 480,
+                            width: MediaQuery.of(context).size.width,
+                            child: Column(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 13,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(image:
+                                      NetworkImage("https://www.gu-japan.com/jp/feature/denimskirt/women/pc/img/190708_img_04_m.jpg"),
+                                      fit: BoxFit.cover)
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 4,
+                                  child: Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                       child: Container(
+                                         decoration: BoxDecoration(
+                                           image: DecorationImage(image:
+                                           NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190716_w_sports.jpg"),
+                                           fit: BoxFit.cover)
+                                         ),
+                                       ),
+                                      ),
+                                      Expanded(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              image: DecorationImage(image:
+                                              NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190712_w_19a.jpg"),
+                                                  fit: BoxFit.cover)
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 16,),
+                          Container(
+
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.grey)
+                            ),
+                            child: Column(
+                              children: <Widget>[
+                                Container(
+                                  height: 78,
+                                  child: Stack(
+                                    children: <Widget>[
+                                      Positioned(
+                                        left: 16,
+                                        top: 16,
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text("期間限定価格",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18,letterSpacing: 5
+                                            ),),
+                                            Text("LIMITED PRICE",
+                                              style: TextStyle(
+                                              color: Colors.grey,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 13,
+                                                letterSpacing: 1.2
+                                              ),)
+                                          ],
+                                        ),
+                                      ),
+                                      Positioned(
+                                        right: 16,
+                                        top: 24,
+                                        child: Row(
+                                          children: <Widget>[
+                                            Text("一覧へ"),
+                                            Icon(Icons.arrow_forward_ios,
+                                           size: 12, )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 320,
                                   decoration: BoxDecoration(
-                                    image: DecorationImage(image: 
-                                    NetworkImage("https://www.gu-japan.com/jp/feature/denimskirt/women/pc/img/190708_img_04_m.jpg"),
+                                    image: DecorationImage(image:
+                                    NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190716_w_loungewear.jpg"),
                                     fit: BoxFit.cover)
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                flex: 3,
-                                child: Row(
-                                  children: <Widget>[
-                                    Expanded(
-                                     child: Container(
-                                       decoration: BoxDecoration(
-                                         image: DecorationImage(image:
-                                         NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190716_w_sports.jpg"),
-                                         fit: BoxFit.cover)
-                                       ),
-                                     ),
-                                    ),
-                                    Expanded(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            image: DecorationImage(image:
-                                            NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190712_w_19a.jpg"),
-                                                fit: BoxFit.cover)
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                Container(
+                                  height: 320,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(image:
+                                      NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190701_w_brafeel.jpg"),
+                                          fit: BoxFit.cover)
+                                  ),
                                 ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+
+
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Container(),
                     Container(),
