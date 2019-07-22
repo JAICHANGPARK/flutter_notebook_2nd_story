@@ -21,6 +21,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
   int pageIndex = 0;
   List<Widget> pageWidget = [];
   TabController tabController;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -52,12 +53,11 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(16)),
                       child: TextField(
                         decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search),
-                          hintText: "WOMAN(レディース)商品を検索",
-                          hintStyle: TextStyle(
-                            fontSize: 14,
-                          )
-                        ),
+                            prefixIcon: Icon(Icons.search),
+                            hintText: "WOMEN(レディース)商品を検索",
+                            hintStyle: TextStyle(
+                              fontSize: 14,
+                            )),
                       ),
                     ),
                   ),
@@ -82,6 +82,92 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                 ]),
               ),
             ),
+            TabBar(
+
+              onTap: (newTabIndex){
+                setState(() {
+                });
+              },
+              unselectedLabelColor: Colors.black,
+              labelColor: Colors.black,
+              indicatorPadding: EdgeInsets.zero,
+              labelPadding: EdgeInsets.zero,
+              controller: tabController,
+              indicatorWeight: 3,
+              tabs: <Widget>[
+                Tab(
+                  text: "WOMEN",
+                ),
+                Tab(
+                  text: "MEN",
+                ),
+                Tab(
+                  text: "KIDS",
+                )
+              ],
+            ),
+            Container(
+
+              height: MediaQuery.of(context).size.height - 120,
+              child: TabBarView(
+
+                  controller: tabController,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    ListView(
+                      shrinkWrap: true,
+                      padding: EdgeInsets.zero,
+                      scrollDirection: Axis.vertical,
+                      children: <Widget>[
+                        Container(
+                          height: 460,
+                          width: MediaQuery.of(context).size.width,
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 8,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(image: 
+                                    NetworkImage("https://www.gu-japan.com/jp/feature/denimskirt/women/pc/img/190708_img_04_m.jpg"),
+                                    fit: BoxFit.cover)
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
+                                     child: Container(
+                                       decoration: BoxDecoration(
+                                         image: DecorationImage(image:
+                                         NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190716_w_sports.jpg"),
+                                         fit: BoxFit.cover)
+                                       ),
+                                     ),
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image:
+                                            NetworkImage("https://www.gu-japan.com/jp/feature/material/sc/img/190712_w_19a.jpg"),
+                                                fit: BoxFit.cover)
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Container(),
+                    Container(),
+                  ]),
+            )
           ],
         ),
       ),
@@ -114,34 +200,3 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
