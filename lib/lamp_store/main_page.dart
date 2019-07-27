@@ -81,7 +81,7 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           Container(
-            height: 400,
+            height: 380,
             margin: EdgeInsets.all(16),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(color: Colors.white),
@@ -99,7 +99,37 @@ class _MainPageState extends State<MainPage> {
                                 "http://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Hanging-Lamp-PNG-Transparent-Image-500x544.png"),
                             fit: BoxFit.cover)),
                   ),
-                )
+                ),
+                Positioned(
+                  right: 42,
+                  top: 16,
+                  child: Container(
+                    height: 28,
+                    width: 28,
+                    decoration: BoxDecoration(
+                      color: appPurpleColor.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Icon(Icons.add, color: Colors.white,),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 62,
+                  bottom: 180,
+                  child: Container(
+                    height: 28,
+                    width: 28,
+                    decoration: BoxDecoration(
+                      color: appPurpleColor.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Icon(Icons.add, color: Colors.white,),
+                    ),
+                  ),
+                ),
               ],
             ),
           )
@@ -108,6 +138,11 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+
+
+
+
 
 
 
