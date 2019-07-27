@@ -24,6 +24,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    final counterManagement = Provider.of<CounterProvider>(context);
     return Scaffold(
       body: Column(
         children: <Widget>[
@@ -182,7 +183,9 @@ class _MainPageState extends State<MainPage> {
                       color: Colors.grey,
                       size: 16,
                     ),
-                    SizedBox(width: 16,),
+                    SizedBox(
+                      width: 16,
+                    ),
                     Text(
                       "245 Reviews",
                       style: TextStyle(
@@ -197,10 +200,107 @@ class _MainPageState extends State<MainPage> {
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, border: Border.all()),
                       child: Center(
-                        child: Icon(Icons.keyboard_arrow_down,),
+                        child: Icon(
+                          Icons.keyboard_arrow_down,
+                        ),
                       ),
                     )
                   ],
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Container(
+            height: 149,
+            decoration: BoxDecoration(
+                color: appPurpleColor,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(32),
+                  topLeft: Radius.circular(32),
+                )),
+            child: Stack(
+              fit: StackFit.expand,
+              children: <Widget>[
+                Positioned(
+                  top: 16,
+                  left: 24,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      RichText(
+                        text: TextSpan(children: [
+                          TextSpan(text: "\$", style: TextStyle()),
+                          TextSpan(text: "90", style: TextStyle(fontSize: 30)),
+                          TextSpan(text: ".00"),
+                        ]),
+                      ),
+                      Text(
+                        "Price per unit.",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          InkWell(
+                            onTap: () {
+                              if(counterManagement.getProductCount() > 1){
+                                counterManagement.decrement();
+                              }
+                            },
+                            child: Container(
+                              height: 32,
+                              width: 32,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.white)),
+                              child: Center(
+                                child: Text(
+                                  "-",
+                                  style: TextStyle(
+                                      fontSize: 24, color: Colors.white),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(16),
+                            child: Text(
+                                counterManagement.getProductCount().toString(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18
+                            ),),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              counterManagement.increment();
+                            },
+                            child: Container(
+                              height: 32,
+                              width: 32,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.white)),
+                              child: Center(
+                                child: Text(
+                                  "+",
+                                  style: TextStyle(
+                                      fontSize: 24, color: Colors.white),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
@@ -210,24 +310,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

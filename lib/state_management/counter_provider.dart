@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CounterProvider with ChangeNotifier{
 
-  int productCount = 0;
+  int productCount = 1;
   getProductCount() => productCount;
   setProductCount(int count) => productCount = count;
 
