@@ -111,7 +111,10 @@ class _MainPageState extends State<MainPage> {
                       shape: BoxShape.circle,
                     ),
                     child: Center(
-                      child: Icon(Icons.add, color: Colors.white,),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
@@ -126,10 +129,79 @@ class _MainPageState extends State<MainPage> {
                       shape: BoxShape.circle,
                     ),
                     child: Center(
-                      child: Icon(Icons.add, color: Colors.white,),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
+              ],
+            ),
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Lamp Swarm",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.star,
+                      color: appPurpleColor,
+                      size: 16,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: appPurpleColor,
+                      size: 16,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: appPurpleColor,
+                      size: 16,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: appPurpleColor,
+                      size: 16,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.grey,
+                      size: 16,
+                    ),
+                    SizedBox(width: 16,),
+                    Text(
+                      "245 Reviews",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12),
+                    ),
+                    Spacer(),
+                    Container(
+                      height: 32,
+                      width: 32,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, border: Border.all()),
+                      child: Center(
+                        child: Icon(Icons.keyboard_arrow_down,),
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           )
@@ -138,6 +210,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
 
 
 
