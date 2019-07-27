@@ -230,12 +230,16 @@ class _MainPageState extends State<MainPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      RichText(
-                        text: TextSpan(children: [
-                          TextSpan(text: "\$", style: TextStyle()),
-                          TextSpan(text: "90", style: TextStyle(fontSize: 30)),
-                          TextSpan(text: ".00"),
-                        ]),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(children: [
+                            TextSpan(text: "\$", style: TextStyle()),
+                            TextSpan(text: "90", style: TextStyle(fontSize: 32)),
+                            TextSpan(text: ".00"),
+                          ]),
+                        ),
                       ),
                       Text(
                         "Price per unit.",
@@ -250,7 +254,7 @@ class _MainPageState extends State<MainPage> {
                         children: <Widget>[
                           InkWell(
                             onTap: () {
-                              if(counterManagement.getProductCount() > 1){
+                              if (counterManagement.getProductCount() > 1) {
                                 counterManagement.decrement();
                               }
                             },
@@ -272,11 +276,10 @@ class _MainPageState extends State<MainPage> {
                           Padding(
                             padding: EdgeInsets.all(16),
                             child: Text(
-                                counterManagement.getProductCount().toString(),
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18
-                            ),),
+                              counterManagement.getProductCount().toString(),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
                           ),
                           InkWell(
                             onTap: () {
@@ -301,6 +304,34 @@ class _MainPageState extends State<MainPage> {
                       )
                     ],
                   ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 24,
+                  top: 24,
+                  child: Container(
+                    width: 80,
+                    decoration: BoxDecoration(
+                        color: Color(0xfffecf92),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16))),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(
+                          Icons.shopping_basket,
+                          color: appPurpleColor,
+                        ),
+                        Text('Buy',style: TextStyle(
+                          color: appPurpleColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700
+                        ),)
+                      ],
+                    ),
+                  ),
                 )
               ],
             ),
@@ -310,3 +341,20 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
