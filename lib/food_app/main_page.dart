@@ -285,6 +285,60 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ],
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Popular",style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  letterSpacing: 1.1
+                ),),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, right: 16),
+              child: ListView(
+                padding: EdgeInsets.zero,
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                children: <Widget>[
+                  Container(
+                    height: 250,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Expanded(
+                          flex: 7,
+                          child: Placeholder(),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Placeholder(),
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 16,),
+                  Container(
+                    height: 250,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Expanded(
+                          flex: 7,
+                          child: Placeholder(),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Placeholder(),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
