@@ -137,6 +137,7 @@ class _MainPageState extends State<MainPage> {
                             decoration: BoxDecoration(
                                 color: iconContainerColor,
                                 borderRadius: BorderRadius.circular(16)),
+
                           ),
                         ),
                         Expanded(
@@ -311,11 +312,61 @@ class _MainPageState extends State<MainPage> {
                       children: <Widget>[
                         Expanded(
                           flex: 7,
-                          child: Placeholder(),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              image: DecorationImage(image: NetworkImage("https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590__340.jpg"),
+                              fit: BoxFit.cover)
+                            ),
+                            child: Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  bottom: 16,
+                                  right: 16,
+                                  child: Container(
+                                    height: 34,
+                                    width: 120,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(32)
+                                    ),
+                                    child: Center(
+                                      child: Text("10-15 min",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold
+                                      ),),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
                         ),
                         Expanded(
-                          flex: 3,
-                          child: Placeholder(),
+                          flex: 2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(height: 8,),
+                              Text("Millionia State Cafe", style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18
+                              ),),
+                              SizedBox(height: 8,),
+                              Row(
+                                children: <Widget>[
+                                  Icon(Icons.star,color: Colors.yellow, size: 13,),
+                                  SizedBox(width: 8,),
+                                  Text("4.8 (90)  Deli - Pizza 0 Breakfast and Brunch", style:
+                                    TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.blueGrey
+                                    ),),
+                                ],
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -328,15 +379,132 @@ class _MainPageState extends State<MainPage> {
                       children: <Widget>[
                         Expanded(
                           flex: 7,
-                          child: Placeholder(),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                image: DecorationImage(image: NetworkImage("https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590__340.jpg"),
+                                    fit: BoxFit.cover)
+                            ),
+                            child: Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  bottom: 16,
+                                  right: 16,
+                                  child: Container(
+                                    height: 34,
+                                    width: 120,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(32)
+                                    ),
+                                    child: Center(
+                                      child: Text("10-15 min",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold
+                                        ),),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
                         ),
                         Expanded(
-                          flex: 3,
-                          child: Placeholder(),
+                          flex: 2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(height: 8,),
+                              Text("Millionia State Cafe", style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18
+                              ),),
+                              SizedBox(height: 8,),
+                              Row(
+                                children: <Widget>[
+                                  Icon(Icons.star,color: Colors.yellow, size: 13,),
+                                  SizedBox(width: 8,),
+                                  Text("4.8 (90)  Deli - Pizza 0 Breakfast and Brunch", style:
+                                  TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.blueGrey
+                                  ),),
+                                ],
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(height: 16,),
+                  Container(
+                    height: 250,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Expanded(
+                          flex: 7,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                image: DecorationImage(image: NetworkImage("https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590__340.jpg"),
+                                    fit: BoxFit.cover)
+                            ),
+                            child: Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  bottom: 16,
+                                  right: 16,
+                                  child: Container(
+                                    height: 34,
+                                    width: 120,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(32)
+                                    ),
+                                    child: Center(
+                                      child: Text("10-15 min",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold
+                                        ),),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              SizedBox(height: 8,),
+                              Text("Millionia State Cafe", style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18
+                              ),),
+                              SizedBox(height: 8,),
+                              Row(
+                                children: <Widget>[
+                                  Icon(Icons.star,color: Colors.yellow, size: 13,),
+                                  SizedBox(width: 8,),
+                                  Text("4.8 (90)  Deli - Pizza 0 Breakfast and Brunch", style:
+                                  TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.blueGrey
+                                  ),),
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             )
