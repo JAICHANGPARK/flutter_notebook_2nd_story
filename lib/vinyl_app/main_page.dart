@@ -630,7 +630,59 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                   ],
                 )),
           ),
-
+          SizedBox(height: 16,),
+          Positioned(
+            bottom: 100,
+            left: 24,
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text("Vinyls Listed", style:
+                TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 21
+                ),),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 3,
+                    spreadRadius: 2
+                  )
+                ],
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(24),
+                  topLeft: Radius.circular(24)
+                )
+              ),
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    width: 80,
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.purple.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
