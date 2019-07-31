@@ -649,7 +649,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
             right: 0,
             child: Container(
               height: 60,
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: EdgeInsets.symmetric(horizontal: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
@@ -665,20 +665,30 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                 )
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Container(
                     width: 80,
+                    height: 40,
                     margin: EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                      color: Colors.purple.withOpacity(0.3),
+                      color: Colors.purple.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(24),
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
-                        
+                          Icon(Icons.home, color: Colors.purple,),
+                          Text("Home", style: TextStyle(
+                            color: Colors.purple
+                          ),)
                       ],
                     ),
-                  )
+                  ),
+                  Icon(Icons.music_note, color: Colors.grey,),
+                  Icon(Icons.notifications_none,color: Colors.grey,),
+                  Icon(Icons.menu,color: Colors.grey,)
                 ],
               ),
             ),
