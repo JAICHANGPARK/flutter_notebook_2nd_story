@@ -877,6 +877,7 @@ class _ResultPageState extends State<ResultPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -890,6 +891,7 @@ class _ResultPageState extends State<ResultPage> {
                             )
                           ],
                         ),
+
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
