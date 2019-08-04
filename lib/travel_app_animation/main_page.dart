@@ -44,7 +44,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
       ..addStatusListener((as) {
         print(_animation.value);
         if (as == AnimationStatus.completed) {
-          Future.delayed(Duration(milliseconds: 200), (){
+          Future.delayed(Duration(milliseconds: 200), () {
             _scaleAnimationController.forward();
           });
           setState(() {
@@ -53,12 +53,11 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
         }
       });
 
-    scaleAnimation = CurveTween(curve: Curves.bounceIn).animate(_scaleAnimationController)
-    ..addListener((){
-      setState(() {
-
-      });
-    });
+    scaleAnimation =
+        CurveTween(curve: Curves.bounceIn).animate(_scaleAnimationController)
+          ..addListener(() {
+            setState(() {});
+          });
 //        Tween(begin: 0.0, end: 1.0).animate(_scaleAnimationController)
 //          ..addListener(() {
 //            setState(() {});
@@ -186,29 +185,48 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
               ),
               height: animationDone ? 320 : 0,
               curve: Curves.bounceIn,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(height: 52,),
-                  Text("GINZA", style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    letterSpacing: 1.5
-                  ),),
-                  SizedBox(height: 8,),
-                  Text("Tokyo".toUpperCase(), style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 16
-                  ),),
-                  SizedBox(height: 16,),
-                  Container(
-                    height: 2,
-                    width: 68,
-                    decoration: BoxDecoration(
-                      color: Colors.cyan
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(
+                      height: 52,
                     ),
-                  )
-                ],
+                    Text(
+                      "GINZA",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          letterSpacing: 1.5),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Tokyo".toUpperCase(),
+                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Container(
+                      height: 2,
+                      width: 68,
+                      decoration: BoxDecoration(color: Colors.cyan),
+                    ),
+                    SizedBox(height: 16,),
+                    SizedBox(
+                      width: 280,
+                      child: Text(
+                          "Ginza (銀座) is a district of Chūō, Tokyo, located south of Yaesu and Kyōbashi, west of Tsukiji, east of Yūrakuchō and Uchisaiwaichō, and north of Shinbashi. It is a popular upscale shopping area of Tokyo, with numerous internationally renowned department stores, boutiques, restaurants and coffeehouses located in its vicinity. It is considered one of the most expensive, elegant, and luxurious streets in the world.",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        letterSpacing: 1.5
+                      ),
+                      textAlign: TextAlign.center,),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
