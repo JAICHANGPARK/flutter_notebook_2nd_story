@@ -22,11 +22,11 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
   GoogleMapController _googleMapController;
   AnimationController _animationController;
+  AnimationController _scaleAnimationController;
+  Animation<double> scaleAnimation;
   Animation<double> _animation;
   bool cardClicked = false;
   bool animationDone = false;
-  AnimationController _scaleAnimationController;
-  Animation<double> scaleAnimation;
 
   @override
   void initState() {
@@ -214,16 +214,17 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                       width: 68,
                       decoration: BoxDecoration(color: Colors.cyan),
                     ),
-                    SizedBox(height: 16,),
+                    SizedBox(
+                      height: 16,
+                    ),
                     SizedBox(
                       width: 280,
                       child: Text(
-                          "Ginza (銀座) is a district of Chūō, Tokyo, located south of Yaesu and Kyōbashi, west of Tsukiji, east of Yūrakuchō and Uchisaiwaichō, and north of Shinbashi. It is a popular upscale shopping area of Tokyo, with numerous internationally renowned department stores, boutiques, restaurants and coffeehouses located in its vicinity. It is considered one of the most expensive, elegant, and luxurious streets in the world.",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        letterSpacing: 1.5
+                        "Ginza (銀座) is a district of Chūō, Tokyo, located south of Yaesu and Kyōbashi, west of Tsukiji, east of Yūrakuchō and Uchisaiwaichō, and north of Shinbashi. It is a popular upscale shopping area of Tokyo, with numerous internationally renowned department stores, boutiques, restaurants and coffeehouses located in its vicinity. It is considered one of the most expensive, elegant, and luxurious streets in the world.",
+                        style:
+                            TextStyle(color: Colors.grey, letterSpacing: 1.5),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,),
                     )
                   ],
                 ),
