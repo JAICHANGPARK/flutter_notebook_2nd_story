@@ -212,7 +212,9 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 16),
                                               ),
-                                              SizedBox(height: 8,),
+                                              SizedBox(
+                                                height: 8,
+                                              ),
                                               Row(
                                                 children: <Widget>[
                                                   Icon(
@@ -220,7 +222,9 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                                     color: Colors.white,
                                                     size: 14,
                                                   ),
-                                                  SizedBox(width: 8,),
+                                                  SizedBox(
+                                                    width: 8,
+                                                  ),
                                                   Text(
                                                     "45 minutes",
                                                     style: TextStyle(
@@ -230,6 +234,25 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                                 ],
                                               )
                                             ],
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 8,
+                                          left: 8,
+                                          child: Container(
+                                            height: 48,
+                                            width: 48,
+                                            decoration: BoxDecoration(
+                                                color: Colors.redAccent,
+                                                image: DecorationImage(image:
+                                                NetworkImage(dreamwalkerImg),
+                                                fit: BoxFit.cover),
+                                                border: Border.all(
+                                                    color: Colors.white,
+                                                    width: 3),
+                                                borderRadius:
+                                                    BorderRadius.circular(9))
+                                            ,
                                           ),
                                         )
                                       ],
@@ -262,64 +285,298 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 8, right: 8, top: 8),
-                            width: 170,
+                            width: 150,
                             child: Column(
                               children: <Widget>[
                                 Expanded(
                                   flex: 8,
                                   child: Container(
+                                    margin: EdgeInsets.only(bottom: 8),
                                     decoration: BoxDecoration(
                                         color: Colors.blue,
                                         borderRadius: BorderRadius.circular(8)),
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Positioned(
+                                          top: 16,
+                                          left: 16,
+                                          right: 16,
+                                          child: Column(
+                                            children: <Widget>[
+                                              Text(
+                                                "Strength & Conditioning",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                              ),
+                                              SizedBox(
+                                                height: 8,
+                                              ),
+                                              Row(
+                                                children: <Widget>[
+                                                  Icon(
+                                                    Icons.access_time,
+                                                    color: Colors.white,
+                                                    size: 14,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 8,
+                                                  ),
+                                                  Text(
+                                                    "45 minutes",
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 8,
+                                          left: 8,
+                                          child: Container(
+                                            height: 48,
+                                            width: 48,
+                                            decoration: BoxDecoration(
+                                                color: Colors.redAccent,
+                                                image: DecorationImage(image:
+                                                NetworkImage(dreamwalkerImg),
+                                                    fit: BoxFit.cover),
+                                                border: Border.all(
+                                                    color: Colors.white,
+                                                    width: 3),
+                                                borderRadius:
+                                                BorderRadius.circular(9))
+                                            ,
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Expanded(
                                   flex: 1,
-                                  child: Placeholder(),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text(
+                                        "#2 Weight training",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        "4.8 / 5",
+                                        style: TextStyle(
+                                            color: Colors.redAccent,
+                                            fontSize: 12),
+                                      )
+                                    ],
+                                  ),
                                 )
                               ],
                             ),
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 8, right: 8, top: 8),
-                            width: 170,
+                            width: 150,
                             child: Column(
                               children: <Widget>[
                                 Expanded(
                                   flex: 8,
                                   child: Container(
+                                    margin: EdgeInsets.only(bottom: 8),
                                     decoration: BoxDecoration(
                                         color: Colors.blue,
                                         borderRadius: BorderRadius.circular(8)),
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Positioned(
+                                          top: 16,
+                                          left: 16,
+                                          right: 16,
+                                          child: Column(
+                                            children: <Widget>[
+                                              Text(
+                                                "Strength & Conditioning",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                              ),
+                                              SizedBox(
+                                                height: 8,
+                                              ),
+                                              Row(
+                                                children: <Widget>[
+                                                  Icon(
+                                                    Icons.access_time,
+                                                    color: Colors.white,
+                                                    size: 14,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 8,
+                                                  ),
+                                                  Text(
+                                                    "45 minutes",
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 8,
+                                          left: 8,
+                                          child: Container(
+                                            height: 48,
+                                            width: 48,
+                                            decoration: BoxDecoration(
+                                                color: Colors.redAccent,
+                                                image: DecorationImage(image:
+                                                NetworkImage(dreamwalkerImg),
+                                                    fit: BoxFit.cover),
+                                                border: Border.all(
+                                                    color: Colors.white,
+                                                    width: 3),
+                                                borderRadius:
+                                                BorderRadius.circular(9))
+                                            ,
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Expanded(
                                   flex: 1,
-                                  child: Placeholder(),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text(
+                                        "#2 Weight training",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        "4.8 / 5",
+                                        style: TextStyle(
+                                            color: Colors.redAccent,
+                                            fontSize: 12),
+                                      )
+                                    ],
+                                  ),
                                 )
                               ],
                             ),
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 8, right: 8, top: 8),
-                            width: 170,
+                            width: 150,
                             child: Column(
                               children: <Widget>[
                                 Expanded(
                                   flex: 8,
                                   child: Container(
+                                    margin: EdgeInsets.only(bottom: 8),
                                     decoration: BoxDecoration(
                                         color: Colors.blue,
                                         borderRadius: BorderRadius.circular(8)),
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Positioned(
+                                          top: 16,
+                                          left: 16,
+                                          right: 16,
+                                          child: Column(
+                                            children: <Widget>[
+                                              Text(
+                                                "Strength & Conditioning",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                              ),
+                                              SizedBox(
+                                                height: 8,
+                                              ),
+                                              Row(
+                                                children: <Widget>[
+                                                  Icon(
+                                                    Icons.access_time,
+                                                    color: Colors.white,
+                                                    size: 14,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 8,
+                                                  ),
+                                                  Text(
+                                                    "45 minutes",
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 8,
+                                          left: 8,
+                                          child: Container(
+                                            height: 48,
+                                            width: 48,
+                                            decoration: BoxDecoration(
+                                                color: Colors.redAccent,
+                                                image: DecorationImage(image:
+                                                NetworkImage(dreamwalkerImg),
+                                                    fit: BoxFit.cover),
+                                                border: Border.all(
+                                                    color: Colors.white,
+                                                    width: 3),
+                                                borderRadius:
+                                                BorderRadius.circular(9))
+                                            ,
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Expanded(
                                   flex: 1,
-                                  child: Placeholder(),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text(
+                                        "#2 Weight training",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        "4.8 / 5",
+                                        style: TextStyle(
+                                            color: Colors.redAccent,
+                                            fontSize: 12),
+                                      )
+                                    ],
+                                  ),
                                 )
                               ],
                             ),
-                          )
+                          ),
                         ],
                       ),
                       Container(),
