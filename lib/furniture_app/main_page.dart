@@ -105,62 +105,95 @@ class _HomePageState extends State<HomePage> {
                       scrollDirection: Axis.vertical,
                       shrinkWrap: true,
                       itemBuilder: (context, idx) {
-                        return Container(
-                          margin: EdgeInsets.only(bottom: 8),
-                          height: MediaQuery.of(context).size.height / 6.6,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 1,
-                                spreadRadius: 1
-                              )
-                            ]
-                          ),
-                          child: Stack(
-                            children: <Widget>[
-                              Positioned(
-                                top: 8,
-                                left: 8,
-                                bottom: 8,
-                                child: Container(
-                                  width: 100,
-                                  child: Placeholder(),
+                        return Stack(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(bottom: 8, right: 68),
+                              height: MediaQuery.of(context).size.height / 6.6,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.1),
+                                        blurRadius: 1,
+                                        spreadRadius: 1)
+                                  ]),
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    top: 8,
+                                    left: 8,
+                                    bottom: 8,
+                                    child: Container(
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  "https://cdn.pixabay.com/photo/2017/06/13/22/42/kitchen-2400367__340.jpg"),
+                                              fit: BoxFit.cover)),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 8,
+                                    left: 124,
+                                    bottom: 8,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("AUTUMN CHAIR",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16
+                                        ),),
+                                        Text("design by dreamwalker",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 11
+                                        ),),
+                                        Spacer(),
+                                        RichText(
+                                            text: TextSpan(
+                                                style: TextStyle(
+                                                  color: Color(0xffd78b2e),
+                                                ),
+                                                children: [
+                                              TextSpan(
+                                                  text: "129",
+                                                  style: TextStyle(
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.bold)),
+                                              TextSpan(
+                                                  text: "USB",
+                                                  style: TextStyle(
+                                                    fontSize: 12,
+                                                  )),
+                                            ]))
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Positioned(
+                              right: 48,
+                              bottom: 20,
+                              child: Container(
+                                height: 42,
+                                width: 42,
+                                decoration: BoxDecoration(
+                                  color: Color(0xffd78b2e),
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.arrow_forward,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
-                              Positioned(
-                                top: 8,
-                                left: 124,
-                                bottom: 8,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text("AUTUMN CHAIR"),
-                                    Text("design by dreamwalker"),
-                                    Spacer(),
-                                    RichText(
-                                        text: TextSpan(
-                                            style: TextStyle(
-                                              color: Color(0xffd78b2e),
-                                            ),
-                                            children: [
-                                              TextSpan(text: "129",style: TextStyle(
-                                                  fontSize: 24,
-                                                  fontWeight: FontWeight.bold
-                                              )),
-                                              TextSpan(text: "USB", style: TextStyle(
-                                                fontSize: 12,
-
-                                              )),
-                                            ]
-                                        )
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
+                            )
+                          ],
                         );
                       }),
                 )
@@ -172,21 +205,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
