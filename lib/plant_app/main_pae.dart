@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
 
 class PlantsApp extends StatelessWidget {
   @override
@@ -60,6 +61,122 @@ class _MainPageState extends State<MainPage> {
       ),
       body: Stack(
         children: <Widget>[
+          Positioned(
+            bottom: 16,
+            left: 24,
+            right: 24,
+            child: Container(
+              height: 116,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "Added Friends",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    "5 total",
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                  ),
+                  Spacer(),
+                  Container(
+                    height: 60,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: <Widget>[
+                        Positioned(
+                          top: 4,
+                          left: 0,
+                          child: Container(
+                            height: 48,
+                            width: 48,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.green, width: 3),
+                              image: DecorationImage(
+                                  image: NetworkImage(dreamwalkerImg)),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 4,
+                          left: 32,
+                          child: Container(
+                            height: 48,
+                            width: 48,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border:
+                                    Border.all(color: Colors.green, width: 3),
+                                image: DecorationImage(
+                                    image: NetworkImage(dreamwalkerImg))),
+                          ),
+                        ),
+                        Positioned(
+                          top: 4,
+                          left: 64,
+                          child: Container(
+                            height: 48,
+                            width: 48,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.green, width: 3),
+                              image: DecorationImage(
+                                  image: NetworkImage(dreamwalkerImg)),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 18,
+                          left: 118,
+                          child: Container(
+                            child: Text("+2 More",
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 16,
+                          top: 4,
+                          child: Row(
+                            children: <Widget>[
+                              Text('Add New',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey,
+                              ),),
+                              SizedBox(width: 8,),
+                              Container(
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.blueGrey.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(16)
+
+                                ),
+                                child: Center(
+                                  child: Icon(Icons.add,
+                                  color: Colors.green,),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
           Positioned(
             top: 0,
             left: 0,
