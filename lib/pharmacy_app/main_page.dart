@@ -89,6 +89,41 @@ class _MapPageState extends State<MapPage> {
                               color: Colors.black.withOpacity(0.15),
                               blurRadius: 2)
                         ]),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          width: 120,
+                          decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.circular(16),
+                            image: DecorationImage(image:
+                            NetworkImage("https://cdn.pixabay.com/photo/2016/02/19/11/40/coffee-shop-1209863_960_720.jpg"),
+                            fit: BoxFit.cover)
+                          ),
+                        ),
+                        SizedBox(width: 16,),
+                        SizedBox(
+                          width: 170,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text("Life Pharmacy", style: TextStyle(
+                                fontWeight: FontWeight.bold,
+
+                              ),),
+                              Text("4-chōme-32-7 Jingūmae, Shibuya City, Tōkyō-to 150-0001",
+                              style: TextStyle(
+                                fontSize: 10
+                              ),),
+                              Text("Open", style: TextStyle(
+                                color: Colors.indigo
+                              ),)
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   );
                 },
               ),
@@ -99,3 +134,34 @@ class _MapPageState extends State<MapPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
