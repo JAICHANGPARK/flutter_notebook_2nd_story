@@ -127,8 +127,19 @@ class _BookingPageState extends State<BookingPage> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
-                                  Text(items[index].hours[idx].date),
-                                  Text(items[index].hours[idx].time),
+                                  Text(
+                                    items[index].hours[idx].date,
+                                    style: TextStyle(
+                                      color: Colors.indigo,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  Text(
+                                    items[index].hours[idx].time,
+                                    style: TextStyle(
+                                        color: Colors.indigo,
+                                        fontWeight: FontWeight.w500),
+                                  ),
                                 ],
                               ),
                             );
@@ -142,15 +153,38 @@ class _BookingPageState extends State<BookingPage> {
                           SizedBox(
                             width: 4,
                           ),
-                          Text("floor"),
-                          Text(items[index].floor.toString()),
+                          Text(
+                            "floors",
+                            style: TextStyle(
+                              color: Colors.indigo,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            items[index].floor.toString(),
+                            style: TextStyle(
+                                color: Colors.red, fontWeight: FontWeight.bold),
+                          ),
                           Spacer(),
                           Icon(Icons.room_service),
                           SizedBox(
                             width: 4,
                           ),
-                          Text("meeting rooms"),
-                          Text(items[index].rooms.toString()),
+                          Text(
+                            "meeting rooms",
+                            style: TextStyle(
+                              color: Colors.indigo,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            items[index].rooms.toString(),
+                            style: TextStyle(
+                                color: Colors.red, fontWeight: FontWeight.bold),
+                          ),
                         ],
                       ),
                       Container(
