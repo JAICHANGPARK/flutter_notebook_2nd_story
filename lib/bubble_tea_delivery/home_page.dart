@@ -91,10 +91,130 @@ class _HomePageState extends State<HomePage> {
             right: 0,
             child: Container(
               height: 280,
-              decoration: BoxDecoration(
-                color: Colors.red
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    width: 200,
+                    margin: EdgeInsets.only(right: 16, bottom: 4, left: 4, top: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(48)
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 5,
+                        )
+                      ]
+                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned(
+                      right: -38,
+                      top: -60,
+                      child: Container(
+                        height: 160,
+                        width: 160,
+                        decoration: BoxDecoration(
+                          color: Colors.orange.withOpacity(0.2),
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    ),
+                        Positioned(
+                          right: 8,
+                          top: 8,
+                          child: Text("\$5.90",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16
+                          ),),
+                        ),
+                        Positioned(
+                          top: 16,
+                          left: 16,
+                          right: 16,
+                          child: Container(
+                            height: 180,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: 
+                              NetworkImage("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bubble_Tea.png/200px-Bubble_Tea.png"))
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          top: 180,
+                          child: Container(
+                            height: 20,
+                            width: 42,
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                            ),
+                            child: Center(
+                              child: Text("NEW!",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                              ),),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          right: 0,
+                          top: 210,
+                          bottom: 0,
+                          child: Container(
+                            color: Colors.white70,
+                            padding: EdgeInsets.all(8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("Chewy tea".toUpperCase(),
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.grey,
+                                ),),
+                                Text("Taro Bubble \nMilk Tea"),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 16,
+                          right: 16,
+                          child: InkWell(
+                            onTap: (){
+                              
+                            },
+                            child: Container(
+                              height: 38,
+                              width: 38,
+                              decoration: BoxDecoration(
+                                color: Colors.green,
+                              shape: BoxShape.circle,),
+                              child: Center(
+                                child: Icon(Icons.add, color: Colors.white,),
+                              ),
+                            ),
+                          )
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 200,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                    ),
+                  )
+                ],
               ),
-              child: ListView(),
             ),
           )
         ],
