@@ -16,6 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool clicked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,26 +51,33 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       width: 16,
                     ),
-                    Container(
-                      height: 52,
-                      width: 52,
-                      decoration: BoxDecoration(
-                          color: Colors.green,
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Colors.blueGrey, width: 5)),
-                      child: Stack(
-                        children: <Widget>[
-                          Positioned(
-                            top: 0,
-                            right: 0,
-                            child: Container(
-                              height: 16,
-                              width: 16,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle, color: Colors.red),
-                            ),
-                          )
-                        ],
+                    InkWell(
+                      onTap: (){
+                        setState(() {
+                          clicked = !clicked;
+                        });
+                      },
+                      child: Container(
+                        height: 52,
+                        width: 52,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.blueGrey, width: 5)),
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              top: 0,
+                              right: 0,
+                              child: Container(
+                                height: 16,
+                                width: 16,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle, color: Colors.red),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
@@ -572,9 +580,48 @@ class _HomePageState extends State<HomePage> {
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
-                          return Container(
-                            height: 80,
-                            decoration: BoxDecoration(color: Colors.blueGrey),
+                          return InkWell(
+                            onTap: (){
+                              setState(() {
+                                clicked = !clicked;
+                              });
+                            },
+                            child: Container(
+                              height: 80,
+                              padding: EdgeInsets.symmetric(horizontal: 24),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Container(
+                                    height: 64,
+                                    width: 64,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        image: DecorationImage(
+                                            image: NetworkImage(
+                                                "https://i.pinimg.com/originals/fa/fd/0f/fafd0f9c7daef75d21be2a8aa6ea4afe.jpg"),
+                                            fit: BoxFit.cover)),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text(
+                                    "Honey Milk Tea",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16),
+                                  ),
+                                  Spacer(),
+                                  Text(
+                                    "\$4.90",
+                                    style: TextStyle(
+                                        color: Colors.green,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16),
+                                  )
+                                ],
+                              ),
+                            ),
                           );
                         },
                         separatorBuilder: (context, index) {
@@ -587,6 +634,17 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+          ),
+          AnimatedPositioned(
+            top: clicked ? 100:  MediaQuery.of(context).size.height,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.blue
+              ),
+            ), duration: Duration(seconds: 1),
           )
         ],
       ),
