@@ -17,6 +17,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool clicked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                       width: 16,
                     ),
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         setState(() {
                           clicked = !clicked;
                         });
@@ -63,7 +64,8 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                             color: Colors.green,
                             shape: BoxShape.circle,
-                            border: Border.all(color: Colors.blueGrey, width: 5)),
+                            border:
+                                Border.all(color: Colors.blueGrey, width: 5)),
                         child: Stack(
                           children: <Widget>[
                             Positioned(
@@ -581,7 +583,7 @@ class _HomePageState extends State<HomePage> {
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
                           return InkWell(
-                            onTap: (){
+                            onTap: () {
                               setState(() {
                                 clicked = !clicked;
                               });
@@ -590,7 +592,8 @@ class _HomePageState extends State<HomePage> {
                               height: 80,
                               padding: EdgeInsets.symmetric(horizontal: 24),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Container(
                                     height: 64,
@@ -636,32 +639,128 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           AnimatedPositioned(
-            top: clicked ? 100:  MediaQuery.of(context).size.height,
+            top: clicked ? 100 : MediaQuery.of(context).size.height,
             left: 0,
             right: 0,
             bottom: 0,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.blue
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(64),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 3,
+                    )
+                  ]),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    height: 240,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(64),
+                        )),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned(
+                          top: 16,
+                          right: 16,
+                          child: IconButton(
+                              icon: Icon(Icons.clear),
+                              onPressed: () {
+                                setState(() {
+                                  clicked = !clicked;
+                                });
+                              }),
+                        ),
+                        Positioned(
+                          top: 24,
+                          left: 36,
+                          child: Container(
+                            height: 160,
+                            width: 160,
+                            decoration: BoxDecoration(
+                                color: Colors.orangeAccent.withOpacity(0.5),
+                                shape: BoxShape.circle),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: -32,
+                          left: 38,
+                          child: Container(
+                            height: 180,
+                            width: 160,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bubble_Tea.png/200px-Bubble_Tea.png"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Positioned(
+                          top: 35,
+                          right: 32,
+                          child: Container(
+                            height: 200,
+                            width: 160,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                  height: 24,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                    color: Colors.green,
+                                  ),
+                                  child: Center(
+                                    child: Text("New!"),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text(
+                                  "CHEWY TEA",
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text(
+                                  "Taro Bubble Milk Tea",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 24),
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                Text(
+                                  "\$5 90",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
-            ), duration: Duration(seconds: 1),
+            ),
+            duration: Duration(milliseconds: 500),
           )
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
