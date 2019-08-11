@@ -17,6 +17,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool clicked = false;
+  double sValue = 5.0;
 
   @override
   Widget build(BuildContext context) {
@@ -645,7 +646,7 @@ class _HomePageState extends State<HomePage> {
             bottom: 0,
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(64),
                   ),
@@ -750,10 +751,54 @@ class _HomePageState extends State<HomePage> {
                               ],
                             ),
                           ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 100,
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.only( top: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.orangeAccent.withOpacity(0.1),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16),
+                          child: Text("Sugar level".toUpperCase()),
+                        ),
+                        Slider(
+                          activeColor: Colors.green,
+                          divisions: 4,
+                          max: 10,
+                          min: 0,
+                          onChanged: (double value) {
+                            setState(() {
+                              sValue = value;
+                            });
+                          },
+                          value: sValue,
                         )
                       ],
                     ),
-                  )
+                  ),
+                  Divider(
+                    color: Colors.black,
+                    height: 0,
+                  ),
+                  Container(
+                    height: 160,
+                    decoration: BoxDecoration(
+                        color: Colors.orangeAccent.withOpacity(0.1)),
+                  ),
+                  Container(
+                    height: 136,
+                    decoration: BoxDecoration(
+                        color: Colors.green),
+                  ),
                 ],
               ),
             ),
