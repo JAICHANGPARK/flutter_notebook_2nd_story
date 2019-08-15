@@ -78,11 +78,11 @@ class _MainPageState extends State<MainPage> {
                     color: Colors.teal,
                   ),
                   InkWell(
-                    onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context){
-                          return MapPage();
-                        }));
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return MapPage();
+                      }));
                     },
                     child: Text(
                       "ASAP -- Prince George's Park",
@@ -161,9 +161,10 @@ class _MainPageState extends State<MainPage> {
             ),
             Padding(
               padding: EdgeInsets.only(left: 16, top: 16, bottom: 8),
-              child: Text("Recent",style: TextStyle(
-                color: Colors.grey
-              ),),
+              child: Text(
+                "Recent",
+                style: TextStyle(color: Colors.grey),
+              ),
             ),
             Container(
               height: 360,
@@ -171,56 +172,114 @@ class _MainPageState extends State<MainPage> {
                 padding: EdgeInsets.zero,
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
-                itemBuilder: (context, index){
-                return Container(
-                  height: 280,
-                  margin: EdgeInsets.all(16),
-                  width: MediaQuery.of(context).size.width,
-                  child: Placeholder(),
-                );
-              },
-              itemCount: 3,),
+                itemBuilder: (context, index) {
+                  return Container(
+                    height: 280,
+                    margin: EdgeInsets.all(16),
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(16),
+                                topRight: Radius.circular(16)
+                              ),
+                              image: DecorationImage(image:
+                              NetworkImage("https://cdn.pixabay.com/photo/2018/02/22/17/09/barber-shop-3173422__340.jpg"),
+                              fit: BoxFit.cover)
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            padding: EdgeInsets.only(left: 16, top: 8, right: 16),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("Rogue and Beyond"),
+                                Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.location_on,
+                                      color: Colors.grey,
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Text(
+                                      "174A Telok ayer St",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 34,
+                                      width: 120,
+                                      decoration: BoxDecoration(
+                                          color: Colors.greenAccent
+                                              .withOpacity(0.2),
+                                          borderRadius:
+                                              BorderRadius.circular(16)),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.timer,
+                                            color: Colors.teal,
+                                          ),
+                                          Text(
+                                            "11:00-22:00",
+                                            style:
+                                                TextStyle(color: Colors.teal),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(width: 16,),
+                                    Container(
+                                        height: 34,
+                                        width: 64,
+                                        decoration: BoxDecoration(
+                                            color: Colors.greenAccent
+                                                .withOpacity(0.2),
+                                            borderRadius:
+                                                BorderRadius.circular(16)),
+                                        child: Center(
+                                          child: Text(
+                                            "4.5",
+                                            style: TextStyle(color: Colors.teal),
+                                          ),
+                                        )),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                },
+                itemCount: 3,
+              ),
             )
-
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
