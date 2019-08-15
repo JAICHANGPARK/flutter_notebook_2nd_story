@@ -90,6 +90,7 @@ class _MainPageState extends State<MainPage> {
             ),
             Container(
               height: 240,
+              padding: EdgeInsets.only(left: 16),
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                   itemCount: items.length,
