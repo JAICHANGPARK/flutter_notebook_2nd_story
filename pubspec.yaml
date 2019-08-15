@@ -33,6 +33,7 @@ dependencies:
 
   google_map_location_picker: ^1.0.5+1
   avatar_glow: ^1.0.0
+  google_maps_flutter: ^0.5.20+3
 
 dev_dependencies:
   flutter_test:

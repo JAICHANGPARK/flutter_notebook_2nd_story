@@ -63,7 +63,7 @@ packages:
       name: camera
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.2+2"
+    version: "0.5.3+1"
   charcode:
     dependency: transitive
     description:
@@ -91,7 +91,7 @@ packages:
       name: crypto
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.1+1"
   csslib:
     dependency: transitive
     description:
@@ -141,7 +141,7 @@ packages:
       name: geolocator
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.1.1+1"
+    version: "5.1.2"
   glob:
     dependency: transitive
     description:
@@ -162,14 +162,14 @@ packages:
       name: google_map_location_picker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.5+1"
+    version: "1.0.5+2"
   google_maps_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: google_maps_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.20+1"
+    version: "0.5.20+3"
   html:
     dependency: transitive
     description:

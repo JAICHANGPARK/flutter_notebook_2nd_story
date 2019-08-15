@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/hair_salons/map_page.dart';
 
 class HairSalonsApp extends StatelessWidget {
   @override
@@ -47,6 +48,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(
               height: 64,
@@ -75,11 +77,19 @@ class _MainPageState extends State<MainPage> {
                     Icons.location_on,
                     color: Colors.teal,
                   ),
-                  Text(
-                    "ASAP -- Prince George's Park",
-                    style: TextStyle(
-                      color: Colors.teal,
-                      fontWeight: FontWeight.bold,
+                  InkWell(
+                    onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context){
+                          return MapPage();
+                        }));
+                    },
+                    child: Text(
+                      "ASAP -- Prince George's Park",
+                      style: TextStyle(
+                        color: Colors.teal,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   )
                 ],
@@ -148,10 +158,69 @@ class _MainPageState extends State<MainPage> {
                       ),
                     );
                   }),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 16, top: 16, bottom: 8),
+              child: Text("Recent",style: TextStyle(
+                color: Colors.grey
+              ),),
+            ),
+            Container(
+              height: 360,
+              child: ListView.builder(
+                padding: EdgeInsets.zero,
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                itemBuilder: (context, index){
+                return Container(
+                  height: 280,
+                  margin: EdgeInsets.all(16),
+                  width: MediaQuery.of(context).size.width,
+                  child: Placeholder(),
+                );
+              },
+              itemCount: 3,),
             )
+
           ],
         ),
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
