@@ -209,62 +209,76 @@ class _MainPageState extends State<MainPage> {
                             Container(
                               width: 140,
                               decoration: BoxDecoration(
-                                color: Colors.blueGrey,
-                                borderRadius: BorderRadius.circular(16),
-                                image: DecorationImage(image:
-                                NetworkImage("https://cdn.pixabay.com/photo/2016/11/23/18/05/blurry-1854113_960_720.jpg"),
-                                fit: BoxFit.cover)
-                              ),
+                                  color: Colors.blueGrey,
+                                  borderRadius: BorderRadius.circular(16),
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2016/11/23/18/05/blurry-1854113_960_720.jpg"),
+                                      fit: BoxFit.cover)),
                             ),
                             Container(
                               padding: EdgeInsets.only(left: 16),
-                              width:MediaQuery.of(context).size.width - 180,
+                              width: MediaQuery.of(context).size.width - 180,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Row(
                                     children: <Widget>[
-                                      Text("03",style: TextStyle(
-                                          fontWeight: FontWeight.bold
-                                      ),),
-                                      SizedBox(width: 8,),
-                                      Text("AGO", style: TextStyle(
-                                        color: Colors.red,
-                                        fontWeight: FontWeight.bold
-                                      ),),
+                                      Text(
+                                        "03",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        "AGO",
+                                        style: TextStyle(
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.bold),
+                                      ),
                                       Spacer(),
                                       IconButton(
                                         padding: EdgeInsets.zero,
-                                        icon: Icon(Icons.favorite,
-                                      color: Colors.red,),
-                                        onPressed: (){},
+                                        icon: Icon(
+                                          Icons.favorite,
+                                          color: Colors.red,
+                                        ),
+                                        onPressed: () {},
                                       ),
                                       IconButton(
                                         padding: EdgeInsets.zero,
                                         icon: Icon(Icons.share),
-                                        onPressed: (){},
+                                        onPressed: () {},
                                       )
                                     ],
                                   ),
-                                  Text("James Levin \nRythms of Bossano...",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold
-                                  ),),
+                                  Text(
+                                    "James Levin \nRythms of Bossano...",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                   SizedBox(
                                     height: 16,
                                   ),
                                   Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
-                                      Icon(Icons.location_on, color: Colors.red,),
+                                      Icon(
+                                        Icons.location_on,
+                                        color: Colors.red,
+                                      ),
                                       SizedBox(
                                         width: 4,
                                       ),
-                                      Text("New York,", style: TextStyle(
-                                        color: Colors.grey
-                                      ),)
+                                      Text(
+                                        "New York,",
+                                        style: TextStyle(color: Colors.grey),
+                                      )
                                     ],
                                   )
                                 ],
