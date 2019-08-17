@@ -20,15 +20,20 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 16,),
+            SizedBox(
+              height: 16,
+            ),
             SafeArea(
               top: true,
               left: true,
               right: true,
               child: Container(
                 height: 54,
-                padding: EdgeInsets.only(left: 8, ),
+                padding: EdgeInsets.only(
+                  left: 8,
+                ),
                 child: Row(
                   children: <Widget>[
                     Expanded(
@@ -36,21 +41,21 @@ class _MainPageState extends State<MainPage> {
                       child: Container(
                         child: TextField(
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.search,
-                            color: Colors.black,),
-                            hintText: "Find events",
-                            hintStyle: TextStyle(
-                              fontWeight: FontWeight.bold
-                            ),
-                            border: InputBorder.none
-                          ),
+                              prefixIcon: Icon(
+                                Icons.search,
+                                color: Colors.black,
+                              ),
+                              hintText: "Find events",
+                              hintStyle: TextStyle(fontWeight: FontWeight.bold),
+                              border: InputBorder.none),
                         ),
                       ),
                     ),
                     Expanded(
                       flex: 2,
-                      child: IconButton(icon:
-                          Icon(Icons.notifications_none), onPressed: (){}),
+                      child: IconButton(
+                          icon: Icon(Icons.notifications_none),
+                          onPressed: () {}),
                     )
                   ],
                 ),
@@ -61,14 +66,14 @@ class _MainPageState extends State<MainPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Featured near you",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16
-                  ),),
-                  SizedBox(height: 16,),
+                  Text(
+                    "Featured near you",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
                   Container(
-
                     height: 280,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
@@ -84,12 +89,12 @@ class _MainPageState extends State<MainPage> {
                           child: Container(
                             height: 180,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              color: Colors.red,
-                              image: DecorationImage(image:
-                              NetworkImage("https://cdn.pixabay.com/photo/2016/11/29/06/17/audience-1867754_960_720.jpg"),
-                              fit: BoxFit.cover)
-                            ),
+                                borderRadius: BorderRadius.circular(16),
+                                color: Colors.red,
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2016/11/29/06/17/audience-1867754_960_720.jpg"),
+                                    fit: BoxFit.cover)),
                           ),
                         ),
                         Positioned(
@@ -101,18 +106,19 @@ class _MainPageState extends State<MainPage> {
                                 height: 32,
                                 width: 32,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.5),
-                                      blurRadius: 3,
-                                      spreadRadius: 1
-                                    )
-                                  ]
-                                ),
+                                    color: Colors.white,
+                                    shape: BoxShape.circle,
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.5),
+                                          blurRadius: 3,
+                                          spreadRadius: 1)
+                                    ]),
                                 child: Center(
-                                  child: Icon(Icons.favorite_border, size: 18,),
+                                  child: Icon(
+                                    Icons.favorite_border,
+                                    size: 18,
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -128,12 +134,13 @@ class _MainPageState extends State<MainPage> {
                                       BoxShadow(
                                           color: Colors.black.withOpacity(0.5),
                                           blurRadius: 3,
-                                          spreadRadius: 1
-                                      )
-                                    ]
-                                ),
+                                          spreadRadius: 1)
+                                    ]),
                                 child: Center(
-                                  child:Icon(Icons.share, size: 18,),
+                                  child: Icon(
+                                    Icons.share,
+                                    size: 18,
+                                  ),
                                 ),
                               )
                             ],
@@ -149,20 +156,26 @@ class _MainPageState extends State<MainPage> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  Text("AGO", style: TextStyle(
-                                    color: Colors.red,
-                                  ),),
-                                  Text("03", style: TextStyle(
-                                    fontSize: 18
-                                  ),)
+                                  Text(
+                                    "AGO",
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                  Text(
+                                    "03",
+                                    style: TextStyle(fontSize: 18),
+                                  )
                                 ],
                               ),
-                              SizedBox(width: 16,),
-                              Text("Arthur McCallen\nJazz Night",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18
-                              ),),
+                              SizedBox(
+                                width: 16,
+                              ),
+                              Text(
+                                "Arthur McCallen\nJazz Night",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
                             ],
                           ),
                         )
@@ -171,6 +184,102 @@ class _MainPageState extends State<MainPage> {
                   )
                 ],
               ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: Text(
+                    "This month at Barga",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                ),
+                Container(
+                  height: 360,
+                  padding: EdgeInsets.all(16),
+                  child: ListView.builder(
+                    padding: EdgeInsets.zero,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        height: 140,
+                        margin: EdgeInsets.only(bottom: 16),
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              width: 140,
+                              decoration: BoxDecoration(
+                                color: Colors.blueGrey,
+                                borderRadius: BorderRadius.circular(16),
+                                image: DecorationImage(image:
+                                NetworkImage("https://cdn.pixabay.com/photo/2016/11/23/18/05/blurry-1854113_960_720.jpg"),
+                                fit: BoxFit.cover)
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 16),
+                              width:MediaQuery.of(context).size.width - 180,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Text("03",style: TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      ),),
+                                      SizedBox(width: 8,),
+                                      Text("AGO", style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold
+                                      ),),
+                                      Spacer(),
+                                      IconButton(
+                                        padding: EdgeInsets.zero,
+                                        icon: Icon(Icons.favorite,
+                                      color: Colors.red,),
+                                        onPressed: (){},
+                                      ),
+                                      IconButton(
+                                        padding: EdgeInsets.zero,
+                                        icon: Icon(Icons.share),
+                                        onPressed: (){},
+                                      )
+                                    ],
+                                  ),
+                                  Text("James Levin \nRythms of Bossano...",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold
+                                  ),),
+                                  SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      Icon(Icons.location_on, color: Colors.red,),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text("New York,", style: TextStyle(
+                                        color: Colors.grey
+                                      ),)
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                    itemCount: 4,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                  ),
+                )
+              ],
             )
           ],
         ),
@@ -178,20 +287,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
