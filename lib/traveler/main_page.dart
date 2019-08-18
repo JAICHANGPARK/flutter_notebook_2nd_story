@@ -42,7 +42,9 @@ class _MainPageState extends State<MainPage> {
                       Spacer(),
                       Icon(Icons.search),
                       SizedBox(width: 16,),
-                      CircleAvatar()
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(dreamwalkerImg),
+                      )
                     ],
                   ),
                   Text("Finding your travel experience",
