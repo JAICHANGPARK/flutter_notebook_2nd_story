@@ -15,7 +15,14 @@ class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
+  TabController _tabController;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -151,12 +158,26 @@ class _MainPageState extends State<MainPage> {
           //TODO Tabbar
           Expanded(
             flex: 1,
-            child: Placeholder(),
+            child: TabBar(
+                controller: _tabController,
+                tabs: [
+                  Tab(),
+                  Tab(),
+                  Tab(),
+                  Tab(),
+                ]),
           ),
           //TODO Tabbar View
           Expanded(
             flex: 3,
-            child: Placeholder(),
+            child: TabBarView(
+            controller: _tabController,children: [
+              Container(),
+              Container(),
+              Container(),
+              Container(),
+
+            ]),
           )
         ],
       ),
