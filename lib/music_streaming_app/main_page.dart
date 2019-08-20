@@ -95,31 +95,39 @@ class _MainPageState extends State<MainPage> {
                   ),
                   Expanded(
                     flex: 9,
-                    child: Row(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text("Kids See Ghosts",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold
-                              ),),
-                              SizedBox(height: 4,),
-                              Text("Kanye West and Kid Cudi",
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text("Kids See Ghosts",
                                 style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 12,
-
-                                ),)
-                            ],
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                SizedBox(height: 4,),
+                                Text("Kanye West and Kid Cudi",
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12,
+                                  ),)
+                              ],
+                            ),
                           ),
-                        )
-                      ],
+                          Spacer(),
+                          FloatingActionButton(
+                            child: Icon(Icons.pause, color: Colors.white,),
+                            backgroundColor: Colors.black,
+                            elevation: 0, onPressed: () {},
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
