@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
 
 class MusicStreamingApp extends StatelessWidget {
   @override
@@ -21,17 +22,107 @@ class _MainPageState extends State<MainPage> {
       body: Stack(
         children: <Widget>[
           Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 3,
+                  child: ListView.builder(itemBuilder: (context,index){
+                    return Container(
+                      height: 62,
+                      width: 62,
+                      padding: EdgeInsets.all(4),
+                      margin: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.black,
+                        width: 2)
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.red,
+                        ),
+                        child: CircleAvatar(
+                        ),
+                      ),
+                    );
+                  },
+                  itemCount: 20,
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,),
+                ),
+                VerticalDivider(
+                  width: 0,
+                  thickness: 2,
+                  color: Colors.black.withOpacity(0.2),
+                ),
+                Expanded(
+                  flex: 9,
+                  child: Container(),
+                )
+              ],
+            ),
+          ),
+          Positioned(
             bottom: 0,
             left: 0,
             right: 0,
             child: Container(
-              height: 180,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(color: Colors.black.withOpacity(0.2),
-                  blurRadius: 1, spreadRadius: 2)
-                ]
+              height: 120,
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 1,
+                    spreadRadius: 2)
+              ]),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 3,
+                    child: Center(
+                      child: Icon(Icons.menu),
+                    ),
+                  ),
+                  VerticalDivider(
+                    width: 0,
+                    thickness: 2,
+                    color: Colors.black.withOpacity(0.2),
+                  ),
+                  Expanded(
+                    flex: 9,
+                    child: Row(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text("Kids See Ghosts",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold
+                              ),),
+                              SizedBox(height: 4,),
+                              Text("Kanye West and Kid Cudi",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 12,
+
+                                ),)
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
           )
