@@ -112,9 +112,11 @@ class _MainPageState extends State<MainPage> {
                                         decoration: BoxDecoration(
                                             color: Colors.pink,
                                             boxShadow: [
-                                              BoxShadow(color: Colors.black.withOpacity(0.2),
-                                              blurRadius: 4,
-                                              spreadRadius: 3)
+                                              BoxShadow(
+                                                  color: Colors.black
+                                                      .withOpacity(0.2),
+                                                  blurRadius: 4,
+                                                  spreadRadius: 3)
                                             ],
                                             image: DecorationImage(
                                                 image: NetworkImage(""
@@ -136,11 +138,14 @@ class _MainPageState extends State<MainPage> {
                                           ),
                                           FloatingActionButton(
                                             heroTag: "play",
-                                            child: Icon(Icons.play_arrow,
-                                            color: Colors.black,),
+                                            child: Icon(
+                                              Icons.play_arrow,
+                                              color: Colors.black,
+                                            ),
                                             onPressed: () {},
                                             elevation: 0,
-                                            backgroundColor: Colors.grey.withOpacity(0.4),
+                                            backgroundColor:
+                                                Colors.grey.withOpacity(0.4),
                                           ),
                                           IconButton(
                                             icon: Icon(Icons.favorite_border),
@@ -179,8 +184,79 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                           Container(
-                            height: 280,
-                            decoration: BoxDecoration(color: Colors.blueGrey),
+                            height: 320,
+                            padding: EdgeInsets.only(left: 16, right: 16),
+                            child: Column(
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    Text(
+                                      "History",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 16),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      "Show all",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 14),
+                                    ),
+                                    Icon(
+                                      Icons.keyboard_arrow_right,
+                                      size: 14,
+                                    )
+                                  ],
+                                ),
+                                ListTile(
+                                  contentPadding: EdgeInsets.zero,
+                                  title: Text("Solastalgia",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w300,
+                                        fontSize: 21
+                                    ),),
+                                  subtitle: Text("Missy Higgins"),
+                                  trailing: Icon(Icons.more_vert),
+                                ),
+                                ListTile(
+                                  contentPadding: EdgeInsets.zero,
+                                  title: Text("Solastalgia",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w300,
+                                        fontSize: 21
+                                    ),),
+                                  subtitle: Text("Missy Higgins"),
+                                  trailing: Icon(Icons.more_vert),
+                                ),
+                                ListTile(
+                                  contentPadding: EdgeInsets.zero,
+                                  title: Text("Solastalgia",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w300,
+                                        fontSize: 21
+                                    ),),
+                                  subtitle: Text("Missy Higgins"),
+                                  trailing: Icon(Icons.more_vert),
+                                ),
+                                ListTile(
+                                  contentPadding: EdgeInsets.zero,
+                                  title: Text("Solastalgia",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w300,
+                                        fontSize: 21
+                                    ),),
+                                  subtitle: Text("Missy Higgins"),
+                                  trailing: Icon(Icons.more_vert),
+                                ),
+                              ],
+                            ),
                           ),
                           Divider(
                             color: Colors.grey,
@@ -226,7 +302,9 @@ class _MainPageState extends State<MainPage> {
                                         decoration: BoxDecoration(
                                             color: Colors.pink,
                                             boxShadow: [
-                                              BoxShadow(color: Colors.black.withOpacity(0.2),
+                                              BoxShadow(
+                                                  color: Colors.black
+                                                      .withOpacity(0.2),
                                                   blurRadius: 4,
                                                   spreadRadius: 3)
                                             ],
@@ -235,14 +313,14 @@ class _MainPageState extends State<MainPage> {
                                                     "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Kids_See_Ghost_Cover.jpg/220px-Kids_See_Ghost_Cover.jpg"),
                                                 fit: BoxFit.cover),
                                             borderRadius:
-                                            BorderRadius.circular(16)),
+                                                BorderRadius.circular(16)),
                                       ),
                                       SizedBox(
                                         width: 16,
                                       ),
                                       Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
                                           IconButton(
                                             icon: Icon(Icons.add),
@@ -250,11 +328,14 @@ class _MainPageState extends State<MainPage> {
                                           ),
                                           FloatingActionButton(
                                             heroTag: "play",
-                                            child: Icon(Icons.play_arrow,
-                                              color: Colors.black,),
+                                            child: Icon(
+                                              Icons.play_arrow,
+                                              color: Colors.black,
+                                            ),
                                             onPressed: () {},
                                             elevation: 0,
-                                            backgroundColor: Colors.grey.withOpacity(0.4),
+                                            backgroundColor:
+                                                Colors.grey.withOpacity(0.4),
                                           ),
                                           IconButton(
                                             icon: Icon(Icons.favorite_border),
