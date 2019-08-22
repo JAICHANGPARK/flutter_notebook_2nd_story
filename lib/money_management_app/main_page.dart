@@ -68,12 +68,35 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              height: 120,
-              margin: EdgeInsets.all(16),
+              height: 100,
+              margin: EdgeInsets.fromLTRB(16,8,16,8),
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   color: Colors.blueAccent
+              ),
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("Account balance", style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                  ),),
+                  SizedBox(height: 8,),
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(text: "\$256.51",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold
+                        )),
 
+                        TextSpan(text: "USD")
+                      ]
+                    )
+
+                  )
+                ],
               ),
             )
           ],
