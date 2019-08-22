@@ -18,6 +18,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
+    var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -32,7 +33,7 @@ class _MainPageState extends State<MainPage> {
             Container(
               height: 80,
               padding: EdgeInsets.only(left: 16, right: 16),
-              width: MediaQuery.of(context).size.width,
+              width: deviceWidth,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +71,7 @@ class _MainPageState extends State<MainPage> {
             Container(
               height: 100,
               margin: EdgeInsets.fromLTRB(16,8,16,8),
-              width: MediaQuery.of(context).size.width,
+              width: deviceWidth,
               decoration: BoxDecoration(
                   color: Colors.blueAccent
               ),
@@ -90,11 +91,82 @@ class _MainPageState extends State<MainPage> {
                           fontSize: 32,
                           fontWeight: FontWeight.bold
                         )),
-
                         TextSpan(text: "USD")
                       ]
                     )
-
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: 128,
+              width: deviceWidth,
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("Send Funds"),
+                  SizedBox(height: 8,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Container(
+                        width: deviceWidth/6,
+                        height:deviceWidth/6 ,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.amber,
+                          image: DecorationImage(
+                            image: NetworkImage(dreamwalkerImg)
+                          )
+                        ),
+                      ),
+                      Container(
+                        width: deviceWidth/6,
+                        height:deviceWidth/6 ,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.amber,
+                            image: DecorationImage(
+                                image: NetworkImage(dreamwalkerImg)
+                            )
+                        ),
+                      ),
+                      Container(
+                        width: deviceWidth/6,
+                        height:deviceWidth/6 ,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.amber,
+                            image: DecorationImage(
+                                image: NetworkImage(dreamwalkerImg)
+                            )
+                        ),
+                      ),
+                      Container(
+                        width: deviceWidth/6,
+                        height:deviceWidth/6 ,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.amber,
+                            image: DecorationImage(
+                                image: NetworkImage(dreamwalkerImg)
+                            )
+                        ),
+                      ),
+                      Container(
+                        width: deviceWidth/6,
+                        height:deviceWidth/6 ,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue.withOpacity(0.5)
+                        ),
+                        child: Center(
+                          child: Icon(Icons.add, color: Colors.blueAccent,
+                          size: 38,),
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
