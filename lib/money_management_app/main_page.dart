@@ -105,7 +105,12 @@ class _MainPageState extends State<MainPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Send Funds"),
+                  Text("Send Funds",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+
+                    ),),
                   SizedBox(height: 8,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -171,6 +176,7 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             ),
+            SizedBox(height: 16,),
             Container(
               padding: EdgeInsets.only(left: 16, top: 8, right: 16),
               height: 120,
@@ -178,7 +184,12 @@ class _MainPageState extends State<MainPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Weekly Stats"),
+                  Text("Weekly Stats",
+                    style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+
+                  ),),
                   SizedBox(height: 8,),
                   Container(
                     height: 80,
@@ -237,6 +248,67 @@ class _MainPageState extends State<MainPage> {
                         ),
                       ],
                     ),
+                  ),
+
+                ],
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.only(top: 16,left: 16, right: 16),
+              height: 280,
+              width: deviceWidth,
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Text("Transactions", style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                      ),),
+                      Spacer(),
+                      Text("View all".toUpperCase(),style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                        color: Colors.blueAccent
+                      ),)
+                    ],
+                  ),
+                  ListView(
+                    padding: EdgeInsets.zero,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: <Widget>[
+                     Container(
+                       height: 84,
+                       child: Row(
+                         children: <Widget>[
+                           Container(
+                             height: 58,
+                             width: 58,
+                             decoration: BoxDecoration(
+                               color: Colors.blueGrey[100]
+                             ),
+                           ),
+                           SizedBox(width: 16,),
+                           Column(
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.center,
+                             mainAxisSize: MainAxisSize.min,
+                             children: <Widget>[
+                               Text("Apple"),
+                               Text("20-07-2019")
+                             ],
+                           ),
+                           Spacer(),
+                           Align(
+                             alignment: Alignment.center,
+                             child: Text("-\$159"),
+                           )
+                         ],
+                       ),
+                     )
+                    ],
                   )
                 ],
               ),
