@@ -172,11 +172,72 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              height: 100,
+              padding: EdgeInsets.only(left: 16, top: 8, right: 16),
+              height: 120,
               width: deviceWidth,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  
+                  Text("Weekly Stats"),
+                  SizedBox(height: 8,),
+                  Container(
+                    height: 80,
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.only(right: 8, top: 8, bottom: 8),
+                            padding: EdgeInsets.only(left: 16),
+                            decoration: BoxDecoration(
+                              color: Colors.greenAccent[100]
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text("Income", style: TextStyle(
+                                  fontSize: 16
+                                ),),
+                                Text("+\$762.25",
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.green
+                                  ),)
+                              ],
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.only(left: 8, top: 8, bottom: 8),
+                            padding: EdgeInsets.only(left: 16),
+                            decoration: BoxDecoration(
+                              color: Colors.red[100]
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text("Expenses", style: TextStyle(
+                                    fontSize: 16
+                                ),),
+                                Text("-\$531.51",
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red
+                                  ),)
+                              ],
+                            ),
+
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             )
