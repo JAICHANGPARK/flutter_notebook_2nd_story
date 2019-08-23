@@ -170,6 +170,15 @@ class _MainPageState extends State<MainPage> {
                   )
                 ],
               ),
+            ),
+            Container(
+              height: 100,
+              width: deviceWidth,
+              child: Column(
+                children: <Widget>[
+                  
+                ],
+              ),
             )
           ],
         ),
