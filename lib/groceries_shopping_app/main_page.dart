@@ -77,66 +77,94 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
+  double containerHeight = 0.0;
   @override
   Widget build(BuildContext context) {
-    double containerHeight = MediaQuery.of(context).size.height - 120;
+    containerHeight = MediaQuery.of(context).size.height - 80;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             AnimatedContainer(
-              padding: EdgeInsets.all(16),
+                padding: EdgeInsets.all(16),
                 height: containerHeight,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(16)),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius:
+                      BorderRadius.only(
+                        bottomLeft: Radius.circular(32),
+                        bottomRight: Radius.circular(32),
+                      ),
+                ),
                 duration: Duration(microseconds: 700),
                 child: StaggeredGridView.countBuilder(
                   itemCount: foodItems.length,
                   crossAxisCount: 2,
                   itemBuilder: (context, index) {
-                    return Container(
-                      padding: EdgeInsets.only(left: 16, right: 16),
-                      margin: EdgeInsets.all(8),
-                      decoration: BoxDecoration(color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
-                          blurRadius: 2,
-                          spreadRadius: 1
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(16),),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.network(foodItems[index].imgPath,width: 160, height: 100,alignment:
-                            Alignment.center,),
-                          SizedBox(height: 16,),
-                          Text(foodItems[index].price,
-                            style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                          ),),
-                          SizedBox(height: 16,),
-                          Text(foodItems[index].title,
-                            style: TextStyle(
+                    return InkWell(
+                      onTap: () {
+                        print("Item Clicked");
+                        setState(() {
+                          containerHeight = MediaQuery.of(context).size.height;
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(left: 16, right: 16),
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black.withOpacity(0.15),
+                                blurRadius: 2,
+                                spreadRadius: 1)
+                          ],
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Image.network(
+                              foodItems[index].imgPath,
+                              width: 160,
+                              height: 100,
+                              alignment: Alignment.center,
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Text(
+                              foodItems[index].price,
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Text(
+                              foodItems[index].title,
+                              style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 12,
-
-                            ),),
-                          SizedBox(height: 4,),
-                          Text(foodItems[index].subtitle,
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 10,
-
+                              ),
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              foodItems[index].subtitle,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
