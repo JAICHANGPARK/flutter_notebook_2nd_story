@@ -77,28 +77,26 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
-  double containerHeight = 0.0;
+  double containerHeight = 657.4545454545455;
+  BorderRadiusGeometry _borderRadiusGeometry = BorderRadius.only(
+    bottomLeft: Radius.circular(32),
+    bottomRight: Radius.circular(32),
+  );
+  bool selectedTrigger = false;
   @override
   Widget build(BuildContext context) {
-    containerHeight = MediaQuery.of(context).size.height - 80;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             AnimatedContainer(
+              curve: Curves.easeIn,
                 padding: EdgeInsets.all(16),
                 height: containerHeight,
-                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius:
-                      BorderRadius.only(
-                        bottomLeft: Radius.circular(32),
-                        bottomRight: Radius.circular(32),
-                      ),
-                ),
-                duration: Duration(microseconds: 700),
+                    color: Colors.white, borderRadius: _borderRadiusGeometry),
+                duration: Duration(milliseconds: 1000),
                 child: StaggeredGridView.countBuilder(
                   itemCount: foodItems.length,
                   crossAxisCount: 2,
@@ -107,7 +105,20 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                       onTap: () {
                         print("Item Clicked");
                         setState(() {
-                          containerHeight = MediaQuery.of(context).size.height;
+                          if(!selectedTrigger){
+                            containerHeight = MediaQuery.of(context).size.height;
+                            _borderRadiusGeometry = BorderRadius.circular(0);
+                            selectedTrigger = !selectedTrigger;
+
+                          }else{
+                             containerHeight = 657.4545454545455;
+                             _borderRadiusGeometry = BorderRadius.only(
+                              bottomLeft: Radius.circular(32),
+                              bottomRight: Radius.circular(32),
+                            );
+                             selectedTrigger = !selectedTrigger;
+                          }
+
                         });
                       },
                       child: Container(
