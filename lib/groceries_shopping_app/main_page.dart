@@ -234,7 +234,39 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                         ),
                         Expanded(
                           flex: 3,
-                          child: Placeholder(),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "About the product",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              SingleChildScrollView(
+                                child: Container(
+                                  height: 80,
+                                  decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          colors: [
+                                            Colors.white,
+                                            Colors.white.withOpacity(0.8)
+                                          ],
+                                          begin: Alignment.bottomCenter,
+                                          end: Alignment.center,
+                                          stops: [0.0, 0.5])),
+                                  child: Text(
+                                      "Lay's is the name of a brand for a number of potato chip varieties, as well as the name of "
+                                      "the company that founded the chip brand in the U.S."
+                                      " It has also been called Frito-Lay with Fritos. Lay's "
+                                      "has been owned by PepsiCo through Frito-Lay since 1965."),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         Expanded(
                           flex: 2,
