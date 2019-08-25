@@ -84,6 +84,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
   );
   bool selectedTrigger = false;
   Food selectedFood = Food();
+  int selectedCounter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -163,7 +164,73 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                         ),
                         Expanded(
                           flex: 2,
-                          child: Placeholder(),
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 38,
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(24),
+                                      border: Border.all(color: Colors.grey)),
+                                  child: Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 1,
+                                        child: InkWell(
+                                          onTap: () {
+                                            setState(() {
+                                              if (selectedCounter < 2) {
+                                                print("under 1 blocking");
+                                              } else {
+                                                selectedCounter--;
+                                              }
+                                            });
+                                          },
+                                          child: Center(
+                                            child: Icon(Icons.remove),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          child: Center(
+                                              child: Text(
+                                            selectedCounter.toString(),
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          )),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: InkWell(
+                                          onTap: () {
+                                            setState(() {
+                                              selectedCounter++;
+                                            });
+                                          },
+                                          child: Center(
+                                            child: Icon(Icons.add),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Spacer(),
+                                Text(
+                                  selectedFood.price,
+                                  style: TextStyle(
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
+                                )
+                              ],
+                            ),
+                          ),
                         ),
                         Expanded(
                           flex: 3,
