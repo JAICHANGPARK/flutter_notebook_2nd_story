@@ -100,7 +100,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: _borderRadiusGeometry),
-              duration: Duration(milliseconds: 1000),
+              duration: Duration(milliseconds: 500),
               child: selectedTrigger
                   ? Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -270,7 +270,41 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                         ),
                         Expanded(
                           flex: 2,
-                          child: Placeholder(),
+                          child: Padding(
+
+                            padding: const EdgeInsets.all(16),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(
+                                  height: 64,
+                                  width: 64,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(),
+
+                                  ),
+                                  child: Center(
+                                    child: Icon(Icons.favorite_border),
+                                  ),
+                                ),
+                                Container(
+                                  height: 64,
+                                  width: 240,
+                                  decoration: BoxDecoration(
+                                    color: Colors.orange,
+                                    borderRadius: BorderRadius.circular(36)
+                                  ),
+                                  child: Center(
+                                    child: Text("Add to cart", style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18
+                                    ),),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
                         ),
                       ],
                     )
