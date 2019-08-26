@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -83,8 +84,10 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     bottomRight: Radius.circular(32),
   );
   bool selectedTrigger = false;
+  bool bottomViewTrigger = false;
   Food selectedFood = Food();
   int selectedCounter = 1;
+  List<Food> userFoodCart = List();
 
   @override
   Widget build(BuildContext context) {
@@ -271,7 +274,6 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                         Expanded(
                           flex: 2,
                           child: Padding(
-
                             padding: const EdgeInsets.all(16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -282,24 +284,38 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     border: Border.all(),
-
                                   ),
                                   child: Center(
                                     child: Icon(Icons.favorite_border),
                                   ),
                                 ),
-                                Container(
-                                  height: 64,
-                                  width: 240,
-                                  decoration: BoxDecoration(
-                                    color: Colors.orange,
-                                    borderRadius: BorderRadius.circular(36)
-                                  ),
-                                  child: Center(
-                                    child: Text("Add to cart", style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18
-                                    ),),
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      userFoodCart.add(selectedFood);
+                                      containerHeight = 657.4545454545455;
+                                      _borderRadiusGeometry = BorderRadius.only(
+                                        bottomLeft: Radius.circular(32),
+                                        bottomRight: Radius.circular(32),
+                                      );
+                                      selectedTrigger = !selectedTrigger;
+                                    });
+                                  },
+                                  child: Container(
+                                    height: 64,
+                                    width: 240,
+                                    decoration: BoxDecoration(
+                                        color: Colors.orange,
+                                        borderRadius:
+                                            BorderRadius.circular(36)),
+                                    child: Center(
+                                      child: Text(
+                                        "Add to cart",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18),
+                                      ),
+                                    ),
                                   ),
                                 )
                               ],
@@ -441,6 +457,190 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                       ),
                     ),
             ),
+            InkWell(
+              onTap: (){
+                setState(() {
+                  bottomViewTrigger = ! bottomViewTrigger;
+                });
+              },
+              child: !bottomViewTrigger ?
+              Container(
+                height: 80,
+                padding: EdgeInsets.only(left: 16, right: 16),
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Text(
+                        "Cart",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 5,
+                      child: ListView.builder(
+                        itemCount: userFoodCart.length,
+                        itemBuilder: (context, index){
+                          return Container(
+                            width: 54,
+                            margin: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                image: NetworkImage(userFoodCart[index].imgPath),
+                                fit: BoxFit.fitHeight
+                              )
+                            ),
+                          );
+                        },
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                      ),
+                    ),
+                    Expanded(
+                        flex: 1,
+                        child: Container(
+                          height: 64,
+                          width: 64,
+                          decoration: BoxDecoration(
+                            color: Colors.orangeAccent,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Text(
+                              userFoodCart.length.toString(),
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
+                          ),
+                        ))
+                  ],
+                ),
+              ):Container(
+                height: MediaQuery.of(context).size.height - 120,
+                decoration: BoxDecoration(
+                  color: Colors.black
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text("Cart", style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold
+                          ),),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 5,
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                          padding: EdgeInsets.zero,
+                          itemCount: userFoodCart.length,
+                          itemBuilder: (context, index){
+                        return Container(
+                          padding: EdgeInsets.only(left: 16, right: 16),
+                          height: 80,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Container(
+                                height: 38,
+                                width: 38,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.white,
+                                image: DecorationImage(
+                                  image: NetworkImage(userFoodCart[index].imgPath)
+                                )
+                              ),
+                              ),
+                              SizedBox(width: 8,),
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Text("1", style: TextStyle(
+                                  color: Colors.white
+                                ),),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Text("x",  style: TextStyle(
+                                    color: Colors.white
+                                ),),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Text(userFoodCart[index].title, style: TextStyle(
+                                    color: Colors.white,
+                                  fontSize: 16
+                                ),),
+                              ),
+                              Spacer(),
+                              Text(userFoodCart[index].price,
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.5)
+                              ),)
+                            ],
+                          ),
+                        );
+                      }),
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: Container(
+                        padding: EdgeInsets.only(left: 16, right: 16, top: 16),
+                        child: Row(
+
+                          children: <Widget>[
+                            Align(
+                              alignment: Alignment.topRight,
+                              child: Container(
+                                height: 36,
+                                width: 36,
+                                child: Icon(Icons.directions_car, color: Colors.yellow,),
+                              ),
+                            ),
+                            SizedBox(width: 16,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children: <Widget>[
+                                Text("Delivery",style: TextStyle(
+                                  color: Colors.white
+                                ),),
+                                SizedBox(
+                                    width: 120,
+                                    child: Text("All order of \$40 or more quality for FREE delivery",
+                                      style: TextStyle(
+                                          color: Colors.white
+                                      ),),
+                                 )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ), Expanded(
+                      flex: 4,
+                      child: Placeholder(),
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
