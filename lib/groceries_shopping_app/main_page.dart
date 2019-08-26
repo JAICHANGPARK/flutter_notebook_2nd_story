@@ -88,9 +88,13 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
   Food selectedFood = Food();
   int selectedCounter = 1;
   List<Food> userFoodCart = List();
+  double sumPrice = 0;
 
   @override
   Widget build(BuildContext context) {
+    userFoodCart.forEach((f){
+      sumPrice += double.parse(f.price.substring(1));
+    });
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
@@ -545,7 +549,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                             ),
                           ),
                           Expanded(
-                            flex: 5,
+                            flex: 6,
                             child: ListView.builder(
                                 shrinkWrap: true,
                                 padding: EdgeInsets.zero,
@@ -676,7 +680,41 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                           ),
                           Expanded(
                             flex: 4,
-                            child: Placeholder(),
+                            child: Container(
+                              padding: EdgeInsets.only(left: 16, right: 16),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text("Total", style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 24
+                                      ),),
+                                      Text("\$ ${sumPrice.toStringAsFixed(2)}", style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 38
+                                      ),),
+                                    ],
+                                  ),
+                                  Container(
+                                    height: 48,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: Colors.orangeAccent,
+                                      borderRadius: BorderRadius.circular(24),
+                                    ),
+                                    child: Center(child: Text("Next",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    )),
+                                  )
+                                ],
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -688,8 +726,6 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     );
   }
 }
-
-
 
 
 
