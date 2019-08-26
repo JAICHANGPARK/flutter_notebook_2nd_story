@@ -458,188 +458,229 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                     ),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 setState(() {
-                  bottomViewTrigger = ! bottomViewTrigger;
+                  bottomViewTrigger = !bottomViewTrigger;
                 });
               },
-              child: !bottomViewTrigger ?
-              Container(
-                height: 80,
-                padding: EdgeInsets.only(left: 16, right: 16),
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Text(
-                        "Cart",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 5,
-                      child: ListView.builder(
-                        itemCount: userFoodCart.length,
-                        itemBuilder: (context, index){
-                          return Container(
-                            width: 54,
-                            margin: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: NetworkImage(userFoodCart[index].imgPath),
-                                fit: BoxFit.fitHeight
-                              )
-                            ),
-                          );
-                        },
-                        scrollDirection: Axis.horizontal,
-                        shrinkWrap: true,
-                      ),
-                    ),
-                    Expanded(
-                        flex: 1,
-                        child: Container(
-                          height: 64,
-                          width: 64,
-                          decoration: BoxDecoration(
-                            color: Colors.orangeAccent,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Center(
+              child: !bottomViewTrigger
+                  ? Container(
+                      height: 80,
+                      padding: EdgeInsets.only(left: 16, right: 16),
+                      width: MediaQuery.of(context).size.width,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
                             child: Text(
-                              userFoodCart.length.toString(),
+                              "Cart",
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18),
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
-                        ))
-                  ],
-                ),
-              ):Container(
-                height: MediaQuery.of(context).size.height - 120,
-                decoration: BoxDecoration(
-                  color: Colors.black
-                ),
-                child: Column(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text("Cart", style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold
-                          ),),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 5,
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                          padding: EdgeInsets.zero,
-                          itemCount: userFoodCart.length,
-                          itemBuilder: (context, index){
-                        return Container(
-                          padding: EdgeInsets.only(left: 16, right: 16),
-                          height: 80,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Container(
-                                height: 38,
-                                width: 38,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.white,
-                                image: DecorationImage(
-                                  image: NetworkImage(userFoodCart[index].imgPath)
-                                )
-                              ),
-                              ),
-                              SizedBox(width: 8,),
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Text("1", style: TextStyle(
-                                  color: Colors.white
-                                ),),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Text("x",  style: TextStyle(
-                                    color: Colors.white
-                                ),),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Text(userFoodCart[index].title, style: TextStyle(
-                                    color: Colors.white,
-                                  fontSize: 16
-                                ),),
-                              ),
-                              Spacer(),
-                              Text(userFoodCart[index].price,
-                              style: TextStyle(
-                                color: Colors.white.withOpacity(0.5)
-                              ),)
-                            ],
+                          Expanded(
+                            flex: 5,
+                            child: ListView.builder(
+                              itemCount: userFoodCart.length,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  width: 54,
+                                  margin: EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              userFoodCart[index].imgPath),
+                                          fit: BoxFit.fitHeight)),
+                                );
+                              },
+                              scrollDirection: Axis.horizontal,
+                              shrinkWrap: true,
+                            ),
                           ),
-                        );
-                      }),
-                    ),
-                    Expanded(
-                      flex: 4,
-                      child: Container(
-                        padding: EdgeInsets.only(left: 16, right: 16, top: 16),
-                        child: Row(
-
-                          children: <Widget>[
-                            Align(
-                              alignment: Alignment.topRight,
+                          Expanded(
+                              flex: 1,
                               child: Container(
-                                height: 36,
-                                width: 36,
-                                child: Icon(Icons.directions_car, color: Colors.yellow,),
+                                height: 64,
+                                width: 64,
+                                decoration: BoxDecoration(
+                                  color: Colors.orangeAccent,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    userFoodCart.length.toString(),
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  ),
+                                ),
+                              ))
+                        ],
+                      ),
+                    )
+                  : Container(
+                      height: MediaQuery.of(context).size.height - 120,
+                      decoration: BoxDecoration(color: Colors.black),
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 2,
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  "Cart",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ),
                             ),
-                            SizedBox(width: 16,),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-
-                              children: <Widget>[
-                                Text("Delivery",style: TextStyle(
-                                  color: Colors.white
-                                ),),
-                                SizedBox(
-                                    width: 120,
-                                    child: Text("All order of \$40 or more quality for FREE delivery",
-                                      style: TextStyle(
-                                          color: Colors.white
-                                      ),),
-                                 )
-                              ],
-                            )
-                          ],
-                        ),
+                          ),
+                          Expanded(
+                            flex: 5,
+                            child: ListView.builder(
+                                shrinkWrap: true,
+                                padding: EdgeInsets.zero,
+                                itemCount: userFoodCart.length,
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    padding:
+                                        EdgeInsets.only(left: 16, right: 16),
+                                    height: 80,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Container(
+                                          height: 38,
+                                          width: 38,
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.white,
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      userFoodCart[index]
+                                                          .imgPath))),
+                                        ),
+                                        SizedBox(
+                                          width: 8,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(4.0),
+                                          child: Text(
+                                            "1",
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(4.0),
+                                          child: Text(
+                                            "x",
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(4.0),
+                                          child: Text(
+                                            userFoodCart[index].title,
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 16),
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          userFoodCart[index].price,
+                                          style: TextStyle(
+                                              color: Colors.white
+                                                  .withOpacity(0.5)),
+                                        )
+                                      ],
+                                    ),
+                                  );
+                                }),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              padding:
+                                  EdgeInsets.only(left: 16, right: 16, top: 16),
+                              child: Row(
+                                children: <Widget>[
+                                  Align(
+                                    alignment: Alignment.topRight,
+                                    child: Container(
+                                      height: 36,
+                                      width: 36,
+                                      child: Icon(
+                                        Icons.directions_car,
+                                        color: Colors.yellow,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "Delivery",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      SizedBox(
+                                        height: 16,
+                                      ),
+                                      SizedBox(
+                                        width: 160,
+                                        child: Text(
+                                          "All order of \$40 or more quality for FREE delivery",
+                                          style: TextStyle(
+                                              color: Colors.white
+                                                  .withOpacity(0.5)),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 16,
+                                      ),
+                                      Container(
+                                        height: 4,
+                                        width: 160,
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Colors.white.withOpacity(0.23)),
+                                        child: Container(
+                                          height: 4,
+                                          width: 100,
+                                          margin: EdgeInsets.only(right: 60),
+                                          decoration: BoxDecoration(
+                                              color: Colors.yellow),
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Placeholder(),
+                          )
+                        ],
                       ),
-                    ), Expanded(
-                      flex: 4,
-                      child: Placeholder(),
-                    )
-                  ],
-                ),
-              ),
+                    ),
             )
           ],
         ),
@@ -647,3 +688,17 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
