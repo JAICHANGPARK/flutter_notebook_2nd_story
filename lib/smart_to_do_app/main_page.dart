@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/food_delivery_app_02/main_page.dart';
 import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
 
 class Todo {
@@ -119,7 +120,6 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                   ),
                 ),
               ),
-
               Container(
                 height: deviceHeight / 12,
                 child: TabBar(
@@ -152,14 +152,34 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                     shrinkWrap: true,
                     padding: EdgeInsets.zero,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisSpacing: 16,
-                        mainAxisSpacing: 16,
                         crossAxisCount: 2),
                     itemBuilder: (context, index) {
                       return Container(
+                        margin: EdgeInsets.only(bottom: 16, top: 16, right: 8),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(color: Colors.grey)
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(color: Colors.grey)),
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              left: 16,
+                              top: 16,
+                              child: Text(todoItem[index].time),
+                            ),
+                            Positioned(
+                              right: 0,
+                              top: 16,
+                              child: Container(
+                                height: 4,
+                                width: 36,
+                                decoration: BoxDecoration(
+                                    color: todoItem[index].labelColor,
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(16),
+                                        topRight: Radius.circular(16))),
+                              ),
+                            ),
+                          ],
                         ),
                       );
                     },
