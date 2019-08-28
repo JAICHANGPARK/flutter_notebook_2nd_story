@@ -157,7 +157,10 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                         crossAxisCount: 2),
                     itemBuilder: (context, index) {
                       return Container(
-                        child: Placeholder(),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: Colors.grey)
+                        ),
                       );
                     },
                     itemCount: todoItem.length,
