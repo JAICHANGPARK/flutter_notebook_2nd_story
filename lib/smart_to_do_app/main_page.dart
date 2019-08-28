@@ -164,7 +164,16 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                             Positioned(
                               left: 16,
                               top: 16,
-                              child: Text(todoItem[index].time),
+                              right: 16,
+                              child: Column(
+                                children: <Widget>[
+                                  Text(todoItem[index].time),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(todoItem[index].task),
+                                ],
+                              ),
                             ),
                             Positioned(
                               right: 0,
@@ -173,12 +182,26 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                 height: 4,
                                 width: 36,
                                 decoration: BoxDecoration(
-                                    color: todoItem[index].labelColor,
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(16),
-                                        topRight: Radius.circular(16))),
+                                  color: todoItem[index].labelColor,
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(16),
+                                    topRight: Radius.circular(16),
+                                  ),
+                                ),
                               ),
                             ),
+                            Positioned(
+                              bottom: 8,
+                              right: 16,
+                              left: 16,
+                              child: Row(
+                                children: <Widget>[
+                                  Text(todoItem[index].setTime),
+                                  Spacer(),
+                                  Icon(Icons.notifications_none, color: Colors.grey,)
+                                ],
+                              ),
+                            )
                           ],
                         ),
                       );
