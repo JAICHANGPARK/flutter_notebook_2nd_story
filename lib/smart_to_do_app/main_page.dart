@@ -228,265 +228,265 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                   )),
                   Container(
                       child: GridView.builder(
-                        shrinkWrap: true,
-                        padding: EdgeInsets.zero,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2),
-                        itemBuilder: (context, index) {
-                          return Container(
-                            margin: EdgeInsets.only(bottom: 16, top: 16, right: 8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                border: Border.all(
-                                    color: Colors.grey.withOpacity(0.5))),
-                            child: Stack(
-                              children: <Widget>[
-                                Positioned(
-                                  left: 16,
-                                  top: 16,
-                                  right: 16,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text(
-                                        todoItem[index].setTime,
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 12,
-                                      ),
-                                      Text(
-                                        todoItem[index].task,
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 16),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Positioned(
-                                  right: 0,
-                                  top: 16,
-                                  child: Container(
-                                    height: 4,
-                                    width: 28,
-                                    decoration: BoxDecoration(
-                                      color: todoItem[index].labelColor,
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(16),
-                                        bottomLeft: Radius.circular(16),
-                                      ),
+                    shrinkWrap: true,
+                    padding: EdgeInsets.zero,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 16, top: 16, right: 8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                                color: Colors.grey.withOpacity(0.5))),
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              left: 16,
+                              top: 16,
+                              right: 16,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    todoItem[index].setTime,
+                                    style: TextStyle(
+                                      color: Colors.grey,
                                     ),
                                   ),
-                                ),
-                                Positioned(
-                                  bottom: 8,
-                                  right: 8,
-                                  left: 16,
-                                  child: Row(
-                                    children: <Widget>[
-                                      Text(
-                                        todoItem[index].time,
-                                        style: TextStyle(
-                                            color: Colors.grey, fontSize: 12),
-                                      ),
-                                      Spacer(),
-                                      Icon(
-                                        Icons.notifications_none,
-                                        color: Colors.grey.withOpacity(0.5),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    height: 12,
                                   ),
-                                )
-                              ],
+                                  Text(
+                                    todoItem[index].task,
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 16),
+                                  ),
+                                ],
+                              ),
                             ),
-                          );
-                        },
-                        itemCount: todoItem.length,
-                      )),
+                            Positioned(
+                              right: 0,
+                              top: 16,
+                              child: Container(
+                                height: 4,
+                                width: 28,
+                                decoration: BoxDecoration(
+                                  color: todoItem[index].labelColor,
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(16),
+                                    bottomLeft: Radius.circular(16),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 8,
+                              right: 8,
+                              left: 16,
+                              child: Row(
+                                children: <Widget>[
+                                  Text(
+                                    todoItem[index].time,
+                                    style: TextStyle(
+                                        color: Colors.grey, fontSize: 12),
+                                  ),
+                                  Spacer(),
+                                  Icon(
+                                    Icons.notifications_none,
+                                    color: Colors.grey.withOpacity(0.5),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                    itemCount: todoItem.length,
+                  )),
                   Container(
                       child: GridView.builder(
-                        shrinkWrap: true,
-                        padding: EdgeInsets.zero,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2),
-                        itemBuilder: (context, index) {
-                          return Container(
-                            margin: EdgeInsets.only(bottom: 16, top: 16, right: 8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                border: Border.all(
-                                    color: Colors.grey.withOpacity(0.5))),
-                            child: Stack(
-                              children: <Widget>[
-                                Positioned(
-                                  left: 16,
-                                  top: 16,
-                                  right: 16,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text(
-                                        todoItem[index].setTime,
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 12,
-                                      ),
-                                      Text(
-                                        todoItem[index].task,
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 16),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Positioned(
-                                  right: 0,
-                                  top: 16,
-                                  child: Container(
-                                    height: 4,
-                                    width: 28,
-                                    decoration: BoxDecoration(
-                                      color: todoItem[index].labelColor,
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(16),
-                                        bottomLeft: Radius.circular(16),
-                                      ),
+                    shrinkWrap: true,
+                    padding: EdgeInsets.zero,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 16, top: 16, right: 8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                                color: Colors.grey.withOpacity(0.5))),
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              left: 16,
+                              top: 16,
+                              right: 16,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    todoItem[index].setTime,
+                                    style: TextStyle(
+                                      color: Colors.grey,
                                     ),
                                   ),
-                                ),
-                                Positioned(
-                                  bottom: 8,
-                                  right: 8,
-                                  left: 16,
-                                  child: Row(
-                                    children: <Widget>[
-                                      Text(
-                                        todoItem[index].time,
-                                        style: TextStyle(
-                                            color: Colors.grey, fontSize: 12),
-                                      ),
-                                      Spacer(),
-                                      Icon(
-                                        Icons.notifications_none,
-                                        color: Colors.grey.withOpacity(0.5),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    height: 12,
                                   ),
-                                )
-                              ],
+                                  Text(
+                                    todoItem[index].task,
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 16),
+                                  ),
+                                ],
+                              ),
                             ),
-                          );
-                        },
-                        itemCount: todoItem.length,
-                      )),
+                            Positioned(
+                              right: 0,
+                              top: 16,
+                              child: Container(
+                                height: 4,
+                                width: 28,
+                                decoration: BoxDecoration(
+                                  color: todoItem[index].labelColor,
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(16),
+                                    bottomLeft: Radius.circular(16),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 8,
+                              right: 8,
+                              left: 16,
+                              child: Row(
+                                children: <Widget>[
+                                  Text(
+                                    todoItem[index].time,
+                                    style: TextStyle(
+                                        color: Colors.grey, fontSize: 12),
+                                  ),
+                                  Spacer(),
+                                  Icon(
+                                    Icons.notifications_none,
+                                    color: Colors.grey.withOpacity(0.5),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                    itemCount: todoItem.length,
+                  )),
                   Container(
                       child: GridView.builder(
-                        shrinkWrap: true,
-                        padding: EdgeInsets.zero,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2),
-                        itemBuilder: (context, index) {
-                          return Container(
-                            margin: EdgeInsets.only(bottom: 16, top: 16, right: 8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                border: Border.all(
-                                    color: Colors.grey.withOpacity(0.5))),
-                            child: Stack(
-                              children: <Widget>[
-                                Positioned(
-                                  left: 16,
-                                  top: 16,
-                                  right: 16,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text(
-                                        todoItem[index].setTime,
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 12,
-                                      ),
-                                      Text(
-                                        todoItem[index].task,
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 16),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Positioned(
-                                  right: 0,
-                                  top: 16,
-                                  child: Container(
-                                    height: 4,
-                                    width: 28,
-                                    decoration: BoxDecoration(
-                                      color: todoItem[index].labelColor,
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(16),
-                                        bottomLeft: Radius.circular(16),
-                                      ),
+                    shrinkWrap: true,
+                    padding: EdgeInsets.zero,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 16, top: 16, right: 8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                                color: Colors.grey.withOpacity(0.5))),
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                              left: 16,
+                              top: 16,
+                              right: 16,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    todoItem[index].setTime,
+                                    style: TextStyle(
+                                      color: Colors.grey,
                                     ),
                                   ),
-                                ),
-                                Positioned(
-                                  bottom: 8,
-                                  right: 8,
-                                  left: 16,
-                                  child: Row(
-                                    children: <Widget>[
-                                      Text(
-                                        todoItem[index].time,
-                                        style: TextStyle(
-                                            color: Colors.grey, fontSize: 12),
-                                      ),
-                                      Spacer(),
-                                      Icon(
-                                        Icons.notifications_none,
-                                        color: Colors.grey.withOpacity(0.5),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    height: 12,
                                   ),
-                                )
-                              ],
+                                  Text(
+                                    todoItem[index].task,
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 16),
+                                  ),
+                                ],
+                              ),
                             ),
-                          );
-                        },
-                        itemCount: todoItem.length,
-                      )),
+                            Positioned(
+                              right: 0,
+                              top: 16,
+                              child: Container(
+                                height: 4,
+                                width: 28,
+                                decoration: BoxDecoration(
+                                  color: todoItem[index].labelColor,
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(16),
+                                    bottomLeft: Radius.circular(16),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 8,
+                              right: 8,
+                              left: 16,
+                              child: Row(
+                                children: <Widget>[
+                                  Text(
+                                    todoItem[index].time,
+                                    style: TextStyle(
+                                        color: Colors.grey, fontSize: 12),
+                                  ),
+                                  Spacer(),
+                                  Icon(
+                                    Icons.notifications_none,
+                                    color: Colors.grey.withOpacity(0.5),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                    itemCount: todoItem.length,
+                  )),
                 ]),
               ),
               Container(
-                height: deviceHeight/3,
+                height: deviceHeight / 3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text("THIS WEEK"),
                     Container(
-                      height: deviceHeight/3 - 24,
+                      height: deviceHeight / 3 - 24,
                       child: ListView.builder(
                         shrinkWrap: true,
                         padding: EdgeInsets.zero,
-                        itemBuilder: (context, index){
-                        return Container(
-                          margin: EdgeInsets.only(top: 8, bottom: 8),
-                          height: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            border: Border.all(color: Colors.grey.withOpacity(0.5))
-                          ),
-                        );
-                      },
-                      itemCount: todoItem.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: EdgeInsets.only(top: 8, bottom: 8),
+                            height: 80,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(
+                                    color: Colors.grey.withOpacity(0.5))),
+                          );
+                        },
+                        itemCount: todoItem.length,
                       ),
                     )
                   ],
@@ -498,7 +498,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.mic),
-        onPressed: (){},
+        onPressed: () {},
       ),
 //      floatingActionButton: Align(
 //        alignment: Alignment.bottomRight,
@@ -518,19 +518,3 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
