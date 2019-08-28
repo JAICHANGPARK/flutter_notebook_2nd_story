@@ -103,13 +103,12 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                 height: deviceHeight / 10,
                 padding: EdgeInsets.only(right: 100),
                 child: Align(
-                    alignment: Alignment.centerLeft,
-                    child:
-                        Text("You have some important tasks to do for today",
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 20
-                        ),)),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "You have some important tasks to do for today",
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                ),
               ),
             ],
           ),
@@ -118,22 +117,3 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
