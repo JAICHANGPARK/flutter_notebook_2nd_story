@@ -48,6 +48,15 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
+  TabController _tabController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     var deviceHeight = MediaQuery.of(context).size.height;
@@ -110,6 +119,54 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                   ),
                 ),
               ),
+
+              Container(
+                height: deviceHeight / 12,
+                child: TabBar(
+                  labelColor: Colors.black,
+                  unselectedLabelColor: Colors.grey,
+                  isScrollable: true,
+                  indicatorColor: Colors.transparent,
+                  controller: _tabController,
+                  tabs: <Widget>[
+                    Tab(
+                      text: "Today's PRIORITIES".toUpperCase(),
+                    ),
+                    Tab(
+                      text: "NOTES".toUpperCase(),
+                    ),
+                    Tab(
+                      text: "projects".toUpperCase(),
+                    ),
+                    Tab(
+                      text: "others".toUpperCase(),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: deviceHeight / 2,
+                child: TabBarView(controller: _tabController, children: [
+                  Container(
+                      child: GridView.builder(
+                    shrinkWrap: true,
+                    padding: EdgeInsets.zero,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisSpacing: 16,
+                        mainAxisSpacing: 16,
+                        crossAxisCount: 2),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        child: Placeholder(),
+                      );
+                    },
+                    itemCount: todoItem.length,
+                  )),
+                  Container(),
+                  Container(),
+                  Container(),
+                ]),
+              )
             ],
           ),
         ),
