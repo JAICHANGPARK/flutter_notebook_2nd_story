@@ -88,18 +88,29 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                       decoration: BoxDecoration(
                           color: Colors.red,
                           image: DecorationImage(
-                            image: NetworkImage(
-                              dreamwalkerImg,
-                            ),
-                            fit: BoxFit.cover
-                          ),
+                              image: NetworkImage(
+                                dreamwalkerImg,
+                              ),
+                              fit: BoxFit.cover),
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(16),
                               bottomLeft: Radius.circular(16))),
                     )
                   ],
                 ),
-              )
+              ),
+              Container(
+                height: deviceHeight / 10,
+                padding: EdgeInsets.only(right: 100),
+                child: Align(
+                    alignment: Alignment.centerLeft,
+                    child:
+                        Text("You have some important tasks to do for today",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 20
+                        ),)),
+              ),
             ],
           ),
         ),
@@ -107,9 +118,6 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     );
   }
 }
-
-
-
 
 
 
