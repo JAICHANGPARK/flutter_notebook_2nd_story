@@ -91,7 +91,7 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(16),
+                            padding: const EdgeInsets.only(left: 16, right: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
@@ -101,14 +101,13 @@ class _MainPageState extends State<MainPage> {
                                     height: 28,
                                     margin: EdgeInsets.only(right: 16),
                                     decoration: BoxDecoration(
-                                      color: Colors.deepPurpleAccent,
-                                      borderRadius: BorderRadius.circular(4)
-                                    ),
+                                        color: Colors.deepPurpleAccent,
+                                        borderRadius: BorderRadius.circular(4)),
                                     child: Center(
-                                      child: Text("Description",
-                                      style: TextStyle(
-                                        color: Colors.white
-                                      ),),
+                                      child: Text(
+                                        "Description",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -116,18 +115,90 @@ class _MainPageState extends State<MainPage> {
                                   flex: 1,
                                   child: Container(
                                     margin: EdgeInsets.only(left: 16),
-                                    child: Text("Ingredients"),
+                                    child: Text(
+                                      "Ingredients",
+                                      style: TextStyle(color: Colors.grey[500]),
+                                    ),
                                   ),
                                 ),
                                 Expanded(
                                   flex: 1,
                                   child: Container(
-                                    child: Text("Nutrition Facts"),
+                                    child: Text(
+                                      "Nutrition Facts",
+                                      style: TextStyle(color: Colors.grey[500]),
+                                    ),
                                   ),
                                 )
                               ],
                             ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              "Jucice GangGang Jucice GangGang Jucice GangGang Jucice GangGang Jucice GangGang ",
+                              style: TextStyle(
+                                  color: Colors.grey[500], fontSize: 16),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 16, right: 16),
+                            child: Container(
+                              height: 48,
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    flex: 10,
+                                    child: Container(
+                                      child: Center(
+                                        child: Text("BUY NOW",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold
+                                        ),),
+                                      ),
+                                      decoration: BoxDecoration(
+                                          color: Colors.pinkAccent,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.black
+                                                    .withOpacity(0.15),
+                                                blurRadius: 3)
+                                          ]),
+                                      margin: EdgeInsets.only(
+                                          right: 8, top: 2, bottom: 2),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Container(
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.close,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      margin: EdgeInsets.only(
+                                          left: 8, top: 2, bottom: 2),
+                                      decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.black
+                                                    .withOpacity(0.15),
+                                                blurRadius: 3)
+                                          ],
+                                          color: Colors.deepPurpleAccent,
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ),
