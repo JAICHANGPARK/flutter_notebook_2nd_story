@@ -28,7 +28,9 @@ class _MainPageState extends State<MainPage> {
               right: true,
               child: Container(
                 height: 80,
+                padding: EdgeInsets.only(left: 24, right: 24),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     CircleAvatar(
                       backgroundImage: NetworkImage(dreamwalkerImg),
@@ -37,37 +39,61 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ),
+            ),
+            Container(
+              height: 100,
+              padding: EdgeInsets.only(left: 24),
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "Hello,",
+                    style: TextStyle(color: Colors.black, fontSize: 24),
+                  ),
+                  Text(
+                    "Dreamwalker",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: 280,
+              padding: EdgeInsets.only(left: 24),
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(right: 24),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          "Here are your goals",
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "see all",
+                          style: TextStyle(color: Colors.grey),
+                        )
+                      ],
+                    ),
+                  ),
+
+
+                ],
+              ),
             )
           ],
         ),
-      ) ,
+      ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
