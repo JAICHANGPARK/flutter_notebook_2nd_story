@@ -370,20 +370,160 @@ class _MainPageState extends State<MainPage> {
                           height: 38,
                           width: 38,
                           decoration: BoxDecoration(
-                            color: Colors.indigoAccent,
-                            borderRadius: BorderRadius.circular(8)
-                          ),
+                              color: Colors.indigoAccent,
+                              borderRadius: BorderRadius.circular(8)),
                           child: Center(
-                            child: Icon(Icons.add,
-                            color: Colors.white,),
+                            child: Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
                           ),
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          "Quick tasks for today",
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
                   ),
                   Flexible(
                     flex: 8,
-                    child: Placeholder(),
+                    child: ListView(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      children: <Widget>[
+                        Container(
+                          height: 58,
+                          width: double.infinity,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(top: 3),
+                                child: Align(
+                                  alignment: Alignment.topCenter,
+                                  child: Container(
+                                    height: 12,
+                                    width: 12,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.deepOrange),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Daily Meeting"),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    "Zoom, 10:00 AM",
+                                    style: TextStyle(color: Colors.grey[500]),
+                                  )
+                                ],
+                              ),
+                              Spacer(),
+                              CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                  dreamwalkerImg,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 58,
+                          width: double.infinity,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(top: 3),
+                                child: Align(
+                                  alignment: Alignment.topCenter,
+                                  child: Container(
+                                    height: 12,
+                                    width: 12,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.deepOrange),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Designer's Interview"),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    "Green Meeting Room, 3:30 PM",
+                                    style: TextStyle(color: Colors.grey[500]),
+                                  )
+                                ],
+                              ),
+                              Spacer(),
+                              CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                  dreamwalkerImg,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 58,
+                          width: double.infinity,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(top: 3),
+                                child: Align(
+                                  alignment: Alignment.topCenter,
+                                  child: Container(
+                                    height: 12,
+                                    width: 12,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.greenAccent),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Daily Sketching"),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text("Open Space, 05:00 PM",
+                                    style: TextStyle(color: Colors.grey[500]),)
+                                ],
+                              ),
+                              Spacer(),
+
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
