@@ -44,9 +44,8 @@ class _DetailPageState extends State<DetailPage> {
                     child: Container(
                       width: 140,
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(16)
-                      ),
+                          color: Colors.white.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(16)),
                     ),
                   )
                 ],
@@ -95,64 +94,73 @@ class _DetailPageState extends State<DetailPage> {
               height: 300,
               width: 120,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text("Series".toUpperCase(),
-                  style: TextStyle(
-                    fontSize: 12
-                  ),),
-                  SizedBox(height: 4,),
-                  Text("000".toUpperCase(),
-                    style: TextStyle(
-                        fontSize: 16,
-                      fontWeight: FontWeight.bold
-                    ),),
-                  Spacer(),
-                  Text("size".toUpperCase(),
-                    style: TextStyle(
-                        fontSize: 12
-                    ),),
-                  SizedBox(height: 4,),
-                  Text("Small", style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                  ),),
-                  Spacer(),
-                  Text("price".toUpperCase(), style: TextStyle(
-                      fontSize: 12
-                  ),),
-                  SizedBox(height: 4,),
-                  Text("\$410".toUpperCase(),
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold
-                    ),),
-                  Spacer(),
-                  Container(
-                    height: 54,
-                    width: 54,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(colors: [
-                        Colors.redAccent,
-                        Colors.orange[200],
-                      ], begin: Alignment.bottomCenter, end: Alignment.topCenter),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.red[50],
-                          blurRadius: 10,
-                          spreadRadius: 10
-                        )
-                      ]
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Series".toUpperCase(),
+                      style: TextStyle(fontSize: 12),
                     ),
-                    child: Center(
-                      child: Icon(Icons.add_shopping_cart,
-                      color: Colors.white,),
+                    SizedBox(
+                      height: 4,
                     ),
-                  )
-                ]
-
-              ),
+                    Text(
+                      "000".toUpperCase(),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Spacer(),
+                    Text(
+                      "size".toUpperCase(),
+                      style: TextStyle(fontSize: 12),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Small",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Spacer(),
+                    Text(
+                      "price".toUpperCase(),
+                      style: TextStyle(fontSize: 12),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "\$410".toUpperCase(),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Spacer(),
+                    Container(
+                      height: 54,
+                      width: 54,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: LinearGradient(
+                              colors: [
+                                Colors.redAccent,
+                                Colors.orange[200],
+                              ],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.red[50],
+                                blurRadius: 10,
+                                spreadRadius: 10)
+                          ]),
+                      child: Center(
+                        child: Icon(
+                          Icons.add_shopping_cart,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
+                  ]),
             ),
           ),
           Positioned(
@@ -162,13 +170,10 @@ class _DetailPageState extends State<DetailPage> {
               width: 180,
               height: 400,
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    "https://www.searchpng.com/wp-content/uploads/2019/01/Apple-Watch-Apple-Watch-Iwatch-PNG-Image-715x715.png"
-                  ),
-                  fit: BoxFit.fitHeight
-                )
-              ),
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          "https://www.searchpng.com/wp-content/uploads/2019/01/Apple-Watch-Apple-Watch-Iwatch-PNG-Image-715x715.png"),
+                      fit: BoxFit.fitHeight)),
             ),
           )
         ],
@@ -176,22 +181,3 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
