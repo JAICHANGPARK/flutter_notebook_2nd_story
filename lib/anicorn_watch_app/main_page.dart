@@ -41,7 +41,13 @@ class _DetailPageState extends State<DetailPage> {
                     right: 16,
                     top: 16,
                     bottom: 24,
-                    child: Container(),
+                    child: Container(
+                      width: 140,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(16)
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -146,6 +152,22 @@ class _DetailPageState extends State<DetailPage> {
                   )
                 ]
 
+              ),
+            ),
+          ),
+          Positioned(
+            left: 120,
+            top: 72,
+            child: Container(
+              width: 180,
+              height: 400,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "https://www.searchpng.com/wp-content/uploads/2019/01/Apple-Watch-Apple-Watch-Iwatch-PNG-Image-715x715.png"
+                  ),
+                  fit: BoxFit.fitHeight
+                )
               ),
             ),
           )
