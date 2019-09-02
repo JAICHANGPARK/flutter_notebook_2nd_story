@@ -223,12 +223,90 @@ class _DetailPageState extends State<DetailPage> {
                             children: <Widget>[
                               Expanded(
                                 flex: 1,
-                                child: Placeholder(),
+                                child: Row(
+                                 crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: Colors.orange,
+                                          width: 2
+                                        )
+                                      ),
+                                      child: Center(
+                                        child: Icon(Icons.directions_run,
+                                        color: Colors.orange,),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("Movement", style: TextStyle
+                                          (fontSize: 16,
+                                        letterSpacing: 1.3,
+                                        fontWeight: FontWeight.bold),),
+                                        SizedBox(height: 4,),
+                                        Text("13m2", style: TextStyle(
+                                          fontSize: 12
+                                        ),)
+
+                                      ],
+                                    ),
+
+                                  ],
+                                ),
                               ),
                               Expanded(
                                 flex: 1,
-                                child: Placeholder(),
-                              )
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: Colors.red,
+                                              width: 2
+                                          )
+                                      ),
+                                      child: Center(
+                                        child: Icon(Icons.data_usage,
+                                          color: Colors.red,),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("Accuracy", style: TextStyle
+                                          (fontSize: 16,
+                                            letterSpacing: 1.3,
+                                            fontWeight: FontWeight.bold),),
+                                        SizedBox(height: 4,),
+                                        Text("20-+40 sec", style: TextStyle(
+                                            fontSize: 12
+                                        ),)
+
+                                      ],
+                                    ),
+
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -237,12 +315,90 @@ class _DetailPageState extends State<DetailPage> {
                             children: <Widget>[
                               Expanded(
                                 flex: 1,
-                                child: Placeholder(),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: Colors.red,
+                                              width: 2
+                                          )
+                                      ),
+                                      child: Center(
+                                        child: Icon(Icons.data_usage,
+                                          color: Colors.red,),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("Accuracy", style: TextStyle
+                                          (fontSize: 16,
+                                            letterSpacing: 1.3,
+                                            fontWeight: FontWeight.bold),),
+                                        SizedBox(height: 4,),
+                                        Text("20-+40 sec", style: TextStyle(
+                                            fontSize: 12
+                                        ),)
+
+                                      ],
+                                    ),
+
+                                  ],
+                                ),
                               ),
                               Expanded(
                                 flex: 1,
-                                child: Placeholder(),
-                              )
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: Colors.red,
+                                              width: 2
+                                          )
+                                      ),
+                                      child: Center(
+                                        child: Icon(Icons.data_usage,
+                                          color: Colors.red,),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("Accuracy", style: TextStyle
+                                          (fontSize: 16,
+                                            letterSpacing: 1.3,
+                                            fontWeight: FontWeight.bold),),
+                                        SizedBox(height: 4,),
+                                        Text("20-+40 sec", style: TextStyle(
+                                            fontSize: 12
+                                        ),)
+
+                                      ],
+                                    ),
+
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         )
