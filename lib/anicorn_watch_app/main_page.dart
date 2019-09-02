@@ -213,21 +213,41 @@ class _DetailPageState extends State<DetailPage> {
                       color: Colors.black,
                     ),
                   ),
-                  Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Expanded(
-                            flex: 1,
-                            child: Placeholder(),
+                  Container(
+                    height: 116,
+                    margin: EdgeInsets.only(right: 16),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 1,
+                                child: Placeholder(),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Placeholder(),
+                              )
+                            ],
                           ),
-                          Expanded(
-                            flex: 1,
-                            child: Placeholder(),
-                          )
-                        ],
-                      )
-                    ],
+                        ),
+                        Expanded(
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 1,
+                                child: Placeholder(),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Placeholder(),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
