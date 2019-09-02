@@ -181,13 +181,30 @@ class _DetailPageState extends State<DetailPage> {
             bottom: 16,
             right: 0,
             child: Container(
-              height: 280,
+              height: 270,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Rose & Gold"),
-                  Text("Automatic Watch"),
-                  Text("Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.")
+                  Text("Rose & Gold", style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28
+                  ),),
+                  Text("Automatic Watch",
+                  style: TextStyle(
+                    fontSize: 26,
+                    letterSpacing: 1.2
+                  ),),
+                  SizedBox(height: 16,),
+                  SizedBox(
+                      width: 300,
+                      child: Text("Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.",
+                      style: TextStyle(
+                        wordSpacing: 1.2,
+                        letterSpacing: 1.2,
+                        fontSize: 12
+                      )
+                        ,))
                 ],
               ),
             ),
