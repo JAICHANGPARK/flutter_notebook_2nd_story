@@ -224,43 +224,48 @@ class _DetailPageState extends State<DetailPage> {
                               Expanded(
                                 flex: 1,
                                 child: Row(
-                                 crossAxisAlignment: CrossAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
                                     Container(
                                       height: 48,
                                       width: 48,
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: Colors.orange,
-                                          width: 2
-                                        )
-                                      ),
+                                          color: Colors.white,
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: Colors.orange, width: 2)),
                                       child: Center(
-                                        child: Icon(Icons.directions_run,
-                                        color: Colors.orange,),
+                                        child: Icon(
+                                          Icons.directions_run,
+                                          color: Colors.orange,
+                                        ),
                                       ),
                                     ),
                                     SizedBox(
                                       width: 8,
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
-                                        Text("Movement", style: TextStyle
-                                          (fontSize: 16,
-                                        letterSpacing: 1.3,
-                                        fontWeight: FontWeight.bold),),
-                                        SizedBox(height: 4,),
-                                        Text("13m2", style: TextStyle(
-                                          fontSize: 12
-                                        ),)
-
+                                        Text(
+                                          "Movement",
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.3,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          "13m2",
+                                          style: TextStyle(fontSize: 12),
+                                        )
                                       ],
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -276,34 +281,39 @@ class _DetailPageState extends State<DetailPage> {
                                           color: Colors.white,
                                           shape: BoxShape.circle,
                                           border: Border.all(
-                                              color: Colors.red,
-                                              width: 2
-                                          )
-                                      ),
+                                              color: Colors.red, width: 2)),
                                       child: Center(
-                                        child: Icon(Icons.data_usage,
-                                          color: Colors.red,),
+                                        child: Icon(
+                                          Icons.data_usage,
+                                          color: Colors.red,
+                                        ),
                                       ),
                                     ),
                                     SizedBox(
                                       width: 8,
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
-                                        Text("Accuracy", style: TextStyle
-                                          (fontSize: 16,
-                                            letterSpacing: 1.3,
-                                            fontWeight: FontWeight.bold),),
-                                        SizedBox(height: 4,),
-                                        Text("20-+40 sec", style: TextStyle(
-                                            fontSize: 12
-                                        ),)
-
+                                        Text(
+                                          "Accuracy",
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.3,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          "20-+40 sec",
+                                          style: TextStyle(fontSize: 12),
+                                        )
                                       ],
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -326,33 +336,39 @@ class _DetailPageState extends State<DetailPage> {
                                           shape: BoxShape.circle,
                                           border: Border.all(
                                               color: Colors.lightBlueAccent,
-                                              width: 2
-                                          )
-                                      ),
+                                              width: 2)),
                                       child: Center(
-                                        child: Icon(Icons.whatshot,
-                                          color: Colors.lightBlueAccent,),
+                                        child: Icon(
+                                          Icons.whatshot,
+                                          color: Colors.lightBlueAccent,
+                                        ),
                                       ),
                                     ),
                                     SizedBox(
                                       width: 8,
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
-                                        Text("Resistance", style: TextStyle
-                                          (fontSize: 16,
-                                            letterSpacing: 1.3,
-                                            fontWeight: FontWeight.bold),),
-                                        SizedBox(height: 4,),
-                                        Text("50 meters", style: TextStyle(
-                                            fontSize: 12
-                                        ),)
-
+                                        Text(
+                                          "Resistance",
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.3,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          "50 meters",
+                                          style: TextStyle(fontSize: 12),
+                                        )
                                       ],
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -369,33 +385,39 @@ class _DetailPageState extends State<DetailPage> {
                                           shape: BoxShape.circle,
                                           border: Border.all(
                                               color: Colors.indigoAccent,
-                                              width: 2
-                                          )
-                                      ),
+                                              width: 2)),
                                       child: Center(
-                                        child: Icon(Icons.tune,
-                                          color: Colors.indigoAccent,),
+                                        child: Icon(
+                                          Icons.tune,
+                                          color: Colors.indigoAccent,
+                                        ),
                                       ),
                                     ),
                                     SizedBox(
                                       width: 8,
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
-                                        Text("Function", style: TextStyle
-                                          (fontSize: 16,
-                                            letterSpacing: 1.3,
-                                            fontWeight: FontWeight.bold),),
-                                        SizedBox(height: 4,),
-                                        Text("Hrs/min/sec", style: TextStyle(
-                                            fontSize: 12
-                                        ),)
-
+                                        Text(
+                                          "Function",
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.3,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          "Hrs/min/sec",
+                                          style: TextStyle(fontSize: 12),
+                                        )
                                       ],
                                     ),
-
                                   ],
                                 ),
                               ),
