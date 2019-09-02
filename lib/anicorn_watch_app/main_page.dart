@@ -193,7 +193,7 @@ class _DetailPageState extends State<DetailPage> {
                         fontSize: 28),
                   ),
                   Text(
-                    "Automatic Watch",
+                    "Apple Watch Series 4",
                     style: TextStyle(fontSize: 26, letterSpacing: 1.2),
                   ),
                   SizedBox(
