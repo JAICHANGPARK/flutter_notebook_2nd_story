@@ -205,7 +205,13 @@ class _DetailPageState extends State<DetailPage> {
                         "Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.",
                         style: TextStyle(
                             wordSpacing: 1.2, letterSpacing: 1.2, fontSize: 12),
-                      ))
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 16),
+                    child: Divider(
+                      color: Colors.black,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -215,3 +221,17 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
