@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AnicornWatchApp extends StatelessWidget {
@@ -104,7 +105,7 @@ class _DetailPageState extends State<DetailPage> {
                       height: 4,
                     ),
                     Text(
-                      "000".toUpperCase(),
+                      "004".toUpperCase(),
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
@@ -130,7 +131,7 @@ class _DetailPageState extends State<DetailPage> {
                       height: 4,
                     ),
                     Text(
-                      "\$410".toUpperCase(),
+                      "\$499".toUpperCase(),
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
@@ -212,6 +213,22 @@ class _DetailPageState extends State<DetailPage> {
                       color: Colors.black,
                     ),
                   ),
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
+                            child: Placeholder(),
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Placeholder(),
+                          )
+                        ],
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
@@ -221,17 +238,3 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
