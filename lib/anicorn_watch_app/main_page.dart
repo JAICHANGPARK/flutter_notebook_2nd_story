@@ -175,9 +175,44 @@ class _DetailPageState extends State<DetailPage> {
                           "https://www.searchpng.com/wp-content/uploads/2019/01/Apple-Watch-Apple-Watch-Iwatch-PNG-Image-715x715.png"),
                       fit: BoxFit.fitHeight)),
             ),
+          ),
+          Positioned(
+            left: 24,
+            bottom: 16,
+            right: 0,
+            child: Container(
+              height: 280,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("Rose & Gold"),
+                  Text("Automatic Watch"),
+                  Text("Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.")
+                ],
+              ),
+            ),
           )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
