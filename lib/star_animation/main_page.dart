@@ -168,9 +168,51 @@ class _MainPageState extends State<MainPage> {
                 )
               ],
             ),
+          ),
+          Container(
+            height: 360,
+            child: ListView(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.all(16),
+                  height: 240,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.grey[200]
+                  ),
+
+                ),
+                Container(
+                  margin: EdgeInsets.all(16),
+                  height: 240,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.grey[200]
+                  ),
+
+                ),
+              ],
+            ),
           )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
