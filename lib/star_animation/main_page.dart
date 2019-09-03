@@ -99,10 +99,51 @@ class _MainPageState extends State<MainPage> {
                   left: 36,
                   right: 36,
                   child: Container(
+                    padding: EdgeInsets.only(right: 16, left: 7),
                     height: 52,
                     decoration: BoxDecoration(
                       color: Colors.indigoAccent,
                       borderRadius: BorderRadius.circular(16)
+                    ),
+                    child: Row(
+                      children: <Widget>[
+
+                        Icon(Icons.visibility, color: Colors.white,),
+                        Text("999", style: TextStyle(
+                          color: Colors.white
+                        ),),
+                        Spacer(),
+                        Icon(Icons.whatshot,  color: Colors.white,),
+                        Text("150", style: TextStyle(
+                            color: Colors.white
+                        ),),
+                        Spacer(),
+                        Icon(Icons.message, color: Colors.white,),
+                        Text("25", style: TextStyle(
+                            color: Colors.white
+                        ),),
+                        Spacer(),
+                        InkWell(
+                          onTap: (){
+                            
+                          },
+                          child: Container(
+                            height: 30,
+                            width: 80,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8)
+                            ),
+                            child: Center(
+                              child: Text("Full Stats",
+                              style: TextStyle(
+                                color: Colors.indigoAccent
+                              ),),
+                            ),
+                          ),
+                        )
+
+                      ],
                     ),
                   ),
                 )
