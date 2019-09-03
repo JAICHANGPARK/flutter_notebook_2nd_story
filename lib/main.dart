@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notebook_second_story/anicorn_watch_app/main_page.dart';
+import 'package:flutter_notebook_second_story/star_animation/main_page.dart';
 
 
-void main() => runApp(AnicornWatchApp());
+void main() => runApp(StarAnimationApp());
 
 

@@ -336,6 +336,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  snappable:
+    dependency: "direct main"
+    description:
+      name: snappable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   source_span:
     dependency: transitive
     description:
