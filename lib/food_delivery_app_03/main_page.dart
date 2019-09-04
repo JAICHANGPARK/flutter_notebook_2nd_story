@@ -60,7 +60,295 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
-            
+            Container(
+              height: 140,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text("Top categories",style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20
+                          ),),
+                          Text("show all", style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600
+                          ),)
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.orange[200]
+                                ),
+                                child: Center(
+                                  child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/taco_1f32e.png",
+                                  width: 32,
+                                  height: 38,),
+                                ),
+                                ),
+
+                                Text("Mexican",style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Pizza",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/cooked-rice_1f35a.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Asian",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hamburger_1f354.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Burgers",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/burrito_1f32f.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Burrito",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/taco_1f32e.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Mexican",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Pizza",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/cooked-rice_1f35a.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Asian",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hamburger_1f354.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Burgers",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 84,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]
+                                  ),
+                                  child: Center(
+                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/burrito_1f32f.png",
+                                      width: 32,
+                                      height: 38,),
+                                  ),
+                                ),
+
+                                Text("Burrito",style: TextStyle(
+                                    color: Colors.black.withOpacity(0.6)
+                                ),)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Text("Recommended for you",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              
+            ),)
           ],
         ),
       ),
