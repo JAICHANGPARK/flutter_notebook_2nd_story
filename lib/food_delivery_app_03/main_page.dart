@@ -40,11 +40,11 @@ class _MainPageState extends State<MainPage> {
                             borderRadius: BorderRadius.circular(4)),
                         child: TextField(
                           decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.search),
+                              suffixIcon: Icon(Icons.search),
                               border: InputBorder.none,
                               hintText: "Search",
-                              helperStyle: TextStyle(color: Colors.grey,
-                              fontSize: 12)),
+                              helperStyle:
+                                  TextStyle(color: Colors.grey, fontSize: 12)),
                         ),
                       ),
                     ),
@@ -73,16 +73,20 @@ class _MainPageState extends State<MainPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text("Top categories",style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20
-                          ),),
-                          Text("show all", style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600
-                          ),)
+                          Text(
+                            "Top categories",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                          Text(
+                            "show all",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          )
                         ],
                       ),
                     ),
@@ -101,22 +105,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.orange[200]
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.orange[200]),
+                                  child: Center(
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/taco_1f32e.png",
+                                      width: 32,
+                                      height: 38,
+                                    ),
+                                  ),
                                 ),
-                                child: Center(
-                                  child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/taco_1f32e.png",
-                                  width: 32,
-                                  height: 38,),
-                                ),
-                                ),
-
-                                Text("Mexican",style: TextStyle(
-                                  color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Mexican",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -125,22 +132,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Pizza",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Pizza",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -149,22 +159,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/cooked-rice_1f35a.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/cooked-rice_1f35a.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Asian",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Asian",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -173,22 +186,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hamburger_1f354.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hamburger_1f354.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Burgers",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Burgers",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -197,22 +213,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/burrito_1f32f.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/burrito_1f32f.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Burrito",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Burrito",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -221,22 +240,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/taco_1f32e.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/taco_1f32e.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Mexican",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Mexican",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -245,22 +267,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Pizza",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Pizza",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -269,22 +294,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/cooked-rice_1f35a.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/cooked-rice_1f35a.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Asian",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Asian",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -293,22 +321,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hamburger_1f354.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/hamburger_1f354.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Burgers",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Burgers",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -317,22 +348,25 @@ class _MainPageState extends State<MainPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Container(height: 48,
+                                Container(
+                                  height: 48,
                                   width: 48,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.orange[200]
-                                  ),
+                                      color: Colors.orange[200]),
                                   child: Center(
-                                    child: Image.network("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/burrito_1f32f.png",
+                                    child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/burrito_1f32f.png",
                                       width: 32,
-                                      height: 38,),
+                                      height: 38,
+                                    ),
                                   ),
                                 ),
-
-                                Text("Burrito",style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)
-                                ),)
+                                Text(
+                                  "Burrito",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.6)),
+                                )
                               ],
                             ),
                           ),
@@ -345,27 +379,28 @@ class _MainPageState extends State<MainPage> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16, left: 8),
-              child: Text("Recommended for you",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),),
+              child: Text(
+                "Recommended for you",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             Container(
               height: 460,
               child: ListView.builder(
-
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   itemCount: 10,
-                  itemBuilder: (context, index){
-                return Container(
-                  height: 120,
-                  margin: EdgeInsets.all(8),
-                  child: Placeholder(),
-                );
-              }),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 120,
+                      margin: EdgeInsets.all(8),
+                      child: Placeholder(),
+                    );
+                  }),
             )
           ],
         ),
@@ -373,26 +408,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
