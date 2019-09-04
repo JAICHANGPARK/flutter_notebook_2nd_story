@@ -20,6 +20,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SafeArea(
               top: true,
@@ -342,13 +343,30 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             ),
-            Text("Recommended for you",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              
-            ),)
+            Padding(
+              padding: const EdgeInsets.only(top: 16, left: 8),
+              child: Text("Recommended for you",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),
+            ),
+            Container(
+              height: 460,
+              child: ListView.builder(
+
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  itemCount: 10,
+                  itemBuilder: (context, index){
+                return Container(
+                  height: 120,
+                  margin: EdgeInsets.all(8),
+                  child: Placeholder(),
+                );
+              }),
+            )
           ],
         ),
       ),
