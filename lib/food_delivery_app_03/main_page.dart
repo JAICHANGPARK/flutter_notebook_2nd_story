@@ -401,24 +401,19 @@ class _MainPageState extends State<MainPage> {
                       margin: EdgeInsets.all(8),
                       padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4),
-                        border: Border.all(
-                          color: Colors.grey,
-                        )
-                      ),
+                          borderRadius: BorderRadius.circular(4),
+                          border: Border.all(
+                            color: Colors.grey,
+                          )),
                       child: Row(
                         children: <Widget>[
                           Expanded(
                             flex: 4,
                             child: Container(
                               decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    shops[index].imgPath
-                                  ),
-                                  fit: BoxFit.cover
-                                )
-                              ),
+                                  image: DecorationImage(
+                                      image: NetworkImage(shops[index].imgPath),
+                                      fit: BoxFit.cover)),
                             ),
                           ),
                           Expanded(
@@ -430,36 +425,95 @@ class _MainPageState extends State<MainPage> {
                                 children: <Widget>[
                                   Row(
                                     mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Expanded(
                                         flex: 8,
                                         child: Text(
                                           shops[index].title,
                                           style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold
-                                          ),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                       Expanded(
                                         flex: 2,
-                                        child: shops[index].isLike ?
-                                        Icon(Icons.favorite, color: Colors.red,)
-                                        : Icon(Icons.favorite_border, color: Colors.red,),
+                                        child: shops[index].isLike
+                                            ? Icon(
+                                                Icons.favorite,
+                                                color: Colors.red,
+                                              )
+                                            : Icon(
+                                                Icons.favorite_border,
+                                                color: Colors.red,
+                                              ),
                                       ),
                                     ],
                                   ),
                                   Spacer(),
-                                  Text(shops[index].food, style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black.withOpacity(0.6)
-                                  ),),
-                                  Text(shops[index].price,
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    color: Colors.grey
-                                  ),)
+                                  Text(
+                                    shops[index].food,
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.black.withOpacity(0.6)),
+                                  ),
+                                  Text(
+                                    shops[index].price,
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.grey),
+                                  ),
+                                  Spacer(),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 1,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Row(
+                                              children: <Widget>[
+                                                Icon(
+                                                  Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 20,
+                                                ),
+                                                Icon(Icons.star,
+                                                    color: Colors.yellow,
+                                                    size: 20),
+                                                Icon(Icons.star,
+                                                    color: Colors.yellow,
+                                                    size: 20),
+                                                Icon(Icons.star,
+                                                    color: Colors.yellow,
+                                                    size: 20),
+                                                Icon(Icons.star,
+                                                    color: Colors.grey,
+                                                    size: 20),
+                                              ],
+                                            ),
+                                            Text(
+                                              shops[index].price,
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  color: Colors.grey),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: shops[index].freeDelivery
+                                            ? Container(
+                                                height: 16,
+                                                decoration: BoxDecoration(
+                                                    color: Colors.orange),
+                                              )
+                                            : Container(),
+                                      )
+                                    ],
+                                  )
                                 ],
                               ),
                             ),
