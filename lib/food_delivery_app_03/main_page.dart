@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FoodDeliveryApp03 extends StatelessWidget {
@@ -396,9 +397,12 @@ class _MainPageState extends State<MainPage> {
                   itemCount: 10,
                   itemBuilder: (context, index) {
                     return Container(
-                      height: 120,
+                      height: 130,
                       margin: EdgeInsets.all(8),
-                      child: Placeholder(),
+                      padding: EdgeInsets.all(16),
+                      child: Row(
+                        children: <Widget>[],
+                      ),
                     );
                   }),
             )
@@ -408,3 +412,41 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+class Shop {
+  String imgPath;
+  String title;
+  String food;
+  String price;
+  int reviewCount;
+
+  Shop({this.imgPath, this.title, this.food, this.price, this.reviewCount});
+}
+
+List<Shop> shops = [
+  Shop(
+      imgPath:
+          "https://cdn.pixabay.com/photo/2017/09/30/15/10/pizza-2802332__340.jpg",
+      title: "The Kitchen",
+      food: "Pizza, burgers, fries",
+      price: "min, order \$10.00",
+      reviewCount: 122)
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
