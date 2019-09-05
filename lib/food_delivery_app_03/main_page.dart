@@ -439,17 +439,29 @@ class _MainPageState extends State<MainPage> {
                                         ),
                                       ),
                                       Expanded(
-                                        flex: 2,
-                                        child: shops[index].isLike
-                                            ? Icon(
-                                                Icons.favorite,
-                                                color: Colors.red,
-                                              )
-                                            : Icon(
-                                                Icons.favorite_border,
-                                                color: Colors.red,
-                                              ),
-                                      ),
+                                          flex: 2,
+                                          child: shops[index].isLike
+                                              ? IconButton(
+                                                  icon: Icon(Icons.favorite),
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      shops[index].isLike =
+                                                          !shops[index].isLike;
+                                                    });
+                                                  },
+                                                  color: Colors.red,
+                                                )
+                                              : IconButton(
+                                                  icon: Icon(
+                                                      Icons.favorite_border),
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      shops[index].isLike =
+                                                          !shops[index].isLike;
+                                                    });
+                                                  },
+                                                  color: Colors.red,
+                                                )),
                                     ],
                                   ),
                                   Spacer(),
@@ -511,17 +523,19 @@ class _MainPageState extends State<MainPage> {
                                                     EdgeInsets.only(left: 32),
                                                 height: 16,
                                                 decoration: BoxDecoration(
-                                                    color: Colors.orange[300],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            4),),
-                                        child: Center(
-                                          child: Text("free deliveryr",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 10
-                                          ),),
-                                        ),)
+                                                  color: Colors.orange[300],
+                                                  borderRadius:
+                                                      BorderRadius.circular(4),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    "free deliveryr",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 10),
+                                                  ),
+                                                ),
+                                              )
                                             : Container(),
                                       )
                                     ],
