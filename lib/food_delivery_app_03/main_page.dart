@@ -392,6 +392,7 @@ class _MainPageState extends State<MainPage> {
             Container(
               height: 460,
               child: ListView.builder(
+                  padding: EdgeInsets.zero,
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   itemCount: shops.length,
@@ -506,10 +507,21 @@ class _MainPageState extends State<MainPage> {
                                         flex: 1,
                                         child: shops[index].freeDelivery
                                             ? Container(
+                                                margin:
+                                                    EdgeInsets.only(left: 32),
                                                 height: 16,
                                                 decoration: BoxDecoration(
-                                                    color: Colors.orange),
-                                              )
+                                                    color: Colors.orange[300],
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            4),),
+                                        child: Center(
+                                          child: Text("free deliveryr",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 10
+                                          ),),
+                                        ),)
                                             : Container(),
                                       )
                                     ],
