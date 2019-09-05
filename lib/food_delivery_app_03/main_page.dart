@@ -394,14 +394,77 @@ class _MainPageState extends State<MainPage> {
               child: ListView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
-                  itemCount: 10,
+                  itemCount: shops.length,
                   itemBuilder: (context, index) {
                     return Container(
-                      height: 130,
+                      height: 160,
                       margin: EdgeInsets.all(8),
                       padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(4),
+                        border: Border.all(
+                          color: Colors.grey,
+                        )
+                      ),
                       child: Row(
-                        children: <Widget>[],
+                        children: <Widget>[
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    shops[index].imgPath
+                                  ),
+                                  fit: BoxFit.cover
+                                )
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 8,
+                            child: Container(
+                              margin: EdgeInsets.only(left: 8),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 8,
+                                        child: Text(
+                                          shops[index].title,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 2,
+                                        child: shops[index].isLike ?
+                                        Icon(Icons.favorite, color: Colors.red,)
+                                        : Icon(Icons.favorite_border, color: Colors.red,),
+                                      ),
+                                    ],
+                                  ),
+                                  Spacer(),
+                                  Text(shops[index].food, style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.black.withOpacity(0.6)
+                                  ),),
+                                  Text(shops[index].price,
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    color: Colors.grey
+                                  ),)
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     );
                   }),
@@ -419,34 +482,45 @@ class Shop {
   String food;
   String price;
   int reviewCount;
+  bool isLike;
+  bool freeDelivery;
 
-  Shop({this.imgPath, this.title, this.food, this.price, this.reviewCount});
+  Shop(
+      {this.imgPath,
+      this.title,
+      this.food,
+      this.price,
+      this.reviewCount,
+      this.isLike,
+      this.freeDelivery});
 }
 
 List<Shop> shops = [
+  Shop(
+      imgPath:
+          "https://cdn.pixabay.com/photo/2017/03/17/16/44/taco-2152097_960_720.jpg",
+      title: "Paco fish taco and more",
+      food: "Seafood, Mexican, fish tacos",
+      price: "min, order \$15.00",
+      reviewCount: 157,
+      isLike: true,
+      freeDelivery: false),
   Shop(
       imgPath:
           "https://cdn.pixabay.com/photo/2017/09/30/15/10/pizza-2802332__340.jpg",
       title: "The Kitchen",
       food: "Pizza, burgers, fries",
       price: "min, order \$10.00",
-      reviewCount: 122)
+      reviewCount: 122,
+      isLike: false,
+      freeDelivery: true),
+  Shop(
+      imgPath:
+          "https://cdn.pixabay.com/photo/2016/01/22/02/13/meat-1155132_960_720.jpg",
+      title: "Joe and sons grill steak house",
+      food: "American, steak, ribs",
+      price: "min, order \$10.00",
+      reviewCount: 98,
+      isLike: false,
+      freeDelivery: true),
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
