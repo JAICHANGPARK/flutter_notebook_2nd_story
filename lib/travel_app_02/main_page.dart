@@ -106,9 +106,9 @@ class _MainPageState extends State<MainPage> {
                                 borderRadius: BorderRadius.circular(16),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.black.withOpacity(0.05),
-                                    blurRadius: 5,
-                                    spreadRadius: 6
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 3,
+                                    spreadRadius: 1
                                   )
                                 ]
                               ),
@@ -129,7 +129,6 @@ class _MainPageState extends State<MainPage> {
                         ],
                       ),
                     ),
-
                     Container(
                       width: 260,
                       margin: EdgeInsets.only(right: 16),
@@ -139,11 +138,18 @@ class _MainPageState extends State<MainPage> {
                             left: 4,
                             top: 0,
                             right: 0,
-                            bottom: 0,
+                            bottom: 12,
                             child: Container(
                               decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(16)
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.1),
+                                        blurRadius: 3,
+                                        spreadRadius: 1
+                                    )
+                                  ]
                               ),
                             ),
                           ),
