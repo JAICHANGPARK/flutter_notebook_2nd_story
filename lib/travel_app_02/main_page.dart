@@ -14,6 +14,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  TextEditingController _textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,12 +51,119 @@ class _MainPageState extends State<MainPage> {
                 ),
                 child: Center(
                   child: TextField(
+                    controller: _textEditingController,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       icon: Icon(Icons.search),
                       hintText: "Search place or list..."
                     ),
                   ),
+                ),
+              ),
+              SizedBox(
+                height: 32,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text("My List", style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),),
+                    Spacer(),
+                    Text("Show all", style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold
+                    ),)
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Container(
+                height: 340,
+                child: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Container(
+                      width: 260,
+                      margin: EdgeInsets.only(right: 16),
+                      child: Stack(
+                        children: <Widget>[
+                          Positioned(
+                            left: 4,
+                            top: 0,
+                            right: 0,
+                            bottom: 12,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.05),
+                                    blurRadius: 5,
+                                    spreadRadius: 6
+                                  )
+                                ]
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 0,
+                            top: 16,
+                            child: Container(
+                              height: 32,
+                              width: 4,
+                              decoration: BoxDecoration(
+                                  color: Colors.orange,
+                                  borderRadius: BorderRadius.circular(16)
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      width: 260,
+                      margin: EdgeInsets.only(right: 16),
+                      child: Stack(
+                        children: <Widget>[
+                          Positioned(
+                            left: 4,
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16)
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 0,
+                            top: 16,
+                            child: Container(
+                              height: 32,
+                              width: 4,
+                              decoration: BoxDecoration(
+                                  color: Colors.orange,
+                                  borderRadius: BorderRadius.circular(16)
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+
+                  ],
                 ),
               )
             ],
