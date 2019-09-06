@@ -16,7 +16,23 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            SafeArea(
+              top: true,
+              left: true,
+              right: true,
+              child: Text("Collections", style: TextStyle(
+                color: Colors.black,
+
+              ),),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
 
