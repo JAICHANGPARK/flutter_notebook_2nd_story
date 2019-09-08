@@ -91,7 +91,7 @@ class _MainPageState extends State<MainPage> {
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     Container(
-                      width: 260,
+                      width: 220,
                       margin: EdgeInsets.only(right: 16),
                       child: Stack(
                         children: <Widget>[
@@ -112,11 +112,40 @@ class _MainPageState extends State<MainPage> {
                                   )
                                 ]
                               ),
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 24, right: 24,
+                                top: 24),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text("Private list", style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.w700
+                                            ),),
+                                            Text("by Sean Collins", style: TextStyle(
+                                              color: Colors.grey,
+                                            ),),
+                                          ],
+                                        ),
+                                        Icon(Icons.more_horiz, color: Colors.grey,
+                                        size: 28,),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                           Positioned(
                             left: 0,
-                            top: 16,
+                            top: 24,
                             child: Container(
                               height: 32,
                               width: 4,
@@ -150,6 +179,11 @@ class _MainPageState extends State<MainPage> {
                                         spreadRadius: 1
                                     )
                                   ]
+                              ),
+                              child: Column(
+                                children: <Widget>[
+
+                                ],
                               ),
                             ),
                           ),
