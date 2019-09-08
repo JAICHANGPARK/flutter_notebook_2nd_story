@@ -114,8 +114,11 @@ class _MainPageState extends State<MainPage> {
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 24, right: 24,
-                                top: 24),
+                                top: 24,
+                                bottom: 24
+                                ),
                                 child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Row(
@@ -137,7 +140,29 @@ class _MainPageState extends State<MainPage> {
                                         Icon(Icons.more_horiz, color: Colors.grey,
                                         size: 28,),
                                       ],
+                                    ),
+                                    Container(
+                                      height: 90,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(8),
+                                        image: DecorationImage(
+                                          image: NetworkImage(
+                                            "https://cdn.pixabay.com/photo/2019/04/04/17/58/hong-kong-4103334_960_720.jpg"
+                                          ),
+                                          fit: BoxFit.cover
+                                        ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black.withOpacity(0.2),
+                                            blurRadius: 10,
+                                            spreadRadius: 1,
+                                            offset: Offset(0, 5)
+                                          )
+                                        ]
+                                      ),
                                     )
+
                                   ],
                                 ),
                               ),
