@@ -31,9 +31,9 @@ dependencies:
 
   bubble_bottom_bar: ^1.2.0
 
-  google_map_location_picker: ^1.0.5+1
+  google_map_location_picker:
   avatar_glow: ^1.0.0
-  google_maps_flutter: ^0.5.20+3
+  google_maps_flutter:
 
   flutter_staggered_grid_view: ^0.3.0
 
