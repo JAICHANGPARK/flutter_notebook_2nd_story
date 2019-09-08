@@ -585,10 +585,91 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              Container(
+                height: 280,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("You will be interested" ,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18
+                    ),),
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Container(
+                      height: 200,
+                      child: ListView(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        children: <Widget>[
+                          Container(
+                            width: 200,
+                            margin: EdgeInsets.only(right: 8),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16)
+                            ),
+                            child: Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  left: 24,
+                                  top: 24,
+                                  child: Container(height:52,width: 52,
+                                  decoration: BoxDecoration(
+                                    color: Colors.deepPurpleAccent,
+                                    borderRadius: BorderRadius.circular(16)
+                                  ),
+                                  
+                                 ),
+                                  
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 200,
+                            margin: EdgeInsets.only(right: 8),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16)
+                            ),
+                            child: Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  left: 24,
+                                  top: 24,
+                                  child: Container(height:52,width: 52,
+                                    decoration: BoxDecoration(
+                                        color: Colors.orange,
+                                        borderRadius: BorderRadius.circular(16)
+                                    ),
+
+                                  ),
+
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
         ),
+
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        child: Container(height: 60,),
       ),
     );
   }
