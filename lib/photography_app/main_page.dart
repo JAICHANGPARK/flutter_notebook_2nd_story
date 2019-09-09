@@ -85,12 +85,13 @@ class _MainPageState extends State<MainPage> {
                                 height: 38,
                                 width: 100,
                                 decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.1),),
+                                  color: Colors.white.withOpacity(0.1),
+                                ),
                                 child: Center(
-                                  child: Text("City",
-                                  style: TextStyle(
-                                    color: Colors.yellow[300]
-                                  ),),
+                                  child: Text(
+                                    "City",
+                                    style: TextStyle(color: Colors.yellow[300]),
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -100,12 +101,13 @@ class _MainPageState extends State<MainPage> {
                                 height: 38,
                                 width: 100,
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.1),),
+                                  color: Colors.white.withOpacity(0.1),
+                                ),
                                 child: Center(
-                                  child: Text("Panorama",
-                                    style: TextStyle(
-                                        color: Colors.yellow[300]
-                                    ),),
+                                  child: Text(
+                                    "Panorama",
+                                    style: TextStyle(color: Colors.yellow[300]),
+                                  ),
                                 ),
                               ),
                             ],
