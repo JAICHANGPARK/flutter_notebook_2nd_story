@@ -111,6 +111,68 @@ class _MainPageState extends State<MainPage> {
                                 ),
                               ),
                             ],
+                          ),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "41+",
+                                    style: TextStyle(
+                                      fontSize: 28,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Spot Building",
+                                    style: TextStyle(
+                                        color: Colors.white.withOpacity(0.8)),
+                                  )
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "10+",
+                                    style: TextStyle(
+                                      fontSize: 28,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Spot Popular",
+                                    style: TextStyle(
+                                        color: Colors.white.withOpacity(0.8)),
+                                  )
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "5+",
+                                    style: TextStyle(
+                                      fontSize: 28,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Culinary Spot",
+                                    style: TextStyle(
+                                        color: Colors.white.withOpacity(0.8)),
+                                  )
+                                ],
+                              )
+                            ],
                           )
                         ],
                       ),
