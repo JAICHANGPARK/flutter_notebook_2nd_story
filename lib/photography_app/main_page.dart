@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/generated/i18n.dart';
 
 class PhotographyApp extends StatelessWidget {
   @override
@@ -63,7 +64,54 @@ class _MainPageState extends State<MainPage> {
                     bottom: 0,
                     top: 16,
                     child: Container(
+                      padding: EdgeInsets.all(24),
                       decoration: BoxDecoration(color: Colors.red[400]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            "Summarecon Lit",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 24),
+                          ),
+                          SizedBox(
+                            height: 32,
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                height: 38,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.1),),
+                                child: Center(
+                                  child: Text("City",
+                                  style: TextStyle(
+                                    color: Colors.yellow[300]
+                                  ),),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              ),
+                              Container(
+                                height: 38,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.1),),
+                                child: Center(
+                                  child: Text("Panorama",
+                                    style: TextStyle(
+                                        color: Colors.yellow[300]
+                                    ),),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Positioned(
