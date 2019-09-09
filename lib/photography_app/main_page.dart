@@ -67,6 +67,7 @@ class _MainPageState extends State<MainPage> {
                       padding: EdgeInsets.all(24),
                       decoration: BoxDecoration(color: Colors.red[400]),
                       child: Column(
+
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
@@ -173,7 +174,23 @@ class _MainPageState extends State<MainPage> {
                                 ],
                               )
                             ],
-                          )
+                          ),
+                          SizedBox(height: 48,),
+                          Text(
+                              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, "
+                                  "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  " e velit esse cillum dolore eu fugiat nulla pariatur. Excepteur",
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.5)
+                          ),),
+                          SizedBox(height: 16,),
+                          Text(
+                            "Detail",
+                            style: TextStyle(
+                              color: Colors.,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -201,6 +218,30 @@ class _MainPageState extends State<MainPage> {
                           Icons.location_searching,
                           color: Colors.black,
                         ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 24,
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      height: 160,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 5,
+                            child: Container(
+                              color: Colors.white.withOpacity(0.2),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              color: Colors.white.withOpacity(0.1),
+                            ),
+                          )
+                        ],
                       ),
                     ),
                   ),
