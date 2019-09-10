@@ -187,7 +187,7 @@ class _MainPageState extends State<MainPage> {
                           Text(
                             "Detail",
                             style: TextStyle(
-                              color: Colors.,
+                              color: Colors.yellow,
                               fontWeight: FontWeight.bold
                             ),
                           ),
