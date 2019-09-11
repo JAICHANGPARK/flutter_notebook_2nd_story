@@ -20,6 +20,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+        fit: StackFit.expand,
         children: <Widget>[
           Positioned(
             left: 0,
@@ -147,7 +148,7 @@ class _MainPageState extends State<MainPage> {
                                           ),
                                         ),
                                         Spacer(),
-                                        Text("INDOOR", 
+                                        Text("INDOOR",
                                         style: TextStyle(
                                           color: Colors.white.withOpacity(0.5),
                                           fontSize: 12
