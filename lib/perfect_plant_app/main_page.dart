@@ -87,9 +87,92 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
           ),
-          
+          Positioned(
+            bottom: 0,
+            right: 0,
+            top: MediaQuery.of(context).size.height / 2.6,
+            left: 0,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 1,
+                          child: Container(
+                            color: Colors.red,
+                            child: Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  top: 16,
+                                  left: 8,
+                                  right: 8,
+                                  bottom: 8,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.teal
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 1,
+                          child: Placeholder(),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 1,
+                          child: Placeholder(),
+                        ),
+                        Flexible(
+                          flex: 1,
+                          child: Placeholder(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
