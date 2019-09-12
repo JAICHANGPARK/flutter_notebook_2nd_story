@@ -78,6 +78,7 @@ class _AddPlantPageState extends State<AddPlantPage> {
                           right: 0,
                           bottom: 0,
                           child: Container(
+                            padding: EdgeInsets.only(left: 16, bottom: 16),
                             decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                     colors: <Color>[
@@ -86,13 +87,82 @@ class _AddPlantPageState extends State<AddPlantPage> {
                                     ],
                                     begin: Alignment.topLeft,
                                     end: Alignment.bottomRight),
-                                borderRadius: BorderRadius.circular(16)),
+                               borderRadius: BorderRadius.circular(16)),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Spacer(),
+                                Text("INDOOR",
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5),
+                                      fontSize: 16
+                                  ),),
+                                SizedBox(height: 4,),
+                                Text("Cactus",
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(1),
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.w600
+                                  ),),
+                                SizedBox(height: 16,),
+                                Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(8),
+                                          border: Border.all(
+                                              color: Colors.white
+                                          )
+                                      ),
+                                      child: Center(
+                                        child: Icon(Icons.wb_sunny,
+                                          color: Colors.white,
+                                          size: 24,),
+                                      ),
+                                    ),
+                                    SizedBox(width: 16,),
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(8),
+                                          border: Border.all(
+                                              color: Colors.white
+                                          )
+                                      ),
+                                      child: Center(
+                                        child: Icon(Icons.local_drink,
+                                          color: Colors.white,size: 24,),
+                                      ),
+                                    ),
+                                    SizedBox(width: 16,),
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(8),
+                                          border: Border.all(
+                                              color: Colors.white
+                                          )
+                                      ),
+                                      child: Center(
+                                        child: Icon(Icons.terrain,
+                                          color: Colors.white,size: 24,),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
+
                         ),
                         Positioned(
                           top: -16,
-                          left: 16,
-                          right: 16,
+                          left: 0,
+                          right: 0,
                           child: Container(
                             height: 340,
                             decoration: BoxDecoration(
