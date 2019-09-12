@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/perfect_plant_app/add_page.dart';
 
 class PerfectPlantApp extends StatelessWidget {
   @override
@@ -654,8 +655,9 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: (){
-
-
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context)=>AddPlantPage()
+          ));
         },
       ),
     );
