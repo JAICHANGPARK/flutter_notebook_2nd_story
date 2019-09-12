@@ -13,6 +13,7 @@ class _AddPlantPageState extends State<AddPlantPage> {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SafeArea(
               top: true,
@@ -20,8 +21,13 @@ class _AddPlantPageState extends State<AddPlantPage> {
               child: Icon(Icons.arrow_back),
             ),
             SizedBox(height: 16,),
-            Icon(Icons.local_florist, size: 38,),
-            Text("Beginner")
+            Icon(Icons.local_florist, size: 38,color: Colors.teal,),
+            SizedBox(height: 16,),
+            Text("Beginner", style: TextStyle(
+              color: Colors.black,
+              fontSize: 24,
+              fontWeight: FontWeight.bold
+            ),)
           ],
         ),
       ),
