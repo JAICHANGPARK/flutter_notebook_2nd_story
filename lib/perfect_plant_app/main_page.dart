@@ -651,6 +651,13 @@ class _MainPageState extends State<MainPage> {
 
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
+
+
+        },
+      ),
     );
   }
 }
