@@ -118,6 +118,11 @@ class _DetailPageState extends State<DetailPage> {
                                   borderRadius: BorderRadius.circular(8),
                                   border: Border.all(color: Colors.white,)
                                 ),
+                                child: Center(
+                                  child: Icon(Icons.wb_sunny,
+                                    color: Colors.white,
+                                    size: 28,),
+                                ),
                               ),
                               Spacer(),
                               Text("LIGHT", style: TextStyle(
