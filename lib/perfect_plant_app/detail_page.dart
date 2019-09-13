@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
@@ -80,16 +81,74 @@ class _DetailPageState extends State<DetailPage> {
                       "Agave is an example of a popular succulent, along with aloe and "
                       "popular echeveria rosettes.",
                       style: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black.withOpacity(0.6),
                           letterSpacing: 1.2,
                           wordSpacing: 1.5),
                     ),
                   ),
                   Spacer(),
-                  Text("How to take care of it".toUpperCase()),
+                  Text("How to take care of it".toUpperCase(),
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16
+                  ),),
                   Container(
-                    height: 160,
-                    child: Placeholder(),
+                    height: 180,
+                    margin: EdgeInsets.only(top: 16, bottom: 16),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.only(left: 16, top: 16, bottom: 32),
+                          margin: EdgeInsets.only(right: 8),
+                          width: 180,
+                         decoration: BoxDecoration(
+                           color: Colors.teal,
+                           borderRadius: BorderRadius.circular(8)
+                         ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.white,)
+                                ),
+                              ),
+                              Spacer(),
+                              Text("LIGHT", style: TextStyle(
+                                color: Colors.white,
+                              ),),
+                              Text("Indirect", style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18
+                              ),),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 8),
+                          width: 180,
+                          decoration: BoxDecoration(
+                              color: Colors.teal,
+                              borderRadius: BorderRadius.circular(8)
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 8),
+                          width: 180,
+                          decoration: BoxDecoration(
+                              color: Colors.teal,
+                              borderRadius: BorderRadius.circular(8)
+                          ),
+                        ),
+
+                      ],
+                    ),
                   )
                 ],
               ),
