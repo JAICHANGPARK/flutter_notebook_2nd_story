@@ -87,12 +87,13 @@ class _DetailPageState extends State<DetailPage> {
                     ),
                   ),
                   Spacer(),
-                  Text("How to take care of it".toUpperCase(),
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16
-                  ),),
+                  Text(
+                    "How to take care of it".toUpperCase(),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
+                  ),
                   Container(
                     height: 180,
                     margin: EdgeInsets.only(top: 16, bottom: 16),
@@ -101,48 +102,13 @@ class _DetailPageState extends State<DetailPage> {
                       shrinkWrap: true,
                       children: <Widget>[
                         Container(
-                          padding: EdgeInsets.only(left: 16, top: 16, bottom: 32),
+                          padding:
+                              EdgeInsets.only(left: 16, top: 16, bottom: 32),
                           margin: EdgeInsets.only(right: 8),
-                          width: 180,
-                         decoration: BoxDecoration(
-                           color: Colors.teal,
-                           borderRadius: BorderRadius.circular(8)
-                         ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Container(
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  border: Border.all(color: Colors.white,)
-                                ),
-                                child: Center(
-                                  child: Icon(Icons.wb_sunny,
-                                    color: Colors.white,
-                                    size: 28,),
-                                ),
-                              ),
-                              Spacer(),
-                              Text("LIGHT", style: TextStyle(
-                                color: Colors.white,
-                              ),),
-                              Text("Indirect", style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18
-                              ),),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(left: 16, top: 16, bottom: 32),
-                          margin: EdgeInsets.only(right: 8),
-                          width: 180,
+                          width: 160,
                           decoration: BoxDecoration(
                               color: Colors.teal,
-                              borderRadius: BorderRadius.circular(8)
-                          ),
+                              borderRadius: BorderRadius.circular(8)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -151,33 +117,40 @@ class _DetailPageState extends State<DetailPage> {
                                 width: 48,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(color: Colors.white,)
-                                ),
+                                    border: Border.all(
+                                      color: Colors.white,
+                                    )),
                                 child: Center(
-                                  child: Icon(Icons.local_drink,
+                                  child: Icon(
+                                    Icons.wb_sunny,
                                     color: Colors.white,
-                                    size: 28,),
+                                    size: 28,
+                                  ),
                                 ),
                               ),
                               Spacer(),
-                              Text("WATER", style: TextStyle(
-                                color: Colors.white,
-                              ),),
-                              Text("Every 15 days", style: TextStyle(
+                              Text(
+                                "LIGHT",
+                                style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 18
-                              ),),
+                                ),
+                              ),
+                              Text(
+                                "Indirect",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
                             ],
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(left: 16, top: 16, bottom: 32),
+                          padding:
+                              EdgeInsets.only(left: 16, top: 16, bottom: 32),
                           margin: EdgeInsets.only(right: 8),
-                          width: 180,
+                          width: 160,
                           decoration: BoxDecoration(
                               color: Colors.teal,
-                              borderRadius: BorderRadius.circular(8)
-                          ),
+                              borderRadius: BorderRadius.circular(8)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -186,26 +159,74 @@ class _DetailPageState extends State<DetailPage> {
                                 width: 48,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(color: Colors.white,)
-                                ),
+                                    border: Border.all(
+                                      color: Colors.white,
+                                    )),
                                 child: Center(
-                                  child: Icon(Icons.terrain,
+                                  child: Icon(
+                                    Icons.local_drink,
                                     color: Colors.white,
-                                    size: 28,),
+                                    size: 28,
+                                  ),
                                 ),
                               ),
                               Spacer(),
-                              Text("Temperature".toUpperCase(), style: TextStyle(
-                                color: Colors.white,
-                              ),),
-                              Text("20-28 C", style: TextStyle(
+                              Text(
+                                "WATER",
+                                style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 18
-                              ),),
+                                ),
+                              ),
+                              Text(
+                                "Every 15 days",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
                             ],
                           ),
                         ),
-
+                        Container(
+                          padding:
+                              EdgeInsets.only(left: 16, top: 16, bottom: 32),
+                          margin: EdgeInsets.only(right: 8),
+                          width: 160,
+                          decoration: BoxDecoration(
+                              color: Colors.teal,
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                      color: Colors.white,
+                                    )),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.terrain,
+                                    color: Colors.white,
+                                    size: 28,
+                                  ),
+                                ),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Temperature".toUpperCase(),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Text(
+                                "20-28 C",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   )
