@@ -46,8 +46,25 @@ class _DetailPageState extends State<DetailPage> {
             left: 0,
             right: 0,
             top: MediaQuery.of(context).size.height / 2 - 80,
-            child: Placeholder(),
-          )
+            child: Container(
+              margin: EdgeInsets.only(top: 24),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24)
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 4,
+                    spreadRadius: 1
+                  )
+                ]
+              ),
+            ),
+          ),
+          Positioned()
         ],
       ),
     );
