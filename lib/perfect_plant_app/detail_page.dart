@@ -136,19 +136,73 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
                         Container(
+                          padding: EdgeInsets.only(left: 16, top: 16, bottom: 32),
                           margin: EdgeInsets.only(right: 8),
                           width: 180,
                           decoration: BoxDecoration(
                               color: Colors.teal,
                               borderRadius: BorderRadius.circular(8)
                           ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(color: Colors.white,)
+                                ),
+                                child: Center(
+                                  child: Icon(Icons.local_drink,
+                                    color: Colors.white,
+                                    size: 28,),
+                                ),
+                              ),
+                              Spacer(),
+                              Text("WATER", style: TextStyle(
+                                color: Colors.white,
+                              ),),
+                              Text("Every 15 days", style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18
+                              ),),
+                            ],
+                          ),
                         ),
                         Container(
+                          padding: EdgeInsets.only(left: 16, top: 16, bottom: 32),
                           margin: EdgeInsets.only(right: 8),
                           width: 180,
                           decoration: BoxDecoration(
                               color: Colors.teal,
                               borderRadius: BorderRadius.circular(8)
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(color: Colors.white,)
+                                ),
+                                child: Center(
+                                  child: Icon(Icons.terrain,
+                                    color: Colors.white,
+                                    size: 28,),
+                                ),
+                              ),
+                              Spacer(),
+                              Text("Temperature".toUpperCase(), style: TextStyle(
+                                color: Colors.white,
+                              ),),
+                              Text("20-28 C", style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18
+                              ),),
+                            ],
                           ),
                         ),
 
@@ -168,7 +222,10 @@ class _DetailPageState extends State<DetailPage> {
                 size: 38,
               ),
               backgroundColor: Colors.teal,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
+              },
             ),
           )
         ],
