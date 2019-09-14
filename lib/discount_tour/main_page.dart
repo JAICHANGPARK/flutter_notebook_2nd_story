@@ -18,27 +18,30 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        centerTitle: true,
-        title: Row(
-          crossAxisAlignment: CrossAxisAlignment.center
-          children: <Widget>[
-            Icon(Icons.flight_takeoff),
-            Text("DiscouintTour",style: TextStyle(
-              color: Colors.black
-            ),)
-          ],
-        ),
-      ),
+
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-
+            Padding(
+              padding: const EdgeInsets.only(top: 48, left: 16, right: 16),
+              child: Container(
+                child: Row(
+                  children: (<Widget>[
+                    Icon(Icons.menu),
+                    Spacer(),
+                    Icon(Icons.flight_takeoff, color: Colors.teal,),
+                    SizedBox(width: 4,),
+                    Text("DiscountTour", style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),),
+                    Spacer()
+                  ]),
+                ),
+              ),
+            )
           ],
         ),
       ),
