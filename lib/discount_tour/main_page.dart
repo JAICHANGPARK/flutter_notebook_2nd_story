@@ -66,12 +66,55 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 16),
+              margin: EdgeInsets.only(left: 16, top: 8),
               height: MediaQuery.of(context).size.height / 3.4,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
-                children: <Widget>[],
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(top: 8, bottom: 8, right: 16),
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black.withOpacity(0.2),
+                        blurRadius: 3,
+                        spreadRadius: 1,
+                        offset: Offset(0, 2))
+                      ]
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 8, bottom: 8, right: 16),
+                    width: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.blueGrey,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black.withOpacity(0.2),
+                              blurRadius: 3,
+                              spreadRadius: 1,
+                              offset: Offset(0, 2))
+                        ]
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 8, bottom: 8, right: 16),
+                    width: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.blueGrey,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black.withOpacity(0.2),
+                              blurRadius: 3,
+                              spreadRadius: 1,
+                              offset: Offset(0, 2))
+                        ]
+                    ),
+                  ),
+                ],
               ),
             )
           ],
