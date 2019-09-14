@@ -85,6 +85,73 @@ class _MainPageState extends State<MainPage> {
                         offset: Offset(0, 2))
                       ]
                     ),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned(
+                          top: 16,
+                          left: 16,
+                          right: 16,
+                          child: Container(
+                            height: 28,
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 28,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.2),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Center(
+                                    child: Text("New", style: TextStyle(
+                                      color: Colors.white
+                                    ),),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+
+
+                        Positioned(
+                          top: 16,
+                          right: 16,
+                          child: Container(
+                            height: 28,
+                            width: 28,
+                            decoration: BoxDecoration(
+                                color: Colors.green,
+                                shape: BoxShape.circle
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 16,
+                          right: 32,
+                          child: Container(
+                            height: 28,
+                            width: 28,
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                shape: BoxShape.circle
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 16,
+                          right: 48,
+                          child: Container(
+                            height: 28,
+                            width: 28,
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                shape: BoxShape.circle
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 8, bottom: 8, right: 16),
