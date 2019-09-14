@@ -18,7 +18,6 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,13 +29,20 @@ class _MainPageState extends State<MainPage> {
                   children: (<Widget>[
                     Icon(Icons.menu),
                     Spacer(),
-                    Icon(Icons.flight_takeoff, color: Colors.teal,),
-                    SizedBox(width: 4,),
-                    Text("DiscountTour", style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold
-                    ),),
+                    Icon(
+                      Icons.flight_takeoff,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      "DiscountTour",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
                     Spacer()
                   ]),
                 ),
@@ -44,31 +50,36 @@ class _MainPageState extends State<MainPage> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 16, top: 42),
-              child: Text("Find the best tour", style: TextStyle(
-                color: Colors.blueGrey, fontWeight: FontWeight.bold,
-                fontSize: 28
-              ),),
+              child: Text(
+                "Find the best tour",
+                style: TextStyle(
+                    color: Colors.blueGrey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 16, top: 16),
               child: Text(
-                "Country", style: TextStyle(
-                color: Colors.blueGrey,
-                fontSize: 20
-              ),
+                "Country",
+                style: TextStyle(color: Colors.blueGrey, fontSize: 20),
               ),
             ),
+            Container(
+              margin: EdgeInsets.only(left: 16),
+              height: MediaQuery.of(context).size.height / 3.4,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                children: <Widget>[],
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
 
 
 
