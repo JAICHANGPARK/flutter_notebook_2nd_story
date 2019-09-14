@@ -41,7 +41,23 @@ class _MainPageState extends State<MainPage> {
                   ]),
                 ),
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, top: 42),
+              child: Text("Find the best tour", style: TextStyle(
+                color: Colors.blueGrey, fontWeight: FontWeight.bold,
+                fontSize: 28
+              ),),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, top: 16),
+              child: Text(
+                "Country", style: TextStyle(
+                color: Colors.blueGrey,
+                fontSize: 20
+              ),
+              ),
+            ),
           ],
         ),
       ),
