@@ -112,8 +112,6 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                         ),
-
-
                         Positioned(
                           top: 16,
                           right: 16,
@@ -150,6 +148,57 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                         ),
+                        Positioned(
+                          bottom: 16,
+                          left: 16,
+                          right: 16,
+                          child: Container(
+                            height: 58,
+                            decoration: BoxDecoration(
+//                              color: Colors.blueAccent
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Text("Thailand", style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1.2,
+                                      fontSize: 18
+                                    ),),
+                                    Text("18 Tours", style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold
+                                    ),),
+                                  ],
+                                ),
+                                Container(
+                                  width: 28,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(.1),
+                                    borderRadius: BorderRadius.circular(8)
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text("4.5", style: TextStyle(
+                                        color: Colors.white,
+                                      ),),
+                                      SizedBox(height: 4,),
+                                      Icon(Icons.star,color: Colors.white,
+                                      size: 16,)
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+
+                        )
                       ],
                     ),
                   ),
