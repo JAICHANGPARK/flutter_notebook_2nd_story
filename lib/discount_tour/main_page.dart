@@ -76,15 +76,15 @@ class _MainPageState extends State<MainPage> {
                     margin: EdgeInsets.only(top: 8, bottom: 8, right: 16),
                     width: 150,
                     decoration: BoxDecoration(
-                      color: Colors.blueGrey,
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
-                        BoxShadow(color: Colors.black.withOpacity(0.2),
-                        blurRadius: 3,
-                        spreadRadius: 1,
-                        offset: Offset(0, 2))
-                      ]
-                    ),
+                        color: Colors.blueGrey,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              blurRadius: 3,
+                              spreadRadius: 1,
+                              offset: Offset(0, 2))
+                        ]),
                     child: Stack(
                       children: <Widget>[
                         Positioned(
@@ -103,9 +103,10 @@ class _MainPageState extends State<MainPage> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Center(
-                                    child: Text("New", style: TextStyle(
-                                      color: Colors.white
-                                    ),),
+                                    child: Text(
+                                      "New",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
                                   ),
                                 )
                               ],
@@ -119,9 +120,7 @@ class _MainPageState extends State<MainPage> {
                             height: 28,
                             width: 28,
                             decoration: BoxDecoration(
-                                color: Colors.green,
-                                shape: BoxShape.circle
-                            ),
+                                color: Colors.green, shape: BoxShape.circle),
                           ),
                         ),
                         Positioned(
@@ -131,9 +130,7 @@ class _MainPageState extends State<MainPage> {
                             height: 28,
                             width: 28,
                             decoration: BoxDecoration(
-                                color: Colors.blue,
-                                shape: BoxShape.circle
-                            ),
+                                color: Colors.blue, shape: BoxShape.circle),
                           ),
                         ),
                         Positioned(
@@ -143,9 +140,7 @@ class _MainPageState extends State<MainPage> {
                             height: 28,
                             width: 28,
                             decoration: BoxDecoration(
-                                color: Colors.red,
-                                shape: BoxShape.circle
-                            ),
+                                color: Colors.red, shape: BoxShape.circle),
                           ),
                         ),
                         Positioned(
@@ -156,48 +151,59 @@ class _MainPageState extends State<MainPage> {
                             height: 58,
                             decoration: BoxDecoration(
 //                              color: Colors.blueAccent
-                            ),
+                                ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    Text("Thailand", style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 1.2,
-                                      fontSize: 18
-                                    ),),
-                                    Text("18 Tours", style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold
-                                    ),),
+                                    Text(
+                                      "Thailand",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 1.2,
+                                          fontSize: 18),
+                                    ),
+                                    Text(
+                                      "18 Tours",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ],
                                 ),
                                 Container(
                                   width: 28,
                                   decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(.1),
-                                    borderRadius: BorderRadius.circular(8)
-                                  ),
+                                      color: Colors.white.withOpacity(.1),
+                                      borderRadius: BorderRadius.circular(8)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
-                                      Text("4.5", style: TextStyle(
+                                      Text(
+                                        "4.5",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 4,
+                                      ),
+                                      Icon(
+                                        Icons.star,
                                         color: Colors.white,
-                                      ),),
-                                      SizedBox(height: 4,),
-                                      Icon(Icons.star,color: Colors.white,
-                                      size: 16,)
+                                        size: 16,
+                                      )
                                     ],
                                   ),
                                 )
                               ],
                             ),
                           ),
-
                         )
                       ],
                     ),
@@ -209,12 +215,12 @@ class _MainPageState extends State<MainPage> {
                         color: Colors.blueGrey,
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
-                          BoxShadow(color: Colors.black.withOpacity(0.2),
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
                               blurRadius: 3,
                               spreadRadius: 1,
                               offset: Offset(0, 2))
-                        ]
-                    ),
+                        ]),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 8, bottom: 8, right: 16),
@@ -223,12 +229,12 @@ class _MainPageState extends State<MainPage> {
                         color: Colors.blueGrey,
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
-                          BoxShadow(color: Colors.black.withOpacity(0.2),
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
                               blurRadius: 3,
                               spreadRadius: 1,
                               offset: Offset(0, 2))
-                        ]
-                    ),
+                        ]),
                   ),
                 ],
               ),
@@ -239,14 +245,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
