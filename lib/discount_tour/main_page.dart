@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
 
 class DiscountTour extends StatelessWidget {
   @override
@@ -77,6 +78,13 @@ class _MainPageState extends State<MainPage> {
                     width: 150,
                     decoration: BoxDecoration(
                         color: Colors.blueGrey,
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                "https://cdn.pixabay.com/photo/2019/06/01/09/16/ocean-4243709_960_720.jpg"),
+                            colorFilter: ColorFilter.mode(
+                                Colors.black.withOpacity(0.15),
+                                BlendMode.darken),
+                            fit: BoxFit.cover),
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
@@ -96,7 +104,7 @@ class _MainPageState extends State<MainPage> {
                             child: Row(
                               children: <Widget>[
                                 Container(
-                                  height: 28,
+                                  height: 24,
                                   width: 48,
                                   decoration: BoxDecoration(
                                     color: Colors.white.withOpacity(0.2),
@@ -115,22 +123,30 @@ class _MainPageState extends State<MainPage> {
                         ),
                         Positioned(
                           top: 16,
-                          right: 16,
+                          right: 8,
                           child: Container(
                             height: 28,
                             width: 28,
                             decoration: BoxDecoration(
-                                color: Colors.green, shape: BoxShape.circle),
+                                image: DecorationImage(
+                                    image: NetworkImage(dreamwalkerImg)),
+                                color: Colors.green,
+                                shape: BoxShape.circle),
                           ),
                         ),
                         Positioned(
                           top: 16,
-                          right: 32,
+                          right: 28,
                           child: Container(
                             height: 28,
                             width: 28,
                             decoration: BoxDecoration(
-                                color: Colors.blue, shape: BoxShape.circle),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2019/08/23/13/45/koreanfashion-4425752_960_720.jpg"),
+                                    fit: BoxFit.cover),
+                                color: Colors.blue,
+                                shape: BoxShape.circle),
                           ),
                         ),
                         Positioned(
@@ -140,7 +156,12 @@ class _MainPageState extends State<MainPage> {
                             height: 28,
                             width: 28,
                             decoration: BoxDecoration(
-                                color: Colors.red, shape: BoxShape.circle),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2015/09/02/12/58/woman-918788_960_720.jpg"),
+                                    fit: BoxFit.cover),
+                                color: Colors.red,
+                                shape: BoxShape.circle),
                           ),
                         ),
                         Positioned(
@@ -179,7 +200,7 @@ class _MainPageState extends State<MainPage> {
                                 Container(
                                   width: 28,
                                   decoration: BoxDecoration(
-                                      color: Colors.white.withOpacity(.1),
+                                      color: Colors.white.withOpacity(.3),
                                       borderRadius: BorderRadius.circular(8)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
