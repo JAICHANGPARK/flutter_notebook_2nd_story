@@ -66,7 +66,7 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 16, top: 8),
+              margin: EdgeInsets.only(left: 16, top: 16),
               height: MediaQuery.of(context).size.height / 3.4,
               child: ListView(
                 scrollDirection: Axis.horizontal,
