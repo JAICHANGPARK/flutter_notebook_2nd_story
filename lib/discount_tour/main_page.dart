@@ -477,14 +477,14 @@ class _MainPageState extends State<MainPage> {
                             height: 58,
                             decoration: BoxDecoration(
 //                              color: Colors.blueAccent
-                            ),
+                                ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Text(
                                       "Thailand",
@@ -537,7 +537,6 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.only(left: 16, top: 16),
               child: Text(
@@ -551,22 +550,421 @@ class _MainPageState extends State<MainPage> {
             Container(
               height: 210,
               child: ListView(
-
                 shrinkWrap: true,
                 children: <Widget>[
                   Container(
+                    padding: EdgeInsets.only(right: 8),
                     margin: EdgeInsets.only(left: 16, right: 16, bottom: 8),
                     height: 80,
                     decoration: BoxDecoration(
-                      color: Colors.blue[50]
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(16)),
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  bottomLeft: Radius.circular(16),
+                                ),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2016/03/09/16/50/city-street-1246870_960_720.jpg"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Thailand",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "10 nights for two/all inclusive",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 12),
+                                ),
+                                Text(
+                                  "\$ 245.50",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 1,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 12, bottom: 12, right: 8),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(8)
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("4.0", style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12
+                                  ),),
+                                  Icon(Icons.star,color: Colors.white,size: 18,)
+                                ],
+                              ),
+                            ),
+
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(right: 8),
+                    margin: EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                    height: 80,
+                    decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(16)),
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  bottomLeft: Radius.circular(16),
+                                ),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2016/09/02/08/32/cuba-1638594__340.jpg"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Cuba",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "10 nights for two/all inclusive",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 12),
+                                ),
+                                Text(
+                                  "\$ 499.99",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 1,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 12, bottom: 12, right: 8),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(8)
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("4.5", style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),),
+                                  Icon(Icons.star,color: Colors.white,size: 18,)
+                                ],
+                              ),
+                            ),
+
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(right: 8),
+                    margin: EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                    height: 80,
+                    decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(16)),
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  bottomLeft: Radius.circular(16),
+                                ),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2016/03/04/19/36/beach-1236581__340.jpg"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Dominican",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "10 nights for two/all inclusive",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 12),
+                                ),
+                                Text(
+                                  "\$ 245.50",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 1,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 12, bottom: 12, right: 8),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(8)
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("4.2", style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),),
+                                  Icon(Icons.star,color: Colors.white,size: 18,)
+                                ],
+                              ),
+                            ),
+
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(right: 8),
+                    margin: EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                    height: 80,
+                    decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(16)),
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  bottomLeft: Radius.circular(16),
+                                ),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2016/03/09/16/50/city-street-1246870_960_720.jpg"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Thailand",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "10 nights for two/all inclusive",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 12),
+                                ),
+                                Text(
+                                  "\$ 245.50",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 1,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 12, bottom: 12, right: 8),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(8)
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("4.0", style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),),
+                                  Icon(Icons.star,color: Colors.white,size: 18,)
+                                ],
+                              ),
+                            ),
+
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(right: 8),
+                    margin: EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                    height: 80,
+                    decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(16)),
+                    child: Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  bottomLeft: Radius.circular(16),
+                                ),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2016/03/09/16/50/city-street-1246870_960_720.jpg"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Thailand",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "10 nights for two/all inclusive",
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 12),
+                                ),
+                                Text(
+                                  "\$ 245.50",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 1,
+                          fit: FlexFit.tight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 12, bottom: 12, right: 8),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(8)
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text("4.0", style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12
+                                  ),),
+                                  Icon(Icons.star,color: Colors.white,size: 18,)
+                                ],
+                              ),
+                            ),
+
+                          ),
+                        )
+                      ],
                     ),
                   )
                 ],
               ),
             )
-
-
-
           ],
         ),
       ),
@@ -579,23 +977,39 @@ class _MainPageState extends State<MainPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.home, color: Colors.green,),
-                onPressed: (){},
+                icon: Icon(
+                  Icons.home,
+                  color: Colors.green,
+                ),
+                onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.star, color: Colors.grey,),
-                onPressed: (){},
+                icon: Icon(
+                  Icons.star,
+                  color: Colors.grey,
+                ),
+                onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.favorite ,color: Colors.grey,),
-                onPressed: (){},
-              ), IconButton(
-                icon: Icon(Icons.credit_card ,color: Colors.grey,),
-                onPressed: (){},
+                icon: Icon(
+                  Icons.favorite,
+                  color: Colors.grey,
+                ),
+                onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.search ,color: Colors.grey,),
-                onPressed: (){},
+                icon: Icon(
+                  Icons.credit_card,
+                  color: Colors.grey,
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.search,
+                  color: Colors.grey,
+                ),
+                onPressed: () {},
               ),
             ],
           ),
@@ -604,17 +1018,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
