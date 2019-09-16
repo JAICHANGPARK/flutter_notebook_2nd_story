@@ -25,7 +25,7 @@ class _MainPageState extends State<MainPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              height: 120,
+              height: MediaQuery.of(context).size.height / 7,
               padding: EdgeInsets.only(bottom: 16, left: 24),
               decoration: BoxDecoration(color: Colors.white, boxShadow: [
                 BoxShadow(
@@ -38,7 +38,7 @@ class _MainPageState extends State<MainPage> {
                 child: Text(
                   "YOGA SEQUENCES",
                   style: TextStyle(
-                      color: Colors.black87, fontSize: 24, letterSpacing: 1.5),
+                      color: Colors.black87, fontSize: 20, letterSpacing: 1.5),
                 ),
               ),
             ),
@@ -54,17 +54,67 @@ class _MainPageState extends State<MainPage> {
             ),
             Container(
                 margin: EdgeInsets.all(16),
-                height: MediaQuery.of(context).size.height / 1.52,
+                height: MediaQuery.of(context).size.height / 1.48,
                 child: Column(
                   children: <Widget>[
                     Expanded(
                       flex: 1,
-                      child: Placeholder(),
+                      child: Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          color: Colors.blueGrey,
+                          image: DecorationImage(
+                            image: NetworkImage("https://cdn.pixabay.com/photo/2018/01/01/01/57/woman-3053489__340.jpg")
+                          )
+                        ),
+                        child: Column(
+                          children: <Widget>[
+
+                          ],
+                        ),
+                      ),
                     ),
                     Expanded(
                       flex: 1,
-                      child: Placeholder(),
-                    )
+                      child: Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.blueGrey,
+                            image: DecorationImage(
+                                image: NetworkImage("https://cdn.pixabay.com/photo/2018/01/01/01/57/woman-3053489__340.jpg")
+                            )
+                        ),
+                        padding: EdgeInsets.only(left: 16,
+                        top: 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 32,
+                                  width: 32,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.blueGrey.withOpacity(0.3),
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width: 1
+                                    )
+                                  ),
+                                  child: Center(
+                                    child: Icon(Icons.whatshot),
+                                  ),
+                                )
+                              ],
+                            )
+
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ))
           ],
