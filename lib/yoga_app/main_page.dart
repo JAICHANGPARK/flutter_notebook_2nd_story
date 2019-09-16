@@ -52,6 +52,21 @@ class _MainPageState extends State<MainPage> {
                     fontWeight: FontWeight.w600),
               ),
             ),
+            Container(
+                margin: EdgeInsets.all(16),
+                height: MediaQuery.of(context).size.height / 1.52,
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Placeholder(),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Placeholder(),
+                    )
+                  ],
+                ))
           ],
         ),
         bottomNavigationBar: _buildBottomNavigationBar());
