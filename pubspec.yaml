@@ -24,7 +24,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   badges: ^1.1.0
-  video_player: ^0.10.1+5
+  video_player:
   camera: ^0.5.2+1
   path_provider: ^1.1.2
   provider: ^3.0.0+1

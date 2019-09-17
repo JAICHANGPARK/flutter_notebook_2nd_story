@@ -66,9 +66,104 @@ class _MainPageState extends State<MainPage> {
                             color: Colors.blueGrey,
                             image: DecorationImage(
                                 image: NetworkImage(
-                                    "https://cdn.pixabay.com/photo/2018/01/01/01/57/woman-3053489__340.jpg"))),
+                                    "https://cdn.pixabay.com/photo/2017/07/31/11/41/people-2557547_960_720.jpg"),
+                                fit: BoxFit.cover)),
+                        padding: EdgeInsets.only(left: 16, bottom: 16, top: 16),
                         child: Column(
-                          children: <Widget>[],
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 32,
+                                  width: 32,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.blueGrey[50],
+                                      border: Border.all(
+                                          color: Colors.black, width: 1)),
+                                  child: Center(
+                                    child: Icon(
+                                      Icons.whatshot,
+                                      size: 16,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  "HOT",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                              ],
+                            ),
+                            Spacer(),
+                            Container(
+                              height: 28,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueGrey[100],
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.av_timer,
+                                    size: 14,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Text(
+                                    "25 min",
+                                    style: TextStyle(fontSize: 10),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              "SUN SALUTATION",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 2),
+                            ),
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text("surya namaskar"),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Container(
+                              height: 28,
+                              width: 72,
+                              decoration: BoxDecoration(
+                                  color: Color(0xff003847),
+                                  borderRadius: BorderRadius.circular(4),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color:
+                                            Color(0xff003847).withOpacity(0.2),
+                                        blurRadius: 7,
+                                        spreadRadius: 5)
+                                  ]),
+                              child: Center(
+                                child: Text(
+                                  "START",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                      letterSpacing: 2),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -95,7 +190,7 @@ class _MainPageState extends State<MainPage> {
                                   width: 32,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.blueGrey.withOpacity(0.3),
+                                      color: Colors.blueGrey[50],
                                       border: Border.all(
                                           color: Colors.black, width: 1)),
                                   child: Center(
