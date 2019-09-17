@@ -99,13 +99,19 @@ class _MainPageState extends State<MainPage> {
                                       border: Border.all(
                                           color: Colors.black, width: 1)),
                                   child: Center(
-                                    child: Icon(Icons.whatshot),
+                                    child: Icon(
+                                      Icons.whatshot,
+                                      size: 16,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 4,
+                                  width: 8,
                                 ),
-                                Text("HOT"),
+                                Text(
+                                  "HOT",
+                                  style: TextStyle(fontSize: 12),
+                                ),
                               ],
                             ),
                             Spacer(),
@@ -123,7 +129,9 @@ class _MainPageState extends State<MainPage> {
                                     Icons.av_timer,
                                     size: 14,
                                   ),
-                                  SizedBox(width: 2,),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
                                   Text(
                                     "18 min",
                                     style: TextStyle(fontSize: 10),
@@ -134,24 +142,41 @@ class _MainPageState extends State<MainPage> {
                             SizedBox(
                               height: 8,
                             ),
-                            Text("HEART OPENING",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2
-                            ),),
+                            Text(
+                              "HEART OPENING",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 2),
+                            ),
                             SizedBox(
                               height: 4,
                             ),
                             Text("heart chakra"),
                             SizedBox(
-                              height: 8,
+                              height: 16,
                             ),
                             Container(
                               height: 28,
                               width: 72,
                               decoration: BoxDecoration(
                                   color: Color(0xff003847),
-                                  borderRadius: BorderRadius.circular(4)),
+                                  borderRadius: BorderRadius.circular(4),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color:
+                                            Color(0xff003847).withOpacity(0.2),
+                                        blurRadius: 7,
+                                        spreadRadius: 5)
+                                  ]),
+                              child: Center(
+                                child: Text(
+                                  "START",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                      letterSpacing: 2),
+                                ),
+                              ),
                             ),
                           ],
                         ),
