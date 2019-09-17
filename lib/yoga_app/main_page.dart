@@ -62,16 +62,13 @@ class _MainPageState extends State<MainPage> {
                       child: Container(
                         margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          color: Colors.blueGrey,
-                          image: DecorationImage(
-                            image: NetworkImage("https://cdn.pixabay.com/photo/2018/01/01/01/57/woman-3053489__340.jpg")
-                          )
-                        ),
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.blueGrey,
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                    "https://cdn.pixabay.com/photo/2018/01/01/01/57/woman-3053489__340.jpg"))),
                         child: Column(
-                          children: <Widget>[
-
-                          ],
+                          children: <Widget>[],
                         ),
                       ),
                     ),
@@ -83,12 +80,12 @@ class _MainPageState extends State<MainPage> {
                             borderRadius: BorderRadius.circular(16),
                             color: Colors.blueGrey,
                             image: DecorationImage(
-                                image: NetworkImage("https://cdn.pixabay.com/photo/2018/01/01/01/57/woman-3053489__340.jpg")
-                            )
-                        ),
-                        padding: EdgeInsets.only(left: 16,
-                        top: 16),
+                                image: NetworkImage(
+                                    "https://cdn.pixabay.com/photo/2017/07/31/11/41/people-2557545_960_720.jpg"),
+                                fit: BoxFit.cover)),
+                        padding: EdgeInsets.only(left: 16, bottom: 16, top: 16),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Row(
@@ -97,20 +94,65 @@ class _MainPageState extends State<MainPage> {
                                   height: 32,
                                   width: 32,
                                   decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.blueGrey.withOpacity(0.3),
-                                    border: Border.all(
-                                      color: Colors.black,
-                                      width: 1
-                                    )
-                                  ),
+                                      shape: BoxShape.circle,
+                                      color: Colors.blueGrey.withOpacity(0.3),
+                                      border: Border.all(
+                                          color: Colors.black, width: 1)),
                                   child: Center(
                                     child: Icon(Icons.whatshot),
                                   ),
-                                )
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text("HOT"),
                               ],
-                            )
-
+                            ),
+                            Spacer(),
+                            Container(
+                              height: 28,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueGrey[100],
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.av_timer,
+                                    size: 14,
+                                  ),
+                                  SizedBox(width: 2,),
+                                  Text(
+                                    "18 min",
+                                    style: TextStyle(fontSize: 10),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("HEART OPENING",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2
+                            ),),
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text("heart chakra"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Container(
+                              height: 28,
+                              width: 72,
+                              decoration: BoxDecoration(
+                                  color: Color(0xff003847),
+                                  borderRadius: BorderRadius.circular(4)),
+                            ),
                           ],
                         ),
                       ),
