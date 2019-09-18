@@ -81,66 +81,104 @@ class _DetailPageState extends State<DetailPage> {
             maxHeight: MediaQuery.of(context).size.height - 160,
             panel: Padding(
               padding: const EdgeInsets.all(24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    height: 28,
-                    width: 72,
-                    decoration: BoxDecoration(
-                        color: Colors.blueGrey[100],
-                        borderRadius: BorderRadius.circular(24)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Icon(
-                          Icons.av_timer,
-                          size: 14,
-                        ),
-                        SizedBox(
-                          width: 2,
-                        ),
-                        Text(
-                          "18 min",
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      height: 28,
+                      width: 72,
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey[100],
+                          borderRadius: BorderRadius.circular(24)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            Icons.av_timer,
+                            size: 14,
+                          ),
+                          SizedBox(
+                            width: 2,
+                          ),
+                          Text(
+                            "18 min",
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 16,
-                  ),
-                  Text("SUN SALUTATION", style: TextStyle(
-                    fontSize: 24
-                  ),),
-                  Text("surya namaskar", style: TextStyle(),),
-                  SizedBox(height: 16,
-                  ),
-                  Text("about the workout".toUpperCase()),
-                  SizedBox(height: 8,
-                  ),
-                  Text(kLoremIpsum),
-                  SizedBox(height: 16,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 100),
-                    child: Text("Surta namaskar consists of the following asanas:".toUpperCase()),
-                  )
-
-
-                ],
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Text(
+                      "SUN SALUTATION",
+                      style: TextStyle(
+                          fontSize: 24,
+                          letterSpacing: 3,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "surya namaskar",
+                      style: TextStyle(color: Colors.grey, letterSpacing: 4),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Text(
+                      "about the workout".toUpperCase(),
+                      style: TextStyle(
+                          letterSpacing: 3, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      kLoremIpsum,
+                      style: TextStyle(color: Colors.grey, letterSpacing: 3),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 64),
+                      child: Text(
+                        "Surta namaskar consists of the following asanas:"
+                            .toUpperCase(),
+                        style: TextStyle(
+                            letterSpacing: 3, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Text(
+                      kLoremIpsum,
+                      style: TextStyle(color: Colors.grey, letterSpacing: 3),
+                    ),
+                  ],
+                ),
               ),
             ),
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(24),
+              topLeft: Radius.circular(24),
               topRight: Radius.circular(24),
             ),
-          )
+          ),
+
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
 
 
 
