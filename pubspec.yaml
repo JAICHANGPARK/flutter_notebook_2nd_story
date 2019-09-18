@@ -42,6 +42,8 @@ dependencies:
 
   snappable: ^1.0.1
 
+  sliding_up_panel:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
