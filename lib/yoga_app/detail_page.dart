@@ -111,7 +111,7 @@ class _DetailPageState extends State<DetailPage> {
                   SizedBox(height: 16,
                   ),
                   Text("SUN SALUTATION", style: TextStyle(
-                    fontSize: 28
+                    fontSize: 24
                   ),),
                   Text("surya namaskar", style: TextStyle(),),
                   SizedBox(height: 16,
