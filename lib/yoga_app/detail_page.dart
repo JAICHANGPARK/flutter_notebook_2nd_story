@@ -82,7 +82,7 @@ class _DetailPageState extends State<DetailPage> {
               children: <Widget>[
                 Positioned(
                   right: 24,
-                  top: 0,
+                  top: -48,
                  child: Container(
                    height: 64,
                    width: 64,
