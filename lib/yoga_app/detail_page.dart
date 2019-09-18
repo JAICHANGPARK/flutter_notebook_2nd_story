@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:video_player/video_player.dart';
@@ -77,11 +78,28 @@ class _DetailPageState extends State<DetailPage> {
           SlidingUpPanel(
             minHeight: 360,
             maxHeight: MediaQuery.of(context).size.height - 160,
-            panel: Center(
-              child: Text("Sliding Up Pannel"),
+            panel: Stack(
+              children: <Widget>[
+                Positioned(
+                  right: 24,
+                  top: 0,
+                 child: Container(
+                   height: 64,
+                   width: 64,
+                   decoration: BoxDecoration(
+                     shape: BoxShape.circle,
+                     color: Color(0xff003847),
+                   ),
+                   child: Center(
+                     child: Icon(Icons.play_arrow, color: Colors.white,),
+                   ),
+                 ),
+                )
+              ],
             ),
             borderRadius: BorderRadius.only(
-
+                topLeft: Radius.circular(24),
+              topRight: Radius.circular(24),
             ),
           )
         ],
