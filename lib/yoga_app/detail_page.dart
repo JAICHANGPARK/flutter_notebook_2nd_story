@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:video_player/video_player.dart';
 
@@ -78,24 +79,57 @@ class _DetailPageState extends State<DetailPage> {
           SlidingUpPanel(
             minHeight: 360,
             maxHeight: MediaQuery.of(context).size.height - 160,
-            panel: Stack(
-              children: <Widget>[
-                Positioned(
-                  right: 24,
-                  top: -48,
-                 child: Container(
-                   height: 64,
-                   width: 64,
-                   decoration: BoxDecoration(
-                     shape: BoxShape.circle,
-                     color: Color(0xff003847),
-                   ),
-                   child: Center(
-                     child: Icon(Icons.play_arrow, color: Colors.white,),
-                   ),
-                 ),
-                )
-              ],
+            panel: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                    height: 28,
+                    width: 72,
+                    decoration: BoxDecoration(
+                        color: Colors.blueGrey[100],
+                        borderRadius: BorderRadius.circular(24)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(
+                          Icons.av_timer,
+                          size: 14,
+                        ),
+                        SizedBox(
+                          width: 2,
+                        ),
+                        Text(
+                          "18 min",
+                          style: TextStyle(fontSize: 10),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 16,
+                  ),
+                  Text("SUN SALUTATION", style: TextStyle(
+                    fontSize: 28
+                  ),),
+                  Text("surya namaskar", style: TextStyle(),),
+                  SizedBox(height: 16,
+                  ),
+                  Text("about the workout".toUpperCase()),
+                  SizedBox(height: 8,
+                  ),
+                  Text(kLoremIpsum),
+                  SizedBox(height: 16,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 100),
+                    child: Text("Surta namaskar consists of the following asanas:".toUpperCase()),
+                  )
+
+
+                ],
+              ),
             ),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(24),
