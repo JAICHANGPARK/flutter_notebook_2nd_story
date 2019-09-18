@@ -166,7 +166,7 @@ class _DetailPageState extends State<DetailPage> {
               topRight: Radius.circular(24),
             ),
           ),
-
+         
         ],
       ),
     );
