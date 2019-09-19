@@ -8,6 +8,7 @@ class TravelCollection extends StatelessWidget {
     );
   }
 }
+
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();
@@ -16,7 +17,33 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: MediaQuery.of(context).size.height / 6,
+              child: Placeholder(),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 8,
+              child: Placeholder(),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 2.5,
+              child: Placeholder(),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 8,
+              child: Placeholder(),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 2,
+              child: Placeholder(),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
-
