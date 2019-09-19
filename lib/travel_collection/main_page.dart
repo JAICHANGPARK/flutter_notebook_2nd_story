@@ -36,9 +36,8 @@ class _MainPageState extends State<MainPage> {
                       margin: EdgeInsets.only(top: 48, bottom: 36, right: 16),
                       padding: EdgeInsets.only(left: 16),
                       decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(4)
-                      ),
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(4)),
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -51,7 +50,10 @@ class _MainPageState extends State<MainPage> {
                     flex: 1,
                     child: Badge(
                       badgeContent: Text("1"),
-                      child: Icon(Icons.menu, color: Colors.black,),
+                      child: Icon(
+                        Icons.menu,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ],
@@ -59,9 +61,16 @@ class _MainPageState extends State<MainPage> {
             ),
             Container(
               height: MediaQuery.of(context).size.height / 8,
+              padding: EdgeInsets.only(left: 24, bottom: 16),
               child: Align(
                   alignment: Alignment.bottomLeft,
-                  child: Text("Ondue")),
+                  child: SelectableText(
+                    "Ondue",
+                    style: TextStyle(
+                      fontSize: 38,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 2.5,
@@ -81,17 +90,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
