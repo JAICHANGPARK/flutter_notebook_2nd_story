@@ -41,8 +41,9 @@ dependencies:
   flutter_particles: ^1.0.0+7
 
   snappable: ^1.0.1
+  sliding_up_panel: any
 
-  sliding_up_panel:
+
 
 dev_dependencies:
   flutter_test:

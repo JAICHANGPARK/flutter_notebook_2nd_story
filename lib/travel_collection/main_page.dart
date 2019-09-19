@@ -1,3 +1,5 @@
+import 'package:badges/badges.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TravelCollection extends StatelessWidget {
@@ -23,11 +25,43 @@ class _MainPageState extends State<MainPage> {
           children: <Widget>[
             Container(
               height: MediaQuery.of(context).size.height / 6,
-              child: Placeholder(),
+              padding: EdgeInsets.only(left: 24, right: 24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(
+                    flex: 8,
+                    child: Container(
+                      margin: EdgeInsets.only(top: 48, bottom: 36, right: 16),
+                      padding: EdgeInsets.only(left: 16),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(4)
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Search for place",
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Badge(
+                      badgeContent: Text("1"),
+                      child: Icon(Icons.menu, color: Colors.black,),
+                    ),
+                  ),
+                ],
+              ),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 8,
-              child: Placeholder(),
+              child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text("Ondue")),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 2.5,
@@ -47,3 +81,17 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
