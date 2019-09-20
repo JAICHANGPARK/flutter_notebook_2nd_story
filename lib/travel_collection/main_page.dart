@@ -90,13 +90,12 @@ class _MainPageState extends State<MainPage> {
                           bottom: 8,
                           child: Container(
                             decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3,
-                                  spreadRadius: 2
-                                )
-                              ],
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 3,
+                                      spreadRadius: 2)
+                                ],
                                 image: DecorationImage(
                                     image: NetworkImage(
                                         "https://cdn.pixabay.com/photo/2019/02/22/08/36/japan-4013068_960_720.jpg"),
@@ -139,10 +138,11 @@ class _MainPageState extends State<MainPage> {
                                     topRight: Radius.circular(7),
                                     bottomRight: Radius.circular(7))),
                             child: Center(
-                              child: Text("-20%", style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 22
-                              ),),
+                              child: Text(
+                                "-20%",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 22),
+                              ),
                             ),
                           ),
                         )
@@ -164,8 +164,7 @@ class _MainPageState extends State<MainPage> {
                                   BoxShadow(
                                       color: Colors.black12,
                                       blurRadius: 3,
-                                      spreadRadius: 2
-                                  )
+                                      spreadRadius: 2)
                                 ],
                                 image: DecorationImage(
                                     image: NetworkImage(
@@ -197,7 +196,6 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                         ),
-
                       ],
                     ),
                   )
