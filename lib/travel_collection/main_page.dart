@@ -16,7 +16,16 @@ class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
+  TabController _tabController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(vsync: this, length: 2);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -405,12 +414,52 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height / 8,
-              child: Placeholder(),
+              padding: EdgeInsets.only(left: 16),
+              height: MediaQuery.of(context).size.height / 11,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: TabBar(
+                  indicatorSize: TabBarIndicatorSize.label,
+                  isScrollable: true,
+                  unselectedLabelColor: Colors.grey,
+                  unselectedLabelStyle: TextStyle(
+                    fontSize: 16
+                  ),
+                  indicatorColor: Colors.black,
+                  labelColor: Colors.black,
+                  labelStyle: TextStyle(
+                    fontSize: 28
+                  ),
+                  controller: _tabController,
+
+                  tabs: <Widget>[
+                    Tab(
+                      text: "Favorite",
+                    ),
+                    Tab(
+                      text: "New",
+                    )
+                  ],
+                ),
+              ),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 2,
-              child: Placeholder(),
+              child: TabBarView(
+                controller: _tabController,
+                children: <Widget>[
+                  Container(
+                    child: Center(
+                      child: Text("Page 1 "),
+                    ),
+                  ),
+                  Container(
+                    child: Center(
+                      child: Text("Page 2 "),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
