@@ -452,16 +452,14 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                               EdgeInsets.only(left: 16, right: 16, bottom: 8),
                           height: 160,
                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(8),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 3,
-                                spreadRadius: 2
-                              )
-                            ]
-                          ),
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 3,
+                                    spreadRadius: 2)
+                              ]),
                           child: Stack(
                             children: <Widget>[
                               Positioned(
@@ -481,7 +479,72 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                   ),
                                 ),
                               ),
-                              
+                              Positioned(
+                                left: 16,
+                                top: 12,
+                                bottom: 12,
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      color: Colors.red,
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              "https://cdn.pixabay.com/photo/2016/11/19/21/29/temple-1841296__340.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
+                              Positioned(
+                                top: 24,
+                                left: 124,
+                                bottom: 12,
+                                right: 12,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Nagoya & Tokyo",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 23,
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 2),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star_border,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
                             ],
                           ))
                     ],
