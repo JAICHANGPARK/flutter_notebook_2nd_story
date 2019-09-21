@@ -448,9 +448,42 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                     shrinkWrap: true,
                     children: <Widget>[
                       Container(
-                        height: 160,
-                        child: Placeholder(),
-                      )
+                          margin:
+                              EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                          height: 160,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                blurRadius: 3,
+                                spreadRadius: 2
+                              )
+                            ]
+                          ),
+                          child: Stack(
+                            children: <Widget>[
+                              Positioned(
+                                top: 0,
+                                right: 0,
+                                child: Container(
+                                  height: 24,
+                                  width: 80,
+                                  decoration:
+                                      BoxDecoration(color: Colors.blue[100]),
+                                  child: Center(
+                                    child: Text(
+                                      "Standard",
+                                      style:
+                                          TextStyle(color: Colors.blueAccent),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              
+                            ],
+                          ))
                     ],
                   )),
                   Container(
