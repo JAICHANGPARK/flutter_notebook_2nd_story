@@ -495,7 +495,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                 ),
                               ),
                               Positioned(
-                                top: 24,
+                                top: 32,
                                 left: 124,
                                 bottom: 12,
                                 right: 12,
@@ -543,6 +543,303 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                           size: 14,
                                         ),
                                       ],
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.flight_takeoff,
+                                          color: Colors.black,
+                                          size: 18,
+                                        ),
+                                        Text(
+                                          "Japan, Dec 29, 2019",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.loyalty,
+                                          color: Colors.black,
+                                          size: 18,
+                                        ),
+                                        Text(
+                                          "02/12 Seats",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          "\$770",
+                                          style: TextStyle(
+                                            color: Colors.red[200],
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )),
+                      Container(
+                          margin:
+                          EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                          height: 160,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 3,
+                                    spreadRadius: 2)
+                              ]),
+                          child: Stack(
+                            children: <Widget>[
+                              Positioned(
+                                top: 0,
+                                right: 0,
+                                child: Container(
+                                  height: 24,
+                                  width: 80,
+                                  decoration:
+                                  BoxDecoration(color: Colors.blue[100]),
+                                  child: Center(
+                                    child: Text(
+                                      "Standard",
+                                      style:
+                                      TextStyle(color: Colors.blueAccent),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 16,
+                                top: 12,
+                                bottom: 12,
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      color: Colors.red,
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              "https://cdn.pixabay.com/photo/2016/11/19/21/29/temple-1841296__340.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
+                              Positioned(
+                                top: 32,
+                                left: 124,
+                                bottom: 12,
+                                right: 12,
+                                child: Column(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Nagoya & Tokyo",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 23,
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 2),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star_border,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.flight_takeoff,
+                                          color: Colors.black,
+                                          size: 18,
+                                        ),
+                                        Text(
+                                          "Japan, Dec 29, 2019",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.loyalty,
+                                          color: Colors.black,
+                                          size: 18,
+                                        ),
+                                        Text(
+                                          "02/12 Seats",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          "\$770",
+                                          style: TextStyle(
+                                            color: Colors.red[200],
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )),
+                      Container(
+                          margin:
+                          EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                          height: 160,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 3,
+                                    spreadRadius: 2)
+                              ]),
+                          child: Stack(
+                            children: <Widget>[
+                              Positioned(
+                                top: 0,
+                                right: 0,
+                                child: Container(
+                                  height: 24,
+                                  width: 80,
+                                  decoration:
+                                  BoxDecoration(color: Colors.blue[100]),
+                                  child: Center(
+                                    child: Text(
+                                      "Standard",
+                                      style:
+                                      TextStyle(color: Colors.blueAccent),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 16,
+                                top: 12,
+                                bottom: 12,
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      color: Colors.red,
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              "https://cdn.pixabay.com/photo/2016/11/19/21/29/temple-1841296__340.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
+                              Positioned(
+                                top: 32,
+                                left: 124,
+                                bottom: 12,
+                                right: 12,
+                                child: Column(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Nagoya & Tokyo",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 23,
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 2),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                        Icon(
+                                          Icons.star_border,
+                                          color: Colors.orangeAccent,
+                                          size: 14,
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 8,
                                     ),
                                     Row(
                                       children: <Widget>[
@@ -594,10 +891,452 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                     ],
                   )),
                   Container(
-                    child: Center(
-                      child: Text("Page 2 "),
-                    ),
-                  ),
+                      child: ListView(
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Container(
+                              margin:
+                              EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                              height: 160,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.1),
+                                        blurRadius: 3,
+                                        spreadRadius: 2)
+                                  ]),
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    top: 0,
+                                    right: 0,
+                                    child: Container(
+                                      height: 24,
+                                      width: 80,
+                                      decoration:
+                                      BoxDecoration(color: Colors.blue[100]),
+                                      child: Center(
+                                        child: Text(
+                                          "Standard",
+                                          style:
+                                          TextStyle(color: Colors.blueAccent),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 16,
+                                    top: 12,
+                                    bottom: 12,
+                                    child: Container(
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                          color: Colors.red,
+                                          borderRadius: BorderRadius.circular(8),
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  "https://cdn.pixabay.com/photo/2016/11/19/21/29/temple-1841296__340.jpg"),
+                                              fit: BoxFit.cover)),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 32,
+                                    left: 124,
+                                    bottom: 12,
+                                    right: 12,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Nagoya & Tokyo",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 23,
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 2),
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star_border,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.flight_takeoff,
+                                              color: Colors.black,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              "Japan, Dec 29, 2019",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.loyalty,
+                                              color: Colors.black,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              "02/12 Seats",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "\$770",
+                                              style: TextStyle(
+                                                color: Colors.red[200],
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              )),
+                          Container(
+                              margin:
+                              EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                              height: 160,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.1),
+                                        blurRadius: 3,
+                                        spreadRadius: 2)
+                                  ]),
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    top: 0,
+                                    right: 0,
+                                    child: Container(
+                                      height: 24,
+                                      width: 80,
+                                      decoration:
+                                      BoxDecoration(color: Colors.blue[100]),
+                                      child: Center(
+                                        child: Text(
+                                          "Standard",
+                                          style:
+                                          TextStyle(color: Colors.blueAccent),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 16,
+                                    top: 12,
+                                    bottom: 12,
+                                    child: Container(
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                          color: Colors.red,
+                                          borderRadius: BorderRadius.circular(8),
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  "https://cdn.pixabay.com/photo/2016/11/19/21/29/temple-1841296__340.jpg"),
+                                              fit: BoxFit.cover)),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 32,
+                                    left: 124,
+                                    bottom: 12,
+                                    right: 12,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Nagoya & Tokyo",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 23,
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 2),
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star_border,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.flight_takeoff,
+                                              color: Colors.black,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              "Japan, Dec 29, 2019",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.loyalty,
+                                              color: Colors.black,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              "02/12 Seats",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "\$770",
+                                              style: TextStyle(
+                                                color: Colors.red[200],
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              )),
+                          Container(
+                              margin:
+                              EdgeInsets.only(left: 16, right: 16, bottom: 8),
+                              height: 160,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.1),
+                                        blurRadius: 3,
+                                        spreadRadius: 2)
+                                  ]),
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    top: 0,
+                                    right: 0,
+                                    child: Container(
+                                      height: 24,
+                                      width: 80,
+                                      decoration:
+                                      BoxDecoration(color: Colors.blue[100]),
+                                      child: Center(
+                                        child: Text(
+                                          "Standard",
+                                          style:
+                                          TextStyle(color: Colors.blueAccent),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 16,
+                                    top: 12,
+                                    bottom: 12,
+                                    child: Container(
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                          color: Colors.red,
+                                          borderRadius: BorderRadius.circular(8),
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  "https://cdn.pixabay.com/photo/2016/11/19/21/29/temple-1841296__340.jpg"),
+                                              fit: BoxFit.cover)),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 32,
+                                    left: 124,
+                                    bottom: 12,
+                                    right: 12,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Nagoya & Tokyo",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 23,
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 2),
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                            Icon(
+                                              Icons.star_border,
+                                              color: Colors.orangeAccent,
+                                              size: 14,
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.flight_takeoff,
+                                              color: Colors.black,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              "Japan, Dec 29, 2019",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.loyalty,
+                                              color: Colors.black,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              "02/12 Seats",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "\$770",
+                                              style: TextStyle(
+                                                color: Colors.red[200],
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ))
+                        ],
+                      )),
                 ],
               ),
             ),
@@ -607,3 +1346,17 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
