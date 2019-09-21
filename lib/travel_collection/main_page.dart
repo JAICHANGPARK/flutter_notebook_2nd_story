@@ -422,16 +422,11 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                   indicatorSize: TabBarIndicatorSize.label,
                   isScrollable: true,
                   unselectedLabelColor: Colors.grey,
-                  unselectedLabelStyle: TextStyle(
-                    fontSize: 16
-                  ),
+                  unselectedLabelStyle: TextStyle(fontSize: 16),
                   indicatorColor: Colors.black,
                   labelColor: Colors.black,
-                  labelStyle: TextStyle(
-                    fontSize: 28
-                  ),
+                  labelStyle: TextStyle(fontSize: 28),
                   controller: _tabController,
-
                   tabs: <Widget>[
                     Tab(
                       text: "Favorite",
@@ -449,10 +444,15 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                 controller: _tabController,
                 children: <Widget>[
                   Container(
-                    child: Center(
-                      child: Text("Page 1 "),
-                    ),
-                  ),
+                      child: ListView(
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      Container(
+                        height: 160,
+                        child: Placeholder(),
+                      )
+                    ],
+                  )),
                   Container(
                     child: Center(
                       child: Text("Page 2 "),
