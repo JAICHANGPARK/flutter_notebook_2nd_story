@@ -500,6 +500,8 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                 bottom: 12,
                                 right: 12,
                                 child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
@@ -541,7 +543,49 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                                           size: 14,
                                         ),
                                       ],
-                                    )
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.flight_takeoff,
+                                          color: Colors.black,
+                                          size: 18,
+                                        ),
+                                        Text(
+                                          "Japan, Dec 29, 2019",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.loyalty,
+                                          color: Colors.black,
+                                          size: 18,
+                                        ),
+                                        Text(
+                                          "02/12 Seats",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          "\$770",
+                                          style: TextStyle(
+                                            color: Colors.red[200],
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               )
