@@ -46,6 +46,41 @@ class _MainPageState extends State<MainPage> {
                     Icon(Icons.search)
                   ],
                 ),
+              ),
+              SizedBox(height: 12,),
+              Container(
+                height: 280,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 4,
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 5,
+                            child: Placeholder(),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Placeholder(),
+                          )
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 3,
+                      child: Placeholder(),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 140,
+                child: Placeholder(),
+              ),
+              Container(
+                height: 280,
+                child: Placeholder(),
               )
             ],
           ),
@@ -54,6 +89,8 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+
 
 
 
