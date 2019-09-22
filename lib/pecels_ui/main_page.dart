@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PixelsUIApp extends StatelessWidget {
@@ -62,26 +63,24 @@ class _MainPageState extends State<MainPage> {
                             flex: 5,
                             child: Container(
                               decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white, width: 4),
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    "https://cdn.pixabay.com/photo/2019/09/12/18/34/krakow-4472321__340.jpg"
-                                  ),
-                                  fit: BoxFit.cover
-                                )
-                              ),
+                                  border:
+                                      Border.all(color: Colors.white, width: 4),
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2019/09/12/18/34/krakow-4472321__340.jpg"),
+                                      fit: BoxFit.cover)),
                             ),
                           ),
                           Expanded(
                             flex: 4,
                             child: Container(
                               decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white, width: 4),
-                                image: DecorationImage(
-                                  image: NetworkImage("https://cdn.pixabay.com/photo/2019/07/16/20/48/dolomites-4342572__340.jpg"),
-                                  fit: BoxFit.cover
-                                )
-                              ),
+                                  border:
+                                      Border.all(color: Colors.white, width: 4),
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2019/07/16/20/48/dolomites-4342572__340.jpg"),
+                                      fit: BoxFit.cover)),
                             ),
                           )
                         ],
@@ -91,20 +90,112 @@ class _MainPageState extends State<MainPage> {
                       flex: 3,
                       child: Container(
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white, width: 4),
+                            border: Border.all(color: Colors.white, width: 4),
                             image: DecorationImage(
-                                image: NetworkImage("https://cdn.pixabay.com/photo/2019/08/06/02/16/landscape-4387209__340.jpg"),
-                                fit: BoxFit.cover
-                            )
-                        ),
+                                image: NetworkImage(
+                                    "https://cdn.pixabay.com/photo/2019/08/06/02/16/landscape-4387209__340.jpg"),
+                                fit: BoxFit.cover)),
                       ),
                     )
                   ],
                 ),
               ),
               Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 4),
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2019/09/14/23/14/dogs-4477058__340.jpg"),
+                      fit: BoxFit.cover,
+                      colorFilter: ColorFilter.mode(
+                          Colors.black.withOpacity(0.3), BlendMode.darken)),
+                ),
                 height: 140,
-                child: Placeholder(),
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "leaderboard last 30 days".toUpperCase(),
+                      style: TextStyle(color: Colors.white, fontSize: 10),
+                    ),
+                    Text(
+                      "Top photographers".toUpperCase(),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Container(
+                      height: 64,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      margin: EdgeInsets.only(left: 16, right: 16),
+                      padding: EdgeInsets.only(left: 16),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 21,
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Card(
+                            elevation: 8,
+                            margin: EdgeInsets.symmetric(vertical: 12),
+                            child: Container(
+                              width: 64,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Card(
+                            elevation: 8,
+                            margin: EdgeInsets.symmetric(vertical: 12),
+                            child: Container(
+                              width: 64,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Card(
+                            elevation: 8,
+                            margin: EdgeInsets.symmetric(vertical: 12),
+                            child: Container(
+                              width: 64,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Card(
+                            elevation: 8,
+                            margin: EdgeInsets.symmetric(vertical: 12),
+                            child: Container(
+                              width: 64,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
               Container(
                 height: 280,
@@ -117,24 +208,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
