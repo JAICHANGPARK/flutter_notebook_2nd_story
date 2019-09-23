@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
+import 'package:flutter_notebook_second_story/pecels_ui/detail_page.dart';
 
 class PixelsUIApp extends StatelessWidget {
   @override
@@ -62,14 +63,20 @@ class _MainPageState extends State<MainPage> {
                         children: <Widget>[
                           Expanded(
                             flex: 5,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.white, width: 4),
-                                  image: DecorationImage(
-                                      image: NetworkImage(
-                                          "https://cdn.pixabay.com/photo/2019/09/12/18/34/krakow-4472321__340.jpg"),
-                                      fit: BoxFit.cover)),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => UserProfilePage()));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.white, width: 4),
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            "https://cdn.pixabay.com/photo/2019/09/12/18/34/krakow-4472321__340.jpg"),
+                                        fit: BoxFit.cover)),
+                              ),
                             ),
                           ),
                           Expanded(
