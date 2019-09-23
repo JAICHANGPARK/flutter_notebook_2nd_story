@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/note_utils/note_image.dart';
 
 class PixelsUIApp extends StatelessWidget {
   @override
@@ -138,6 +139,7 @@ class _MainPageState extends State<MainPage> {
                         children: <Widget>[
                           CircleAvatar(
                             radius: 21,
+                           child: Image.network(dreamwalkerImg),
                           ),
                           SizedBox(
                             width: 8,
@@ -149,6 +151,10 @@ class _MainPageState extends State<MainPage> {
                               width: 64,
                               decoration: BoxDecoration(
                                 color: Colors.grey,
+                                image: DecorationImage(
+                                  image: NetworkImage("https://cdn.pixabay.com/photo/2019/09/19/07/26/extreme-4488462__340.jpg"),
+                                  fit: BoxFit.cover
+                                )
                               ),
                             ),
                           ),
