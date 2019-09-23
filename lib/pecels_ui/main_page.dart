@@ -137,32 +137,29 @@ class _MainPageState extends State<MainPage> {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
-                         Container(
-                           height: 38,
-                           width: 38,
-                           decoration: BoxDecoration(
-                             shape: BoxShape.circle,
-                             image: DecorationImage(
-                               image: NetworkImage(dreamwalkerImg),
-
-                             )
-                           ),
-                         ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Card(
-                            elevation: 8,
-                            margin: EdgeInsets.symmetric(vertical: 12),
-                            child: Container(
-                              width: 64,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
+                          Container(
+                            height: 38,
+                            width: 38,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
                                 image: DecorationImage(
-                                  image: NetworkImage("https://cdn.pixabay.com/photo/2019/09/19/07/26/extreme-4488462__340.jpg"),
-                                  fit: BoxFit.cover
-                                )
-                              ),
+                                  image: NetworkImage(dreamwalkerImg),
+                                )),
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Card(
+                            elevation: 8,
+                            margin: EdgeInsets.symmetric(vertical: 12),
+                            child: Container(
+                              width: 64,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2019/09/19/07/26/extreme-4488462__340.jpg"),
+                                      fit: BoxFit.cover)),
                             ),
                           ),
                           SizedBox(
@@ -174,12 +171,11 @@ class _MainPageState extends State<MainPage> {
                             child: Container(
                               width: 64,
                               decoration: BoxDecoration(
-                                color: Colors.grey,
+                                  color: Colors.grey,
                                   image: DecorationImage(
-                                      image: NetworkImage("https://cdn.pixabay.com/photo/2018/07/16/10/11/table-bay-harbour-3541607__340.jpg"),
-                                      fit: BoxFit.cover
-                                  )
-                              ),
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2018/07/16/10/11/table-bay-harbour-3541607__340.jpg"),
+                                      fit: BoxFit.cover)),
                             ),
                           ),
                           SizedBox(
@@ -191,12 +187,11 @@ class _MainPageState extends State<MainPage> {
                             child: Container(
                               width: 64,
                               decoration: BoxDecoration(
-                                color: Colors.grey,
+                                  color: Colors.grey,
                                   image: DecorationImage(
-                                      image: NetworkImage("https://cdn.pixabay.com/photo/2019/08/19/10/44/peru-4416038__340.jpg"),
-                                      fit: BoxFit.cover
-                                  )
-                              ),
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2019/08/19/10/44/peru-4416038__340.jpg"),
+                                      fit: BoxFit.cover)),
                             ),
                           ),
                           SizedBox(
@@ -208,12 +203,11 @@ class _MainPageState extends State<MainPage> {
                             child: Container(
                               width: 64,
                               decoration: BoxDecoration(
-                                color: Colors.grey,
+                                  color: Colors.grey,
                                   image: DecorationImage(
-                                      image: NetworkImage("https://cdn.pixabay.com/photo/2019/01/02/07/51/landscape-3908270__340.jpg"),
-                                      fit: BoxFit.cover
-                                  )
-                              ),
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2019/01/02/07/51/landscape-3908270__340.jpg"),
+                                      fit: BoxFit.cover)),
                             ),
                           )
                         ],
@@ -224,7 +218,71 @@ class _MainPageState extends State<MainPage> {
               ),
               Container(
                 height: 280,
-                child: Placeholder(),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 4),
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                    "https://cdn.pixabay.com/photo/2019/09/13/03/59/saxophone-4473023__340.jpg"),
+                                fit: BoxFit.cover)),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 7,
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 5,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.white, width: 4),
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2019/09/17/09/01/hahn-4482948__340.jpg"),
+                                      fit: BoxFit.cover)),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: Colors.white, width: 4),
+                                        image: DecorationImage(
+                                            image: NetworkImage(
+                                                "https://cdn.pixabay.com/photo/2019/09/21/10/30/sunflower-4493544__340.jpg"),
+                                            fit: BoxFit.cover)),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: Colors.white, width: 4),
+                                        image: DecorationImage(
+                                            image: NetworkImage(
+                                                "https://cdn.pixabay.com/photo/2019/09/17/08/07/dahlia-4482856__340.jpg"),
+                                            fit: BoxFit.cover)),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
