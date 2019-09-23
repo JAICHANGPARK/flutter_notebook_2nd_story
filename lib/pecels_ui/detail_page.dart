@@ -79,6 +79,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
           ),
           Container(
             height: 48,
+            margin: EdgeInsets.only(top: 16),
             child: Row(
               children: <Widget>[
                 Expanded(
