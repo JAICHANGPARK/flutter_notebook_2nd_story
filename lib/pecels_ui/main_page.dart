@@ -137,10 +137,17 @@ class _MainPageState extends State<MainPage> {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
-                          CircleAvatar(
-                            radius: 21,
-                           child: Image.network(dreamwalkerImg),
-                          ),
+                         Container(
+                           height: 38,
+                           width: 38,
+                           decoration: BoxDecoration(
+                             shape: BoxShape.circle,
+                             image: DecorationImage(
+                               image: NetworkImage(dreamwalkerImg),
+
+                             )
+                           ),
+                         ),
                           SizedBox(
                             width: 8,
                           ),
@@ -168,6 +175,10 @@ class _MainPageState extends State<MainPage> {
                               width: 64,
                               decoration: BoxDecoration(
                                 color: Colors.grey,
+                                  image: DecorationImage(
+                                      image: NetworkImage("https://cdn.pixabay.com/photo/2018/07/16/10/11/table-bay-harbour-3541607__340.jpg"),
+                                      fit: BoxFit.cover
+                                  )
                               ),
                             ),
                           ),
@@ -181,6 +192,10 @@ class _MainPageState extends State<MainPage> {
                               width: 64,
                               decoration: BoxDecoration(
                                 color: Colors.grey,
+                                  image: DecorationImage(
+                                      image: NetworkImage("https://cdn.pixabay.com/photo/2019/08/19/10/44/peru-4416038__340.jpg"),
+                                      fit: BoxFit.cover
+                                  )
                               ),
                             ),
                           ),
@@ -194,6 +209,10 @@ class _MainPageState extends State<MainPage> {
                               width: 64,
                               decoration: BoxDecoration(
                                 color: Colors.grey,
+                                  image: DecorationImage(
+                                      image: NetworkImage("https://cdn.pixabay.com/photo/2019/01/02/07/51/landscape-3908270__340.jpg"),
+                                      fit: BoxFit.cover
+                                  )
                               ),
                             ),
                           )
