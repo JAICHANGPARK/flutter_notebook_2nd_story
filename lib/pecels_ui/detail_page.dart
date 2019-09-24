@@ -6,7 +6,16 @@ class UserProfilePage extends StatefulWidget {
   _UserProfilePageState createState() => _UserProfilePageState();
 }
 
-class _UserProfilePageState extends State<UserProfilePage> {
+class _UserProfilePageState extends State<UserProfilePage>
+with SingleTickerProviderStateMixin{
+
+  TabController _tabController;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(vsync: this, length: 4);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,8 +122,52 @@ class _UserProfilePageState extends State<UserProfilePage> {
               ],
             ),
           ),
+          SizedBox(
+            height: 16,
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Text("TOKYO, JAPAN"),
+          ),
+          Container(
+            height: 48,
+            child: TabBar(tabs: <Widget>[],
+            controller: _tabController,)
+            ,
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height / 2,
+          )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
