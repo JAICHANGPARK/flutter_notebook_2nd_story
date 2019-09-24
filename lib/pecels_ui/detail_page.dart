@@ -162,22 +162,58 @@ class _UserProfilePageState extends State<UserProfilePage>
           Align(
             alignment: Alignment.centerRight,
             child: Padding(
-              padding: const EdgeInsets.only(right: 16),
+              padding: const EdgeInsets.only(right: 16, top: 8),
               child: Text("SORT BY"),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 16, right: 16, top: 8),
-            height: MediaQuery.of(context).size.height / 2.1,
+            margin: EdgeInsets.only(left: 16, right: 16,),
+            height: MediaQuery.of(context).size.height / 2.15,
             child: TabBarView(
               controller: _tabController,
               children: <Widget>[
                 GridView.count(
+                  padding: EdgeInsets.zero,
+                  childAspectRatio: 0.9,
                   crossAxisCount: 2,
+
+                  children: List.generate(100, (index){
+                    return Container(
+                      margin: EdgeInsets.all(4),
+                      color: Colors.red,
+                    );
+                  })
                 ),
-                Placeholder(),
-                Placeholder(),
-                Placeholder(),
+                GridView.count(
+                    padding: EdgeInsets.zero,
+                    crossAxisCount: 2,
+                    children: List.generate(100, (index){
+                      return Container(
+                        margin: EdgeInsets.all(4),
+                        color: Colors.purpleAccent,
+                      );
+                    })
+                ),
+                GridView.count(
+                    padding: EdgeInsets.zero,
+                    crossAxisCount: 2,
+                    children: List.generate(100, (index){
+                      return Container(
+                        margin: EdgeInsets.all(4),
+                        color: Colors.greenAccent,
+                      );
+                    })
+                ),
+                GridView.count(
+                    padding: EdgeInsets.zero,
+                    crossAxisCount: 2,
+                    children: List.generate(100, (index){
+                      return Container(
+                        margin: EdgeInsets.all(4),
+                        color: Colors.blue,
+                      );
+                    })
+                ),
               ],
             ),
           )
@@ -186,3 +222,12 @@ class _UserProfilePageState extends State<UserProfilePage>
     );
   }
 }
+
+
+
+
+
+
+
+
+
