@@ -7,15 +7,16 @@ class UserProfilePage extends StatefulWidget {
 }
 
 class _UserProfilePageState extends State<UserProfilePage>
-with SingleTickerProviderStateMixin{
-
+    with SingleTickerProviderStateMixin {
   TabController _tabController;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _tabController = TabController(vsync: this, length: 4);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,45 +130,59 @@ with SingleTickerProviderStateMixin{
             alignment: Alignment.center,
             child: Text("TOKYO, JAPAN"),
           ),
-          Container(
-            height: 48,
-            child: TabBar(tabs: <Widget>[],
-            controller: _tabController,)
-            ,
+          SizedBox(
+            height: 16,
           ),
           Container(
-            height: MediaQuery.of(context).size.height / 2,
+            padding: EdgeInsets.only(left: 16),
+            height: 32,
+            child: TabBar(
+              indicatorColor: Colors.greenAccent,
+              indicatorWeight: 4,
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.grey,
+              isScrollable: true,
+              tabs: <Widget>[
+                Tab(
+                  text: "103 PHOTOS",
+                ),
+                Tab(
+                  text: "COLLECTIONS",
+                ),
+                Tab(
+                  text: "STATS",
+                ),
+                Tab(
+                  text: "FEATURED IN",
+                )
+              ],
+              controller: _tabController,
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Text("SORT BY"),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 16, right: 16, top: 8),
+            height: MediaQuery.of(context).size.height / 2.1,
+            child: TabBarView(
+              controller: _tabController,
+              children: <Widget>[
+                GridView.count(
+                  crossAxisCount: 2,
+                ),
+                Placeholder(),
+                Placeholder(),
+                Placeholder(),
+              ],
+            ),
           )
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
