@@ -19,7 +19,93 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: <Widget>[],
+        children: <Widget>[
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 0,
+            child: Container(
+              height: 220,
+              padding: EdgeInsets.only(left: 24, right: 24, bottom: 32),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2017/01/14/07/40/vietnam-1978917_960_720.jpg"),
+                      fit: BoxFit.cover)),
+              child: Column(
+                children: <Widget>[
+                  Spacer(),
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.white,
+                        size: 12,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Text(
+                        "Your current location",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        "Ha Noi",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Icon(
+                        Icons.cloud,
+                        color: Colors.white,
+                        size: 24,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Text(
+                        "32",
+                        style: TextStyle(fontSize: 24, color: Colors.white),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 196,
+            left: 24,
+            right: 24,
+            child: Card(
+              elevation: 16,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8)
+              ),
+              child: Container(
+                height: 48,
+                padding: EdgeInsets.only(left: 8, top: 4),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    icon: Icon(Icons.search),
+                    hintText: "Hi Dreamwalker, fine everything on your location",
+                    hintStyle: TextStyle(
+                      fontSize: 13
+                    )
+
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
       ),
       bottomNavigationBar: _buildBottomWidget(context),
     );
