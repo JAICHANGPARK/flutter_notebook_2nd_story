@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TravelAround extends StatelessWidget {
@@ -109,7 +110,7 @@ class _MainPageState extends State<MainPage> {
             left: 24,
             top: 280,
             child: Container(
-              height: 180,
+              height: 200,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
@@ -137,11 +138,75 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                   Container(
-                    height: 156,
+                    height: 176,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
-                      children: <Widget>[],
+                      children: <Widget>[
+                        Container(
+                          width: 300,
+                          margin: EdgeInsets.only(top: 8, right: 12),
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(16),
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Container(
+                                  padding: EdgeInsets.only(
+                                    top: 8,
+                                    left: 4,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text("Vinpearl Resort"),
+                                          Row(
+                                            children: <Widget>[
+                                              Icon(
+                                                Icons.location_on,
+                                                size: 14,
+                                              ),
+                                              Text("500m")
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 28,
+                                        width: 80,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: Colors.grey),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: 300,
+                          margin: EdgeInsets.only(top: 8, right: 12),
+                          child: Placeholder(),
+                        )
+                      ],
                     ),
                   )
                 ],
