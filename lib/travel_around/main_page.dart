@@ -222,8 +222,155 @@ class _MainPageState extends State<MainPage> {
                         Container(
                           width: 300,
                           margin: EdgeInsets.only(top: 8, right: 12),
-                          child: Placeholder(),
-                        )
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(16),
+                                      color: Colors.red,
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Container(
+                                  padding: EdgeInsets.only(
+                                    top: 8,
+                                    left: 4,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "Vinpearl Resort",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Icon(
+                                                Icons.location_on,
+                                                size: 14,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                "500m",
+                                                style: TextStyle(
+                                                    color: Colors.blue),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 28,
+                                        width: 80,
+                                        decoration: BoxDecoration(
+                                          border:
+                                          Border.all(color: Colors.grey),
+                                          borderRadius:
+                                          BorderRadius.circular(6),
+                                        ),
+                                        child: Center(child: Text("\$300/per")),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: 300,
+                          margin: EdgeInsets.only(top: 8, right: 12),
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(16),
+                                      color: Colors.red,
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                              "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Container(
+                                  padding: EdgeInsets.only(
+                                    top: 8,
+                                    left: 4,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "Vinpearl Resort",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Icon(
+                                                Icons.location_on,
+                                                size: 14,
+                                                color: Colors.blue,
+                                              ),
+                                              Text(
+                                                "500m",
+                                                style: TextStyle(
+                                                    color: Colors.blue),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 28,
+                                        width: 80,
+                                        decoration: BoxDecoration(
+                                          border:
+                                          Border.all(color: Colors.grey),
+                                          borderRadius:
+                                          BorderRadius.circular(6),
+                                        ),
+                                        child: Center(child: Text("\$300/per")),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   )
