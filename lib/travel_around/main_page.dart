@@ -111,7 +111,48 @@ class _MainPageState extends State<MainPage> {
       body: Stack(
         children: <Widget>[
           ..._buildTopWidget(context),
-          
+          Positioned(
+            left: 24,
+            top: 280,
+            child: Container(
+              height: 180,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(right: 24),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width - 48,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text("Resort, hotel", style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold
+                          ),),
+
+                          Text("See All",style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12
+                          ),)
+                        ],
+                      ),
+                    ),
+                  )
+
+
+                ],
+              ),
+            ),
+          )
+
+
+
+
+
+
 
 
 
