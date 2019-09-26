@@ -15,7 +15,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  List<Widget> _buildTopWidget(BuildContext context){
+  List<Widget> _buildTopWidget(BuildContext context) {
     return [
       Positioned(
         left: 0,
@@ -82,9 +82,7 @@ class _MainPageState extends State<MainPage> {
         right: 24,
         child: Card(
           elevation: 16,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8)
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           child: Container(
             height: 48,
             padding: EdgeInsets.only(left: 8, top: 4),
@@ -93,18 +91,14 @@ class _MainPageState extends State<MainPage> {
                   border: InputBorder.none,
                   icon: Icon(Icons.search),
                   hintText: "Hi Dreamwalker, fine everything on your location",
-                  hintStyle: TextStyle(
-                      fontSize: 13
-                  )
-              ),
+                  hintStyle: TextStyle(fontSize: 13)),
             ),
           ),
         ),
       ),
     ];
-
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,39 +117,37 @@ class _MainPageState extends State<MainPage> {
                   Padding(
                     padding: EdgeInsets.only(right: 24),
                     child: Container(
+                      height: 24,
                       width: MediaQuery.of(context).size.width - 48,
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text("Resort, hotel", style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold
-                          ),),
-
-                          Text("See All",style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12
-                          ),)
+                          Text(
+                            "Resort, hotel",
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "See All",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
                         ],
                       ),
                     ),
+                  ),
+                  Container(
+                    height: 156,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      children: <Widget>[],
+                    ),
                   )
-
-
                 ],
               ),
             ),
           )
-
-
-
-
-
-
-
-
-
         ],
       ),
       bottomNavigationBar: _buildBottomWidget(context),
