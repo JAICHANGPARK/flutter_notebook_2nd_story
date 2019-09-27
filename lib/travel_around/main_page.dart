@@ -104,6 +104,7 @@ class _MainPageState extends State<MainPage> {
     return Positioned(
       left: 24,
       top: 280,
+      right: 0,
       child: Container(
         height: 200,
         child: Column(
@@ -526,6 +527,7 @@ class _MainPageState extends State<MainPage> {
                       children: <Widget>[
                         Container(
                           width: 120,
+                          margin: EdgeInsets.only(right: 16),
                           child: Column(
                             children: <Widget>[
                               Expanded(
@@ -575,6 +577,214 @@ class _MainPageState extends State<MainPage> {
                             ],
                           ),
                         ),
+                        Container(
+                          width: 120,
+                          margin: EdgeInsets.only(right: 16),
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                        image: NetworkImage("https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952__340.jpg"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 4,
+                                      bottom: 4
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("Gogi House",style: TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      ),),
+                                      Spacer(),
+                                      Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Colors.blue,
+                                            size: 14,
+                                          ),
+                                          Text(
+                                            "500m",
+                                            style: TextStyle(
+                                                color: Colors.blue, fontSize: 12),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: 120,
+                          margin: EdgeInsets.only(right: 16),
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                        image: NetworkImage("https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952__340.jpg"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 4,
+                                      bottom: 4
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("Gogi House",style: TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      ),),
+                                      Spacer(),
+                                      Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Colors.blue,
+                                            size: 14,
+                                          ),
+                                          Text(
+                                            "500m",
+                                            style: TextStyle(
+                                                color: Colors.blue, fontSize: 12),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: 120,
+                          margin: EdgeInsets.only(right: 16),
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                        image: NetworkImage("https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952__340.jpg"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 4,
+                                      bottom: 4
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("Gogi House",style: TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      ),),
+                                      Spacer(),
+                                      Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Colors.blue,
+                                            size: 14,
+                                          ),
+                                          Text(
+                                            "500m",
+                                            style: TextStyle(
+                                                color: Colors.blue, fontSize: 12),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: 120,
+                          margin: EdgeInsets.only(right: 16),
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                        image: NetworkImage("https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952__340.jpg"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 4,
+                                      bottom: 4
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("Gogi House",style: TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      ),),
+                                      Spacer(),
+                                      Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Colors.blue,
+                                            size: 14,
+                                          ),
+                                          Text(
+                                            "500m",
+                                            style: TextStyle(
+                                                color: Colors.blue, fontSize: 12),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   )
@@ -588,3 +798,26 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
