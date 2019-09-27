@@ -503,6 +503,15 @@ class _MainPageState extends State<MainPage> {
         children: <Widget>[
           ..._buildTopWidget(context),
           _buildResortList(),
+          Positioned(
+            bottom: 4,
+            left: 24,
+            right: 0,
+            child: Container(
+              height: 180,
+              child: Placeholder(),
+            ),
+          )
 
         ],
       ),
