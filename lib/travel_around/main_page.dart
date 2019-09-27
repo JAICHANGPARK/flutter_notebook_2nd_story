@@ -99,291 +99,280 @@ class _MainPageState extends State<MainPage> {
       ),
     ];
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          ..._buildTopWidget(context),
-          Positioned(
-            left: 24,
-            top: 280,
-            child: Container(
-              height: 200,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
+  Widget _buildResortList(){
+    return Positioned(
+      left: 24,
+      top: 280,
+      child: Container(
+        height: 200,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(right: 24),
+              child: Container(
+                height: 24,
+                width: MediaQuery.of(context).size.width - 48,
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      "Resort, hotel",
+                      style: TextStyle(
+                          fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "See All",
+                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              height: 176,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
                 children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(right: 24),
-                    child: Container(
-                      height: 24,
-                      width: MediaQuery.of(context).size.width - 48,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            "Resort, hotel",
-                            style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
+                  Container(
+                    width: 300,
+                    margin: EdgeInsets.only(top: 8, right: 12),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 4,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                color: Colors.red,
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
+                                    fit: BoxFit.cover)),
                           ),
-                          Text(
-                            "See All",
-                            style: TextStyle(color: Colors.grey, fontSize: 12),
-                          )
-                        ],
-                      ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            padding: EdgeInsets.only(
+                              top: 8,
+                              left: 4,
+                            ),
+                            child: Row(
+                              mainAxisAlignment:
+                              MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment:
+                              CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Column(
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Vinpearl Resort",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 14,
+                                          color: Colors.blue,
+                                        ),
+                                        Text(
+                                          "500m",
+                                          style: TextStyle(
+                                              color: Colors.blue),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                Container(
+                                  height: 28,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                    border:
+                                    Border.all(color: Colors.grey),
+                                    borderRadius:
+                                    BorderRadius.circular(6),
+                                  ),
+                                  child: Center(child: Text("\$300/per")),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Container(
-                    height: 176,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      shrinkWrap: true,
+                    width: 300,
+                    margin: EdgeInsets.only(top: 8, right: 12),
+                    child: Column(
                       children: <Widget>[
-                        Container(
-                          width: 300,
-                          margin: EdgeInsets.only(top: 8, right: 12),
-                          child: Column(
-                            children: <Widget>[
-                              Expanded(
-                                flex: 4,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(16),
-                                      color: Colors.red,
-                                      image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
-                                          fit: BoxFit.cover)),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Container(
-                                  padding: EdgeInsets.only(
-                                    top: 8,
-                                    left: 4,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            "Vinpearl Resort",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.location_on,
-                                                size: 14,
-                                                color: Colors.blue,
-                                              ),
-                                              Text(
-                                                "500m",
-                                                style: TextStyle(
-                                                    color: Colors.blue),
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                      Container(
-                                        height: 28,
-                                        width: 80,
-                                        decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: Colors.grey),
-                                          borderRadius:
-                                              BorderRadius.circular(6),
-                                        ),
-                                        child: Center(child: Text("\$300/per")),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
+                        Expanded(
+                          flex: 4,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                color: Colors.red,
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
+                                    fit: BoxFit.cover)),
                           ),
                         ),
-                        Container(
-                          width: 300,
-                          margin: EdgeInsets.only(top: 8, right: 12),
-                          child: Column(
-                            children: <Widget>[
-                              Expanded(
-                                flex: 4,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(16),
-                                      color: Colors.red,
-                                      image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
-                                          fit: BoxFit.cover)),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Container(
-                                  padding: EdgeInsets.only(
-                                    top: 8,
-                                    left: 4,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            "Vinpearl Resort",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.location_on,
-                                                size: 14,
-                                                color: Colors.blue,
-                                              ),
-                                              Text(
-                                                "500m",
-                                                style: TextStyle(
-                                                    color: Colors.blue),
-                                              )
-                                            ],
-                                          )
-                                        ],
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            padding: EdgeInsets.only(
+                              top: 8,
+                              left: 4,
+                            ),
+                            child: Row(
+                              mainAxisAlignment:
+                              MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment:
+                              CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Column(
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Vinpearl Resort",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                      Container(
-                                        height: 28,
-                                        width: 80,
-                                        decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: Colors.grey),
-                                          borderRadius:
-                                              BorderRadius.circular(6),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 14,
+                                          color: Colors.blue,
                                         ),
-                                        child: Center(child: Text("\$300/per")),
-                                      )
-                                    ],
-                                  ),
+                                        Text(
+                                          "500m",
+                                          style: TextStyle(
+                                              color: Colors.blue),
+                                        )
+                                      ],
+                                    )
+                                  ],
                                 ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          width: 300,
-                          margin: EdgeInsets.only(top: 8, right: 12),
-                          child: Column(
-                            children: <Widget>[
-                              Expanded(
-                                flex: 4,
-                                child: Container(
+                                Container(
+                                  height: 28,
+                                  width: 80,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(16),
-                                      color: Colors.red,
-                                      image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
-                                          fit: BoxFit.cover)),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Container(
-                                  padding: EdgeInsets.only(
-                                    top: 8,
-                                    left: 4,
+                                    border:
+                                    Border.all(color: Colors.grey),
+                                    borderRadius:
+                                    BorderRadius.circular(6),
                                   ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            "Vinpearl Resort",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: <Widget>[
-                                              Icon(
-                                                Icons.location_on,
-                                                size: 14,
-                                                color: Colors.blue,
-                                              ),
-                                              Text(
-                                                "500m",
-                                                style: TextStyle(
-                                                    color: Colors.blue),
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                      Container(
-                                        height: 28,
-                                        width: 80,
-                                        decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: Colors.grey),
-                                          borderRadius:
-                                              BorderRadius.circular(6),
-                                        ),
-                                        child: Center(child: Text("\$300/per")),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
+                                  child: Center(child: Text("\$300/per")),
+                                )
+                              ],
+                            ),
                           ),
-                        ),
+                        )
                       ],
                     ),
-                  )
+                  ),
+                  Container(
+                    width: 300,
+                    margin: EdgeInsets.only(top: 8, right: 12),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 4,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                color: Colors.red,
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg"),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            padding: EdgeInsets.only(
+                              top: 8,
+                              left: 4,
+                            ),
+                            child: Row(
+                              mainAxisAlignment:
+                              MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment:
+                              CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Column(
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "Vinpearl Resort",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 14,
+                                          color: Colors.blue,
+                                        ),
+                                        Text(
+                                          "500m",
+                                          style: TextStyle(
+                                              color: Colors.blue),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                Container(
+                                  height: 28,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                    border:
+                                    Border.all(color: Colors.grey),
+                                    borderRadius:
+                                    BorderRadius.circular(6),
+                                  ),
+                                  child: Center(child: Text("\$300/per")),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
-      bottomNavigationBar: _buildBottomWidget(context),
     );
   }
-
   Widget _buildBottomWidget(BuildContext context) {
     return BottomAppBar(
       elevation: 16,
@@ -506,4 +495,34 @@ class _MainPageState extends State<MainPage> {
       ),
     );
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          ..._buildTopWidget(context),
+          _buildResortList(),
+
+        ],
+      ),
+      bottomNavigationBar: _buildBottomWidget(context),
+    );
+  }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
