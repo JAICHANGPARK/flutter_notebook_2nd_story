@@ -99,7 +99,8 @@ class _MainPageState extends State<MainPage> {
       ),
     ];
   }
-  Widget _buildResortList(){
+
+  Widget _buildResortList() {
     return Positioned(
       left: 24,
       top: 280,
@@ -120,8 +121,8 @@ class _MainPageState extends State<MainPage> {
                   children: <Widget>[
                     Text(
                       "Resort, hotel",
-                      style: TextStyle(
-                          fontSize: 22, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "See All",
@@ -162,14 +163,11 @@ class _MainPageState extends State<MainPage> {
                               left: 4,
                             ),
                             child: Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment:
-                              CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
                                       "Vinpearl Resort",
@@ -179,7 +177,7 @@ class _MainPageState extends State<MainPage> {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                       children: <Widget>[
                                         Icon(
                                           Icons.location_on,
@@ -188,8 +186,7 @@ class _MainPageState extends State<MainPage> {
                                         ),
                                         Text(
                                           "500m",
-                                          style: TextStyle(
-                                              color: Colors.blue),
+                                          style: TextStyle(color: Colors.blue),
                                         )
                                       ],
                                     )
@@ -199,10 +196,8 @@ class _MainPageState extends State<MainPage> {
                                   height: 28,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                    border:
-                                    Border.all(color: Colors.grey),
-                                    borderRadius:
-                                    BorderRadius.circular(6),
+                                    border: Border.all(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Center(child: Text("\$300/per")),
                                 )
@@ -238,14 +233,11 @@ class _MainPageState extends State<MainPage> {
                               left: 4,
                             ),
                             child: Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment:
-                              CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
                                       "Vinpearl Resort",
@@ -255,7 +247,7 @@ class _MainPageState extends State<MainPage> {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                       children: <Widget>[
                                         Icon(
                                           Icons.location_on,
@@ -264,8 +256,7 @@ class _MainPageState extends State<MainPage> {
                                         ),
                                         Text(
                                           "500m",
-                                          style: TextStyle(
-                                              color: Colors.blue),
+                                          style: TextStyle(color: Colors.blue),
                                         )
                                       ],
                                     )
@@ -275,10 +266,8 @@ class _MainPageState extends State<MainPage> {
                                   height: 28,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                    border:
-                                    Border.all(color: Colors.grey),
-                                    borderRadius:
-                                    BorderRadius.circular(6),
+                                    border: Border.all(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Center(child: Text("\$300/per")),
                                 )
@@ -314,14 +303,11 @@ class _MainPageState extends State<MainPage> {
                               left: 4,
                             ),
                             child: Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment:
-                              CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
                                       "Vinpearl Resort",
@@ -331,7 +317,7 @@ class _MainPageState extends State<MainPage> {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment.spaceBetween,
                                       children: <Widget>[
                                         Icon(
                                           Icons.location_on,
@@ -340,8 +326,7 @@ class _MainPageState extends State<MainPage> {
                                         ),
                                         Text(
                                           "500m",
-                                          style: TextStyle(
-                                              color: Colors.blue),
+                                          style: TextStyle(color: Colors.blue),
                                         )
                                       ],
                                     )
@@ -351,10 +336,8 @@ class _MainPageState extends State<MainPage> {
                                   height: 28,
                                   width: 80,
                                   decoration: BoxDecoration(
-                                    border:
-                                    Border.all(color: Colors.grey),
-                                    borderRadius:
-                                    BorderRadius.circular(6),
+                                    border: Border.all(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Center(child: Text("\$300/per")),
                                 )
@@ -373,6 +356,7 @@ class _MainPageState extends State<MainPage> {
       ),
     );
   }
+
   Widget _buildBottomWidget(BuildContext context) {
     return BottomAppBar(
       elevation: 16,
@@ -519,45 +503,81 @@ class _MainPageState extends State<MainPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text("Restaurants",style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          ),),
-                          Text("See All", style: TextStyle(
-                            fontSize: 12
-                          ),)
+                          Text(
+                            "Restaurants",
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "See All",
+                            style: TextStyle(fontSize: 12),
+                          )
                         ],
                       ),
                     ),
                   ),
                   Expanded(
                     flex: 8,
-                    child: Placeholder(),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      children: <Widget>[
+                        Container(
+                          width: 120,
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Placeholder(),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 4,
+                                    bottom: 4
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+
+                                      Text("Gogi House",style: TextStyle(
+                                        fontWeight: FontWeight.bold
+                                      ),),
+                                      Spacer(),
+                                      Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.location_on,
+                                            color: Colors.blue,
+                                            size: 14,
+                                          ),
+                                          Text(
+                                            "500m",
+                                            style: TextStyle(
+                                                color: Colors.blue, fontSize: 12),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
             ),
           )
-
         ],
       ),
       bottomNavigationBar: _buildBottomWidget(context),
     );
   }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
