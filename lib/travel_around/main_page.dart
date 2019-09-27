@@ -492,7 +492,7 @@ class _MainPageState extends State<MainPage> {
             left: 24,
             right: 0,
             child: Container(
-              height: 180,
+              height: 190,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -519,7 +519,7 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                   Expanded(
-                    flex: 8,
+                    flex: 9,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
@@ -530,7 +530,15 @@ class _MainPageState extends State<MainPage> {
                             children: <Widget>[
                               Expanded(
                                 flex: 7,
-                                child: Placeholder(),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952__340.jpg"),
+                                      fit: BoxFit.cover,
+                                    )
+                                  ),
+                                ),
                               ),
                               Expanded(
                                 flex: 3,
@@ -542,7 +550,6 @@ class _MainPageState extends State<MainPage> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
-
                                       Text("Gogi House",style: TextStyle(
                                         fontWeight: FontWeight.bold
                                       ),),
@@ -567,7 +574,7 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   )
