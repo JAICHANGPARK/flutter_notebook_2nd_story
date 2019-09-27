@@ -509,7 +509,33 @@ class _MainPageState extends State<MainPage> {
             right: 0,
             child: Container(
               height: 180,
-              child: Placeholder(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 24),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text("Restaurants",style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("See All", style: TextStyle(
+                            fontSize: 12
+                          ),)
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 8,
+                    child: Placeholder(),
+                  )
+                ],
+              ),
             ),
           )
 
