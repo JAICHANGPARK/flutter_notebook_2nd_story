@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SchoolApp extends StatelessWidget {
@@ -22,7 +23,7 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height / 2,
+              height: MediaQuery.of(context).size.height / 1.9,
               child: Stack(
                 children: <Widget>[
                   Positioned(
@@ -81,6 +82,7 @@ class _MainPageState extends State<MainPage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(24)),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Container(
@@ -118,7 +120,12 @@ class _MainPageState extends State<MainPage> {
                                   Icons.location_on,
                                   color: Colors.red[200],
                                 ),
-                                Text("576 Sebastin arcade, NY, 123456")
+                                Text(
+                                  "576 Sebastin arcade, NY, 123456",
+                                  style: TextStyle(
+                                      color: Colors.indigo[300],
+                                      fontWeight: FontWeight.bold),
+                                )
                               ],
                             ),
                             SizedBox(
@@ -131,9 +138,69 @@ class _MainPageState extends State<MainPage> {
                                   Icons.phone,
                                   color: Colors.red[200],
                                 ),
-                                Text("123-4567-8901")
+                                Text(
+                                  "123-4567-8901",
+                                  style: TextStyle(
+                                      color: Colors.indigo[300],
+                                      fontWeight: FontWeight.bold),
+                                )
                               ],
                             ),
+                            Row(
+                              children: <Widget>[
+                                Flexible(
+                                  fit: FlexFit.loose,
+                                  flex: 1,
+                                  child: Container(
+                                    height: 48,
+                                    margin: EdgeInsets.all(8),
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                        borderRadius:
+                                            BorderRadius.circular(16)),
+                                    child: Center(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            "380",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Text(
+                                            "Followers",
+                                            style: TextStyle(fontSize: 12),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Flexible(
+                                  fit: FlexFit.loose,
+                                  flex: 1,
+                                  child: Container(
+                                    height: 48,
+                                    margin: EdgeInsets.all(8),
+                                    decoration: BoxDecoration(
+                                        color: Colors.green[400],
+                                        borderRadius:
+                                            BorderRadius.circular(16)),
+                                    child: Center(
+                                      child: Text(
+                                        "Follow",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            letterSpacing: 1.2),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
                           ],
                         ),
                       ),
