@@ -96,6 +96,17 @@ class _MainPageState extends State<MainPage> {
                                   color: Colors.green,
                                 ),
                               ),
+                            ),
+                            SizedBox(height: 12,),
+                            Text("St. Dreamwalker School", style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.indigo[300]
+                            ),),
+                            Row(
+                              children: <Widget>[
+                                
+                              ],
                             )
                           ],
                         ),
