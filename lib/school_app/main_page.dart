@@ -81,6 +81,7 @@ class _MainPageState extends State<MainPage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(24)),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Container(
                               height: 64,
@@ -97,17 +98,42 @@ class _MainPageState extends State<MainPage> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 12,),
-                            Text("St. Dreamwalker School", style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.indigo[300]
-                            ),),
+                            SizedBox(
+                              height: 12,
+                            ),
+                            Text(
+                              "St. Dreamwalker School",
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.indigo[300]),
+                            ),
+                            SizedBox(
+                              height: 12,
+                            ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                
+                                Icon(
+                                  Icons.location_on,
+                                  color: Colors.red[200],
+                                ),
+                                Text("576 Sebastin arcade, NY, 123456")
                               ],
-                            )
+                            ),
+                            SizedBox(
+                              height: 12,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.phone,
+                                  color: Colors.red[200],
+                                ),
+                                Text("123-4567-8901")
+                              ],
+                            ),
                           ],
                         ),
                       ),
