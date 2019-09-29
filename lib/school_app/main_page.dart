@@ -6,9 +6,7 @@ class SchoolApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MainPage(),
-      theme: ThemeData(
-        accentColor: Colors.blueGrey[50]
-      ),
+      theme: ThemeData(accentColor: Colors.blueGrey[50]),
     );
   }
 }
@@ -209,26 +207,27 @@ class _MainPageState extends State<MainPage> {
       ),
     );
   }
-  Widget _buildSchoolListUI(){
-    return  Container(
+
+  Widget _buildSchoolListUI() {
+    return Container(
       padding: EdgeInsets.only(top: 16),
       height: MediaQuery.of(context).size.height / 2,
       child: ListView(
         padding: EdgeInsets.zero,
         shrinkWrap: true,
-        children:_buildListItems(context),
+        children: _buildListItems(context),
       ),
     );
   }
-  List<Widget> _buildListItems(BuildContext context){
+
+  List<Widget> _buildListItems(BuildContext context) {
     return [
       Container(
         padding: EdgeInsets.only(left: 16, right: 8),
         margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
         height: MediaQuery.of(context).size.height / 2.3,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white),
+            borderRadius: BorderRadius.circular(16), color: Colors.white),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -241,8 +240,7 @@ class _MainPageState extends State<MainPage> {
                     width: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                          color: Colors.red[200], width: 2),
+                      border: Border.all(color: Colors.red[200], width: 2),
                     ),
                     child: Center(
                       child: Icon(
@@ -266,9 +264,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Text(
                         "1 hours ago",
-                        style: TextStyle(
-                            color: Colors.indigo[400],
-                            fontSize: 10),
+                        style:
+                            TextStyle(color: Colors.indigo[400], fontSize: 10),
                       )
                     ],
                   ),
@@ -281,28 +278,26 @@ class _MainPageState extends State<MainPage> {
               flex: 5,
               child: Container(
                 decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(16),
-
                     image: DecorationImage(
-                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
                       fit: BoxFit.cover,
-                    )
-                ),
+                    )),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16),
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                child: Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                   style: TextStyle(
                       fontSize: 10,
                       color: Colors.indigo[300],
-                      letterSpacing: 1.2
-                  ),),
+                      letterSpacing: 1.2),
+                ),
               ),
-
             )
           ],
         ),
@@ -312,8 +307,7 @@ class _MainPageState extends State<MainPage> {
         margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
         height: MediaQuery.of(context).size.height / 2.3,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white),
+            borderRadius: BorderRadius.circular(16), color: Colors.white),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -326,8 +320,7 @@ class _MainPageState extends State<MainPage> {
                     width: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                          color: Colors.red[200], width: 2),
+                      border: Border.all(color: Colors.red[200], width: 2),
                     ),
                     child: Center(
                       child: Icon(
@@ -351,9 +344,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Text(
                         "1 hours ago",
-                        style: TextStyle(
-                            color: Colors.indigo[400],
-                            fontSize: 10),
+                        style:
+                            TextStyle(color: Colors.indigo[400], fontSize: 10),
                       )
                     ],
                   ),
@@ -366,28 +358,26 @@ class _MainPageState extends State<MainPage> {
               flex: 5,
               child: Container(
                 decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(16),
-
                     image: DecorationImage(
-                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
                       fit: BoxFit.cover,
-                    )
-                ),
+                    )),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16),
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                child: Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                   style: TextStyle(
                       fontSize: 10,
                       color: Colors.indigo[300],
-                      letterSpacing: 1.2
-                  ),),
+                      letterSpacing: 1.2),
+                ),
               ),
-
             )
           ],
         ),
@@ -397,8 +387,7 @@ class _MainPageState extends State<MainPage> {
         margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
         height: MediaQuery.of(context).size.height / 2.3,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white),
+            borderRadius: BorderRadius.circular(16), color: Colors.white),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -411,8 +400,7 @@ class _MainPageState extends State<MainPage> {
                     width: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                          color: Colors.red[200], width: 2),
+                      border: Border.all(color: Colors.red[200], width: 2),
                     ),
                     child: Center(
                       child: Icon(
@@ -436,9 +424,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Text(
                         "1 hours ago",
-                        style: TextStyle(
-                            color: Colors.indigo[400],
-                            fontSize: 10),
+                        style:
+                            TextStyle(color: Colors.indigo[400], fontSize: 10),
                       )
                     ],
                   ),
@@ -451,28 +438,26 @@ class _MainPageState extends State<MainPage> {
               flex: 5,
               child: Container(
                 decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(16),
-
                     image: DecorationImage(
-                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
                       fit: BoxFit.cover,
-                    )
-                ),
+                    )),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16),
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                child: Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                   style: TextStyle(
                       fontSize: 10,
                       color: Colors.indigo[300],
-                      letterSpacing: 1.2
-                  ),),
+                      letterSpacing: 1.2),
+                ),
               ),
-
             )
           ],
         ),
@@ -482,8 +467,7 @@ class _MainPageState extends State<MainPage> {
         margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
         height: MediaQuery.of(context).size.height / 2.3,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white),
+            borderRadius: BorderRadius.circular(16), color: Colors.white),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -496,8 +480,7 @@ class _MainPageState extends State<MainPage> {
                     width: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                          color: Colors.red[200], width: 2),
+                      border: Border.all(color: Colors.red[200], width: 2),
                     ),
                     child: Center(
                       child: Icon(
@@ -521,9 +504,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Text(
                         "1 hours ago",
-                        style: TextStyle(
-                            color: Colors.indigo[400],
-                            fontSize: 10),
+                        style:
+                            TextStyle(color: Colors.indigo[400], fontSize: 10),
                       )
                     ],
                   ),
@@ -536,28 +518,26 @@ class _MainPageState extends State<MainPage> {
               flex: 5,
               child: Container(
                 decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(16),
-
                     image: DecorationImage(
-                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
                       fit: BoxFit.cover,
-                    )
-                ),
+                    )),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16),
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                child: Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                   style: TextStyle(
                       fontSize: 10,
                       color: Colors.indigo[300],
-                      letterSpacing: 1.2
-                  ),),
+                      letterSpacing: 1.2),
+                ),
               ),
-
             )
           ],
         ),
@@ -567,8 +547,7 @@ class _MainPageState extends State<MainPage> {
         margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
         height: MediaQuery.of(context).size.height / 2.3,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white),
+            borderRadius: BorderRadius.circular(16), color: Colors.white),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -581,8 +560,7 @@ class _MainPageState extends State<MainPage> {
                     width: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                          color: Colors.red[200], width: 2),
+                      border: Border.all(color: Colors.red[200], width: 2),
                     ),
                     child: Center(
                       child: Icon(
@@ -606,9 +584,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Text(
                         "1 hours ago",
-                        style: TextStyle(
-                            color: Colors.indigo[400],
-                            fontSize: 10),
+                        style:
+                            TextStyle(color: Colors.indigo[400], fontSize: 10),
                       )
                     ],
                   ),
@@ -621,28 +598,26 @@ class _MainPageState extends State<MainPage> {
               flex: 5,
               child: Container(
                 decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(16),
-
                     image: DecorationImage(
-                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
                       fit: BoxFit.cover,
-                    )
-                ),
+                    )),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16),
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                child: Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                   style: TextStyle(
                       fontSize: 10,
                       color: Colors.indigo[300],
-                      letterSpacing: 1.2
-                  ),),
+                      letterSpacing: 1.2),
+                ),
               ),
-
             )
           ],
         ),
@@ -652,8 +627,7 @@ class _MainPageState extends State<MainPage> {
         margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
         height: MediaQuery.of(context).size.height / 2.3,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white),
+            borderRadius: BorderRadius.circular(16), color: Colors.white),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -666,8 +640,7 @@ class _MainPageState extends State<MainPage> {
                     width: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                          color: Colors.red[200], width: 2),
+                      border: Border.all(color: Colors.red[200], width: 2),
                     ),
                     child: Center(
                       child: Icon(
@@ -691,9 +664,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Text(
                         "1 hours ago",
-                        style: TextStyle(
-                            color: Colors.indigo[400],
-                            fontSize: 10),
+                        style:
+                            TextStyle(color: Colors.indigo[400], fontSize: 10),
                       )
                     ],
                   ),
@@ -706,28 +678,26 @@ class _MainPageState extends State<MainPage> {
               flex: 5,
               child: Container(
                 decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(16),
-
                     image: DecorationImage(
-                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
                       fit: BoxFit.cover,
-                    )
-                ),
+                    )),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16),
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                child: Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                   style: TextStyle(
                       fontSize: 10,
                       color: Colors.indigo[300],
-                      letterSpacing: 1.2
-                  ),),
+                      letterSpacing: 1.2),
+                ),
               ),
-
             )
           ],
         ),
@@ -737,8 +707,7 @@ class _MainPageState extends State<MainPage> {
         margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
         height: MediaQuery.of(context).size.height / 2.3,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.white),
+            borderRadius: BorderRadius.circular(16), color: Colors.white),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -751,8 +720,7 @@ class _MainPageState extends State<MainPage> {
                     width: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                          color: Colors.red[200], width: 2),
+                      border: Border.all(color: Colors.red[200], width: 2),
                     ),
                     child: Center(
                       child: Icon(
@@ -776,9 +744,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Text(
                         "1 hours ago",
-                        style: TextStyle(
-                            color: Colors.indigo[400],
-                            fontSize: 10),
+                        style:
+                            TextStyle(color: Colors.indigo[400], fontSize: 10),
                       )
                     ],
                   ),
@@ -791,33 +758,30 @@ class _MainPageState extends State<MainPage> {
               flex: 5,
               child: Container(
                 decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(16),
-
                     image: DecorationImage(
-                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
                       fit: BoxFit.cover,
-                    )
-                ),
+                    )),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16),
-                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                child: Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                   style: TextStyle(
                       fontSize: 10,
                       color: Colors.indigo[300],
-                      letterSpacing: 1.2
-                  ),),
+                      letterSpacing: 1.2),
+                ),
               ),
-
             )
           ],
         ),
       ),
-
     ];
   }
 
@@ -836,16 +800,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
