@@ -45,8 +45,10 @@ class _MainPageState extends State<MainPage> {
               child: Row(
                 children: <Widget>[
                   IconButton(
-                    icon: Icon(Icons.arrow_back_ios),
-                    onPressed: () {},
+                    icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
+                    onPressed: () {
+                      print("Back Button Clicked");
+                    },
                   ),
                   Spacer(),
                   Text(
@@ -212,6 +214,23 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           children: <Widget>[
             _buildTopUI(),
+            Container(
+              height: MediaQuery.of(context).size.height / 2,
+              child: ListView(
+                shrinkWrap: true,
+                children: <Widget>[
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2.5,
+                    child: Placeholder(),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2.5,
+                    child: Placeholder(),
+                  )
+                ],
+              ),
+            )
+
 
           ],
         ),
