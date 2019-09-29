@@ -6,6 +6,9 @@ class SchoolApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MainPage(),
+      theme: ThemeData(
+        accentColor: Colors.blueGrey[50]
+      ),
     );
   }
 }
@@ -16,8 +19,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  Widget _buildTopUI(){
-    return  Container(
+  Widget _buildTopUI() {
+    return Container(
       height: MediaQuery.of(context).size.height / 1.9,
       child: Stack(
         children: <Widget>[
@@ -45,7 +48,10 @@ class _MainPageState extends State<MainPage> {
               child: Row(
                 children: <Widget>[
                   IconButton(
-                    icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.white,
+                    ),
                     onPressed: () {
                       print("Back Button Clicked");
                     },
@@ -73,8 +79,8 @@ class _MainPageState extends State<MainPage> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24)),
               child: Container(
-                padding: EdgeInsets.only(
-                    top: 24, left: 16, right: 16, bottom: 8),
+                padding:
+                    EdgeInsets.only(top: 24, left: 16, right: 16, bottom: 8),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(24)),
@@ -87,8 +93,7 @@ class _MainPageState extends State<MainPage> {
                       width: 64,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          border: Border.all(
-                              color: Colors.red[400], width: 2)),
+                          border: Border.all(color: Colors.red[400], width: 2)),
                       child: Center(
                         child: Icon(
                           Icons.school,
@@ -153,12 +158,10 @@ class _MainPageState extends State<MainPage> {
                             margin: EdgeInsets.all(8),
                             decoration: BoxDecoration(
                                 color: Colors.grey[200],
-                                borderRadius:
-                                BorderRadius.circular(16)),
+                                borderRadius: BorderRadius.circular(16)),
                             child: Center(
                               child: Column(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   Text(
                                     "380",
@@ -183,8 +186,7 @@ class _MainPageState extends State<MainPage> {
                             margin: EdgeInsets.all(8),
                             decoration: BoxDecoration(
                                 color: Colors.green[400],
-                                borderRadius:
-                                BorderRadius.circular(16)),
+                                borderRadius: BorderRadius.circular(16)),
                             child: Center(
                               child: Text(
                                 "Follow",
@@ -207,46 +209,633 @@ class _MainPageState extends State<MainPage> {
       ),
     );
   }
+  Widget _buildSchoolListUI(){
+    return  Container(
+      padding: EdgeInsets.only(top: 16),
+      height: MediaQuery.of(context).size.height / 2,
+      child: ListView(
+        padding: EdgeInsets.zero,
+        shrinkWrap: true,
+        children:_buildListItems(context),
+      ),
+    );
+  }
+  List<Widget> _buildListItems(BuildContext context){
+    return [
+      Container(
+        padding: EdgeInsets.only(left: 16, right: 8),
+        margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
+        height: MediaQuery.of(context).size.height / 2.3,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: Colors.red[200], width: 2),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.school,
+                        color: Colors.green[200],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dreamwalker Flutter School",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1 hours ago",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontSize: 10),
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert, size: 34),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(16),
+
+                    image: DecorationImage(
+                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      fit: BoxFit.cover,
+                    )
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.indigo[300],
+                      letterSpacing: 1.2
+                  ),),
+              ),
+
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(left: 16, right: 8),
+        margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
+        height: MediaQuery.of(context).size.height / 2.3,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: Colors.red[200], width: 2),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.school,
+                        color: Colors.green[200],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dreamwalker Flutter School",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1 hours ago",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontSize: 10),
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert, size: 34),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(16),
+
+                    image: DecorationImage(
+                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      fit: BoxFit.cover,
+                    )
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.indigo[300],
+                      letterSpacing: 1.2
+                  ),),
+              ),
+
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(left: 16, right: 8),
+        margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
+        height: MediaQuery.of(context).size.height / 2.3,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: Colors.red[200], width: 2),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.school,
+                        color: Colors.green[200],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dreamwalker Flutter School",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1 hours ago",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontSize: 10),
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert, size: 34),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(16),
+
+                    image: DecorationImage(
+                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      fit: BoxFit.cover,
+                    )
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.indigo[300],
+                      letterSpacing: 1.2
+                  ),),
+              ),
+
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(left: 16, right: 8),
+        margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
+        height: MediaQuery.of(context).size.height / 2.3,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: Colors.red[200], width: 2),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.school,
+                        color: Colors.green[200],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dreamwalker Flutter School",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1 hours ago",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontSize: 10),
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert, size: 34),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(16),
+
+                    image: DecorationImage(
+                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      fit: BoxFit.cover,
+                    )
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.indigo[300],
+                      letterSpacing: 1.2
+                  ),),
+              ),
+
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(left: 16, right: 8),
+        margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
+        height: MediaQuery.of(context).size.height / 2.3,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: Colors.red[200], width: 2),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.school,
+                        color: Colors.green[200],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dreamwalker Flutter School",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1 hours ago",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontSize: 10),
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert, size: 34),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(16),
+
+                    image: DecorationImage(
+                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      fit: BoxFit.cover,
+                    )
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.indigo[300],
+                      letterSpacing: 1.2
+                  ),),
+              ),
+
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(left: 16, right: 8),
+        margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
+        height: MediaQuery.of(context).size.height / 2.3,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: Colors.red[200], width: 2),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.school,
+                        color: Colors.green[200],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dreamwalker Flutter School",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1 hours ago",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontSize: 10),
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert, size: 34),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(16),
+
+                    image: DecorationImage(
+                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      fit: BoxFit.cover,
+                    )
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.indigo[300],
+                      letterSpacing: 1.2
+                  ),),
+              ),
+
+            )
+          ],
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(left: 16, right: 8),
+        margin: EdgeInsets.only(left: 24, right: 24, bottom: 16),
+        height: MediaQuery.of(context).size.height / 2.3,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                          color: Colors.red[200], width: 2),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.school,
+                        color: Colors.green[200],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dreamwalker Flutter School",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1 hours ago",
+                        style: TextStyle(
+                            color: Colors.indigo[400],
+                            fontSize: 10),
+                      )
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert, size: 34),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(16),
+
+                    image: DecorationImage(
+                      image: NetworkImage("https://cdn.pixabay.com/photo/2014/03/12/18/45/boys-286245__340.jpg"),
+                      fit: BoxFit.cover,
+                    )
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.indigo[300],
+                      letterSpacing: 1.2
+                  ),),
+              ),
+
+            )
+          ],
+        ),
+      ),
+
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[50],
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             _buildTopUI(),
-            Container(
-              height: MediaQuery.of(context).size.height / 2,
-              child: ListView(
-                shrinkWrap: true,
-                children: <Widget>[
-                  Container(
-                    height: MediaQuery.of(context).size.height / 2.5,
-                    child: Placeholder(),
-                  ),
-                  Container(
-                    height: MediaQuery.of(context).size.height / 2.5,
-                    child: Placeholder(),
-                  )
-                ],
-              ),
-            )
-
-
+            _buildSchoolListUI(),
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 
