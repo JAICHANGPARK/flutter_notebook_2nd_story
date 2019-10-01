@@ -240,9 +240,8 @@ class _FilePageState extends State<FilePage> {
             ..._buildTopView(context),
             _buildMemberView(),
             Padding(
-              padding: const EdgeInsets.only(top: 16,left: 24, right: 24),
+              padding: const EdgeInsets.only(top: 16, left: 24, right: 24),
               child: Container(
-
                 height: MediaQuery.of(context).size.height / 2.1,
                 child: Column(
                   children: <Widget>[
@@ -250,11 +249,13 @@ class _FilePageState extends State<FilePage> {
                       flex: 1,
                       child: Row(
                         children: <Widget>[
-                          Text("Files",style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 22
-                          ),),
+                          Text(
+                            "Files",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22),
+                          ),
                           Spacer(),
                           Text("Refresh"),
                           Icon(Icons.refresh),
@@ -263,7 +264,31 @@ class _FilePageState extends State<FilePage> {
                     ),
                     Expanded(
                       flex: 8,
-                      child: CircularProgressIndicator(),
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Container(
+                            height: MediaQuery.of(context).size.height / 7,
+                            child: CircularProgressIndicator(),
+                          ),
+                          Divider(),
+                          Container(
+                            height: MediaQuery.of(context).size.height / 7,
+                            child: LinearProgressIndicator(),
+                          ),
+                          Divider(),
+                          Container(
+                            height: MediaQuery.of(context).size.height / 7,
+                            child: CircularProgressIndicator(),
+                          ),
+                          Divider(),
+                          Container(
+                            height: MediaQuery.of(context).size.height / 7,
+                            child: LinearProgressIndicator(),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -280,15 +305,3 @@ class _FilePageState extends State<FilePage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
