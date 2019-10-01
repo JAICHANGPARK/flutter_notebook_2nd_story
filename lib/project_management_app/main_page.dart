@@ -17,7 +17,7 @@ class FilePage extends StatefulWidget {
 }
 
 class _FilePageState extends State<FilePage> {
-  List<Widget> _buildTopView(BuildContext context){
+  List<Widget> _buildTopView(BuildContext context) {
     return [
       SafeArea(
         top: true,
@@ -143,8 +143,8 @@ class _FilePageState extends State<FilePage> {
         ),
       )
     ];
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,32 +153,18 @@ class _FilePageState extends State<FilePage> {
         child: Column(
           children: <Widget>[
             ..._buildTopView(context),
-
-
+            Container(
+              height: 120,
+              child: Placeholder(),
+            )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: Colors.red[400],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
