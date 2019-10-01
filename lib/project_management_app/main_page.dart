@@ -154,8 +154,87 @@ class _FilePageState extends State<FilePage> {
           children: <Widget>[
             ..._buildTopView(context),
             Container(
+              padding: EdgeInsets.only(left: 24, right: 24),
               height: 120,
-              child: Placeholder(),
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    flex: 3,
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "Members",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 22),
+                        ),
+                        Spacer(),
+                        Text("Add"),
+                        SizedBox(
+                          width: 4,
+                        ),
+                        Container(
+                          height: 4,
+                          width: 4,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.black),
+                        )
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 5,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Container(
+                          height: 72,
+                          width: 72,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(16),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947__340.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                        Container(
+                          height: 72,
+                          width: 72,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(16),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2018/01/21/14/16/woman-3096664__340.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                        Container(
+                          height: 72,
+                          width: 72,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(16),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2017/11/19/07/30/girl-2961959__340.jpg"),
+                                  fit: BoxFit.cover)),
+                        ),
+                        Container(
+                          height: 72,
+                          width: 72,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(16),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2016/05/23/23/32/human-1411499__340.jpg"),
+                                  fit: BoxFit.cover)),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
