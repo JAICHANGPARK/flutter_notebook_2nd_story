@@ -274,39 +274,54 @@ class _FilePageState extends State<FilePage> {
                             child: Row(
                               children: <Widget>[
                                 Expanded(
-                                  flex: 3,
+                                  flex: 5,
                                   child: Align(
                                     alignment: Alignment.topLeft,
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 8),
-                                      child: Text("Today", style: TextStyle(
-                                        fontSize: 16),),
+                                      child: Text(
+                                        "Today",
+                                        style: TextStyle(fontSize: 14),
+                                      ),
                                     ),
                                   ),
                                 ),
                                 Expanded(
-                                  flex: 3,
+                                  flex: 5,
                                   child: Container(
-                                    child: Icon(Icons.insert_drive_file, color: Colors.red[300],
-                                    size: 84,),
+                                    child: Icon(
+                                      Icons.insert_drive_file,
+                                      color: Colors.red[300],
+                                      size: 84,
+                                    ),
                                   ),
                                 ),
                                 Expanded(
-                                  flex: 7,
+                                  flex: 10,
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 12, horizontal: 4),
                                     child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
                                       children: <Widget>[
-                                        Text("Flutter Application",
-                                        style: TextStyle(
-                                          fontSize: 16
-                                        ),),
-                                        Text("12:00 pm", style: TextStyle(
-                                          color: Colors.grey,
-                                        ),),
-                                        Text("Shared by - Lucy",)
+                                        Text(
+                                          "Flutter Application",
+                                          style: TextStyle(fontSize: 16,
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 0.9),
+                                        ),
+                                        Text(
+                                          "12:00 pm",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Shared by - Lucy",
+                                        )
                                       ],
                                     ),
                                   ),
@@ -317,29 +332,241 @@ class _FilePageState extends State<FilePage> {
                                     alignment: Alignment.topCenter,
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 8),
-                                      child: Icon(Icons.more_vert, color: Colors.red,),
+                                      child: Icon(
+                                        Icons.more_vert,
+                                        color: Colors.red,
+                                      ),
                                     ),
                                   ),
                                 )
-
                               ],
                             ),
                           ),
                           Divider(),
                           Container(
+                            padding: EdgeInsets.symmetric(vertical: 8),
                             height: MediaQuery.of(context).size.height / 7,
-                            child: LinearProgressIndicator(),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 5,
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Text(
+                                        "Yesterday",
+                                        style: TextStyle(fontSize: 14),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 5,
+                                  child: Container(
+                                    child: Icon(
+                                      Icons.insert_drive_file,
+                                      color: Colors.yellow[300],
+                                      size: 84,
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 10,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 12, horizontal: 8),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Flutter Web File",
+                                          style: TextStyle(fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 1.1),
+                                        ),
+                                        Text(
+                                          "12:00 pm",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Shared by - Andy",
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Align(
+                                    alignment: Alignment.topCenter,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Icon(
+                                        Icons.more_vert,
+                                        color: Colors.orangeAccent,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                           Divider(),
                           Container(
+                            padding: EdgeInsets.symmetric(vertical: 8),
                             height: MediaQuery.of(context).size.height / 7,
-                            child: CircularProgressIndicator(),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 5,
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Text(
+                                        "10.03.19",
+                                        style: TextStyle(fontSize: 14),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 5,
+                                  child: Container(
+                                    child: Icon(
+                                      Icons.insert_drive_file,
+                                      color: Colors.green[300],
+                                      size: 84,
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 10,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 12, horizontal: 8),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Flutter Desktop",
+                                          style: TextStyle(fontSize: 16,
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 1.1),
+                                        ),
+                                        Text(
+                                          "11:30 am",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Shared by - Kortana",
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Align(
+                                    alignment: Alignment.topCenter,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Icon(
+                                        Icons.more_vert,
+                                        color: Colors.green,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                           Divider(),
                           Container(
+                            padding: EdgeInsets.symmetric(vertical: 8),
                             height: MediaQuery.of(context).size.height / 7,
-                            child: LinearProgressIndicator(),
-                          )
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 5,
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Text(
+                                        "10.02.19",
+                                        style: TextStyle(fontSize: 14),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 5,
+                                  child: Container(
+                                    child: Icon(
+                                      Icons.insert_drive_file,
+                                      color: Colors.orange[300],
+                                      size: 84,
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 10,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 12, horizontal: 8),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "Flutter Embedded",
+                                          style: TextStyle(fontSize: 16,
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 1.1),
+                                        ),
+                                        Text(
+                                          "14:20 am",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Shared by - Dream",
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Align(
+                                    alignment: Alignment.topCenter,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Icon(
+                                        Icons.more_vert,
+                                        color: Colors.orangeAccent,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     )
