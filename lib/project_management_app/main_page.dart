@@ -270,7 +270,30 @@ class _FilePageState extends State<FilePage> {
                         children: <Widget>[
                           Container(
                             height: MediaQuery.of(context).size.height / 7,
-                            child: CircularProgressIndicator(),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 4,
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text("Today"),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 3,
+                                  child: Placeholder(),
+                                ),
+                                Expanded(
+                                  flex: 6,
+                                  child: Placeholder(),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Placeholder(),
+                                )
+
+                              ],
+                            ),
                           ),
                           Divider(),
                           Container(
