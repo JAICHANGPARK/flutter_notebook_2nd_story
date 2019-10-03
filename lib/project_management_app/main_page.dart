@@ -269,27 +269,57 @@ class _FilePageState extends State<FilePage> {
                         shrinkWrap: true,
                         children: <Widget>[
                           Container(
+                            padding: EdgeInsets.symmetric(vertical: 8),
                             height: MediaQuery.of(context).size.height / 7,
                             child: Row(
                               children: <Widget>[
                                 Expanded(
-                                  flex: 4,
+                                  flex: 3,
                                   child: Align(
                                     alignment: Alignment.topLeft,
-                                    child: Text("Today"),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Text("Today", style: TextStyle(
+                                        fontSize: 16),),
+                                    ),
                                   ),
                                 ),
                                 Expanded(
                                   flex: 3,
-                                  child: Placeholder(),
+                                  child: Container(
+                                    child: Icon(Icons.insert_drive_file, color: Colors.red[300],
+                                    size: 84,),
+                                  ),
                                 ),
                                 Expanded(
-                                  flex: 6,
-                                  child: Placeholder(),
+                                  flex: 7,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("Flutter Application",
+                                        style: TextStyle(
+                                          fontSize: 16
+                                        ),),
+                                        Text("12:00 pm", style: TextStyle(
+                                          color: Colors.grey,
+                                        ),),
+                                        Text("Shared by - Lucy",)
+                                      ],
+                                    ),
+                                  ),
                                 ),
                                 Expanded(
                                   flex: 1,
-                                  child: Placeholder(),
+                                  child: Align(
+                                    alignment: Alignment.topCenter,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Icon(Icons.more_vert, color: Colors.red,),
+                                    ),
+                                  ),
                                 )
 
                               ],
