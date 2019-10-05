@@ -139,13 +139,12 @@ class _MainPageState extends State<MainPage> {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: TextField(
                 enabled: true,
-                onTap: (){
+                onTap: () {
                   _distanceTextController.clear();
                 },
-                onSubmitted: (v){
+                onSubmitted: (v) {
                   setState(() {
-
-                    _distanceTextController.text = v +"  miles";
+                    _distanceTextController.text = v + "  miles";
                   });
                 },
                 controller: _distanceTextController,
@@ -197,18 +196,17 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
-            SizedBox(height: 16,),
+            SizedBox(
+              height: 16,
+            ),
             Container(
               height: 48,
               margin: EdgeInsets.symmetric(horizontal: 16),
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Color(0xff181E27),
-                borderRadius: BorderRadius.circular(6),
-                border: Border.all(
-                  color: Colors.teal[200]
-                )
-              ),
+                  color: Color(0xff181E27),
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(color: Colors.teal[200])),
               child: Center(
                 child: Text(
                   "Save & Run Later",
@@ -225,10 +223,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
