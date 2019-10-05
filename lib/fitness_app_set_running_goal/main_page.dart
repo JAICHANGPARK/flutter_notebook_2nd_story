@@ -102,6 +102,11 @@ class _MainPageState extends State<MainPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: TextField(
+                onTap: (){
+                  showTimePicker(context: context, initialTime: TimeOfDay.now(),).then((v){
+
+                  });
+                },
                 controller: _timeTextController,
                 style: TextStyle(
                   color: Colors.white,
