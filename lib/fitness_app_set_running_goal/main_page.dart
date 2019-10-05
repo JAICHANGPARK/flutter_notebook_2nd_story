@@ -19,6 +19,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   TextEditingController _goalTextController = TextEditingController();
+  TextEditingController _timeTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,7 +102,7 @@ class _MainPageState extends State<MainPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: TextField(
-                controller: _goalTextController,
+                controller: _timeTextController,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 28,
