@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -24,18 +25,22 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
-                      Text("12", style: TextStyle(
-                        color: Colors.redAccent,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 58),),
+                      Text(
+                        "12",
+                        style: TextStyle(
+                            color: Colors.redAccent,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 58),
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 16),
                         child: Align(
                           alignment: Alignment.centerLeft,
-                          child: Text("MON", style: TextStyle(
-                            color: Colors.redAccent,
-                            fontSize: 12
-                          ),),
+                          child: Text(
+                            "MON",
+                            style: TextStyle(
+                                color: Colors.redAccent, fontSize: 12),
+                          ),
                         ),
                       )
                     ],
@@ -45,84 +50,98 @@ class _HomePageState extends State<HomePage> {
                   height: 120,
                   child: Align(
                     alignment: Alignment.topCenter,
-                    child: Text("13",style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
+                    child: Text(
+                      "13",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
                   height: 120,
                   child: Align(
                     alignment: Alignment.topCenter,
-                    child: Text("14",style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
+                    child: Text(
+                      "14",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
                   height: 120,
                   child: Align(
                     alignment: Alignment.topCenter,
-                    child: Text("15",style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
+                    child: Text(
+                      "15",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
                   height: 120,
                   child: Align(
                     alignment: Alignment.topCenter,
-                    child: Text("16",style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
+                    child: Text(
+                      "16",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
                   height: 120,
                   child: Align(
                     alignment: Alignment.topCenter,
-                    child: Text("17",style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
+                    child: Text(
+                      "17",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
                   height: 120,
                   child: Align(
                     alignment: Alignment.topCenter,
-                    child: Text("18",style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
+                    child: Text(
+                      "18",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
                   height: 120,
                   child: Align(
                     alignment: Alignment.topCenter,
-                    child: Text("19",style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
+                    child: Text(
+                      "19",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -134,8 +153,51 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             flex: 8,
-            child: Column(
-              children: <Widget>[],
+            child: Padding(
+              padding: const EdgeInsets.only(left: 24, right: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: <Widget>[
+                  SizedBox(
+                    height: 120,
+                  ),
+                  SizedBox(
+                    height: 80,
+                    width: 120,
+                    child: Text(
+                      "Select \na Run",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 84,
+                  ),
+                  Container(
+                    height: 72,
+                    padding:
+                        EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "Free\nRun",
+                          style: TextStyle(
+                              color: Colors.tealAccent,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],
