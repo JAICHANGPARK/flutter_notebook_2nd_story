@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/fitness_app_set_running_goal/home_page.dart';
 
 class FitnessSetRunningApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(accentColor: Colors.tealAccent),
-      home: MainPage(),
+      home: HomePage(),
     );
   }
 }
