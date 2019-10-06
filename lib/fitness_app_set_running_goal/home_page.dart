@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter_notebook_second_story/fitness_app_set_running_goal/main_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -180,18 +181,33 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     height: 72,
                     padding:
-                        EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
+                        EdgeInsets.only(left: 16, right: 0, top: 0, bottom: 8),
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(8)),
                     child: Row(
                       children: <Widget>[
-                        Text(
-                          "Free\nRun",
-                          style: TextStyle(
-                              color: Colors.tealAccent,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8),
+                          child: Text(
+                            "Free\nRun",
+                            style: TextStyle(
+                                color: Colors.tealAccent,
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Spacer(),
+                        Align(
+                          alignment: Alignment.topCenter,
+                          child: IconButton(icon: Icon(Icons.add), onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context)=>MainPage()
+                            ));
+                          },
+                          iconSize: 38,
+                          color: Colors.grey,
+                          padding: EdgeInsets.zero,),
                         )
                       ],
                     ),
