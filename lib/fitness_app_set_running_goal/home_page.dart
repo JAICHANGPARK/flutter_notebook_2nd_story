@@ -231,13 +231,15 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     height: 296,
                     child: GridView.count(
+                      padding: EdgeInsets.only(top: 16),
                       crossAxisCount: 2,
                       childAspectRatio: 0.6,
                       mainAxisSpacing: 16,
                       crossAxisSpacing: 16,
                       children: <Widget>[
                         Container(
-                          padding: EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
+                          padding: EdgeInsets.only(
+                              left: 16, top: 16, right: 16, bottom: 16),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
@@ -246,58 +248,193 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text("Long\nRun",style: TextStyle(
-                                color: Colors.tealAccent,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 1.5
-                              ),),
+                              Text(
+                                "Long\nRun",
+                                style: TextStyle(
+                                    color: Colors.tealAccent,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5),
+                              ),
                               Spacer(),
-                              Text("Distance",style: TextStyle(
-                                color: Colors.tealAccent.withOpacity(0.5),
-                                letterSpacing: 1.5,
-                                fontWeight: FontWeight.bold,
-                              ),),
-                              Text("15 mil",style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 21,
-                                fontWeight: FontWeight.bold
-
-                              ),),
+                              Text(
+                                "Distance",
+                                style: TextStyle(
+                                  color: Colors.tealAccent.withOpacity(0.5),
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "15 mil",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold),
+                              ),
                               Spacer(),
-                              Text("Pace",style: TextStyle(
-                                color: Colors.tealAccent.withOpacity(0.5),
-                                letterSpacing: 1.5,
-                                fontWeight: FontWeight.bold,
-                              ),),
-                              Text("7:30",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 21,
-                                  fontWeight: FontWeight.bold
-
-                              ),),
+                              Text(
+                                "Pace",
+                                style: TextStyle(
+                                  color: Colors.tealAccent.withOpacity(0.5),
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "7:30",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ],
                           ),
                         ),
                         Container(
+                          padding: EdgeInsets.only(
+                              left: 16, top: 16, right: 16, bottom: 16),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
                                 color: Colors.tealAccent, width: 0.5),
                           ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Short\nRun",
+                                style: TextStyle(
+                                    color: Colors.tealAccent,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Distance",
+                                style: TextStyle(
+                                  color: Colors.tealAccent.withOpacity(0.5),
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "4 mil",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
                         ),
                         Container(
+                          padding: EdgeInsets.only(
+                              left: 16, top: 16, right: 16, bottom: 16),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
                                 color: Colors.tealAccent, width: 0.5),
                           ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Time\nRun",
+                                style: TextStyle(
+                                    color: Colors.tealAccent,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Distance",
+                                style: TextStyle(
+                                  color: Colors.tealAccent.withOpacity(0.5),
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "18 mil",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Pace",
+                                style: TextStyle(
+                                  color: Colors.tealAccent.withOpacity(0.5),
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "4:30",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
                         ),
                         Container(
+                          padding: EdgeInsets.only(
+                              left: 16, top: 16, right: 16, bottom: 16),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
                                 color: Colors.tealAccent, width: 0.5),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Speed\nRun",
+                                style: TextStyle(
+                                    color: Colors.tealAccent,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Speed",
+                                style: TextStyle(
+                                  color: Colors.tealAccent.withOpacity(0.5),
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "2.8km/h",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Spacer(),
+                              Text(
+                                "Pace",
+                                style: TextStyle(
+                                  color: Colors.tealAccent.withOpacity(0.5),
+                                  letterSpacing: 1.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "6:30",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
                           ),
                         ),
                       ],
