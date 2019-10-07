@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_notebook_second_story/fitness_app_set_running_goal/main_page.dart';
@@ -233,35 +234,70 @@ class _HomePageState extends State<HomePage> {
                       crossAxisCount: 2,
                       childAspectRatio: 0.6,
                       mainAxisSpacing: 16,
-
                       crossAxisSpacing: 16,
                       children: <Widget>[
                         Container(
+                          padding: EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.tealAccent,
-                            width: 0.5),
+                            border: Border.all(
+                                color: Colors.tealAccent, width: 0.5),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text("Long\nRun",style: TextStyle(
+                                color: Colors.tealAccent,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1.5
+                              ),),
+                              Spacer(),
+                              Text("Distance",style: TextStyle(
+                                color: Colors.tealAccent.withOpacity(0.5),
+                                letterSpacing: 1.5,
+                                fontWeight: FontWeight.bold,
+                              ),),
+                              Text("15 mil",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 21,
+                                fontWeight: FontWeight.bold
+
+                              ),),
+                              Spacer(),
+                              Text("Pace",style: TextStyle(
+                                color: Colors.tealAccent.withOpacity(0.5),
+                                letterSpacing: 1.5,
+                                fontWeight: FontWeight.bold,
+                              ),),
+                              Text("7:30",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 21,
+                                  fontWeight: FontWeight.bold
+
+                              ),),
+                            ],
                           ),
                         ),
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.tealAccent,
-                                width: 0.5),
+                            border: Border.all(
+                                color: Colors.tealAccent, width: 0.5),
                           ),
                         ),
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.tealAccent,
-                                width: 0.5),
+                            border: Border.all(
+                                color: Colors.tealAccent, width: 0.5),
                           ),
                         ),
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.tealAccent,
-                                width: 0.5),
+                            border: Border.all(
+                                color: Colors.tealAccent, width: 0.5),
                           ),
                         ),
                       ],
