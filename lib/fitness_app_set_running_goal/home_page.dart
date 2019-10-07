@@ -200,14 +200,16 @@ class _HomePageState extends State<HomePage> {
                         Spacer(),
                         Align(
                           alignment: Alignment.topCenter,
-                          child: IconButton(icon: Icon(Icons.add), onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context)=>MainPage()
-                            ));
-                          },
-                          iconSize: 38,
-                          color: Colors.grey,
-                          padding: EdgeInsets.zero,),
+                          child: IconButton(
+                            icon: Icon(Icons.add),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => MainPage()));
+                            },
+                            iconSize: 38,
+                            color: Colors.grey,
+                            padding: EdgeInsets.zero,
+                          ),
                         )
                       ],
                     ),
