@@ -33,8 +33,7 @@ class _EFMainPageState extends State<EFMainPage> {
               height: 130,
               width: MediaQuery.of(context).size.width / 2,
               decoration: BoxDecoration(color: topViewColor),
-              padding:
-                  EdgeInsets.only(left: 8, top: 24, bottom: 16, right: 16),
+              padding: EdgeInsets.only(left: 8, top: 24, bottom: 16, right: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,26 +42,25 @@ class _EFMainPageState extends State<EFMainPage> {
                     padding: EdgeInsets.zero,
                     icon: Icon(Icons.arrow_back),
                     color: Colors.white,
-                    onPressed: (){
+                    onPressed: () {
                       print("back button pressed");
                     },
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(text: "100",style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          )),
-                          TextSpan(text: ".00 USD",style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold
-                          )),
-                        ]
-                      ),
-
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: "100",
+                            style: TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            )),
+                        TextSpan(
+                            text: ".00 USD",
+                            style: TextStyle(
+                                fontSize: 24, fontWeight: FontWeight.bold)),
+                      ]),
                     ),
                   )
                 ],
@@ -82,15 +80,38 @@ class _EFMainPageState extends State<EFMainPage> {
             top: 152,
             left: appLeftPadding,
             right: 0,
-            height: 64,
-            child: Placeholder(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Current location", style: TextStyle(
+                  color: Colors.blueGrey[700],
+                ),),
+                SizedBox(
+                  height: 8,
+                ),
+                Row(
+                  children: <Widget>[
+                    Icon(Icons.location_searching,color: topViewColor,
+                    size: 16,),
+                    Text("Prague, Czech Republic", style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.1
+                    ),),
+                  ],
+                )
+              ],
+            ),
           ),
           Positioned(
             right: 0,
             bottom: 100,
             left: appLeftPadding,
-            top: 262,
-            child: Placeholder(),
+            top: 230,
+            child: Container(
+              color: Colors.red[200],
+            ),
           ),
           Positioned(
             bottom: 0,
