@@ -116,21 +116,31 @@ class _EFMainPageState extends State<EFMainPage> {
           Positioned(
             bottom: 0,
             left: 0,
-            right: 72,
+            right: 0,
             child: Container(
-              height: MediaQuery.of(context).size.height / 1.9,
+              height: 100,
               child: Placeholder(),
             ),
           ),
           Positioned(
             bottom: 0,
             left: 0,
-            right: 0,
+            right: 84,
             child: Container(
-              height: 100,
-              child: Placeholder(),
+              color: Colors.white,
+              height: MediaQuery.of(context).size.height / 1.7,
+              child: ListView.builder(itemBuilder: (context, index){
+                return Container(
+                  margin: EdgeInsets.symmetric(vertical: 4),
+                  height: 64,
+                  color: Colors.blue,
+                );
+              },
+              itemCount: 10,
+              )
             ),
-          )
+          ),
+
         ],
       ),
     );
