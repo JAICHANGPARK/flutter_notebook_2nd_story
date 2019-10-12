@@ -20,6 +20,7 @@ class _EFMainPageState extends State<EFMainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[100],
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
@@ -36,6 +37,7 @@ class _EFMainPageState extends State<EFMainPage> {
             right: 24,
             top: 16,
             child: IconButton(
+              color: Colors.black,
               icon: Icon(Icons.menu),
               onPressed: () {},
             ),
@@ -45,3 +47,23 @@ class _EFMainPageState extends State<EFMainPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
