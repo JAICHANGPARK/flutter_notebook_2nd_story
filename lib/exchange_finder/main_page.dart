@@ -135,7 +135,9 @@ class _EFMainPageState extends State<EFMainPage> {
                     return InkWell(
                       onTap: () {
                         Fluttertoast.showToast(
-                            msg: priceItems[index].countryCode);
+
+                            msg: priceItems[index].countryCode,
+                            backgroundColor: Colors.green);
                       },
                       child: Container(
                         margin: EdgeInsets.symmetric(vertical: 10),
