@@ -132,32 +132,54 @@ class _EFMainPageState extends State<EFMainPage> {
                 child: ListView.builder(
                   itemBuilder: (context, index) {
                     return Container(
-                      margin: EdgeInsets.symmetric(vertical: 12),
+                      margin: EdgeInsets.symmetric(vertical: 10),
                       padding: EdgeInsets.only(left: appLeftPadding),
-                      height: 84,
+                      height: 82,
                       child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Container(
                             height: 48,
                             width: 48,
                             padding: EdgeInsets.all(4),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
+                            decoration:
+                                BoxDecoration(color: Colors.white, boxShadow: [
+                              BoxShadow(
                                   color: Colors.black.withOpacity(0.15),
                                   blurRadius: 3,
                                   spreadRadius: 2,
-                                  offset: Offset(
-                                    2,2
-                                  )
-                                )
-                              ]
+                                  offset: Offset(2, 2))
+                            ]),
+                            child: Image.network(
+                              priceItems[index].img,
+                              scale: 0.6,
+                              width: 40,
+                              height: 40,
                             ),
-                            child: Image.network(priceItems[index].img,
-                            scale: 0.6,
-                            width: 40,
-                            height: 40,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 32),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text("${priceItems[index].price}"),
+                                Text(priceItems[index].countryCode),
+                              ],
+                            ),
+                          ),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 18),
+                            child: VerticalDivider(
+                              thickness: 2,
+                            ),
+                          ),
+                          IconButton(
+                            padding: EdgeInsets.zero,
+                            icon: Icon(Icons.more_vert),
+                            color: Colors.grey[200],
+                            onPressed: () {},
                           )
                         ],
                       ),
