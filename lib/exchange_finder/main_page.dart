@@ -113,15 +113,7 @@ class _EFMainPageState extends State<EFMainPage> {
               color: Colors.red[200],
             ),
           ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: 100,
-              child: Placeholder(),
-            ),
-          ),
+
           Positioned(
             bottom: 0,
             left: 0,
@@ -140,9 +132,33 @@ class _EFMainPageState extends State<EFMainPage> {
               )
             ),
           ),
+          Positioned(
+            bottom: 0,
+            right: 0,
+            child: Container(
+              height: 140,
+              width: 120,
+              child: Placeholder(),
+            ),
+          ),
 
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
