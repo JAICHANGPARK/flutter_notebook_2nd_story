@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/exchange_finder/models/curreny.dart';
 
 class ExchangeFinder extends StatelessWidget {
   @override
@@ -84,21 +85,29 @@ class _EFMainPageState extends State<EFMainPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("Current location", style: TextStyle(
-                  color: Colors.blueGrey[700],
-                ),),
+                Text(
+                  "Current location",
+                  style: TextStyle(
+                    color: Colors.blueGrey[700],
+                  ),
+                ),
                 SizedBox(
                   height: 8,
                 ),
                 Row(
                   children: <Widget>[
-                    Icon(Icons.location_searching,color: topViewColor,
-                    size: 16,),
-                    Text("Prague, Czech Republic", style: TextStyle(
-                      color: Colors.deepPurple,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.1
-                    ),),
+                    Icon(
+                      Icons.location_searching,
+                      color: topViewColor,
+                      size: 16,
+                    ),
+                    Text(
+                      "Prague, Czech Republic",
+                      style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.1),
+                    ),
                   ],
                 )
               ],
@@ -113,24 +122,49 @@ class _EFMainPageState extends State<EFMainPage> {
               color: Colors.red[200],
             ),
           ),
-
           Positioned(
             bottom: 0,
             left: 0,
             right: 84,
             child: Container(
-              color: Colors.white,
-              height: MediaQuery.of(context).size.height / 1.7,
-              child: ListView.builder(itemBuilder: (context, index){
-                return Container(
-                  margin: EdgeInsets.symmetric(vertical: 4),
-                  height: 64,
-                  color: Colors.blue,
-                );
-              },
-              itemCount: 10,
-              )
-            ),
+                color: Colors.white,
+                height: MediaQuery.of(context).size.height / 1.7,
+                child: ListView.builder(
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: EdgeInsets.symmetric(vertical: 12),
+                      padding: EdgeInsets.only(left: appLeftPadding),
+                      height: 84,
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            height: 48,
+                            width: 48,
+                            padding: EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.15),
+                                  blurRadius: 3,
+                                  spreadRadius: 2,
+                                  offset: Offset(
+                                    2,2
+                                  )
+                                )
+                              ]
+                            ),
+                            child: Image.network(priceItems[index].img,
+                            scale: 0.6,
+                            width: 40,
+                            height: 40,),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                  itemCount: priceItems.length,
+                )),
           ),
           Positioned(
             bottom: 0,
@@ -141,24 +175,8 @@ class _EFMainPageState extends State<EFMainPage> {
               child: Placeholder(),
             ),
           ),
-
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
