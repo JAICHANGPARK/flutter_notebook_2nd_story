@@ -12,7 +12,6 @@ class Currency {
   String img;
   double price;
   String countryCode;
-
   Currency({this.img, this.price, this.countryCode});
 }
 

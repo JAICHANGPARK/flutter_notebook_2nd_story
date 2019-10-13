@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/exchange_finder/app_styles.dart';
 import 'package:flutter_notebook_second_story/exchange_finder/models/curreny.dart';
+import 'package:flutter_notebook_second_story/exchange_finder/ui/item_view.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class ExchangeFinder extends StatelessWidget {
@@ -18,7 +20,7 @@ class EFMainPage extends StatefulWidget {
 }
 
 class _EFMainPageState extends State<EFMainPage> {
-  static const double appLeftPadding = 48.0;
+
   Color topViewColor = Color(0xffA28835);
 
   @override
@@ -29,7 +31,7 @@ class _EFMainPageState extends State<EFMainPage> {
         fit: StackFit.expand,
         children: <Widget>[
           Positioned(
-            left: appLeftPadding,
+            left: ApplicationPadding.appLeftPadding,
             top: 0,
             child: Container(
               height: 130,
@@ -80,7 +82,7 @@ class _EFMainPageState extends State<EFMainPage> {
           ),
           Positioned(
             top: 152,
-            left: appLeftPadding,
+            left:  ApplicationPadding.appLeftPadding,
             right: 0,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,7 +119,7 @@ class _EFMainPageState extends State<EFMainPage> {
           Positioned(
             right: 0,
             bottom: 100,
-            left: appLeftPadding,
+            left:  ApplicationPadding.appLeftPadding,
             top: 230,
             child: Container(
               color: Colors.red[200],
@@ -132,68 +134,7 @@ class _EFMainPageState extends State<EFMainPage> {
                 height: MediaQuery.of(context).size.height / 1.7,
                 child: ListView.builder(
                   itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () {
-                        Fluttertoast.showToast(
-
-                            msg: priceItems[index].countryCode,
-                            backgroundColor: Colors.green);
-                      },
-                      child: Container(
-                        margin: EdgeInsets.symmetric(vertical: 10),
-                        padding: EdgeInsets.only(left: appLeftPadding),
-                        height: 82,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              height: 48,
-                              width: 48,
-                              padding: EdgeInsets.all(4),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Colors.black.withOpacity(0.15),
-                                        blurRadius: 3,
-                                        spreadRadius: 2,
-                                        offset: Offset(2, 2))
-                                  ]),
-                              child: Image.network(
-                                priceItems[index].img,
-                                scale: 0.6,
-                                width: 40,
-                                height: 40,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 32),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Text("${priceItems[index].price}"),
-                                  Text(priceItems[index].countryCode),
-                                ],
-                              ),
-                            ),
-                            Spacer(),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 18),
-                              child: VerticalDivider(
-                                thickness: 2,
-                              ),
-                            ),
-                            IconButton(
-                              padding: EdgeInsets.zero,
-                              icon: Icon(Icons.more_vert),
-                              color: Colors.grey[200],
-                              onPressed: () {},
-                            )
-                          ],
-                        ),
-                      ),
-                    );
+                    return ItemView(v: priceItems[index],);
                   },
                   itemCount: priceItems.length,
                 )),
