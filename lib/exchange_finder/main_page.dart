@@ -4,6 +4,7 @@ import 'package:flutter_notebook_second_story/exchange_finder/app_styles.dart';
 import 'package:flutter_notebook_second_story/exchange_finder/models/curreny.dart';
 import 'package:flutter_notebook_second_story/exchange_finder/ui/item_view.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class ExchangeFinder extends StatelessWidget {
   @override
@@ -20,7 +21,6 @@ class EFMainPage extends StatefulWidget {
 }
 
 class _EFMainPageState extends State<EFMainPage> {
-
   Color topViewColor = Color(0xffA28835);
 
   @override
@@ -82,7 +82,7 @@ class _EFMainPageState extends State<EFMainPage> {
           ),
           Positioned(
             top: 152,
-            left:  ApplicationPadding.appLeftPadding,
+            left: ApplicationPadding.appLeftPadding,
             right: 0,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,7 +119,7 @@ class _EFMainPageState extends State<EFMainPage> {
           Positioned(
             right: 0,
             bottom: 100,
-            left:  ApplicationPadding.appLeftPadding,
+            left: ApplicationPadding.appLeftPadding,
             top: 230,
             child: Container(
               color: Colors.red[200],
@@ -134,7 +134,9 @@ class _EFMainPageState extends State<EFMainPage> {
                 height: MediaQuery.of(context).size.height / 1.7,
                 child: ListView.builder(
                   itemBuilder: (context, index) {
-                    return ItemView(v: priceItems[index],);
+                    return ItemView(
+                      v: priceItems[index],
+                    );
                   },
                   itemCount: priceItems.length,
                 )),
@@ -145,11 +147,49 @@ class _EFMainPageState extends State<EFMainPage> {
             child: Container(
               height: 140,
               width: 120,
-              child: Placeholder(),
+              child: GoogleMap(
+                initialCameraPosition: CameraPosition(target: LatLng(37.42796133580664, -122.085749655962),
+                zoom: 14.4764),
+              ),
             ),
           ),
+          Positioned(
+            right: 48,
+            bottom: 48,
+            child: Container(
+              height: 16,
+              width: 16,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.purpleAccent,
+                border: Border.all(color: Colors.purple)
+              ),
+            ),
+          )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
