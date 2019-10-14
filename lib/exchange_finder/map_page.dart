@@ -48,6 +48,7 @@ class _ExchangeMapPageState extends State<ExchangeMapPage> {
                     color: Colors.white,
                     onPressed: () {
                       print("back button pressed");
+                      Navigator.of(context).pop();
                     },
                   ),
                   Padding(
