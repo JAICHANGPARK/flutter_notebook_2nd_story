@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_second_story/exchange_finder/app_styles.dart';
+import 'package:flutter_notebook_second_story/exchange_finder/map_page.dart';
 import 'package:flutter_notebook_second_story/exchange_finder/models/curreny.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -15,6 +16,7 @@ class ItemView extends StatelessWidget {
         Fluttertoast.showToast(
             msg: v.countryCode,
             backgroundColor: Colors.red);
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ExchangeMapPage()));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10),

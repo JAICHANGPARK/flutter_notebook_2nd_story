@@ -144,12 +144,15 @@ class _EFMainPageState extends State<EFMainPage> {
           Positioned(
             bottom: 0,
             right: 0,
-            child: Container(
-              height: 140,
-              width: 120,
-              child: GoogleMap(
-                initialCameraPosition: CameraPosition(target: LatLng(37.42796133580664, -122.085749655962),
-                zoom: 14.4764),
+            child: Hero(
+              tag: "maps",
+              child: Container(
+                height: 140,
+                width: 120,
+                child: GoogleMap(
+                  initialCameraPosition: CameraPosition(target: LatLng(37.42796133580664, -122.085749655962),
+                  zoom: 14.4764),
+                ),
               ),
             ),
           ),
