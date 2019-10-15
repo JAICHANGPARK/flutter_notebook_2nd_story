@@ -23,7 +23,6 @@ class _HouseListPageState extends State<HouseListPage> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
-
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(
@@ -41,28 +40,28 @@ class _HouseListPageState extends State<HouseListPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(text: "New York, ",style: TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black
-                              )),
-                              TextSpan(text: "US", style: TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey
-                              )),
-                            ]
-                          ),
+                          text: TextSpan(children: [
+                            TextSpan(
+                                text: "New York, ",
+                                style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black)),
+                            TextSpan(
+                                text: "US",
+                                style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey)),
+                          ]),
                         ),
-                        SizedBox(height: 4,),
+                        SizedBox(
+                          height: 4,
+                        ),
                         Divider(
                           height: 4,
-
                           thickness: 3,
                         )
-
                       ],
                     ),
                   ),
@@ -74,6 +73,51 @@ class _HouseListPageState extends State<HouseListPage> {
                           context: context, delegate: HomeSearchDelegate());
                     },
                   )
+                ],
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Row(
+                children: <Widget>[
+                  Container(
+                    height: 42,
+                    width: MediaQuery.of(context).size.width / 2 - 72,
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.teal[100],
+                        borderRadius: BorderRadius.circular(24)),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "2-4 Beds",
+                          style: TextStyle(
+                              color: Colors.teal, fontWeight: FontWeight.w800),
+                        ),
+                        Spacer(),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(
+                              Icons.arrow_drop_up,
+                              size: 20,
+                              color: Colors.teal,
+                            ),
+                            Icon(
+                              Icons.arrow_drop_down,
+                              size: 20,
+                              color: Colors.teal,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.filter_list),
+                    onPressed: () {},
+                  ),
                 ],
               )
             ],
