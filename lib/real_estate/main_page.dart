@@ -131,7 +131,7 @@ class _HouseListPageState extends State<HouseListPage> {
                       child: Column(
                         children: <Widget>[
                           Expanded(
-                            flex: 4,
+                            flex: 5,
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(16),
@@ -160,7 +160,40 @@ class _HouseListPageState extends State<HouseListPage> {
                           ),
                           Expanded(
                             flex: 2,
-                            child: Placeholder(),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8, right: 8,top: 12,bottom: 12),
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    left: 0,
+                                    top: 0,
+                                    child: Text("2922 Barnes Ave",style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 21
+                                    ),),
+                                  ),
+                                  Positioned(
+                                    right: 0,
+                                    top: 0,
+                                    child: Text("\$400,500",style: TextStyle(
+                                        color: Colors.teal,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21
+                                    ),),
+                                  ),
+                                  Positioned(
+                                    bottom: 0,
+                                    left: 0,
+                                    child: Text("williamsbridge, Bronx",style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18
+                                    ),),
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                           Expanded(
                             flex: 1,
