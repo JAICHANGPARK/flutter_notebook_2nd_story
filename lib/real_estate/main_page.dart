@@ -124,6 +124,7 @@ class _HouseListPageState extends State<HouseListPage> {
               Container(
                 height: MediaQuery.of(context).size.height / 1.35,
                 child: ListView(
+                  padding: EdgeInsets.zero,
                   children: <Widget>[
                     Container(
                       height: 280,
@@ -138,19 +139,19 @@ class _HouseListPageState extends State<HouseListPage> {
                               ),
                               padding: EdgeInsets.all(4),
                               child: Container(
+                                
                                 decoration: BoxDecoration(
-                                  image: DecorationImage(image: NetworkImage()
-
-                                  )
+                                  borderRadius: BorderRadius.circular(16),
+                                  image: DecorationImage(image: NetworkImage("https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073__340.jpg"),
+                                  fit: BoxFit.cover,)
                                 ),
                                 child: Stack(
                                   children: <Widget>[
                                     Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      right: 0,
-                                      bottom: 0,
-                                      child: ,
+                                      left: 16,
+                                      top: 16,
+                                      child: Icon(Icons.favorite,
+                                      color: Colors.red,),
                                     )
                                   ],
                                 ),
