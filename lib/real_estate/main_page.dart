@@ -119,6 +119,22 @@ class _HouseListPageState extends State<HouseListPage> {
                     onPressed: () {},
                   ),
                 ],
+              ),
+              SizedBox(height: 24,),
+              Container(
+                height: MediaQuery.of(context).size.height / 1.35,
+                child: ListView(
+                  children: <Widget>[
+                    Container(
+                      height: 280,
+                      child: Column(
+                        children: <Widget>[
+                          
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
