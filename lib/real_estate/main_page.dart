@@ -120,7 +120,9 @@ class _HouseListPageState extends State<HouseListPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 24,),
+              SizedBox(
+                height: 24,
+              ),
               Container(
                 height: MediaQuery.of(context).size.height / 1.35,
                 child: ListView(
@@ -134,24 +136,27 @@ class _HouseListPageState extends State<HouseListPage> {
                             flex: 5,
                             child: Container(
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                border: Border.all(color: Colors.teal, width: 2)
-                              ),
+                                  borderRadius: BorderRadius.circular(16),
+                                  border:
+                                      Border.all(color: Colors.teal, width: 2)),
                               padding: EdgeInsets.all(4),
                               child: Container(
-                                
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16),
-                                  image: DecorationImage(image: NetworkImage("https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073__340.jpg"),
-                                  fit: BoxFit.cover,)
-                                ),
+                                    borderRadius: BorderRadius.circular(16),
+                                    image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073__340.jpg"),
+                                      fit: BoxFit.cover,
+                                    )),
                                 child: Stack(
                                   children: <Widget>[
                                     Positioned(
                                       left: 16,
                                       top: 16,
-                                      child: Icon(Icons.favorite,
-                                      color: Colors.red,),
+                                      child: Icon(
+                                        Icons.favorite,
+                                        color: Colors.red,
+                                      ),
                                     )
                                   ],
                                 ),
@@ -161,65 +166,87 @@ class _HouseListPageState extends State<HouseListPage> {
                           Expanded(
                             flex: 2,
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 8, right: 8,top: 12,bottom: 12),
+                              padding: const EdgeInsets.only(
+                                  left: 8, right: 8, top: 12, bottom: 12),
                               child: Stack(
                                 children: <Widget>[
                                   Positioned(
                                     left: 0,
                                     top: 0,
-                                    child: Text("2922 Barnes Ave",style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 21
-                                    ),),
+                                    child: Text(
+                                      "2922 Barnes Ave",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 21),
+                                    ),
                                   ),
                                   Positioned(
                                     right: 0,
                                     top: 0,
-                                    child: Text("\$400,500",style: TextStyle(
-                                        color: Colors.teal,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 21
-                                    ),),
+                                    child: Text(
+                                      "\$400,500",
+                                      style: TextStyle(
+                                          color: Colors.teal,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 21),
+                                    ),
                                   ),
                                   Positioned(
                                     bottom: 0,
                                     left: 0,
-                                    child: Text("williamsbridge, Bronx",style: TextStyle(
-                                        color: Colors.grey[600],
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18
-                                    ),),
+                                    child: Text(
+                                      "williamsbridge, Bronx",
+                                      style: TextStyle(
+                                          color: Colors.grey[600],
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
+                                    ),
                                   )
                                 ],
                               ),
                             ),
                           ),
-                          Divider(height: 16
-                            ,
-                          thickness: 2,),
+                          Divider(
+                            height: 16,
+                            thickness: 2,
+                          ),
                           Expanded(
                             flex: 1,
                             child: Row(
-
                               children: <Widget>[
-                                Icon(Icons.hotel,  color: Colors.grey[500]),
-                                SizedBox(width: 4,),
-                                Text("4",style: TextStyle(
-                                    color: Colors.grey[500]
-                                ),),
-                                SizedBox(width: 16,),
-                                Icon(Icons.airline_seat_legroom_extra,  color: Colors.grey[500]),
-                                SizedBox(width: 4,),
-                                Text("2",style: TextStyle(
-                                    color: Colors.grey[500]
-                                ),),
-                                SizedBox(width: 16,),
-                                Icon(Icons.crop_square,  color: Colors.grey[500]),
-                                SizedBox(width: 4,),
-                                Text("1,520 ft",style: TextStyle(
-                                    color: Colors.grey[500]
-                                ),),
+                                Icon(Icons.hotel, color: Colors.grey[500]),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  "4",
+                                  style: TextStyle(color: Colors.grey[500]),
+                                ),
+                                SizedBox(
+                                  width: 16,
+                                ),
+                                Icon(Icons.airline_seat_legroom_extra,
+                                    color: Colors.grey[500]),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  "2",
+                                  style: TextStyle(color: Colors.grey[500]),
+                                ),
+                                SizedBox(
+                                  width: 16,
+                                ),
+                                Icon(Icons.crop_square,
+                                    color: Colors.grey[500]),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  "1,520 ft",
+                                  style: TextStyle(color: Colors.grey[500]),
+                                ),
                                 Spacer()
                               ],
                             ),
