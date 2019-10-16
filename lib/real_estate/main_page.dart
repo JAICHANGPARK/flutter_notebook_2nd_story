@@ -195,9 +195,34 @@ class _HouseListPageState extends State<HouseListPage> {
                               ),
                             ),
                           ),
+                          Divider(height: 16
+                            ,
+                          thickness: 2,),
                           Expanded(
                             flex: 1,
-                            child: Placeholder(),
+                            child: Row(
+
+                              children: <Widget>[
+                                Icon(Icons.hotel,  color: Colors.grey[500]),
+                                SizedBox(width: 4,),
+                                Text("4",style: TextStyle(
+                                    color: Colors.grey[500]
+                                ),),
+                                SizedBox(width: 16,),
+                                Icon(Icons.airline_seat_legroom_extra,  color: Colors.grey[500]),
+                                SizedBox(width: 4,),
+                                Text("2",style: TextStyle(
+                                    color: Colors.grey[500]
+                                ),),
+                                SizedBox(width: 16,),
+                                Icon(Icons.crop_square,  color: Colors.grey[500]),
+                                SizedBox(width: 4,),
+                                Text("1,520 ft",style: TextStyle(
+                                    color: Colors.grey[500]
+                                ),),
+                                Spacer()
+                              ],
+                            ),
                           )
                         ],
                       ),
