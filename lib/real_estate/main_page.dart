@@ -129,7 +129,42 @@ class _HouseListPageState extends State<HouseListPage> {
                       height: 280,
                       child: Column(
                         children: <Widget>[
-                          
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(color: Colors.teal, width: 2)
+                              ),
+                              padding: EdgeInsets.all(4),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(image: NetworkImage()
+
+                                  )
+                                ),
+                                child: Stack(
+                                  children: <Widget>[
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      right: 0,
+                                      bottom: 0,
+                                      child: ,
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Placeholder(),
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Placeholder(),
+                          )
                         ],
                       ),
                     )
