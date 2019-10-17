@@ -4,7 +4,7 @@ class HealthyRecipes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ReciepesPage(),
+      home: RecipesPage(),
     );
   }
 }
