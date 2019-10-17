@@ -26,6 +26,7 @@ class _StateRecipesPage extends State<RecipesPage> {
             left: 0,
             right: 0,
             child: Container(
+              padding: EdgeInsets.only(top: 32, left: 24, right: 24),
               height: MediaQuery.of(context).size.height / 3,
               child: Column(
                 children: <Widget>[
@@ -36,7 +37,18 @@ class _StateRecipesPage extends State<RecipesPage> {
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.2),
-                  )
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    "How Much Should You Take?",
+                    style: TextStyle(
+                        color: Colors.green[200],
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2),
+                  ),
                 ],
               ),
             ),
