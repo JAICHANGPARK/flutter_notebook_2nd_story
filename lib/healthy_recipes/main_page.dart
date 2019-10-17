@@ -139,9 +139,71 @@ class _StateRecipesPage extends State<RecipesPage> {
                 ],
               ),
             ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.height / 3,
+            left: 32,
+            right: 32,
+            bottom: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(16)
+              ),
+            ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.height / 2.9,
+            left: 16,
+            right: 16,
+            bottom: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.4),
+                borderRadius: BorderRadius.circular(16)
+              ),
+            ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.height / 2.8,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(24),
+                  topLeft: Radius.circular(24)
+                )
+              ),
+            ),
           )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
