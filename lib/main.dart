@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notebook_second_story/exchange_finder/main_page.dart';
-import 'package:flutter_notebook_second_story/particle_screen/main_page.dart';
-import 'package:flutter_notebook_second_story/real_estate/main_page.dart';
+import 'package:flutter_notebook_second_story/healthy_recipes/main_page.dart';
 
-void main() => runApp(RealEstateApp());
+void main() => runApp(HealthyRecipes());
 
 
