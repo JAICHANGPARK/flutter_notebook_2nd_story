@@ -49,12 +49,12 @@ class _StateRecipesPage extends State<RecipesPage> {
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.2),
                   ),
-                  SizedBox(height: 24,),
+                  SizedBox(
+                    height: 24,
+                  ),
                   Container(
                     height: MediaQuery.of(context).size.height / 9,
-                    decoration: BoxDecoration(
-                      color: Colors.blue
-                    ),
+//                    decoration: BoxDecoration(color: Colors.blue),
                     child: Row(
                       children: <Widget>[
                         Expanded(
@@ -63,15 +63,19 @@ class _StateRecipesPage extends State<RecipesPage> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Text("80", style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 42
-                              ),),
-                              Text("Vitamin C",style: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
-                                fontSize: 12
-                              ),)
+                              Text(
+                                "80",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 42),
+                              ),
+                              Text(
+                                "Vitamin C",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(0.5),
+                                    fontSize: 12),
+                              )
                             ],
                           ),
                         ),
@@ -83,14 +87,52 @@ class _StateRecipesPage extends State<RecipesPage> {
                         ),
                         Expanded(
                           flex: 1,
-                          child: Container(),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "16",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 42),
+                              ),
+                              Text(
+                                "Vitamin B3",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(0.5),
+                                    fontSize: 12),
+                              ),
+                            ],
+                          ),
                         ),
-                        VerticalDivider(),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          child: VerticalDivider(
+                            color: Colors.white,
+                          ),
+                        ),
                         Expanded(
                           flex: 1,
-                          child: Container(),
-                        )
-
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "90",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 42),
+                              ),
+                              Text(
+                                "Vitamin D",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(0.5),
+                                    fontSize: 12),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   )
