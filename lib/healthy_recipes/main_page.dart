@@ -180,20 +180,27 @@ class _StateRecipesPage extends State<RecipesPage> {
                     child: Center(
                       child: Container(
                         height: 4,
-                        width: 80,
+                        width: 100,
                         decoration: BoxDecoration(
-                          color: Colors.grey
-                        ),
+                            color: Colors.grey[300],
+                            borderRadius: BorderRadius.circular(4)),
                       ),
                     ),
                   ),
                   Expanded(
                     flex: 2,
-                    child: Placeholder(),
+                    child: Container(
+                      margin: EdgeInsets.only(left: 16, right: 16, top: 4),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey[300], width: 1),
+                          borderRadius: BorderRadius.circular(36)),
+                    ),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Placeholder(),
                   ),
                   Expanded(
@@ -207,24 +214,9 @@ class _StateRecipesPage extends State<RecipesPage> {
                 ],
               ),
             ),
-
           )
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
