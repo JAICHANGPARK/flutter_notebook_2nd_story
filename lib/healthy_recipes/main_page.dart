@@ -213,6 +213,13 @@ class _StateRecipesPage extends State<RecipesPage> {
                                 decoration: BoxDecoration(
                                   color: Colors.lightGreen,
                                   borderRadius: BorderRadius.circular(36),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.green[100],
+                                      blurRadius: 5,
+                                      spreadRadius: 3
+                                    )
+                                  ]
                                 ),
                                 child: Center(
                                   child: Text(
