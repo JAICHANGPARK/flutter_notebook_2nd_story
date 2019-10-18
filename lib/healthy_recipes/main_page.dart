@@ -147,9 +147,8 @@ class _StateRecipesPage extends State<RecipesPage> {
             bottom: 0,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(16)
-              ),
+                  color: Colors.white.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(16)),
             ),
           ),
           Positioned(
@@ -159,9 +158,8 @@ class _StateRecipesPage extends State<RecipesPage> {
             bottom: 0,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.4),
-                borderRadius: BorderRadius.circular(16)
-              ),
+                  color: Colors.white.withOpacity(0.4),
+                  borderRadius: BorderRadius.circular(16)),
             ),
           ),
           Positioned(
@@ -171,28 +169,51 @@ class _StateRecipesPage extends State<RecipesPage> {
             bottom: 0,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(24),
-                  topLeft: Radius.circular(24)
-                )
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(24),
+                      topLeft: Radius.circular(24))),
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Center(
+                      child: Container(
+                        height: 4,
+                        width: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.grey
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Placeholder(),
+                  ),
+                  SizedBox(height: 16,),
+                  Expanded(
+                    flex: 1,
+                    child: Placeholder(),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Placeholder(),
+                  ),
+                  Expanded(
+                    flex: 10,
+                    child: Placeholder(),
+                  )
+                ],
               ),
             ),
+
           )
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 
