@@ -194,6 +194,48 @@ class _StateRecipesPage extends State<RecipesPage> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey[300], width: 1),
                           borderRadius: BorderRadius.circular(36)),
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
+                            child: Center(
+                              child: Text(
+                                "Minerals",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                              flex: 1,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.lightGreen,
+                                  borderRadius: BorderRadius.circular(36),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Nutrition",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              )),
+                          Expanded(
+                            flex: 1,
+                            child: Center(
+                              child: Text(
+                                "Vitamins",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
