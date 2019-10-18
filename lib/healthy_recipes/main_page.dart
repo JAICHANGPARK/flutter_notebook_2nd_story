@@ -190,7 +190,7 @@ class _StateRecipesPage extends State<RecipesPage> {
                   Expanded(
                     flex: 2,
                     child: Container(
-                      margin: EdgeInsets.only(left: 16, right: 16, top: 4),
+                      margin: EdgeInsets.only(left: 24, right: 24, top: 4),
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey[300], width: 1),
                           borderRadius: BorderRadius.circular(36)),
@@ -250,7 +250,27 @@ class _StateRecipesPage extends State<RecipesPage> {
                   ),
                   Expanded(
                     flex: 2,
-                    child: Placeholder(),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 24, right: 24
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Text("Schudule",style: TextStyle(
+                            color: Colors.purple[900],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20
+                          ),),
+                          Spacer(),
+                          Text("Today,",style: TextStyle(
+                            color: Colors.grey
+                          ),),
+                          Text("11 Oct",style: TextStyle(
+                            color: Colors.purple[900]
+                          ),)
+                        ],
+                      ),
+                    ),
                   ),
                   Expanded(
                     flex: 1,
