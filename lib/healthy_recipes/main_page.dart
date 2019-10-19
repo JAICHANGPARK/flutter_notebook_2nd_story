@@ -309,7 +309,59 @@ class _StateRecipesPage extends State<RecipesPage> {
                   ),
                   Expanded(
                     flex: 10,
-                    child: Placeholder(),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned(
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          top: 8,
+                          child: ListView.separated(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  width: 80,
+                                );
+                              },
+                              separatorBuilder: (context, index) {
+                                return VerticalDivider(
+                                  width: 2,
+                                  thickness: 1,
+                                );
+                              },
+                              itemCount: 8),
+                        ),
+                       Positioned(
+                         top: 0,
+                         left: MediaQuery.of(context).size.width / 2.8,
+                         child: Container(
+                           height: 12,
+                           width: 12,
+                           child: Container(
+                             decoration: BoxDecoration(
+                               border: Border.all(color: Colors.greenAccent,
+                               width: 3),
+                               shape: BoxShape.circle
+                             ),
+                           ),
+                         ),
+                       ),
+                        Positioned(
+                          top: 12,
+                          left: MediaQuery.of(context).size.width / 2.7,
+                          bottom: 0,
+                          child: Container(
+                            width: 2,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.greenAccent
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
