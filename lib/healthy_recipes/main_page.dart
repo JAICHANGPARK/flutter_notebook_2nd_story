@@ -332,31 +332,29 @@ class _StateRecipesPage extends State<RecipesPage> {
                               },
                               itemCount: 8),
                         ),
-                       Positioned(
-                         top: 0,
-                         left: MediaQuery.of(context).size.width / 2.8,
-                         child: Container(
-                           height: 12,
-                           width: 12,
-                           child: Container(
-                             decoration: BoxDecoration(
-                               border: Border.all(color: Colors.greenAccent,
-                               width: 3),
-                               shape: BoxShape.circle
-                             ),
-                           ),
-                         ),
-                       ),
+                        Positioned(
+                          top: 0,
+                          left: MediaQuery.of(context).size.width / 2.8,
+                          child: Container(
+                            height: 12,
+                            width: 12,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Colors.greenAccent, width: 3),
+                                  shape: BoxShape.circle),
+                            ),
+                          ),
+                        ),
                         Positioned(
                           top: 12,
                           left: MediaQuery.of(context).size.width / 2.7,
                           bottom: 0,
                           child: Container(
-                            width: 2,
+                            width: 1,
                             child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.greenAccent
-                              ),
+                              decoration:
+                                  BoxDecoration(color: Colors.greenAccent),
                             ),
                           ),
                         )
