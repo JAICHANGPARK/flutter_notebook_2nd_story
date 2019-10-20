@@ -332,24 +332,57 @@ class _StateRecipesPage extends State<RecipesPage> {
                               },
                               itemCount: 8),
                         ),
-
                         Positioned(
                             left: 0,
                             right: 0,
                             top: 0,
                             bottom: 0,
-                            child:
-                                ListView.builder(itemBuilder: (context, index) {
-                              return index % 2 == 0
-                                  ? Container(
-                                      height: 60,
-                                    )
-                                  : Container(
-                                      height: 60,
-                                      decoration:
-                                          BoxDecoration(color: Colors.blueGrey[50]),
-                                    );
-                            })),
+                            child: ListView.builder(
+                                itemCount: 4,
+                                shrinkWrap: true,
+                                itemBuilder: (context, index) {
+                                  return index % 2 == 0
+                                      ? Container(
+                                          height: 60,
+                                        )
+                                      : Container(
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                              color: Colors.blueGrey[50]),
+                                        );
+                                })),
+                        Positioned(
+                          left: 40,
+                          top: 24,
+                          child: Container(
+                            height: 42,
+                            width: 140,
+                            padding: EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                                color: Colors.red[100].withOpacity(0.6),
+                                borderRadius: BorderRadius.circular(24)),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 1,
+                                  child: Image.network(
+                                      "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/225/tomato_1f345.png"),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Text(
+                                    "Tomato",
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                        letterSpacing: 1.2),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
                         Positioned(
                           top: 0,
                           left: MediaQuery.of(context).size.width / 2.8,
@@ -369,10 +402,10 @@ class _StateRecipesPage extends State<RecipesPage> {
                           left: MediaQuery.of(context).size.width / 2.7,
                           bottom: 0,
                           child: Container(
-                            width: 1,
+                            width: 1.5,
                             child: Container(
                               decoration:
-                              BoxDecoration(color: Colors.greenAccent),
+                                  BoxDecoration(color: Colors.greenAccent),
                             ),
                           ),
                         ),
