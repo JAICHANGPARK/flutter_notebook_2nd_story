@@ -332,6 +332,24 @@ class _StateRecipesPage extends State<RecipesPage> {
                               },
                               itemCount: 8),
                         ),
+
+                        Positioned(
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0,
+                            child:
+                                ListView.builder(itemBuilder: (context, index) {
+                              return index % 2 == 0
+                                  ? Container(
+                                      height: 60,
+                                    )
+                                  : Container(
+                                      height: 60,
+                                      decoration:
+                                          BoxDecoration(color: Colors.blueGrey[50]),
+                                    );
+                            })),
                         Positioned(
                           top: 0,
                           left: MediaQuery.of(context).size.width / 2.8,
@@ -354,10 +372,10 @@ class _StateRecipesPage extends State<RecipesPage> {
                             width: 1,
                             child: Container(
                               decoration:
-                                  BoxDecoration(color: Colors.greenAccent),
+                              BoxDecoration(color: Colors.greenAccent),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   )
