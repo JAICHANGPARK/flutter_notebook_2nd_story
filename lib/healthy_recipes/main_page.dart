@@ -384,6 +384,114 @@ class _StateRecipesPage extends State<RecipesPage> {
                           ),
                         ),
                         Positioned(
+                          left: MediaQuery.of(context).size.width / 2,
+                          top: 92,
+                          child: Container(
+                            height: 42,
+                            width: 140,
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 4),
+                            decoration: BoxDecoration(
+                                color: Colors.deepPurple[100].withOpacity(0.6),
+                                borderRadius: BorderRadius.circular(24)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 1,
+                                  child: Image.network(
+                                    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/225/aubergine_1f346.png",
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Text(
+                                    "Eggplant",
+                                    style: TextStyle(
+                                        color: Colors.deepPurple,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                        letterSpacing: 1.2),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: MediaQuery.of(context).size.width / 4,
+                          top: 152,
+                          child: Container(
+                            height: 42,
+                            width: 140,
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 4),
+                            decoration: BoxDecoration(
+                                color: Colors.green[100].withOpacity(0.6),
+                                borderRadius: BorderRadius.circular(24)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 1,
+                                  child: Image.network(
+                                    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/225/avocado_1f951.png",
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Text(
+                                    "Avocado",
+                                    style: TextStyle(
+                                        color: Colors.green,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                        letterSpacing: 1.2),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: MediaQuery.of(context).size.width / 2.5,
+                          top: 214,
+                          child: Container(
+                            height: 42,
+                            width: 110,
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 4),
+                            decoration: BoxDecoration(
+                                color: Colors.yellow[100].withOpacity(0.6),
+                                borderRadius: BorderRadius.circular(24)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 1,
+                                  child: Image.network(
+                                    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/225/ear-of-maize_1f33d.png",
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Text(
+                                    "Corn",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                        letterSpacing: 1.2),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
                           top: 0,
                           left: MediaQuery.of(context).size.width / 2.8,
                           child: Container(
