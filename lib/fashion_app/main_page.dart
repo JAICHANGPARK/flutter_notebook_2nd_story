@@ -74,10 +74,11 @@ class _FashionHomePageState extends State<FashionHomePage> {
                     Container(
                       margin: EdgeInsets.only(right: 24),
                       width: MediaQuery.of(context).size.width - 120,
-                      decoration: BoxDecoration(
-                        color: Colors.red
-                      ),
+//                      decoration: BoxDecoration(
+//                        color: Colors.red
+//                      ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Expanded(
                             flex: 8,
@@ -114,7 +115,19 @@ class _FashionHomePageState extends State<FashionHomePage> {
                           ),
                           Expanded(
                             flex: 4,
-                            child: Placeholder(),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("Ansley Gulielmi",style: TextStyle(
+                                  fontSize: 34
+                                ),),
+                                SizedBox(height: 16,),
+                                Text("By: Edgar Berg",style: TextStyle(
+                                  fontSize: 16),)
+                              ],
+                            ),
                           )
                         ],
                       ),
