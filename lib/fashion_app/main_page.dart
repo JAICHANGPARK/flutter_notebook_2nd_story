@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -75,6 +76,47 @@ class _FashionHomePageState extends State<FashionHomePage> {
                       width: MediaQuery.of(context).size.width - 120,
                       decoration: BoxDecoration(
                         color: Colors.red
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 8,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage("https://2-t.imgbox.com/tySOIpoo.jpg"),
+                                  fit: BoxFit.cover
+                                )
+                              ),
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    bottom: 16,
+                                    right: 16,
+                                    child: Container(
+                                      height: 84,
+                                      width: 84,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.deepOrange
+                                      ),
+                                      child: Center(
+                                        child:Text("Top\n50", textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18
+                                        ),),
+                                      ),
+                                    ),
+                                  )],
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Placeholder(),
+                          )
+                        ],
                       ),
                     ),
                     Container(
