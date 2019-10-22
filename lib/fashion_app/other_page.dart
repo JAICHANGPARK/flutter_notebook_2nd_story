@@ -64,7 +64,14 @@ class _OtherPageState extends State<OtherPage> {
                   children: <Widget>[
                     Expanded(
                       flex: 3,
-                      child: Placeholder(),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJoWJ90Ozo07-B1bE8cfxbDBlrCQWt9wPpXfwsv7RbgbG3h05B"),
+                            fit: BoxFit.cover
+                          )
+                        ),
+                      ),
                     ),
                     Expanded(
                       flex: 2,
