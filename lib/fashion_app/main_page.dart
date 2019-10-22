@@ -149,13 +149,42 @@ class _FashionHomePageState extends State<FashionHomePage> {
                 ),
               ),
             ),
-            Divider(
-              height: 0,
-              thickness: 2,
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Divider(
+                height: 0,
+                thickness: 1,
+              ),
             ),
             Expanded(
               flex: 1,
-              child: Placeholder(),
+              child: Padding(
+              padding: EdgeInsets.only(left: 24),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text("Height"),
+                          Text("175 cm")
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Placeholder(),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Placeholder(),
+                    ),
+
+                  ],
+                ),
+              ),
             ),
             Expanded(
               flex: 1,
@@ -167,3 +196,18 @@ class _FashionHomePageState extends State<FashionHomePage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
