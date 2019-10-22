@@ -34,16 +34,18 @@ class _FashionHomePageState extends State<FashionHomePage> {
                     IconButton(
                       icon: Icon(Icons.menu),
                       iconSize: 38,
-                      onPressed: (){
-                        Fluttertoast.showToast(msg: "Pressed Menu Icon",
-                        backgroundColor: Colors.green);
+                      onPressed: () {
+                        Fluttertoast.showToast(
+                            msg: "Pressed Menu Icon",
+                            backgroundColor: Colors.green);
                       },
                     ),
                     IconButton(
                       icon: Icon(Icons.search),
-                        iconSize: 38,
-                      onPressed: (){
-                        Fluttertoast.showToast(msg: "Pressed Search Icon",
+                      iconSize: 38,
+                      onPressed: () {
+                        Fluttertoast.showToast(
+                            msg: "Pressed Search Icon",
                             backgroundColor: Colors.green);
                       },
                     )
@@ -57,9 +59,10 @@ class _FashionHomePageState extends State<FashionHomePage> {
                 padding: const EdgeInsets.only(left: 24),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Fashion",style: TextStyle(
-                    fontSize: 38
-                  ),),
+                  child: Text(
+                    "Fashion",
+                    style: TextStyle(fontSize: 38),
+                  ),
                 ),
               ),
             ),
@@ -84,11 +87,10 @@ class _FashionHomePageState extends State<FashionHomePage> {
                             flex: 8,
                             child: Container(
                               decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: NetworkImage("https://2-t.imgbox.com/tySOIpoo.jpg"),
-                                  fit: BoxFit.cover
-                                )
-                              ),
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://2-t.imgbox.com/tySOIpoo.jpg"),
+                                      fit: BoxFit.cover)),
                               child: Stack(
                                 children: <Widget>[
                                   Positioned(
@@ -98,18 +100,20 @@ class _FashionHomePageState extends State<FashionHomePage> {
                                       height: 84,
                                       width: 84,
                                       decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Colors.deepOrange
-                                      ),
+                                          shape: BoxShape.circle,
+                                          color: Colors.deepOrange),
                                       child: Center(
-                                        child:Text("Top\n50", textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18
-                                        ),),
+                                        child: Text(
+                                          "Top\n50",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 18),
+                                        ),
                                       ),
                                     ),
-                                  )],
+                                  )
+                                ],
                               ),
                             ),
                           ),
@@ -120,12 +124,17 @@ class _FashionHomePageState extends State<FashionHomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text("Ansley Gulielmi",style: TextStyle(
-                                  fontSize: 34
-                                ),),
-                                SizedBox(height: 16,),
-                                Text("By: Edgar Berg",style: TextStyle(
-                                  fontSize: 16),)
+                                Text(
+                                  "Ansley Gulielmi",
+                                  style: TextStyle(fontSize: 34),
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                Text(
+                                  "By: Edgar Berg",
+                                  style: TextStyle(fontSize: 16),
+                                )
                               ],
                             ),
                           )
@@ -134,15 +143,16 @@ class _FashionHomePageState extends State<FashionHomePage> {
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width - 120,
-                      decoration: BoxDecoration(
-                          color: Colors.red
-                      ),
+                      decoration: BoxDecoration(color: Colors.red),
                     )
                   ],
                 ),
               ),
             ),
-            Divider(height: 0,thickness: 2,),
+            Divider(
+              height: 0,
+              thickness: 2,
+            ),
             Expanded(
               flex: 1,
               child: Placeholder(),
@@ -157,27 +167,3 @@ class _FashionHomePageState extends State<FashionHomePage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
