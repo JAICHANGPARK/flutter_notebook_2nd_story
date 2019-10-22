@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_second_story/fashion_app/other_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class FashionApp extends StatelessWidget {
@@ -234,7 +235,9 @@ class _FashionHomePageState extends State<FashionHomePage> {
                     IconButton(
                       icon: Icon(Icons.arrow_forward),
                       color: Colors.white,
-                      onPressed: () {},
+                      onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>OtherPage()));
+                      },
                     )
                   ],
                 ),
