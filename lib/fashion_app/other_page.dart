@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'dart:math' as math;
 
 class OtherPage extends StatefulWidget {
   @override
@@ -66,85 +68,111 @@ class _OtherPageState extends State<OtherPage> {
                       flex: 3,
                       child: Container(
                         decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJoWJ90Ozo07-B1bE8cfxbDBlrCQWt9wPpXfwsv7RbgbG3h05B"),
-                            fit: BoxFit.cover
-                          )
-                        ),
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                    "https://2-t.imgbox.com/tySOIpoo.jpg"),
+                                fit: BoxFit.cover)),
                       ),
                     ),
                     Expanded(
                       flex: 2,
-                      child: Placeholder(),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(
+                            height: 84,
+                            width: 84,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(color: Colors.grey),
+                                shape: BoxShape.circle),
+                            child: Center(
+                              child: Text(
+                                "Top\n50",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: 18),
+                              ),
+                            ),
+                          ),
+                          RotatedBox(
+                            quarterTurns: 3,
+                            child: Text(
+                              "Ansley Gulielmi",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400, fontSize: 46),
+                            ),
+                          )
+                        ],
+                      ),
                     )
-
                   ],
                 ),
               ),
             ),
             Expanded(
               flex: 1,
-              child: Placeholder(),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Align(child: Text("By: Edgar Berg"),
+                alignment: Alignment.centerLeft,),
+              ),
             ),
             Expanded(
               flex: 1,
-              child: Padding(
+              child: Container(
                 padding: EdgeInsets.only(left: 24),
-                child: Container(
-                  color: Colors.blueGrey[50],
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                        flex: 2,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text("Height"),
-                            Text(
-                              "175 cm",
-                              style: TextStyle(fontSize: 21),
-                            )
-                          ],
-                        ),
+                color: Colors.blueGrey[50],
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text("Height"),
+                          Text(
+                            "175 cm",
+                            style: TextStyle(fontSize: 21),
+                          )
+                        ],
                       ),
-                      Expanded(
-                        flex: 2,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text("Bust"),
-                            Text(
-                              "81 cm",
-                              style: TextStyle(fontSize: 21),
-                            )
-                          ],
-                        ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text("Bust"),
+                          Text(
+                            "81 cm",
+                            style: TextStyle(fontSize: 21),
+                          )
+                        ],
                       ),
-                      Expanded(
-                        flex: 3,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(Icons.camera_alt),
-                            SizedBox(
-                              width: 8,
-                            ),
-                            Text(
-                              "6,473",
-                              style: TextStyle(fontSize: 21),
-                            ),
-                          ],
-                        ),
+                    ),
+                    Expanded(
+                      flex: 3,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(Icons.camera_alt),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Text(
+                            "6,473",
+                            style: TextStyle(fontSize: 21),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
-
           ],
         ),
       ),
