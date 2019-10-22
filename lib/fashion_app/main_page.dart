@@ -143,7 +143,12 @@ class _FashionHomePageState extends State<FashionHomePage> {
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width - 120,
-                      decoration: BoxDecoration(color: Colors.red),
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJoWJ90Ozo07-B1bE8cfxbDBlrCQWt9wPpXfwsv7RbgbG3h05B"),
+                              fit: BoxFit.cover)),
                     )
                   ],
                 ),
@@ -159,36 +164,81 @@ class _FashionHomePageState extends State<FashionHomePage> {
             Expanded(
               flex: 1,
               child: Padding(
-              padding: EdgeInsets.only(left: 24),
+                padding: EdgeInsets.only(left: 24),
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                      flex: 1,
+                      flex: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text("Height"),
-                          Text("175 cm")
+                          Text(
+                            "175 cm",
+                            style: TextStyle(fontSize: 21),
+                          )
                         ],
                       ),
                     ),
                     Expanded(
-                      flex: 1,
-                      child: Placeholder(),
+                      flex: 2,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text("Bust"),
+                          Text(
+                            "81 cm",
+                            style: TextStyle(fontSize: 21),
+                          )
+                        ],
+                      ),
                     ),
                     Expanded(
-                      flex: 1,
-                      child: Placeholder(),
+                      flex: 3,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(Icons.camera_alt),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Text(
+                            "6,473",
+                            style: TextStyle(fontSize: 21),
+                          ),
+                        ],
+                      ),
                     ),
-
                   ],
                 ),
               ),
             ),
             Expanded(
               flex: 1,
-              child: Placeholder(),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "Ford Models Paris",
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.arrow_forward),
+                      color: Colors.white,
+                      onPressed: () {},
+                    )
+                  ],
+                ),
+              ),
             ),
           ],
         ),
@@ -196,18 +246,3 @@ class _FashionHomePageState extends State<FashionHomePage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
