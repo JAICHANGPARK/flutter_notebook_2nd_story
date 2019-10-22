@@ -113,8 +113,10 @@ class _OtherPageState extends State<OtherPage> {
               flex: 1,
               child: Padding(
                 padding: const EdgeInsets.only(left: 24),
-                child: Align(child: Text("By: Edgar Berg"),
-                alignment: Alignment.centerLeft,),
+                child: Align(
+                  child: Text("By: Edgar Berg"),
+                  alignment: Alignment.centerLeft,
+                ),
               ),
             ),
             Expanded(
