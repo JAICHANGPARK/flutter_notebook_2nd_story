@@ -21,7 +21,7 @@ class _MainPageState extends State<MainPage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            
+
           ],
         ),
       ),
