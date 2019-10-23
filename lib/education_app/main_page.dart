@@ -37,46 +37,60 @@ class _MainPageState extends State<MainPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text("Home Page",style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),),
-                        RichText(text: TextSpan(
-                          children: [
-                            TextSpan(text: "Choose your course",style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 12
-                            )),
-                            TextSpan(text: " right away",style: TextStyle(
-                              color: Colors.teal,
-                              fontSize: 12
-                            )),
-                          ]
+                        Text(
+                          "Home Page",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        RichText(
+                          text: TextSpan(children: [
+                            TextSpan(
+                                text: "Choose your course",
+                                style: TextStyle(
+                                    color: Colors.grey, fontSize: 12)),
+                            TextSpan(
+                                text: " right away",
+                                style: TextStyle(
+                                    color: Colors.teal, fontSize: 12)),
+                          ]),
                         )
                       ],
                     ),
                     Spacer(),
                     Badge(
-                      child: Icon(Icons.notifications, color: Colors.teal,),
+                      child: Icon(
+                        Icons.notifications,
+                        color: Colors.teal,
+                      ),
                       showBadge: true,
                       badgeContent: Text(""),
-
                     )
                   ],
                 ),
               ),
+            ),
+            SizedBox(height: 24,),
+            Container(
+              height: 48,
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.only(left: 24, right: 24),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey[50],
+                borderRadius: BorderRadius.circular(16)
+              ),
+              child: TextField(),
             )
-
           ],
         ),
       ),
     );
   }
 }
-
-
-
 
 
 
