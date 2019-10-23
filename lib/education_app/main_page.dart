@@ -82,7 +82,7 @@ class _MainPageState extends State<MainPage> {
               padding: EdgeInsets.only(left: 16, right: 16),
               decoration: BoxDecoration(
                 color: Colors.blueGrey[50],
-                borderRadius: BorderRadius.circular(16)
+                borderRadius: BorderRadius.circular(12)
               ),
               child: TextField(
 
