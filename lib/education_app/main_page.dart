@@ -79,11 +79,23 @@ class _MainPageState extends State<MainPage> {
               height: 48,
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.only(left: 24, right: 24),
+              padding: EdgeInsets.only(left: 16, right: 16),
               decoration: BoxDecoration(
                 color: Colors.blueGrey[50],
                 borderRadius: BorderRadius.circular(16)
               ),
-              child: TextField(),
+              child: TextField(
+
+                decoration: InputDecoration(
+                  icon: Icon(Icons.search,size: 14,),
+                  hintText: "Search for your grade, course, training type..",
+                  hintStyle: TextStyle(
+                    fontSize: 12,
+                  ),
+                  border: InputBorder.none,
+
+                ),
+              ),
             )
           ],
         ),
