@@ -241,8 +241,57 @@ class _MainPageState extends State<MainPage> {
               ],
             ),
             Container(
-              height: 240,
-              child: Placeholder(),
+              height: 220,
+              padding: EdgeInsets.only(left: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(right: 24),
+                    child: Row(
+                      children: <Widget>[
+                        Text("Recommended course"),
+                        Spacer(),
+                        Text("More")
+                      ],
+                    ),
+                  ),
+                  Text("you may also like"),
+                  SizedBox(height: 16,),
+                  Container(
+                    height: 170,
+                    child: ListView(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
+                          width: 140,
+                          margin: EdgeInsets.only(right: 16, bottom: 8),
+                          decoration: BoxDecoration(
+                            color: Colors.red
+                          ),
+                        ),
+                        Container(
+                          width: 140,
+                          margin: EdgeInsets.only(right: 16, bottom: 8),
+                          decoration: BoxDecoration(
+                              color: Colors.red
+                          ),
+                        ),
+                        Container(
+                          width: 140,
+                          margin: EdgeInsets.only(right: 16, bottom: 8),
+                          decoration: BoxDecoration(
+                              color: Colors.red
+                          ),
+                        )
+
+                      ],
+                    ),
+                  )
+
+                ],
+              ),
             )
           ],
         ),
@@ -252,22 +301,18 @@ class _MainPageState extends State<MainPage> {
         unselectedLabelStyle: TextStyle(
           color: Colors.grey,
         ),
-        selectedIconTheme: IconThemeData(
-          color: Colors.green
-        ),
+        selectedIconTheme: IconThemeData(color: Colors.green),
         selectedLabelStyle: TextStyle(
           color: Colors.green,
-        ),unselectedIconTheme: IconThemeData(
-        color: Colors.grey
-      ),
+        ),
+        unselectedIconTheme: IconThemeData(color: Colors.grey),
         showSelectedLabels: true,
-        
+        type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
               ),
-
               title: Text("Home")),
           BottomNavigationBarItem(
               icon: Icon(
@@ -289,3 +334,15 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
