@@ -248,14 +248,42 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        unselectedLabelStyle: TextStyle(
+          color: Colors.grey,
+        ),
+        selectedIconTheme: IconThemeData(
+          color: Colors.green
+        ),
+        selectedLabelStyle: TextStyle(
+          color: Colors.green,
+        ),unselectedIconTheme: IconThemeData(
+        color: Colors.grey
+      ),
+        showSelectedLabels: true,
+        
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
               ),
+
               title: Text("Home")),
-          BottomNavigationBarItem(icon: Icon(Icons.home),
-              title: Text("Home")),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.book,
+              ),
+              title: Text("Subject")),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.backup,
+              ),
+              title: Text("Growing")),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.account_circle,
+              ),
+              title: Text("My")),
         ],
       ),
     );
