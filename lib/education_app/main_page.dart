@@ -98,9 +98,165 @@ class _MainPageState extends State<MainPage> {
                   border: InputBorder.none,
                 ),
               ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            GridView.count(
+              shrinkWrap: true,
+              crossAxisCount: 3,
+              children: <Widget>[
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 64,
+                        width: 64,
+                        decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black.withOpacity(0.05),
+                                  blurRadius: 3,
+                                  spreadRadius: 4)
+                            ]),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text("Category")
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 64,
+                        width: 64,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black.withOpacity(0.05),
+                                  blurRadius: 3,
+                                  spreadRadius: 4)
+                            ]),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text("Boutique class")
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 64,
+                        width: 64,
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black.withOpacity(0.05),
+                                  blurRadius: 3,
+                                  spreadRadius: 4)
+                            ]),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text("Free course")
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 64,
+                        width: 64,
+                        decoration: BoxDecoration(boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.05),
+                              blurRadius: 3,
+                              spreadRadius: 4)
+                        ], color: Colors.red, shape: BoxShape.circle),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text("Bookstore")
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 64,
+                        width: 64,
+                        decoration: BoxDecoration(boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.05),
+                              blurRadius: 3,
+                              spreadRadius: 4)
+                        ], color: Colors.purple, shape: BoxShape.circle),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text("Live course")
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 64,
+                        width: 64,
+                        decoration: BoxDecoration(
+                            color: Colors.lightGreenAccent,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black.withOpacity(0.05),
+                                  blurRadius: 3,
+                                  spreadRadius: 4)
+                            ],
+                            shape: BoxShape.circle),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text("Leaderboard")
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Container(
+              height: 240,
+              child: Placeholder(),
             )
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              title: Text("Home")),
+          BottomNavigationBarItem(icon: Icon(Icons.home),
+              title: Text("Home")),
+        ],
       ),
     );
   }
