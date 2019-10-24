@@ -74,26 +74,28 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
-            SizedBox(height: 24,),
+            SizedBox(
+              height: 24,
+            ),
             Container(
               height: 48,
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.only(left: 24, right: 24),
               padding: EdgeInsets.only(left: 16, right: 16),
               decoration: BoxDecoration(
-                color: Colors.blueGrey[50],
-                borderRadius: BorderRadius.circular(12)
-              ),
+                  color: Colors.blueGrey[50],
+                  borderRadius: BorderRadius.circular(12)),
               child: TextField(
-
                 decoration: InputDecoration(
-                  icon: Icon(Icons.search,size: 14,),
+                  icon: Icon(
+                    Icons.search,
+                    size: 14,
+                  ),
                   hintText: "Search for your grade, course, training type..",
                   hintStyle: TextStyle(
                     fontSize: 12,
                   ),
                   border: InputBorder.none,
-
                 ),
               ),
             )
@@ -103,24 +105,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
