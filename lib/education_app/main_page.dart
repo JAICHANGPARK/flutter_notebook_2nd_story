@@ -268,7 +268,47 @@ class _MainPageState extends State<MainPage> {
                           width: 140,
                           margin: EdgeInsets.only(right: 16, bottom: 8),
                           decoration: BoxDecoration(
-                            color: Colors.red
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                blurRadius: 3,
+                                spreadRadius: 2
+                              )
+                            ]
+                          ),
+                          child: Column(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.blueGrey,
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                  child: Center(
+                                    child: Text("Place Your Image"),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 4,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text("Morning textbook"),
+                                    Text("8.6"),
+                                    Row(
+                                      children: <Widget>[
+                                        
+                                      ],
+                                    )
+
+                                  ],
+                                ),
+                              )
+                            ],
                           ),
                         ),
                         Container(
