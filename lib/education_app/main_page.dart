@@ -408,9 +408,9 @@ class _MainPageState extends State<MainPage> {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Column(
                                     mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
                                         "English reading",
@@ -513,9 +513,9 @@ class _MainPageState extends State<MainPage> {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Column(
                                     mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
                                         "Illiustratic image",
@@ -583,6 +583,35 @@ class _MainPageState extends State<MainPage> {
                         ),
                       ],
                     ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              height: 240,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        "Today's event",
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Spacer(),
+                      Text(
+                        "view all >",
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "Join now",
+                    style: TextStyle(color: Colors.teal, fontSize: 12),
                   )
                 ],
               ),
