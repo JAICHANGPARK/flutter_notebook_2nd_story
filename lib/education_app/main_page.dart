@@ -16,7 +16,17 @@ class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainPage>
+    with SingleTickerProviderStateMixin {
+  TabController _tabController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController = TabController(vsync: this, length: 5);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -265,11 +275,13 @@ class _MainPageState extends State<MainPage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 4,),
-                  Text("you may also like",style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey
-                  ),),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Text(
+                    "you may also like",
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                  ),
                   SizedBox(
                     height: 16,
                   ),
@@ -639,9 +651,102 @@ class _MainPageState extends State<MainPage> {
                             spreadRadius: 2,
                           )
                         ]),
+                    child: Center(
+                      child: Text(
+                        "Place Your Image",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        height: 4,
+                        width: 24,
+                        decoration: BoxDecoration(
+                            color: Colors.teal,
+                            borderRadius: BorderRadius.circular(4)),
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Container(
+                        height: 4,
+                        width: 20,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(4)),
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Container(
+                        height: 4,
+                        width: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(4)),
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Container(
+                        height: 4,
+                        width: 8,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(4)),
+                      )
+                    ],
                   )
                 ],
               ),
+            ),
+            Container(
+              height: 32,
+              child: TabBar(
+                unselectedLabelStyle:
+                    TextStyle(color: Colors.grey, fontSize: 14),
+                labelStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+                indicatorSize: TabBarIndicatorSize.label,
+                indicatorColor: Colors.teal,
+                isScrollable: true,
+                labelColor: Colors.black,
+                unselectedLabelColor: Colors.grey,
+                controller: _tabController,
+                tabs: <Widget>[
+                  Tab(
+                    text: "Popular",
+                  ),
+                  Tab(
+                    text: "Lacture",
+                  ),
+                  Tab(
+                    text: "Taste",
+                  ),
+                  Tab(
+                    text: "Task",
+                  ),
+                  Tab(
+                    text: "Radio",
+                  )
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 24, right: 24, top: 8),
+              height: 380,
+              child: TabBarView(controller: _tabController, children: [
+                Placeholder(),
+                Placeholder(),
+                Placeholder(),
+                Placeholder(),
+                Placeholder(),
+              ]),
             )
           ],
         ),
