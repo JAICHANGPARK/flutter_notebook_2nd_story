@@ -241,7 +241,7 @@ class _MainPageState extends State<MainPage> {
               ],
             ),
             Container(
-              height: 220,
+              height: 230,
               padding: EdgeInsets.only(left: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,13 +250,26 @@ class _MainPageState extends State<MainPage> {
                     padding: const EdgeInsets.only(right: 24),
                     child: Row(
                       children: <Widget>[
-                        Text("Recommended course"),
+                        Text(
+                          "Recommended course",
+                          style: TextStyle(fontSize: 18),
+                        ),
                         Spacer(),
-                        Text("More")
+                        Text(
+                          "More",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                        )
                       ],
                     ),
                   ),
-                  Text("you may also like"),
+                  SizedBox(height: 4,),
+                  Text("you may also like",style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey
+                  ),),
                   SizedBox(
                     height: 16,
                   ),
@@ -612,6 +625,20 @@ class _MainPageState extends State<MainPage> {
                   Text(
                     "Join now",
                     style: TextStyle(color: Colors.teal, fontSize: 12),
+                  ),
+                  Container(
+                    height: 150,
+                    margin: EdgeInsets.symmetric(vertical: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blueGrey[100],
+                            blurRadius: 3,
+                            spreadRadius: 2,
+                          )
+                        ]),
                   )
                 ],
               ),
