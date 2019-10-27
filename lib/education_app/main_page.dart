@@ -741,10 +741,64 @@ class _MainPageState extends State<MainPage>
               padding: EdgeInsets.only(left: 24, right: 24, top: 8),
               height: 380,
               child: TabBarView(controller: _tabController, children: [
-                ListView(
-                  children: <Widget>[
-
-                  ],
+                ListView.separated(
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 92,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Colors.red[100],
+                              ),
+                              child: Center(
+                                child: Text("Place Image"),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 11,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("How hard is it for humans to climb Mount Everst?"),
+                                  Spacer(),
+                                  Row(
+                                    children: <Widget>[
+                                      Text("Record"),
+                                      Spacer(),
+                                      Icon(Icons.favorite, size: 12,),
+                                      Text("122", style: TextStyle(
+                                        fontSize: 12,
+                                      ),),
+                                      Spacer(),
+                                      Icon(Icons.message),
+                                      Text("98"),
+                                      Spacer(),
+                                      Icon(Icons.more_horiz)
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                  itemCount: 5,
+                  separatorBuilder: (context, index) {
+                    return Divider();
+                  },
                 ),
                 Placeholder(),
                 Placeholder(),
