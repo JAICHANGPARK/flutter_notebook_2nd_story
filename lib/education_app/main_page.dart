@@ -19,6 +19,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
+  int currentIndex = 0;
+  bool dummyLoading = false;
 
   @override
   void initState() {
@@ -706,6 +708,22 @@ class _MainPageState extends State<MainPage>
             Container(
               height: 32,
               child: TabBar(
+                onTap: (newIndex) {
+                  print(newIndex);
+                  if (newIndex == 1) {
+                    Future.delayed(Duration(seconds: 3), () {
+                      setState(() {
+                        dummyLoading = true;
+                      });
+                    });
+                  }else{
+                    dummyLoading = false;
+                  }
+
+                  setState(() {
+                    currentIndex = newIndex;
+                  });
+                },
                 unselectedLabelStyle:
                     TextStyle(color: Colors.grey, fontSize: 14),
                 labelStyle: TextStyle(
@@ -746,9 +764,6 @@ class _MainPageState extends State<MainPage>
                   itemBuilder: (context, index) {
                     return Container(
                       height: 92,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                      ),
                       child: Row(
                         children: <Widget>[
                           Expanded(
@@ -766,25 +781,53 @@ class _MainPageState extends State<MainPage>
                           Expanded(
                             flex: 11,
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.only(
+                                  left: 16, top: 8, bottom: 8, right: 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  Text("How hard is it for humans to climb Mount Everst?"),
+                                  Text(
+                                    "How hard is it for humans to climb Mount Everst?",
+                                    style: TextStyle(fontSize: 13),
+                                  ),
                                   Spacer(),
                                   Row(
                                     children: <Widget>[
-                                      Text("Record"),
+                                      Text(
+                                        "Record",
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.grey),
+                                      ),
                                       Spacer(),
-                                      Icon(Icons.favorite, size: 12,),
-                                      Text("122", style: TextStyle(
-                                        fontSize: 12,
-                                      ),),
+                                      Icon(
+                                        Icons.favorite,
+                                        size: 12,
+                                        color: Colors.grey,
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        "122",
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.grey),
+                                      ),
+                                      SizedBox(
+                                        width: 16,
+                                      ),
+                                      Icon(Icons.message,
+                                          size: 12, color: Colors.grey),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        "98",
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.grey),
+                                      ),
                                       Spacer(),
-                                      Icon(Icons.message),
-                                      Text("98"),
-                                      Spacer(),
-                                      Icon(Icons.more_horiz)
+                                      Icon(Icons.more_horiz,
+                                          size: 12, color: Colors.grey)
                                     ],
                                   )
                                 ],
@@ -800,7 +843,92 @@ class _MainPageState extends State<MainPage>
                     return Divider();
                   },
                 ),
-                Placeholder(),
+                !dummyLoading
+                    ? Center(child: CircularProgressIndicator())
+                    :  ListView.separated(
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 92,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Colors.red[100],
+                              ),
+                              child: Center(
+                                child: Text("Place Image"),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 11,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 16, top: 8, bottom: 8, right: 16),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "What is used in life to use Newton's first law?",
+                                    style: TextStyle(fontSize: 13),
+                                  ),
+                                  Spacer(),
+                                  Row(
+                                    children: <Widget>[
+                                      Text(
+                                        "Record",
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.grey),
+                                      ),
+                                      Spacer(),
+                                      Icon(
+                                        Icons.favorite,
+                                        size: 12,
+                                        color: Colors.grey,
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        "122",
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.grey),
+                                      ),
+                                      SizedBox(
+                                        width: 16,
+                                      ),
+                                      Icon(Icons.message,
+                                          size: 12, color: Colors.grey),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        "98",
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.grey),
+                                      ),
+                                      Spacer(),
+                                      Icon(Icons.more_horiz,
+                                          size: 12, color: Colors.grey)
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                  itemCount: 5,
+                  separatorBuilder: (context, index) {
+                    return Divider();
+                  },
+                ),
                 Placeholder(),
                 Placeholder(),
                 Placeholder(),
