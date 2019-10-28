@@ -110,7 +110,35 @@ class _MainPageState extends State<MainPage> {
                   color: Colors.white,
                   borderRadius:
                       BorderRadius.only(topLeft: Radius.circular(24))),
-              child: Column(),
+              padding: EdgeInsets.only(top: 16),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("Recommend",style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18
+                        ),),
+                        Text("See All >",style: TextStyle(
+                          color: Colors.grey,
+                        ),)
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 16,),
+                  Container(
+                    height: 48,
+                    child: Placeholder(),
+                  ),
+                  SizedBox(height: 16,),
+                  Container(height: 264,
+                  child: Placeholder(),)
+                ],
+              ),
             ),
           )
         ],
