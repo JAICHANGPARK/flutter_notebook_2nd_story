@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ClothingApp extends StatelessWidget {
@@ -27,14 +28,17 @@ class _MainPageState extends State<MainPage> {
             bottom: MediaQuery.of(context).size.height / 2,
             child: Container(
               padding:
-                  EdgeInsets.only(left: 16, right: 16, top: 38, bottom: 16),
+                  EdgeInsets.only(left: 16, right: 16, top: 38, bottom: 32),
               decoration: BoxDecoration(
                   color: Colors.red,
                   image: DecorationImage(
+                    colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
                       image: NetworkImage(
                           "https://cdn.pixabay.com/photo/2016/11/16/10/28/two-girls-1828539_960_720.jpg"),
-                      fit: BoxFit.cover)),
+                      fit: BoxFit.cover),),
+
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,6 +51,48 @@ class _MainPageState extends State<MainPage> {
                         Icons.add_shopping_cart,
                         color: Colors.white,
                       )
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        height: 4,
+                        width: 16,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Container(
+                        height: 4,
+                        width: 4,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Container(
+                        height: 4,
+                        width: 4,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Container(
+                        height: 4,
+                        width: 4,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
                     ],
                   )
                 ],
