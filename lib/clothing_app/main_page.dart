@@ -138,8 +138,20 @@ class _MainPageState extends State<MainPage> {
                     height: 16,
                   ),
                   Container(
-                    height: 48,
-                    child: Placeholder(),
+                    height: 32,
+                    padding: EdgeInsets.only(left: 16),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
+                          width: 120,
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 16,
@@ -157,7 +169,35 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomAppBar(
         elevation: 12,
         child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16),
           height: 64,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.home),
+                color: Colors.black,
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.favorite,
+                ),
+                color: Colors.grey,
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.card_giftcard),
+                onPressed: () {},
+                color: Colors.grey,
+              ),
+              IconButton(
+                icon: Icon(Icons.account_circle),
+                onPressed: () {},
+                color: Colors.grey,
+              )
+            ],
+          ),
         ),
       ),
     );
