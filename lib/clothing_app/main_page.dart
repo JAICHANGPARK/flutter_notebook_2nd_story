@@ -28,7 +28,7 @@ class _MainPageState extends State<MainPage> {
             bottom: MediaQuery.of(context).size.height / 2.2,
             child: Container(
               padding:
-                  EdgeInsets.only(left: 16, right: 16, top: 38, bottom: 32),
+                  EdgeInsets.only(left: 16, right: 16, top: 38, bottom: 62),
               decoration: BoxDecoration(
                 color: Colors.red,
                 image: DecorationImage(
@@ -197,14 +197,14 @@ class _MainPageState extends State<MainPage> {
                           ),
                         ),
                         Container(
-                          width: 72,
+                          width: 84,
                           margin: EdgeInsets.only(right: 24),
                           decoration: BoxDecoration(
                               color: Colors.grey[100],
                               borderRadius: BorderRadius.circular(16)),
                           child: Center(
                             child: Text(
-                              "Full ?s???",
+                              "Full dress",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -228,12 +228,135 @@ class _MainPageState extends State<MainPage> {
                         Container(
                           width: MediaQuery.of(context).size.width / 2,
                           margin: EdgeInsets.only(right: 21),
-                          decoration: BoxDecoration(color: Colors.red),
+                          decoration: BoxDecoration(color: Colors.white),
+                          child: Stack(
+                            children: <Widget>[
+                              Positioned(
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 72,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    image: DecorationImage(
+                                      image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2019/10/22/13/43/man-4568762_960_720.jpg",
+                                      ),
+                                      fit: BoxFit.cover
+                                    )
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                right: 8,
+                                bottom: 54,
+                                child: Container(
+                                  height: 38,
+                                  width: 38,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Center(
+                                    child: Icon(
+                                      Icons.favorite,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 8,
+                                bottom: 16,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text("Windbreaker", style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      letterSpacing: 1.1
+                                    ),),
+                                    SizedBox(height: 8,),
+                                    Text("\$899", style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width / 2,
-                          decoration: BoxDecoration(color: Colors.red),
-                        )
+                          margin: EdgeInsets.only(right: 21),
+                          decoration: BoxDecoration(color: Colors.white),
+                          child: Stack(
+                            children: <Widget>[
+                              Positioned(
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 72,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(6),
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                            "https://cdn.pixabay.com/photo/2016/11/19/20/17/catwalk-1840941_960_720.jpg",
+                                          ),
+                                          fit: BoxFit.cover
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                right: 8,
+                                bottom: 54,
+                                child: Container(
+                                  height: 38,
+                                  width: 38,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Center(
+                                    child: Icon(
+                                      Icons.favorite,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 8,
+                                bottom: 16,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text("Full dress", style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        letterSpacing: 1.1
+                                    ),),
+                                    SizedBox(height: 8,),
+                                    Text("\$899", style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   )
