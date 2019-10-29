@@ -144,10 +144,72 @@ class _MainPageState extends State<MainPage> {
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         Container(
+                          margin: EdgeInsets.only(right: 24),
                           width: 120,
                           decoration: BoxDecoration(
-                            color: Colors.black,
-
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.15),
+                                    blurRadius: 3,
+                                    spreadRadius: 2)
+                              ]),
+                          child: Center(
+                            child: Text(
+                              "Evening Class",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 54,
+                          margin: EdgeInsets.only(right: 24),
+                          decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(16)),
+                          child: Center(
+                            child: Text(
+                              "Dress",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 72,
+                          margin: EdgeInsets.only(right: 24),
+                          decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(16)),
+                          child: Center(
+                            child: Text(
+                              "Sweater",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 72,
+                          margin: EdgeInsets.only(right: 24),
+                          decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(16)),
+                          child: Center(
+                            child: Text(
+                              "Full ?s???",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         )
                       ],
@@ -157,8 +219,23 @@ class _MainPageState extends State<MainPage> {
                     height: 16,
                   ),
                   Container(
-                    height: 264,
-                    child: Placeholder(),
+                    height: 274,
+                    padding: EdgeInsets.only(left: 16),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      children: <Widget>[
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          margin: EdgeInsets.only(right: 21),
+                          decoration: BoxDecoration(color: Colors.red),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          decoration: BoxDecoration(color: Colors.red),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
