@@ -238,14 +238,12 @@ class _MainPageState extends State<MainPage> {
                                 bottom: 72,
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    image: DecorationImage(
-                                      image: NetworkImage(
-                                        "https://cdn.pixabay.com/photo/2019/10/22/13/43/man-4568762_960_720.jpg",
-                                      ),
-                                      fit: BoxFit.cover
-                                    )
-                                  ),
+                                      borderRadius: BorderRadius.circular(6),
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                            "https://cdn.pixabay.com/photo/2019/10/22/13/43/man-4568762_960_720.jpg",
+                                          ),
+                                          fit: BoxFit.cover)),
                                 ),
                               ),
                               Positioned(
@@ -273,18 +271,25 @@ class _MainPageState extends State<MainPage> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Text("Windbreaker", style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                      letterSpacing: 1.1
-                                    ),),
-                                    SizedBox(height: 8,),
-                                    Text("\$899", style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                    ),),
+                                    Text(
+                                      "Windbreaker",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          letterSpacing: 1.1),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "\$899",
+                                      style: TextStyle(
+                                        color: Colors.red,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               )
@@ -309,9 +314,7 @@ class _MainPageState extends State<MainPage> {
                                           image: NetworkImage(
                                             "https://cdn.pixabay.com/photo/2016/11/19/20/17/catwalk-1840941_960_720.jpg",
                                           ),
-                                          fit: BoxFit.cover
-                                      )
-                                  ),
+                                          fit: BoxFit.cover)),
                                 ),
                               ),
                               Positioned(
@@ -339,18 +342,25 @@ class _MainPageState extends State<MainPage> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Text("Full dress", style: TextStyle(
-                                        color: Colors.black,
+                                    Text(
+                                      "Full dress",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          letterSpacing: 1.1),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "\$899",
+                                      style: TextStyle(
+                                        color: Colors.red,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                        letterSpacing: 1.1
-                                    ),),
-                                    SizedBox(height: 8,),
-                                    Text("\$899", style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                    ),),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               )
