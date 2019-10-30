@@ -58,6 +58,39 @@ class _MainPageState extends State<MainPage> {
                         ],
                       ),
                     ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    bottom: 16,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          height: 12,
+                          width: 12,
+                          decoration: BoxDecoration(color: Colors.green),
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Container(
+                          height: 12,
+                          width: 12,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.green)),
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Container(
+                          height: 12,
+                          width: 12,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.green)),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
