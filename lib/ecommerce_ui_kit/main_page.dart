@@ -23,11 +23,51 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height / 1.8,
-              child: Placeholder(),
+              height: MediaQuery.of(context).size.height / 1.7,
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    top: 0,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  "https://cdn.pixabay.com/photo/2016/06/17/09/54/woman-1462985_960_720.jpg"),
+                              fit: BoxFit.cover)),
+                    ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    top: 34,
+                    child: Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.keyboard_arrow_left),
+                          ),
+                          IconButton(
+                            icon: Icon(Icons.search),
+                            onPressed: () {},
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 5,
+              child: Placeholder(),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 3.5,
               child: Placeholder(),
             )
           ],
@@ -42,11 +82,11 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.home), title: Text("Catalog")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home), title: Text("Catalog")),
+              icon: Icon(Icons.favorite_border), title: Text("Catalog")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home), title: Text("Catalog")),
+              icon: Icon(Icons.add_shopping_cart), title: Text("Catalog")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home), title: Text("Catalog")),
+              icon: Icon(Icons.person), title: Text("Catalog")),
         ],
       ),
     );
