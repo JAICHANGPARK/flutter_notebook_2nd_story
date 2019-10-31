@@ -16,6 +16,13 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  bool xs = false;
+  bool s = false;
+  bool m = false;
+  bool l = false;
+  bool xl = false;
+  bool xxl = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,22 +110,27 @@ class _MainPageState extends State<MainPage> {
                 children: <Widget>[
                   Text(
                     "COMBINED",
-                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,
-                    letterSpacing: 1.5),
+                    style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5),
                   ),
                   Text(
                     "TEXTURE DRESS",
-                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,
-                    letterSpacing: 1.5),
+                    style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5),
                   ),
                   Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text("ZARA", style: TextStyle(
-                        letterSpacing: 1.5,
-                        color: Colors.blueGrey[400]
-                      ),),
+                      Text(
+                        "ZARA",
+                        style: TextStyle(
+                            letterSpacing: 1.5, color: Colors.blueGrey[400]),
+                      ),
                       Text("\$49.99"),
                     ],
                   ),
@@ -130,8 +142,203 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height / 3.5,
-              child: Placeholder(),
+              padding: const EdgeInsets.all(8.0),
+              height: MediaQuery.of(context).size.height / 3.4,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "SIZE",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  GridView.count(
+                    padding: EdgeInsets.zero,
+                    crossAxisCount: 3,
+                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 8,
+                    childAspectRatio: 1.5,
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            xs = true;
+                            s = false;
+                            m = false;
+                            l = false;
+                            xl = false;
+                            xxl = false;
+                          });
+                        },
+                        child: Container(
+                          height: 48,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2),
+                              color: xs ? Colors.black : Colors.white),
+                          child: Center(
+                            child: Text(
+                              "XS",
+                              style: TextStyle(
+                                color: xs ? Colors.white : Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            xs = false;
+                            s = true;
+                            m = false;
+                            l = false;
+                            xl = false;
+                            xxl = false;
+                          });
+                        },
+                        child: Container(
+                          height: 48,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2),
+                              color: s ? Colors.black : Colors.white),
+                          child: Center(
+                            child: Text(
+                              "S",
+                              style: TextStyle(
+                                color: s ? Colors.white : Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            xs = false;
+                            s = false;
+                            m = true;
+                            l = false;
+                            xl = false;
+                            xxl = false;
+                          });
+                        },
+                        child: Container(
+                          height: 48,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2),
+                              color: m ? Colors.black : Colors.white),
+                          child: Center(
+                            child: Text(
+                              "M",
+                              style: TextStyle(
+                                color: m ? Colors.white : Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            xs = false;
+                            s = false;
+                            m = false;
+                            l = true;
+                            xl = false;
+                            xxl = false;
+                          });
+                        },
+                        child: Container(
+                          height: 48,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2),
+                              color: l ? Colors.black : Colors.white),
+                          child: Center(
+                            child: Text(
+                              "L",
+                              style: TextStyle(
+                                color: l ? Colors.white : Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            xs = false;
+                            s = false;
+                            m = false;
+                            l = false;
+                            xl = true;
+                            xxl = false;
+                          });
+                        },
+                        child: Container(
+                          height: 48,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2),
+                              color: xl ? Colors.black : Colors.white),
+                          child: Center(
+                            child: Text(
+                              "XL",
+                              style: TextStyle(
+                                color: xl ? Colors.white : Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            xs = false;
+                            s = false;
+                            m = false;
+                            l = false;
+                            xl = false;
+                            xxl = true;
+                          });
+                        },
+                        child: Container(
+                          height: 48,
+                          decoration: BoxDecoration(
+                              border: Border.all(width: 2),
+                              color: xxl ? Colors.black : Colors.white),
+                          child: Center(
+                            child: Text(
+                              "XXL",
+                              style: TextStyle(
+                                color: xxl ? Colors.white : Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+
+                height: MediaQuery.of(context).size.height / 9,
+                decoration: BoxDecoration(
+                  color: Colors.black
+                ),
+                child: Center(
+                  child: Text("ADD TO CART", style: TextStyle(
+                    color: Colors.white
+                  ),),
+                ),
+              ),
             )
           ],
         ),
