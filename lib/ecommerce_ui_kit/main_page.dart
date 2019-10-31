@@ -131,10 +131,11 @@ class _MainPageState extends State<MainPage> {
                         style: TextStyle(
                             letterSpacing: 1.5, color: Colors.blueGrey[400]),
                       ),
-                      Text("\$49.99",style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2
-                      ),),
+                      Text(
+                        "\$49.99",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, letterSpacing: 2),
+                      ),
                     ],
                   ),
                   Divider(
@@ -331,17 +332,16 @@ class _MainPageState extends State<MainPage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-
                 height: MediaQuery.of(context).size.height / 10,
-                decoration: BoxDecoration(
-                  color: Colors.black
-                ),
+                decoration: BoxDecoration(color: Colors.black),
                 child: Center(
-                  child: Text("ADD TO CART", style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 4
-                  ),),
+                  child: Text(
+                    "ADD TO CART",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 4),
+                  ),
                 ),
               ),
             ),
