@@ -69,7 +69,7 @@ class _MainPageState extends State<MainPage> {
                         Container(
                           height: 12,
                           width: 12,
-                          decoration: BoxDecoration(color: Colors.green),
+                          decoration: BoxDecoration(color: Colors.black),
                         ),
                         SizedBox(
                           width: 12,
@@ -78,7 +78,7 @@ class _MainPageState extends State<MainPage> {
                           height: 12,
                           width: 12,
                           decoration: BoxDecoration(
-                              border: Border.all(color: Colors.green)),
+                              border: Border.all(color: Colors.black)),
                         ),
                         SizedBox(
                           width: 12,
@@ -87,7 +87,7 @@ class _MainPageState extends State<MainPage> {
                           height: 12,
                           width: 12,
                           decoration: BoxDecoration(
-                              border: Border.all(color: Colors.green)),
+                              border: Border.all(color: Colors.black)),
                         )
                       ],
                     ),
@@ -96,8 +96,27 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: 12),
               height: MediaQuery.of(context).size.height / 5,
-              child: Placeholder(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("COMBINED",style: TextStyle(
+                    fontSize: 26, fontWeight: FontWeight.bold
+                  ),),
+                  Text("TEXTURE DRESS"),
+                  Row(
+                    children: <Widget>[
+                      Text("ZARA"),
+                      Text("\$49.99"),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 3,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 3.5,
