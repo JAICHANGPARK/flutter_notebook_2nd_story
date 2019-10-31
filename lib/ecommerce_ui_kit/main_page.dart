@@ -96,18 +96,29 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 12),
-              height: MediaQuery.of(context).size.height / 5,
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+              height: MediaQuery.of(context).size.height / 4.8,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("COMBINED",style: TextStyle(
-                    fontSize: 26, fontWeight: FontWeight.bold
-                  ),),
-                  Text("TEXTURE DRESS"),
+                  Text(
+                    "COMBINED",
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5),
+                  ),
+                  Text(
+                    "TEXTURE DRESS",
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5),
+                  ),
+                  Spacer(),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text("ZARA"),
+                      Text("ZARA", style: TextStyle(
+                        letterSpacing: 1.5,
+                        color: Colors.blueGrey[400]
+                      ),),
                       Text("\$49.99"),
                     ],
                   ),
