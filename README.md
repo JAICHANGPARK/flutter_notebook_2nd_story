@@ -16,3 +16,15 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Just Flutter NoteBook 
+
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/flutter_notebook_2nd_story/blob/master/capture/Screenshot_1571748256.png" width="200">
+</td>
+<td style="text-align: center">
+<img src="https://github.com/JAICHANGPARK/flutter_notebook_2nd_story/blob/master/capture/Screenshot_1571748253.png" width="200">
+</td>
+</td>
+</tr>
+</table>
+</div>
