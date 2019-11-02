@@ -378,16 +378,66 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
+
               height: MediaQuery.of(context).size.height / 3,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Expanded(
                     flex: 2,
-                    child: Placeholder(),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        "YOU MAY ALSO LIKE",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueGrey[400]
+                        ),
+                      ),
+                    ),
                   ),
                   Expanded(
                     flex: 8,
-                    child: Placeholder(),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(right: 12),
+                          width: 160,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 8,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: NetworkImage("https://cdn.pixabay.com/photo/2018/02/09/21/56/people-3142549_960_720.jpg"),
+                                      fit: BoxFit.cover
+                                    )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Column(
+                                  
+                                  children: <Widget>[
+                                    Text("LACE SHIRT DRESS"),
+                                    Text("\$69.99")
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: 160,
+                          margin: EdgeInsets.only(right: 12),
+                          child: Placeholder(),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
