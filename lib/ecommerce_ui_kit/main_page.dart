@@ -352,6 +352,26 @@ class _MainPageState extends State<MainPage> {
                 color: Colors.black,
               ),
             ),
+            Column(
+              children: <Widget>[
+                ExpansionTile(title: Text("PRODUCT DETAILS", style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold
+                ),),
+                children: <Widget>[
+                  Text("Place your Product Text"),
+                ],),
+                ExpansionTile(title: Text("SHIPPING"),),
+              ],
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(
+                thickness: 3,
+                color: Colors.black,
+              ),
+            ),
           ],
         ),
       ),
