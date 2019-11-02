@@ -361,7 +361,12 @@ class _MainPageState extends State<MainPage> {
                 children: <Widget>[
                   Text("Place your Product Text"),
                 ],),
-                ExpansionTile(title: Text("SHIPPING"),),
+                ExpansionTile(title: Text("SHIPPING", style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),),
+                children: <Widget>[
+                  Text("Place your Product Text"),
+                ],),
               ],
             ),
 
@@ -372,6 +377,21 @@ class _MainPageState extends State<MainPage> {
                 color: Colors.black,
               ),
             ),
+            Container(
+              height: MediaQuery.of(context).size.height / 3,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    flex: 2,
+                    child: Placeholder(),
+                  ),
+                  Expanded(
+                    flex: 8,
+                    child: Placeholder(),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
