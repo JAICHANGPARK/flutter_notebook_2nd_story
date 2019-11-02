@@ -403,12 +403,12 @@ class _MainPageState extends State<MainPage> {
                       children: <Widget>[
                         Container(
                           margin: EdgeInsets.only(right: 12),
-                          width: 160,
+                          width: 150,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Expanded(
-                                flex: 8,
+                                flex: 7,
                                 child: Container(
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
@@ -420,22 +420,147 @@ class _MainPageState extends State<MainPage> {
                               ),
                               Expanded(
                                 flex: 2,
-                                child: Column(
-                                  
-                                  children: <Widget>[
-                                    Text("LACE SHIRT DRESS"),
-                                    Text("\$69.99")
-                                  ],
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8, top: 8),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("LACE SHIRT DRESS", style: TextStyle(
+                                        fontSize: 11,
+                                        color: Colors.blueGrey[400]
+                                      ),),
+                                      SizedBox(height: 4,),
+                                      Text("\$69.99",style: TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold
+                                      ),)
+                                    ],
+                                  ),
                                 ),
                               )
                             ],
                           ),
                         ),
                         Container(
-                          width: 160,
                           margin: EdgeInsets.only(right: 12),
-                          child: Placeholder(),
-                        )
+                          width: 150,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: NetworkImage("https://cdn.pixabay.com/photo/2018/02/09/21/56/people-3142549_960_720.jpg"),
+                                          fit: BoxFit.cover
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8, top: 8),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("LACE SHIRT DRESS", style: TextStyle(
+                                          fontSize: 11,
+                                          color: Colors.blueGrey[400]
+                                      ),),
+                                      SizedBox(height: 4,),
+                                      Text("\$69.99",style: TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold
+                                      ),)
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 12),
+                          width: 150,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: NetworkImage("https://cdn.pixabay.com/photo/2018/02/09/21/56/people-3142549_960_720.jpg"),
+                                          fit: BoxFit.cover
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8, top: 8),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("LACE SHIRT DRESS", style: TextStyle(
+                                          fontSize: 11,
+                                          color: Colors.blueGrey[400]
+                                      ),),
+                                      SizedBox(height: 4,),
+                                      Text("\$69.99",style: TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold
+                                      ),)
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 12),
+                          width: 150,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: NetworkImage("https://cdn.pixabay.com/photo/2018/02/09/21/56/people-3142549_960_720.jpg"),
+                                          fit: BoxFit.cover
+                                      )
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8, top: 8),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("LACE SHIRT DRESS", style: TextStyle(
+                                          fontSize: 11,
+                                          color: Colors.blueGrey[400]
+                                      ),),
+                                      SizedBox(height: 4,),
+                                      Text("\$69.99",style: TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold
+                                      ),)
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   )
