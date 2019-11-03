@@ -27,25 +27,38 @@ class _HomePageState extends State<HomePage> {
             left: true,
             child: Container(
               height: 64,
+              padding: EdgeInsets.only(left: 24, right: 24, top: 8),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      Text("19:30 IST"),
-                      Text("(GMT +1:30)"),
+                      Text("19:30 IST",style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18
+                      ),),
+                      Text("(GMT +1:30)",style: TextStyle(
+                        fontSize: 11,
+                      ),),
                       Spacer(),
                       Icon(Icons.calendar_today),
+                      SizedBox(width: 16,),
                       Icon(Icons.more_vert),
                     ],
                   ),
+                  SizedBox(height: 12,),
                   Row(
                     children: <Widget>[
                       Icon(
                         Icons.add_location,
                         size: 12,
                       ),
-                      Text("New Delhi, India")
+                      SizedBox(width: 8,),
+                      Text("New Delhi, India", style: TextStyle(
+                        fontSize: 13,
+                        color: Colors.grey,
+                      ),)
                     ],
                   )
                 ],
