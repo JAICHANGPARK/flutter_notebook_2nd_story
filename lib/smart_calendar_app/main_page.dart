@@ -53,8 +53,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
-            height: MediaQuery.of(context).size.height / 3.5,
+            margin: EdgeInsets.only(left: 24, right: 24, top: 16, bottom: 16),
+            height: MediaQuery.of(context).size.height / 3.8,
             decoration: BoxDecoration(
                 color: Color(0xff1849EC),
                 borderRadius: BorderRadius.only(
@@ -69,36 +69,58 @@ class _HomePageState extends State<HomePage> {
                       spreadRadius: 2)
                 ]),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expanded(
                   flex: 10,
-                  child: Column(
-                    children: <Widget>[
-                      Text("CHANGE IN TIMEZONE DETECTED!"),
-                      Spacer(),
-                      Row(
-                        children: <Widget>[
-                          Text("09:00 CST"),
-                          Text("(GMT -6:30")
-                        ],
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            Icons.location_on,
-                            size: 12,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            "Texas, United States",
-                            style: TextStyle(color: Colors.grey),
-                          )
-                        ],
-                      ),
-                      Spacer(),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 24, bottom: 0, right: 16, left: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text("CHANGE IN TIMEZONE DETECTED!",style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2
+                        ),),
+                        Spacer(),
+                        Row(
+                          children: <Widget>[
+                            Text("09:00 CST",style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800
+                            ),),
+                            SizedBox(width: 4,),
+                            Text("(GMT -6:30)", style: TextStyle(
+                              color: Colors.grey[100],
+                              fontSize: 10
+                            ),)
+                          ],
+                        ),
+                        SizedBox(height: 8,),
+                        Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.location_on,
+                              size: 12,
+                              color: Colors.white,
+                            ),
+                            SizedBox(width: 4,),
+                            Text(
+                              "Texas, United States",
+                              style: TextStyle(color: Colors.grey,
+                              fontSize: 12),
+                            )
+                          ],
+                        ),
+                        Spacer(),
+                      ],
+                    ),
                   ),
                 ),
+                Divider(color: Colors.white.withOpacity(0.3),
+                height: 0,),
                 Expanded(
                   flex: 3,
                   child: Row(
@@ -117,6 +139,17 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(8),
+                              bottomRight: Radius.circular(8),
+                              bottomLeft: Radius.circular(8),
+                            )
+                          ),
+                          child: Center(
+                            child: Text("Update Timezone", style: TextStyle(
+                              color: Color(0xff1849EC),
+                              fontWeight: FontWeight.bold,
+                            ),),
                           ),
                         ),
                       )
@@ -131,3 +164,16 @@ class _HomePageState extends State<HomePage> {
     ));
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
