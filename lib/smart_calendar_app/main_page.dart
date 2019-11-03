@@ -20,8 +20,19 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(
+        children: <Widget>[
+          SafeArea(
+            top: true,
+            right: true,
+            left: true,
+            child: Container(
+              height: 64,
+              child: Placeholder(),
+            ),
+          )
+        ],
 
-        
+
       ),
     ));
   }
