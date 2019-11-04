@@ -236,6 +236,61 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+          ),
+          ListView(
+            shrinkWrap: true,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(left: 24),
+                height: 200,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 3,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            "11:00",
+                            style: TextStyle(color: Colors.black54),
+                          ),
+                          Container(
+                            height: 2,
+                            width: 18,
+                            decoration: BoxDecoration(color: Colors.grey[300]),
+                          ),
+                          Container(
+                            height: 2,
+                            width: 32,
+                            decoration: BoxDecoration(color: Colors.grey[300]),
+                          ),
+                          Container(
+                            height: 2,
+                            width: 18,
+                            decoration: BoxDecoration(color: Colors.grey[300]),
+                          ),
+                          Text(
+                            "12:00",
+                            style: TextStyle(color: Colors.black54),
+                          )
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 7,
+                      child: Container(
+                        margin: EdgeInsets.only(top: 7),
+                        decoration: BoxDecoration(
+                            color: Colors.blue[100],
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(12))),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
           )
         ],
       ),
