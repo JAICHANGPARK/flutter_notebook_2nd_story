@@ -280,11 +280,64 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 7,
                       child: Container(
+                        padding: EdgeInsets.only(left: 24, top: 32, bottom: 0),
                         margin: EdgeInsets.only(top: 7),
                         decoration: BoxDecoration(
                             color: Colors.blue[100],
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(12))),
+                        child: Column(
+
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text("Meeting with Jon",style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("13:00 - 14:00",style: TextStyle(
+                              fontSize: 13
+                            ),),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.add_location,
+                                  color: Colors.grey,
+                                  size: 12,
+                                ),
+                                SizedBox(width: 8,),
+                                Text("Texas, United States", style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12
+                                ),),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 24,
+                            ),
+                           Container(
+                             height: 38,
+                             width: 80,
+                             child: Stack(
+                               children: <Widget>[
+                                 Positioned(
+                                   left: 24,
+                                   bottom: 0,
+                                   top: 0,
+                                   child: CircleAvatar(),
+                                 ),
+                                 CircleAvatar(
+                                   backgroundColor: Colors.red,
+                                 ),
+                               ],
+                             ),
+                           )
+                          ],
+                        ),
                       ),
                     )
                   ],
