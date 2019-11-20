@@ -2,6 +2,8 @@
 
 A new Flutter application.
 
+Story Ended
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
